@@ -80,11 +80,12 @@ section{padding:6rem 4rem}.section-label{font-family:var(--font-display);font-si
 .contact-right{display:flex;flex-direction:column;gap:2.5rem}
 .contact-item{position:relative}
 .contact-item-label{font-family:var(--font-display);font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.5rem}
-.contact-item a{font-family:var(--font-body);font-size:1.1rem;font-weight:300;color:var(--text-primary);text-decoration:none;transition:color .3s ease;position:relative;display:inline-block}
+.contact-item a{font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:300;letter-spacing:.02em;color:var(--text-primary);text-decoration:none;transition:color .3s ease;position:relative;display:inline-block}
 .contact-item a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--red);transition:width .4s ease}
 .contact-item a:hover{color:var(--red)}
 .contact-item a:hover::after{width:100%}
 .contact-line{width:100%;height:1px;background:var(--border);margin:1rem 0}
+.comments-section{padding:8rem 4rem;position:relative;background:rgba(255,255,255,.01)}.comments-inner{max-width:800px;margin:0 auto}.comments-header{margin-bottom:3rem}.comments-label{font-family:var(--font-display);font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}.comments-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.5rem);letter-spacing:.03em;text-transform:uppercase;color:var(--text-primary);margin-bottom:1rem}.comments-subtitle{font-family:var(--font-body);font-size:.95rem;color:var(--text-muted);line-height:1.7}.giscus-wrapper{margin-top:2rem}
 
 footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}footer p{font-size:.75rem;color:var(--text-muted);letter-spacing:.1em}
 
@@ -109,6 +110,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <li><a href="#par">PAR Journal</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#comments">Comments</a></li>
   </ul>
   <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">
     <span></span><span></span><span></span>
@@ -377,7 +379,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <p>I have never studied photography in any formal way, but I have watched countless films, walked through museums, churches, and galleries. My sense of aesthetics belongs only to me, because the world I see is exactly as I see it.</p>
   </div>
   <div class="country-grid">
-    <div class="country-album wide"><div class="country-album-inner"><div class="country-album-name">France</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
+    <div class="country-album wide" onclick="toggleCountry('france')" style="cursor:pointer"><div class="country-album-inner"><div class="country-album-name">France</div><div class="country-album-line"></div><div class="country-album-hint">19 Photos</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Italy</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">United Kingdom</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Japan</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
@@ -388,6 +390,33 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Thailand</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Nepal</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Egypt</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
+  </div>
+  <div class="country-photos" id="france-photos" style="display:none;margin-top:3rem">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+      <h3 style="font-family:var(--font-display);font-size:2rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-primary)">France</h3>
+      <button onclick="toggleCountry('france')" style="font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;color:var(--text-muted);background:none;border:1px solid var(--border);padding:.5rem 1.2rem;cursor:pointer;transition:all .3s">Close</button>
+    </div>
+    <div class="photo-grid">
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-paris-hotel-de-ville.jpeg" alt="Paris" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-sculpture-grief.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-sculpture-nature.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-sculpture-gladiator.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-orsay-silhouette.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-orsay-clock.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-eiffel-night.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-cupid.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-nike.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-monalisa.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-louvre-old-man.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-gallery.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-reclining.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-venus.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-opera-hall.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-versailles-room.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-versailles-gallery.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-versailles-chandeliers.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-versailles-battles.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+    </div>
   </div>
 </section>
 
@@ -400,7 +429,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="contact-right">
       <div class="contact-item">
         <p class="contact-item-label">Email</p>
-        <a href="/cdn-cgi/l/email-protection#98e2f0fdf6f0f9f7efd8f0f9eff9f1f1b6fdfced"><span class="__cf_email__" data-cfemail="b1cbd9d4dfd9d0dec6f1d9d0c6d0d8d89fd4d5c4">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#22584a474c4a434d55624a4355434b4b0c474657"><span class="__cf_email__" data-cfemail="b1cbd9d4dfd9d0dec6f1d9d0c6d0d8d89fd4d5c4">[email&#160;protected]</span></a>
       </div>
       <div class="contact-line"></div>
       <div class="contact-item">
@@ -412,6 +441,35 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
         <p class="contact-item-label">Based In</p>
         <a href="#" style="pointer-events:none;cursor:default;">Honolulu, Hawai&#699;i</a>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="comments-section" id="comments">
+  <div class="comments-inner">
+    <div class="comments-header">
+      <p class="comments-label">Dialogue</p>
+      <h2 class="comments-title">Leave a <span style="color:var(--red)">Trace</span></h2>
+      <p class="comments-subtitle">If something here resonated, challenged you, or reminded you of your own body's knowledge, I'd love to hear it. Sign in with GitHub to leave a comment.</p>
+    </div>
+    <div class="giscus-wrapper">
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://giscus.app/client.js"
+        data-repo="zhenhao0704-wq/zhenhao0704-wq.github.io"
+        data-repo-id=""
+        data-category="General"
+        data-category-id=""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="dark_tritanopia"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+      </script>
     </div>
   </div>
 </section>
@@ -429,20 +487,17 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>80)});
 function toggleNav(){const links=document.querySelector('.nav-links');if(links.style.display==='flex'){links.style.display='none'}else{links.style.display='flex';links.style.flexDirection='column';links.style.position='absolute';links.style.top='100%';links.style.left='0';links.style.right='0';links.style.background='rgba(10,10,10,0.97)';links.style.padding='2rem';links.style.gap='1.5rem'}}
 function scrollRow(btn,direction){const container=btn.parentElement.querySelector('.works-scroll');container.scrollBy({left:370*direction,behavior:'smooth'})}
 document.querySelectorAll('.works-scroll').forEach(el=>{let isDown=false,startX,scrollLeft;el.addEventListener('mousedown',e=>{isDown=true;startX=e.pageX-el.offsetLeft;scrollLeft=el.scrollLeft});el.addEventListener('mouseleave',()=>isDown=false);el.addEventListener('mouseup',()=>isDown=false);el.addEventListener('mousemove',e=>{if(!isDown)return;e.preventDefault();el.scrollLeft=scrollLeft-(e.pageX-el.offsetLeft-startX)*1.5})});
 function toggleJournal(btn){const detail=btn.nextElementSibling;if(detail.classList.contains('open')){detail.classList.remove('open');btn.classList.remove('open');btn.textContent='View Full Journal'}else{detail.classList.add('open');btn.classList.add('open');btn.textContent='Close Journal'}}
+function toggleCountry(id){const el=document.getElementById(id+'-photos');if(el.style.display==='none'){el.style.display='block';el.scrollIntoView({behavior:'smooth',block:'start'})}else{el.style.display='none'}}
 const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:0.15});document.querySelectorAll('.par-entry').forEach(el=>observer.observe(el));
 function openVideo(videoId){const modal=document.getElementById('videoModal');const frame=document.getElementById('videoFrame');frame.src='https://www.youtube.com/embed/'+videoId+'?autoplay=1&rel=0';modal.classList.add('active');document.body.style.overflow='hidden'}
 function closeVideo(){const modal=document.getElementById('videoModal');const frame=document.getElementById('videoFrame');frame.src='';modal.classList.remove('active');document.body.style.overflow=''}
 document.getElementById('videoModal').addEventListener('click',function(e){if(e.target===this)closeVideo()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeVideo();closeLightbox()}});
 function openLightbox(el){const img=el.querySelector('img');const lb=document.getElementById('lightbox');document.getElementById('lightboxImg').src=img.src;lb.classList.add('active');document.body.style.overflow='hidden'}
-function closeLightbox(){const lb=document.getElementById('lightbox');lb.classList.remove('active');document.body.style.overflow=''}
-document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this||e.target.id==='lightboxImg')closeLightbox()});
-</script>-e 
-</body>
-</html>
+function closeLightbox(){const lb=document.getElementById('
