@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhenhao Wen | What Is Fragile Is Still Worth Keeping</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Libre+Franklin:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-card: #1a1a1a;
+  --bg-card-hover: #222222;
+  --text-primary: #e8e4df;
+  --text-secondary: #8a857f;
+  --text-muted: #5a5650;
+  --accent: #c4a882;
+  --accent-dim: #8a7560;
+  --red-accent: #8b2020;
+  --border: #2a2725;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Libre Franklin', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-dim) var(--bg-primary);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.4s ease, padding 0.4s ease;
+}
+
+nav.scrolled {
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(20px);
+  padding: 1rem 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: var(--text-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover { color: var(--text-primary); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--text-primary);
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 3rem 6rem;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(to top, var(--bg-primary) 0%, transparent 50%),
+    linear-gradient(to right, rgba(10,10,10,0.7) 0%, transparent 60%),
+    url('https://static.wixstatic.com/media/7b91af_2a274c1e323143be85c2c5b8f45fea15~mv2.jpeg/v1/fill/w_1920,h_1080,al_c,q_85,enc_avif,quality_auto/A18F03A7-66B4-4E9E-A6CD-6EAA0D036F4F_1_201_a.jpeg') center/cover no-repeat;
+  filter: brightness(0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-tag {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.3s forwards;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.5s forwards;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.7s forwards;
+}
+
+.hero-chinese {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  opacity: 0;
+  animation: fadeUp 1s 0.9s forwards;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s forwards;
+}
+
+.scroll-indicator span {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  writing-mode: vertical-rl;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: scrollPulse 2s infinite;
+}
+
+/* ===== SECTION COMMON ===== */
+section {
+  padding: 6rem 3rem;
+}
+
+.section-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.about-image-container {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  filter: grayscale(20%) brightness(0.9);
+  transition: filter 0.5s ease;
+}
+
+.about-image:hover {
+  filter: grayscale(0%) brightness(1);
+}
+
+.about-image-border {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: -1.5rem;
+  bottom: -1.5rem;
+  border: 1px solid var(--accent-dim);
+  pointer-events: none;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.about-text p:first-of-type {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* ===== CV ===== */
+.cv-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.cv-category h3 {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.cv-item {
+  margin-bottom: 1.8rem;
+}
+
+.cv-item-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.cv-item-detail {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.cv-item-year {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-top: 0.2rem;
+}
+
+/* ===== WORKS / NETFLIX ROWS ===== */
+.works-section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.works-header {
+  padding: 0 3rem;
+  margin-bottom: 3rem;
+}
+
+.works-row {
+  margin-bottom: 3rem;
+}
+
+.works-row-title {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 0 3rem;
+  margin-bottom: 1rem;
+}
+
+.works-scroll-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.works-scroll {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 3rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.works-scroll::-webkit-scrollbar { display: none; }
+.works-scroll:active { cursor: grabbing; }
+
+.work-card {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-card);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.work-card:hover {
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  z-index: 10;
+}
+
+.work-card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transition: filter 0.4s ease;
+}
+
+.work-card:hover .work-card-image {
+  filter: brightness(0.5);
+}
+
+.work-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.3) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.work-card:hover .work-card-overlay {
+  opacity: 1;
+}
+
+.work-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.work-card-meta {
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.work-card-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.work-card-bottom {
+  padding: 0.8rem 1rem;
+  background: var(--bg-card);
+}
+
+.work-card-bottom-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.work-card-bottom-year {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgba(10,10,10,0.8), transparent);
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.scroll-arrow.right {
+  right: 0;
+  background: linear-gradient(to left, rgba(10,10,10,0.8), transparent);
+}
+
+.scroll-arrow.left { left: 0; }
+
+.works-scroll-container:hover .scroll-arrow {
+  opacity: 1;
+}
+
+/* ===== STATEMENT ===== */
+.statement {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 8rem 3rem;
+  position: relative;
+}
+
+.statement::before {
+  content: '\201C';
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: 8rem;
+  color: var(--border);
+  line-height: 1;
+}
+
+.statement p {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 2;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.statement .highlight {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+/* ===== PAR JOURNAL ===== */
+.par-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.par-timeline {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.par-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent), var(--border), transparent);
+}
+
+.par-entry {
+  padding-left: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.par-entry.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.par-entry::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 0.5rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(196, 168, 130, 0.3);
+}
+
+.par-date {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  margin-bottom: 0.5rem;
+}
+
+.par-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.par-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.par-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.par-tag {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 2px;
+}
+
+/* ===== GALLERY ===== */
+.gallery-section {
+  padding: 6rem 0;
+}
+
+.gallery-header {
+  padding: 0 3rem;
+  margin-bottom: 3rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 4px;
+  padding: 0 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.4s ease;
+  filter: grayscale(30%) brightness(0.85);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+  filter: grayscale(0%) brightness(1);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.7) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+.gallery-item-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.gallery-item.wide { grid-column: span 2; }
+.gallery-item.tall { grid-row: span 2; aspect-ratio: auto; }
+
+/* ===== CONTACT ===== */
+.contact {
+  text-align: center;
+  padding: 8rem 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-email {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 300;
+  color: var(--text-primary);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.contact-email:hover {
+  color: var(--accent);
+}
+
+.contact-email::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.contact-email:hover::after {
+  transform: scaleX(1);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-links a {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: var(--accent);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 3rem;
+  border-top: 1px solid var(--border);
+}
+
+footer p {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.6); transform-origin: top; }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  nav.scrolled { padding: 0.8rem 1.5rem; }
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  
+  section { padding: 4rem 1.5rem; }
+  .hero { padding: 0 1.5rem 4rem; }
+  
+  .about { grid-template-columns: 1fr; gap: 3rem; }
+  .about-image-border { display: none; }
+  
+  .cv-grid { grid-template-columns: 1fr; gap: 2rem; }
+  
+  .work-card { flex: 0 0 260px; }
+  .works-scroll { padding: 1rem 1.5rem; }
+  .works-row-title { padding: 0 1.5rem; }
+  .works-header { padding: 0 1.5rem; }
+  
+  .gallery-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 0 1.5rem;
+  }
+  .gallery-item.wide { grid-column: span 1; }
+  .gallery-item.tall { grid-row: span 1; aspect-ratio: 4/3; }
+  
+  .scroll-indicator { display: none; }
+  .statement { padding: 5rem 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .work-card { flex: 0 0 85vw; }
+}
+
+/* ===== GRAIN OVERLAY ===== */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox.active { display: flex; }
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Zhenhao <span>Wen</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#statement">Statement</a></li>
+    <li><a href="#par">PAR Journal</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-tag">Performance Studies / Practice as Research / Embodied Grammar</p>
+    <h1 class="hero-title">What Is <em>Fragile</em><br>Is Still Worth Keeping</h1>
+    <p class="hero-sub">Zhenhao Wen / &#28201;&#38215;&#28009;</p>
+    <p class="hero-chinese">&#26131;&#30862;&#20043;&#29289;&#20381;&#28982;&#20540;&#24471;&#29645;&#24796;</p>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="padding-bottom: 2rem;">
+  <div class="about">
+    <div class="about-image-container">
+      <img class="about-image" src="https://static.wixstatic.com/media/7b91af_4b95a6fbee1d4d8daafd9c2273650541~mv2.jpg/v1/fill/w_600,h_800,al_c,q_85,enc_avif,quality_auto/IMG_3382_edited.jpg" alt="Zhenhao Wen portrait">
+      <div class="about-image-border"></div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">About</p>
+      <h2 class="section-title">My name is Zhenhao Wen,<br>born in 2000.</h2>
+      <p style="font-family: var(--font-display); font-size: 1.3rem; color: var(--text-primary); line-height: 1.6;">
+        I'm in the process of shaping my voice as an artist. I am a performer, researcher, and choreographer working at the intersection of embodied knowledge, practice-as-research, and performance studies.
+      </p>
+      <p>
+        My research framework, "embodied grammar," examines how bodies create knowledge through movement and improvisation. I investigate perceptual dispossession in Chinese dance training and explore how embodied practices carry cultural memory across borders.
+      </p>
+      <p>
+        Currently a PhD student in Performance Studies at the University of Hawai&#699;i at M&#257;noa, I hold an M.Sc. in Dance Science from the University of Edinburgh and a B.A. in Dance Performance from Shanghai Theatre Academy. My training spans contemporary dance, martial arts, tai chi, and Latin dance.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CV -->
+<section class="cv-section" id="cv">
+  <p class="section-label">Curriculum Vitae</p>
+  <h2 class="section-title">Selected Experience</h2>
+  <div class="cv-grid">
+    <div class="cv-category">
+      <h3>Education</h3>
+      <div class="cv-item">
+        <div class="cv-item-title">University of Hawai&#699;i at M&#257;noa</div>
+        <div class="cv-item-detail">PhD in Theatre &amp; Dance, Performance Studies</div>
+        <div class="cv-item-year">2025 ~ present</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-title">The University of Edinburgh</div>
+        <div class="cv-item-detail">M.Sc. Dance Science &amp; Education</div>
+        <div class="cv-item-year">2023 ~ 2024</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-title">Shanghai Theatre Academy</div>
+        <div class="cv-item-detail">B.A. Dance Performance</div>
+        <div class="cv-item-year">2019 ~ 2023</div>
+      </div>
+    </div>
+    <div class="cv-category">
+      <h3>Awards &amp; Performance</h3>
+      <div class="cv-item">
+        <div class="cv-item-title">Principal Performer, Elegies</div>
+        <div class="cv-item-detail">Pomegranate Arts Festival, Scotland</div>
+        <div class="cv-item-year">2024</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-title">Principal Performer, Elegies</div>
+        <div class="cv-item-detail">Scottish International Storytelling Festival</div>
+        <div class="cv-item-year">2023</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-title">Lead Role, Yellow River</div>
+        <div class="cv-item-detail">Shanghai International Dance Center</div>
+        <div class="cv-item-year">2021</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-title">World Champion Team, Zootopia</div>
+        <div class="cv-item-detail">Blackpool Dance Festival, UK</div>
+        <div class="cv-item-year">2017</div>
+      </div>
+    </div>
+    <div class="cv-category">
+      <h3>Research &amp; Teaching</h3>
+      <div class="cv-item">
+        <div class="cv-item-title">Graduate Assistant &amp; Instructor</div>
+        <div class="cv-item-detail">University of Hawai&#699;i at M&#257;noa, Dept. of Theatre &amp; Dance</div>
+        <div class="cv-item-year">2025 ~ present</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-title">Teaching Assistant &amp; Instructor</div>
+        <div class="cv-item-detail">Sichuan Conservatory of Music</div>
+        <div class="cv-item-year">Sep 2024 ~ Jan 2025</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-title">Emotional &amp; Bodily Awareness in Dance</div>
+        <div class="cv-item-detail">MAIA Theory Research</div>
+        <div class="cv-item-year">2024</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-item-title">Independent Dance Film Director</div>
+        <div class="cv-item-detail">Producer &amp; Filmmaker</div>
+        <div class="cv-item-year">2024 ~ 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section class="works-section" id="works">
+  <div class="works-header">
+    <p class="section-label">Portfolio</p>
+    <h2 class="section-title">Works</h2>
+  </div>
+  
+  <div class="works-row">
+    <p class="works-row-title">Performance</p>
+    <div class="works-scroll-container">
+      <button class="scroll-arrow left" onclick="scrollRow(this, -1)">&#8249;</button>
+      <div class="works-scroll">
+        <div class="work-card">
+          <img class="work-card-image" src="https://static.wixstatic.com/media/7b91af_304f164d841348288759e14b012ad131~mv2.jpeg/v1/fill/w_640,h_360,al_c,q_80,enc_avif,quality_auto/7b91af_304f164d841348288759e14b012ad131~mv2.jpeg" alt="Performance work">
+          <div class="work-card-overlay">
+            <div class="work-card-meta">Performance</div>
+            <div class="work-card-title">Elegies</div>
+            <div class="work-card-desc">Scottish International Storytelling Festival / Pomegranate Arts Festival</div>
+          </div>
+          <div class="work-card-bottom">
+            <div class="work-card-bottom-title">Elegies</div>
+            <div class="work-card-bottom-year">2023 / 2024</div>
+          </div>
+        </div>
+        <div class="work-card">
+          <img class="work-card-image" src="https://static.wixstatic.com/media/7b91af_2a274c1e323143be85c2c5b8f45fea15~mv2.jpeg/v1/fill/w_640,h_360,al_c,q_80,enc_avif,quality_auto/A18F03A7-66B4-4E9E-A6CD-6EAA0D036F4F_1_201_a.jpeg" alt="Yellow River">
+          <div class="work-card-overlay">
+            <div class="work-card-meta">Lead Role</div>
+            <div class="work-card-title">Yellow River</div>
+            <div class="work-card-desc">Symphonic Dance Epic, Shanghai International Dance Center</div>
+          </div>
+          <div class="work-card-bottom">
+            <div class="work-card-bottom-title">Yellow River</div>
+            <div class="work-card-bottom-year">2021</div>
+          </div>
+        </div>
+        <div class="work-card">
+          <img class="work-card-image" src="https://static.wixstatic.com/media/7b91af_4268b00e9f28476db462704472051ff9~mv2.jpg/v1/fill/w_640,h_360,al_c,q_80,enc_avif,quality_auto/7b91af_4268b00e9f28476db462704472051ff9~mv2.jpg" alt="Gallery photo">
+          <div class="work-card-overlay">
+            <div class="work-card-meta">World Champion Team</div>
+            <div class="work-card-title">Zootopia</div>
+            <div class="work-card-desc">Blackpool Dance Festival, United Kingdom</div>
+          </div>
+          <div class="work-card-bottom">
+            <div class="work-card-bottom-title">Zootopia</div>
+            <div class="work-card-bottom-year">2017</div>
+          </div>
+        </div>
+        <div class="work-card">
+          <img class="work-card-image" src="https://static.wixstatic.com/media/7b91af_9ecbd6e23340469890e6430f7b77c3de~mv2.png/v1/fill/w_640,h_360,al_c,q_90,enc_avif,quality_auto/7b91af_9ecbd6e23340469890e6430f7b77c3de~mv2.png" alt="Red Flag Anthem">
+          <div class="work-card-overlay">
+            <div class="work-card-meta">Television</div>
+            <div class="work-card-title">Red Flag Anthem</div>
+            <div class="work-card-desc">Dongfang TV, 100th Anniversary Gala</div>
+          </div>
+          <div class="work-card-bottom">
+            <div class="work-card-bottom-title">Red Flag Anthem</div>
+            <div class="work-card-bottom-year">2021</div>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-arrow right" onclick="scrollRow(this, 1)">&#8250;</button>
+    </div>
+  </div>
+  
+  <div class="works-row">
+    <p class="works-row-title">Research</p>
+    <div class="works-scroll-container">
+      <button class="scroll-arrow left" onclick="scrollRow(this, -1)">&#8249;</button>
+      <div class="works-scroll">
+        <div class="work-card">
+          <img class="work-card-image" src="https://static.wixstatic.com/media/7b91af_eb387db990e3438185c960221c84b49b~mv2.jpg/v1/fill/w_640,h_360,al_c,q_80,enc_avif,quality_auto/DSCF0953.jpg" alt="Embodied Grammar">
+          <div class="work-card-overlay">
+            <div class="work-card-meta">PhD Research</div>
+            <div class="work-card-title">Embodied Grammar</div>
+            <div class="work-card-desc">How bodies create knowledge through movement and improvisation</div>
+          </div>
+          <div class="work-card-bottom">
+            <div class="work-card-bottom-title">Embodied Grammar</div>
+            <div class="work-card-bottom-year">2025 ~ ongoing</div>
+          </div>
+        </div>
+        <div class="work-card">
+          <img class="work-card-image" src="https://static.wixstatic.com/media/7b91af_14b420c7de88489b841d49f5aa25dbb6~mv2.jpg/v1/fill/w_640,h_360,al_c,q_80,enc_avif,quality_auto/DSCF0921.jpg" alt="MAIA Theory">
+          <div class="work-card-overlay">
+            <div class="work-card-meta">M.Sc. Research</div>
+            <div class="work-card-title">Emotional &amp; Bodily Awareness</div>
+            <div class="work-card-desc">MAIA Theory applied to dance practice and interoception</div>
+          </div>
+          <div class="work-card-bottom">
+            <div class="work-card-bottom-title">MAIA Theory Research</div>
+            <div class="work-card-bottom-year">2024</div>
+          </div>
+        </div>
+        <div class="work-card">
+          <img class="work-card-image" src="https://static.wixstatic.com/media/7b91af_747f6a66438a4c138c4455c4705e8025~mv2.jpg/v1/fill/w_640,h_360,al_c,q_80,enc_avif,quality_auto/DSCF0614.jpg" alt="Ballroom Dance">
+          <div class="work-card-overlay">
+            <div class="work-card-meta">Research</div>
+            <div class="work-card-title">Ballroom Dance in Emerging Media</div>
+            <div class="work-card-desc">Transformation and mediation of ballroom dance forms</div>
+          </div>
+          <div class="work-card-bottom">
+            <div class="work-card-bottom-title">Ballroom in Emerging Media</div>
+            <div class="work-card-bottom-year">2023</div>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-arrow right" onclick="scrollRow(this, 1)">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ARTIST STATEMENT -->
+<section class="statement" id="statement">
+  <p class="section-label">Artist Statement</p>
+  <p class="highlight">I'm just an ordinary person, but I want to be seen.</p>
+  <p>
+    I am not extraordinary. I don't shine the way people expect. I am clumsy sometimes, fragile most of the time. And yet I want to be seen. Don't you? Don't you also long for the moments when you feel small, or broken, or almost invisible, to still be remembered?
+  </p>
+  <p>
+    We are told only the perfect deserves to last, that only the flawless should be kept. But I don't believe that. I think our raw, unfinished, trembling selves also matter. They carry truth. They carry memory.
+  </p>
+  <p>
+    So this is not a monument. It is a doorway. A space to hold what usually slips away. A place where the incomplete, the unpolished, the too-much and not-enough can breathe.
+  </p>
+  <p class="highlight" style="margin-top: 2rem;">What is fragile is still worth keeping.<br><span style="color: var(--text-muted); font-size: 1rem;">&#26131;&#30862;&#20043;&#29289;&#20381;&#28982;&#20540;&#24471;&#29645;&#24796;</span></p>
+</section>
+
+<!-- PAR JOURNAL -->
+<section class="par-section" id="par">
+  <p class="section-label">Practice as Research</p>
+  <h2 class="section-title">PAR Journal</h2>
+  <div class="par-timeline">
+    <div class="par-entry">
+      <p class="par-date">Spring 2025</p>
+      <h3 class="par-title">Solo Improvisation Sessions, Honolulu</h3>
+      <p class="par-text">
+        Seven weeks of solo improvisation recorded and analyzed as practice-as-research. Each session begins with a different entry point: breath, weight, peripheral vision, floor contact. The body is both subject and instrument. What emerges is not choreography but an archaeology of habits, resistances, and sudden discoveries.
+      </p>
+      <div class="par-tags">
+        <span class="par-tag">Improvisation</span>
+        <span class="par-tag">Embodied Grammar</span>
+        <span class="par-tag">Video Analysis</span>
+      </div>
+    </div>
+    <div class="par-entry">
+      <p class="par-date">Spring 2025</p>
+      <h3 class="par-title">Perceptual Dispossession in Chinese Dance Training</h3>
+      <p class="par-text">
+        Conference paper in development for the AAAS panel examining how Chinese dance pedagogy systematically reorganizes the student's perceptual field. The body learns to override its own signals. What is trained is not just movement but a particular relationship to sensation, pain, and authority.
+      </p>
+      <div class="par-tags">
+        <span class="par-tag">Phenomenology</span>
+        <span class="par-tag">Pedagogy</span>
+        <span class="par-tag">Cultural Analysis</span>
+      </div>
+    </div>
+    <div class="par-entry">
+      <p class="par-date">2024 ~ 2025</p>
+      <h3 class="par-title">Festival &#224; Corps, France</h3>
+      <p class="par-text">
+        Observing and participating in international performance practices. Documenting the gap between trained bodies and untrained environments, between institutional choreography and improvised response.
+      </p>
+      <div class="par-tags">
+        <span class="par-tag">Festival</span>
+        <span class="par-tag">Cross-cultural</span>
+        <span class="par-tag">Documentation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <div class="gallery-header">
+    <p class="section-label">Personal Gallery</p>
+    <h2 class="section-title">Through My Eyes</h2>
+    <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 600px;">
+      I have never studied photography in any formal way, but I have watched countless films, walked through museums, churches, and galleries. My sense of aesthetics belongs only to me, because the world I see is exactly as I see it.
+    </p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item wide" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_9ecbd6e23340469890e6430f7b77c3de~mv2.png/v1/fill/w_800,h_450,al_c,q_90,enc_avif,quality_auto/7b91af_9ecbd6e23340469890e6430f7b77c3de~mv2.png" alt="France" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">France</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_747f6a66438a4c138c4455c4705e8025~mv2.jpg/v1/fill/w_600,h_450,al_c,q_80,enc_avif,quality_auto/DSCF0614.jpg" alt="France" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">France</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_eb387db990e3438185c960221c84b49b~mv2.jpg/v1/fill/w_600,h_450,al_c,q_80,enc_avif,quality_auto/DSCF0953.jpg" alt="France" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">France</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_353126339da94c78bad3be190531d5e1~mv2.jpg/v1/fill/w_600,h_450,al_c,q_80,enc_avif,quality_auto/DSCF0995.jpg" alt="France" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">France</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_ae6d8d0ee2bd443c93eeec820ab4f12d~mv2.jpg/v1/fill/w_600,h_337,al_c,q_80,enc_avif,quality_auto/7b91af_ae6d8d0ee2bd443c93eeec820ab4f12d~mv2.jpg" alt="Scotland" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">Scotland</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_3c34294e151e47ee818225865c1c85c7~mv2.jpg/v1/fill/w_600,h_337,al_c,q_80,enc_avif,quality_auto/7b91af_3c34294e151e47ee818225865c1c85c7~mv2.jpg" alt="Scotland" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">Scotland</span></div>
+    </div>
+    <div class="gallery-item wide" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_1ed5e8723fbf429ea4f56662217bcef6~mv2.jpg/v1/fill/w_800,h_533,al_c,q_80,enc_avif,quality_auto/7b91af_1ed5e8723fbf429ea4f56662217bcef6~mv2.jpg" alt="Iceland" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">Iceland</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_8577eecd330e42beaf7730e38431a9ad~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_avif,quality_auto/7b91af_8577eecd330e42beaf7730e38431a9ad~mv2.jpg" alt="Iceland" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">Iceland</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_33bd20247ddd417c8952571e25804726~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_avif,quality_auto/7b91af_33bd20247ddd417c8952571e25804726~mv2.jpg" alt="Iceland" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">Iceland</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_a75f0ec088e44032baed88e7d22c6a63~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_avif,quality_auto/7b91af_a75f0ec088e44032baed88e7d22c6a63~mv2.jpg" alt="Iceland" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">Iceland</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_855ca77e487248e089cea7d89c4f18e2~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_avif,quality_auto/7b91af_855ca77e487248e089cea7d89c4f18e2~mv2.jpg" alt="Iceland" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">Iceland</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_d138554dcf454d6ca7898a0a31b37e06~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_avif,quality_auto/7b91af_d138554dcf454d6ca7898a0a31b37e06~mv2.jpg" alt="Iceland" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">Iceland</span></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://static.wixstatic.com/media/7b91af_68bbdd041bac497190951da7a848adb4~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,enc_avif,quality_auto/7b91af_68bbdd041bac497190951da7a848adb4~mv2.jpg" alt="Portrait" loading="lazy">
+      <div class="gallery-item-overlay"><span class="gallery-item-label">Portrait</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <p class="section-label">Get in Touch</p>
+  <h2 class="section-title" style="margin-bottom: 1rem;">Let's Connect</h2>
+  <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2.5rem;">
+    Open to collaboration, conversation, and new possibilities.
+  </p>
+  <a href="mailto:zhenhao@hawaii.edu" class="contact-email">zhenhao@hawaii.edu</a>
+  <div class="contact-links">
+    <a href="#">Instagram</a>
+    <a href="#">Vimeo</a>
+    <a href="#">Scholar</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 Zhenhao Wen. All photographs by the artist.</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close">&times;</button>
+  <img src="" alt="Gallery image">
+</div>
+
+<script>
+// Nav scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 80);
+});
+
+// Mobile nav toggle
+function toggleNav() {
+  const links = document.querySelector('.nav-links');
+  if (links.style.display === 'flex') {
+    links.style.display = 'none';
+  } else {
+    links.style.display = 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '100%';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = 'rgba(10,10,10,0.95)';
+    links.style.padding = '2rem';
+    links.style.gap = '1.5rem';
+    links.style.backdropFilter = 'blur(20px)';
+  }
+}
+
+// Scroll rows
+function scrollRow(btn, direction) {
+  const container = btn.parentElement.querySelector('.works-scroll');
+  const scrollAmount = 340 * direction;
+  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+
+// Drag to scroll
+document.querySelectorAll('.works-scroll').forEach(el => {
+  let isDown = false, startX, scrollLeft;
+  el.addEventListener('mousedown', e => {
+    isDown = true;
+    startX = e.pageX - el.offsetLeft;
+    scrollLeft = el.scrollLeft;
+  });
+  el.addEventListener('mouseleave', () => isDown = false);
+  el.addEventListener('mouseup', () => isDown = false);
+  el.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - el.offsetLeft;
+    el.scrollLeft = scrollLeft - (x - startX) * 1.5;
+  });
+});
+
+// PAR entries scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.par-entry').forEach(el => observer.observe(el));
+
+// Lightbox
+function openLightbox(item) {
+  const src = item.querySelector('img').src;
+  const lightbox = document.getElementById('lightbox');
+  lightbox.querySelector('img').src = src;
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+// Smooth scroll for nav links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    if (window.innerWidth <= 900) {
+      document.querySelector('.nav-links').style.display = 'none';
+    }
+  });
+});
+</script>
+</body>
+</html>
