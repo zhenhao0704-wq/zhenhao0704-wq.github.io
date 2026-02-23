@@ -440,4 +440,9 @@ function openVideo(videoId){const modal=document.getElementById('videoModal');co
 function closeVideo(){const modal=document.getElementById('videoModal');const frame=document.getElementById('videoFrame');frame.src='';modal.classList.remove('active');document.body.style.overflow=''}
 document.getElementById('videoModal').addEventListener('click',function(e){if(e.target===this)closeVideo()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeVideo();closeLightbox()}});
-function openLightbox(el){const img=el.querySelector('img');const lb=document.getElementById('lightbox');document.getElementById('lightboxImg').src=img.src;lb.classList.add('active');document.body.style.overflo
+function openLightbox(el){const img=el.querySelector('img');const lb=document.getElementById('lightbox');document.getElementById('lightboxImg').src=img.src;lb.classList.add('active');document.body.style.overflow='hidden'}
+function closeLightbox(){const lb=document.getElementById('lightbox');lb.classList.remove('active');document.body.style.overflow=''}
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this||e.target.id==='lightboxImg')closeLightbox()});
+</script>-e 
+</body>
+</html>
