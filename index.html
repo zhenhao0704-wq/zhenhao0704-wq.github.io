@@ -53,6 +53,23 @@ section{padding:6rem 4rem}.section-label{font-family:var(--font-display);font-si
 .country-album:hover .country-album-hint{opacity:1}
 .country-album.wide{grid-column:span 2}
 
+/* PHOTOGRAPHY - Friends Grid */
+.photo-section{padding:6rem 4rem}
+.photo-header{margin-bottom:3rem}
+.photo-header p{font-family:var(--font-serif);font-style:italic;color:var(--text-secondary);font-size:1rem;max-width:650px;margin-top:1rem;line-height:1.8}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:2rem}
+.photo-item{position:relative;overflow:hidden;cursor:pointer;background:var(--bg-card)}
+.photo-item img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.9)}
+.photo-item:hover img{transform:scale(1.05);filter:brightness(1)}
+.photo-item.wide{grid-column:span 2}
+.photo-item.tall{grid-row:span 2}
+.photo-item.tall img{aspect-ratio:auto;height:100%}
+.photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.6) 0%,transparent 50%);opacity:0;transition:opacity .4s ease;pointer-events:none}
+.photo-item:hover .photo-overlay{opacity:1}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:10001;display:none;align-items:center;justify-content:center;cursor:pointer}
+.lightbox.active{display:flex}
+.lightbox img{max-width:90vw;max-height:90vh;object-fit:contain}
+
 /* CONTACT - Editorial Minimal */
 .contact-section{padding:10rem 4rem;position:relative;overflow:hidden}
 .contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end}
@@ -75,9 +92,9 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.6);transform-origin:top}50%{opacity:1;transform:scaleY(1)}}
 
-@media(max-width:1024px){.country-grid{grid-template-columns:repeat(3,1fr)}.country-album.wide{grid-column:span 1}}
-@media(max-width:900px){nav{padding:1rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}.nav-links{display:none}.nav-toggle{display:block}section{padding:4rem 1.5rem}.hero{padding:0 1.5rem}.about{grid-template-columns:1fr;gap:3rem}.cv-grid{grid-template-columns:1fr;gap:2rem}.work-card{flex:0 0 280px}.works-scroll{padding:1rem 1.5rem}.works-row-title{padding:0 1.5rem}.works-header{padding:0 1.5rem}.gallery-section{padding:4rem 1.5rem}.country-grid{grid-template-columns:repeat(2,1fr)}.scroll-indicator{display:none}.statement{padding:5rem 1.5rem}.contact-section{padding:6rem 1.5rem}.contact-inner{grid-template-columns:1fr;gap:3rem}.hero-buttons{flex-direction:column}}
-@media(max-width:600px){.country-grid{grid-template-columns:1fr 1fr}.work-card{flex:0 0 85vw}.hero-title{font-size:3.5rem}.contact-title{font-size:3.5rem}}
+@media(max-width:1024px){.country-grid{grid-template-columns:repeat(3,1fr)}.country-album.wide{grid-column:span 1}.photo-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){nav{padding:1rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}.nav-links{display:none}.nav-toggle{display:block}section{padding:4rem 1.5rem}.hero{padding:0 1.5rem}.about{grid-template-columns:1fr;gap:3rem}.cv-grid{grid-template-columns:1fr;gap:2rem}.work-card{flex:0 0 280px}.works-scroll{padding:1rem 1.5rem}.works-row-title{padding:0 1.5rem}.works-header{padding:0 1.5rem}.gallery-section{padding:4rem 1.5rem}.photo-section{padding:4rem 1.5rem}.country-grid{grid-template-columns:repeat(2,1fr)}.scroll-indicator{display:none}.statement{padding:5rem 1.5rem}.contact-section{padding:6rem 1.5rem}.contact-inner{grid-template-columns:1fr;gap:3rem}.hero-buttons{flex-direction:column}}
+@media(max-width:600px){.country-grid{grid-template-columns:1fr 1fr}.photo-grid{grid-template-columns:1fr}.photo-item.wide{grid-column:span 1}.photo-item.tall{grid-row:span 1}.photo-item.tall img{aspect-ratio:16/10;height:auto}.work-card{flex:0 0 85vw}.hero-title{font-size:3.5rem}.contact-title{font-size:3.5rem}}
 </style>
 </head>
 <body>
@@ -87,6 +104,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#works">Works</a></li>
+    <li><a href="#photography">Photography</a></li>
     <li><a href="#statement">Statement</a></li>
     <li><a href="#par">PAR Journal</a></li>
     <li><a href="#gallery">Gallery</a></li>
@@ -176,6 +194,32 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
   </div>
 </section>
 
+<section class="photo-section" id="photography">
+  <div class="photo-header">
+    <p class="section-label">Photography</p>
+    <h2 class="section-title">友達</h2>
+    <div class="section-divider"></div>
+    <p>Production photography from Abe Kōbō's <em>Friends</em> (友達, 1967). A tragicomic drama in thirteen scenes about a family who forces their way into a man's apartment and refuses to leave.</p>
+  </div>
+  <div class="photo-grid">
+    <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-hero.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/friends-red-profile.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-table.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-embrace.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-fence.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-girl-fence.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-cage.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-blood-close.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-blood-fence.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-blood-stand.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-group.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-applause.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-wide.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-floor.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+    <div class="photo-item" onclick="openLightbox(this)"><img src="img/friends-curly.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+  </div>
+</section>
+
 <section class="statement" id="statement">
   <p class="section-label">Artist Statement</p>
   <h2 class="statement-quote">I'm just an <span class="red">ordinary</span> person,<br>but I want to be <span class="red">seen.</span></h2>
@@ -261,6 +305,10 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
 
 <footer><p>&copy; 2025 Zhenhao Wen. All photographs by the artist.</p></footer>
 
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt="">
+</div>
+
 <div class="video-modal" id="videoModal">
   <div class="video-modal-content">
     <button class="video-modal-close" onclick="closeVideo()">&times;</button>
@@ -277,8 +325,7 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(e
 function openVideo(videoId){const modal=document.getElementById('videoModal');const frame=document.getElementById('videoFrame');frame.src='https://www.youtube.com/embed/'+videoId+'?autoplay=1&rel=0';modal.classList.add('active');document.body.style.overflow='hidden'}
 function closeVideo(){const modal=document.getElementById('videoModal');const frame=document.getElementById('videoFrame');frame.src='';modal.classList.remove('active');document.body.style.overflow=''}
 document.getElementById('videoModal').addEventListener('click',function(e){if(e.target===this)closeVideo()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVideo()});
-document.querySelectorAll('.nav-links a').forEach(link=>{link.addEventListener('click',e=>{e.preventDefault();const target=document.querySelector(link.getAttribute('href'));if(target)target.scrollIntoView({behavior:'smooth'});if(window.innerWidth<=900)document.querySelector('.nav-links').style.display='none'})});
-</script>
-</body>
-</html>
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeVideo();closeLightbox()}});
+function openLightbox(el){const img=el.querySelector('img');const lb=document.getElementById('lightbox');document.getElementById('lightboxImg').src=img.src;lb.classList.add('active');document.body.style.overflow='hidden'}
+function closeLightbox(){const lb=document.getElementById('lightbox');lb.classList.remove('active');document.body.style.overflow=''}
+document.querySelectorAll('.nav-links a').forEach(link=>{link.addEventListener('click',e=>{e.preve
