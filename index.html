@@ -40,7 +40,7 @@ section{padding:6rem 4rem}.section-label{font-family:var(--font-display);font-si
 .gallery-section{padding:6rem 4rem}
 .gallery-header{margin-bottom:3rem}
 .gallery-header p{font-family:var(--font-serif);font-style:italic;color:var(--text-secondary);font-size:1rem;max-width:650px;margin-top:1rem;line-height:1.8}
-.country-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:2rem}
+.country-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:2rem;max-width:1100px;margin-left:auto;margin-right:auto}
 .country-album{position:relative;aspect-ratio:4/3;overflow:hidden;cursor:pointer;background:var(--bg-card);border:1px solid var(--border);transition:all .4s ease}
 .country-album:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 10px 40px rgba(0,0,0,.5),0 0 20px var(--red-glow)}
 .country-album-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(20,20,20,.95),rgba(30,30,30,.9));transition:background .4s ease}
@@ -51,17 +51,19 @@ section{padding:6rem 4rem}.section-label{font-family:var(--font-display);font-si
 .country-album:hover .country-album-line{width:50px;background:var(--red)}
 .country-album-hint{font-size:.6rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-top:.8rem;opacity:0;transition:opacity .3s ease}
 .country-album:hover .country-album-hint{opacity:1}
+.country-album:hover>img{transform:scale(1.08);filter:brightness(.55)}
 .country-album.wide{grid-column:span 2}
 
 /* PHOTOGRAPHY - Friends Grid */
 .photo-section{padding:6rem 4rem}
 .photo-header{margin-bottom:3rem}
 .photo-header p{font-family:var(--font-serif);font-style:italic;color:var(--text-secondary);font-size:1rem;max-width:650px;margin-top:1rem;line-height:1.8}
-.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:2rem}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:2rem;max-width:1100px;margin-left:auto;margin-right:auto}
 .photo-item{position:relative;overflow:hidden;cursor:pointer;background:var(--bg-card)}
 .photo-item img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.9)}
 .photo-item:hover img{transform:scale(1.05);filter:brightness(1)}
 .photo-item.wide{grid-column:span 2}
+.photo-grid-4{grid-template-columns:repeat(4,1fr)}
 .photo-item.tall{grid-row:span 2}
 .photo-item.tall img{aspect-ratio:auto;height:100%}
 .photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.6) 0%,transparent 50%);opacity:0;transition:opacity .4s ease;pointer-events:none}
@@ -93,9 +95,9 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.6);transform-origin:top}50%{opacity:1;transform:scaleY(1)}}
 
-@media(max-width:1024px){.country-grid{grid-template-columns:repeat(3,1fr)}.country-album.wide{grid-column:span 1}.photo-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1024px){.country-grid{grid-template-columns:repeat(3,1fr)}.country-album.wide{grid-column:span 1}.photo-grid{grid-template-columns:repeat(2,1fr)}.photo-grid-4{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){nav{padding:1rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}.nav-links{display:none}.nav-toggle{display:block}section{padding:4rem 1.5rem}.hero{padding:0 1.5rem}.about{grid-template-columns:1fr;gap:3rem}.cv-grid{grid-template-columns:1fr;gap:2rem}.work-card{flex:0 0 280px}.works-scroll{padding:1rem 1.5rem}.works-row-title{padding:0 1.5rem}.works-header{padding:0 1.5rem}.gallery-section{padding:4rem 1.5rem}.photo-section{padding:4rem 1.5rem}.country-grid{grid-template-columns:repeat(2,1fr)}.scroll-indicator{display:none}.statement{padding:5rem 1.5rem}.contact-section{padding:6rem 1.5rem}.contact-inner{grid-template-columns:1fr;gap:3rem}.hero-buttons{flex-direction:column}}
-@media(max-width:600px){.country-grid{grid-template-columns:1fr 1fr}.photo-grid{grid-template-columns:1fr}.photo-item.wide{grid-column:span 1}.photo-item.tall{grid-row:span 1}.photo-item.tall img{aspect-ratio:16/10;height:auto}.work-card{flex:0 0 85vw}.hero-title{font-size:3.5rem}.contact-title{font-size:3.5rem}}
+@media(max-width:600px){.country-grid{grid-template-columns:1fr 1fr}.photo-grid{grid-template-columns:1fr}.photo-grid-4{grid-template-columns:1fr 1fr}.photo-item.wide{grid-column:span 1}.photo-item.tall{grid-row:span 1}.photo-item.tall img{aspect-ratio:16/10;height:auto}.work-card{flex:0 0 85vw}.hero-title{font-size:3.5rem}.contact-title{font-size:3.5rem}}
 </style>
 </head>
 <body>
@@ -379,7 +381,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <p>I have never studied photography in any formal way, but I have watched countless films, walked through museums, churches, and galleries. My sense of aesthetics belongs only to me, because the world I see is exactly as I see it.</p>
   </div>
   <div class="country-grid">
-    <div class="country-album wide" onclick="toggleCountry('france')" style="cursor:pointer"><div class="country-album-inner"><div class="country-album-name">France</div><div class="country-album-line"></div><div class="country-album-hint">19 Photos</div></div></div>
+    <div class="country-album wide" onclick="toggleCountry('france')" style="cursor:pointer"><img src="img/france-sculpture-nature.jpeg" alt="France" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">France</div><div class="country-album-line"></div><div class="country-album-hint">19 Photos</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Italy</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">United Kingdom</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Japan</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
@@ -391,12 +393,12 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Nepal</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Egypt</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
   </div>
-  <div class="country-photos" id="france-photos" style="display:none;margin-top:3rem">
+  <div class="country-photos" id="france-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
       <h3 style="font-family:var(--font-display);font-size:2rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-primary)">France</h3>
       <button onclick="toggleCountry('france')" style="font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;color:var(--text-muted);background:none;border:1px solid var(--border);padding:.5rem 1.2rem;cursor:pointer;transition:all .3s">Close</button>
     </div>
-    <div class="photo-grid">
+    <div class="photo-grid photo-grid-4">
       <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-paris-hotel-de-ville.jpeg" alt="Paris" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-sculpture-grief.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-sculpture-nature.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
@@ -429,7 +431,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="contact-right">
       <div class="contact-item">
         <p class="contact-item-label">Email</p>
-        <a href="mailto:zhenhaow@hawaii.edu">zhenhaow@hawaii.edu</a>
+        <a href="/cdn-cgi/l/email-protection#93e9fbf6fdfbf2fce4d3fbf2e4f2fafabdf6f7e6"><span class="__cf_email__" data-cfemail="6913010c070108061e2901081e080000470c0d1c">[email&#160;protected]</span></a>
       </div>
       <div class="contact-line"></div>
       <div class="contact-item">
@@ -454,7 +456,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <p class="comments-subtitle">If something here resonated, challenged you, or reminded you of your own body's knowledge, I'd love to hear it. Sign in with GitHub to leave a comment.</p>
     </div>
     <div class="giscus-wrapper">
-      <script src="https://giscus.app/client.js"
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://giscus.app/client.js"
         data-repo="zhenhao0704-wq/zhenhao0704-wq.github.io"
         data-repo-id=""
         data-category="General"
@@ -500,8 +502,4 @@ function closeVideo(){const modal=document.getElementById('videoModal');const fr
 document.getElementById('videoModal').addEventListener('click',function(e){if(e.target===this)closeVideo()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeVideo();closeLightbox()}});
 function openLightbox(el){const img=el.querySelector('img');const lb=document.getElementById('lightbox');document.getElementById('lightboxImg').src=img.src;lb.classList.add('active');document.body.style.overflow='hidden'}
-function closeLightbox(){const lb=document.getElementById('lightbox');lb.classList.remove('active');document.body.style.overflow=''}
-document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this||e.target.id==='lightboxImg')closeLightbox()});
-</script>
-</body>
-</html>
+function closeLightbox(){const lb=document.getElementBy
