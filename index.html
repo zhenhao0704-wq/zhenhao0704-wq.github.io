@@ -64,6 +64,10 @@ section{padding:6rem 4rem}.section-label{font-family:var(--font-display);font-si
 .photo-item:hover img{transform:scale(1.05);filter:brightness(1)}
 .photo-item.wide{grid-column:span 2}
 .photo-grid-4{grid-template-columns:repeat(4,1fr)}
+.masonry-grid{column-count:4;column-gap:6px;max-width:1100px;margin-left:auto;margin-right:auto}
+.masonry-grid .photo-item{break-inside:avoid;margin-bottom:6px;display:block}
+.masonry-grid .photo-item img{width:100%;aspect-ratio:auto;height:auto;display:block;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.9)}
+.masonry-grid .photo-item:hover img{transform:scale(1.03);filter:brightness(1)}
 .photo-item.tall{grid-row:span 2}
 .photo-item.tall img{aspect-ratio:auto;height:100%}
 .photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.6) 0%,transparent 50%);opacity:0;transition:opacity .4s ease;pointer-events:none}
@@ -95,9 +99,9 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes scrollPulse{0%,100%{opacity:.3;transform:scaleY(.6);transform-origin:top}50%{opacity:1;transform:scaleY(1)}}
 
-@media(max-width:1024px){.country-grid{grid-template-columns:repeat(3,1fr)}.country-album.wide{grid-column:span 1}.photo-grid{grid-template-columns:repeat(2,1fr)}.photo-grid-4{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1024px){.country-grid{grid-template-columns:repeat(3,1fr)}.country-album.wide{grid-column:span 1}.photo-grid{grid-template-columns:repeat(2,1fr)}.photo-grid-4{grid-template-columns:repeat(3,1fr)}.masonry-grid{column-count:3}}
 @media(max-width:900px){nav{padding:1rem 1.5rem}nav.scrolled{padding:.8rem 1.5rem}.nav-links{display:none}.nav-toggle{display:block}section{padding:4rem 1.5rem}.hero{padding:0 1.5rem}.about{grid-template-columns:1fr;gap:3rem}.cv-grid{grid-template-columns:1fr;gap:2rem}.work-card{flex:0 0 280px}.works-scroll{padding:1rem 1.5rem}.works-row-title{padding:0 1.5rem}.works-header{padding:0 1.5rem}.gallery-section{padding:4rem 1.5rem}.photo-section{padding:4rem 1.5rem}.country-grid{grid-template-columns:repeat(2,1fr)}.scroll-indicator{display:none}.statement{padding:5rem 1.5rem}.contact-section{padding:6rem 1.5rem}.contact-inner{grid-template-columns:1fr;gap:3rem}.hero-buttons{flex-direction:column}}
-@media(max-width:600px){.country-grid{grid-template-columns:1fr 1fr}.photo-grid{grid-template-columns:1fr}.photo-grid-4{grid-template-columns:1fr 1fr}.photo-item.wide{grid-column:span 1}.photo-item.tall{grid-row:span 1}.photo-item.tall img{aspect-ratio:16/10;height:auto}.work-card{flex:0 0 85vw}.hero-title{font-size:3.5rem}.contact-title{font-size:3.5rem}}
+@media(max-width:600px){.country-grid{grid-template-columns:1fr 1fr}.photo-grid{grid-template-columns:1fr}.photo-grid-4{grid-template-columns:1fr 1fr}.masonry-grid{column-count:2}.photo-item.wide{grid-column:span 1}.photo-item.tall{grid-row:span 1}.photo-item.tall img{aspect-ratio:16/10;height:auto}.work-card{flex:0 0 85vw}.hero-title{font-size:3.5rem}.contact-title{font-size:3.5rem}}
 </style>
 </head>
 <body>
@@ -398,26 +402,26 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <h3 style="font-family:var(--font-display);font-size:2rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-primary)">France</h3>
       <button onclick="toggleCountry('france')" style="font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;color:var(--text-muted);background:none;border:1px solid var(--border);padding:.5rem 1.2rem;cursor:pointer;transition:all .3s">Close</button>
     </div>
-    <div class="photo-grid photo-grid-4">
-      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-paris-hotel-de-ville.jpeg" alt="Paris" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-sculpture-grief.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-sculpture-nature.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-sculpture-gladiator.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-orsay-silhouette.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-orsay-clock.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+    <div class="masonry-grid">
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-paris-hotel-de-ville.jpeg" alt="Paris" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-sculpture-grief.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-sculpture-nature.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-sculpture-gladiator.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-orsay-silhouette.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-orsay-clock.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-eiffel-night.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-cupid.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-nike.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-monalisa.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-louvre-cupid.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-louvre-nike.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-louvre-monalisa.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-louvre-old-man.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-gallery.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-reclining.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-louvre-venus.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-opera-hall.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-versailles-room.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-versailles-gallery.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item tall" onclick="openLightbox(this)"><img src="img/france-versailles-chandeliers.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/france-versailles-battles.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-louvre-gallery.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-louvre-reclining.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-louvre-venus.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-opera-hall.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-versailles-room.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-versailles-gallery.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-versailles-chandeliers.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item" onclick="openLightbox(this)"><img src="img/france-versailles-battles.jpeg" alt="France" loading="lazy"><div class="photo-overlay"></div></div>
     </div>
   </div>
 </section>
@@ -431,7 +435,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="contact-right">
       <div class="contact-item">
         <p class="contact-item-label">Email</p>
-        <a href="/cdn-cgi/l/email-protection#93e9fbf6fdfbf2fce4d3fbf2e4f2fafabdf6f7e6"><span class="__cf_email__" data-cfemail="6913010c070108061e2901081e080000470c0d1c">[email&#160;protected]</span></a>
+        <a href="mailto:zhenhaow@hawaii.edu">zhenhaow@hawaii.edu</a>
       </div>
       <div class="contact-line"></div>
       <div class="contact-item">
@@ -456,11 +460,11 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <p class="comments-subtitle">If something here resonated, challenged you, or reminded you of your own body's knowledge, I'd love to hear it. Sign in with GitHub to leave a comment.</p>
     </div>
     <div class="giscus-wrapper">
-      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://giscus.app/client.js"
+      <script src="https://giscus.app/client.js"
         data-repo="zhenhao0704-wq/zhenhao0704-wq.github.io"
-        data-repo-id=""
+        data-repo-id="R_kgDORWo8vA"
         data-category="General"
-        data-category-id=""
+        data-category-id="DIC_kwDORWo8vM4C3FLl"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
