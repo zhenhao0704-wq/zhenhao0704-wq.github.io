@@ -414,7 +414,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">United States</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Thailand</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Nepal</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
-    <div class="country-album" onclick="toggleCountry('egypt')" style="cursor:pointer"><img src="img/egypt-cave-church-selfie.jpg" alt="Egypt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Egypt</div><div class="country-album-line"></div><div class="country-album-hint">25 Photos</div></div></div>
+    <div class="country-album" onclick="toggleCountry('egypt')" style="cursor:pointer"><img src="img/egypt-ancient-painting.jpg" alt="Egypt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Egypt</div><div class="country-album-line"></div><div class="country-album-hint">25 Photos</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Indonesia</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Malaysia</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
   </div>
@@ -589,7 +589,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="contact-right">
       <div class="contact-item">
         <p class="contact-item-label">Email</p>
-        <a href="mailto:zhenhaow@hawaii.edu">zhenhaow@hawaii.edu</a>
+        <a href="/cdn-cgi/l/email-protection#067c6e63686e676971466e6771676f6f28636273"><span class="__cf_email__" data-cfemail="344e5c515a5c555b43745c5543555d5d1a515041">[email&#160;protected]</span></a>
       </div>
       <div class="contact-line"></div>
       <div class="contact-item">
@@ -614,7 +614,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <p class="comments-subtitle">If something here resonated, challenged you, or reminded you of your own body's knowledge, I'd love to hear it. Sign in with GitHub to leave a comment.</p>
     </div>
     <div class="giscus-wrapper">
-      <script src="https://giscus.app/client.js"
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://giscus.app/client.js"
         data-repo="zhenhao0704-wq/zhenhao0704-wq.github.io"
         data-repo-id="R_kgDORWo8vA"
         data-category="General"
@@ -659,8 +659,9 @@ function openVideo(videoId){const modal=document.getElementById('videoModal');co
 function closeVideo(){const modal=document.getElementById('videoModal');const frame=document.getElementById('videoFrame');frame.src='';modal.classList.remove('active');document.body.style.overflow=''}
 document.getElementById('videoModal').addEventListener('click',function(e){if(e.target===this)closeVideo()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeVideo();closeLightbox()}});
-function openLightbox(el){const img=el.querySelector('img');const lb=document.getElementById('lightbox');document.getElementById('lightboxImg').src=img.src;lb.classList.add('active');document.body.style.overflow='hidden'}
-function closeLightbox(){const lb=document.getElementById('lightbox');lb.classList.remove('active');document.body.style.overflow=''}
+function openLightbox(el){const img=el.querySelector('img');const lb=document.getElementById('lightbox');document.getElementById('lightbox-img').src=img.src;lb.classList.add('active');document.body.style.overflow='hidden'}
+function closeLightbox(){const lb=document.getElementById('lightbox');lb.classList.remove('active');document.getElementById('lightbox-img').src='';document.body.style.overflow=''}
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this||e.target.id==='lightbox-img')closeLightbox()});
 </script>
 </body>
 </html>
