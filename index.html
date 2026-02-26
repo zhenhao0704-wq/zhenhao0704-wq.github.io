@@ -414,7 +414,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">United States</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Thailand</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Nepal</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
-    <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Egypt</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
+    <div class="country-album" onclick="toggleCountry('egypt')" style="cursor:pointer"><img src="img/egypt-cave-church-arms.jpg" alt="Egypt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Egypt</div><div class="country-album-line"></div><div class="country-album-hint">25 Photos</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Indonesia</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Malaysia</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
   </div>
@@ -543,6 +543,39 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-dusk-reach.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/iceland-modern-building.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-black-beach-walk.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
+    </div>
+  </div>
+  <div class="country-photos" id="egypt-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+      <h3 style="font-family:var(--font-display);font-size:2rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text)">Egypt</h3>
+      <button onclick="toggleCountry('egypt')" style="font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;color:var(--text-muted);background:none;border:1px solid var(--border);padding:.5rem 1.2rem;cursor:pointer;transition:all .3s">Close</button>
+    </div>
+    <div class="art-grid">
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/egypt-rock-arch.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-pyramids.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-cliff-ocean-sit.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-cliff-arms-raised.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-sand-bay-backpack.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-sand-beach-gaze.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-cliff-edge-sit.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-cliff-top-perch.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-cliff-ocean-wide.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/egypt-cave-church-interior.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-amphitheater-statue.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-cave-church-selfie.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-cave-church-arms.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/egypt-amphitheater-steps.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-mosque-chandeliers.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-rocks-ocean-closeup.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-ancient-painting.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/egypt-camel-ride-desert.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-camel-caravan.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-pyramid-palms.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-museum-fresco.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-museum-hall.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-museum-sarcophagus.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-museum-busts.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/egypt-museum-artifacts.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
     </div>
   </div>
 </section>
