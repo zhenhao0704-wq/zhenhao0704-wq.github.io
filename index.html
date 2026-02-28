@@ -415,7 +415,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Thailand</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Nepal</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album" onclick="toggleCountry('egypt')" style="cursor:pointer"><img src="img/egypt-ancient-painting.jpg" alt="Egypt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Egypt</div><div class="country-album-line"></div><div class="country-album-hint">25 Photos</div></div></div>
-    <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Indonesia</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
+    <div class="country-album" onclick="toggleCountry('indonesia')" style="cursor:pointer"><img src="img/indonesia-nusa-penida-aerial-cove.jpg" alt="Indonesia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Indonesia</div><div class="country-album-line"></div><div class="country-album-hint">28 Photos</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Malaysia</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
   </div>
   <div class="country-photos" id="france-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
@@ -733,6 +733,43 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-sagrada-stained-glass-warm.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-beach-volleyball.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-canary-coast-palms.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
+    </div>
+  </div>
+
+  <div class="country-photos" id="indonesia-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+      <h3 style="font-family:var(--font-display);font-size:2rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-primary)">Indonesia</h3>
+      <button onclick="toggleCountry('indonesia')" style="font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;color:var(--text-muted);background:none;border:1px solid var(--border);padding:.5rem 1.2rem;cursor:pointer;transition:all .3s">Close</button>
+    </div>
+    <div class="art-grid">
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-aerial-cove.jpg" alt="Nusa Penida aerial cove" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-sea-cliffs.jpg" alt="Nusa Penida sea cliffs" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-wave-crash.jpg" alt="Nusa Penida wave" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-beach-wide.jpg" alt="Nusa Penida beach" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-aerial-shore.jpg" alt="Nusa Penida aerial" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-aerial-foliage.jpg" alt="Nusa Penida aerial" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-beach-gaze-ocean.jpg" alt="Nusa Penida beach gaze" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-beach-action.jpg" alt="Nusa Penida beach action" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-beach-dance.jpg" alt="Nusa Penida beach dance" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-beach-gear-sand.jpg" alt="Beach gear on sand" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/indonesia-tumpak-sewu-waterfall-arms.jpg" alt="Tumpak Sewu waterfall" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-tumpak-sewu-waterfall-selfie.jpg" alt="Tumpak Sewu waterfall selfie" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bromo-tree-frame-clouds.jpg" alt="Bromo through trees" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bromo-foggy-walk.jpg" alt="Bromo foggy walk" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-dawn-portrait.jpg" alt="Bromo dawn portrait" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-silhouette-dawn.jpg" alt="Bromo silhouette dawn" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/indonesia-bromo-volcano-wide.jpg" alt="Bromo volcano" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-smoke.jpg" alt="Bromo crater smoke" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-interior.jpg" alt="Bromo crater interior" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-sign.jpg" alt="Bromo crater sign" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-dance.jpg" alt="Bromo crater dance" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-sit.jpg" alt="Bromo crater" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-street-motorcycle.jpg" alt="Bromo street motorcycle" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bali-temple-gate-night.jpg" alt="Bali temple gate" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/indonesia-bali-temple-ceremony.jpg" alt="Bali temple ceremony" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bali-warrior-sculpture.jpg" alt="Bali warrior sculpture" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bali-jungle-palms.jpg" alt="Bali jungle palms" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bali-palm-sunset.jpg" alt="Bali palm sunset" loading="lazy"><div class="photo-overlay"></div></div>
     </div>
   </div>
 
