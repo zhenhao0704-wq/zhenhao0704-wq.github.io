@@ -406,7 +406,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
   <div class="country-grid">
     <div class="country-album wide" onclick="toggleCountry('france')" style="cursor:pointer"><img src="img/france-sculpture-nature.jpeg" alt="France" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">France</div><div class="country-album-line"></div><div class="country-album-hint">19 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('italy')" style="cursor:pointer"><img src="img/italy-winged-victory-horses.jpg" alt="Italy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Italy</div><div class="country-album-line"></div><div class="country-album-hint">19 Photos</div></div></div>
-    <div class="country-album"><div class="country-album-inner"><div class="country-album-name">United Kingdom</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
+    <div class="country-album" onclick="toggleCountry('uk')" style="cursor:pointer"><img src="img/uk-balmoral-calton-hill.jpg" alt="United Kingdom" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">United Kingdom</div><div class="country-album-line"></div><div class="country-album-hint">58 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('japan')" style="cursor:pointer"><img src="img/japan-hakone-lake-torii.jpg" alt="Japan" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Japan</div><div class="country-album-line"></div><div class="country-album-hint">43 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('spain')" style="cursor:pointer"><img src="img/spain-sagrada-interior-blue.jpg" alt="Spain" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Spain</div><div class="country-album-line"></div><div class="country-album-hint">47 Photos</div></div></div>
     <div class="country-album wide" onclick="toggleCountry('iceland')" style="cursor:pointer"><img src="img/iceland-snow-crouch.jpg" alt="Iceland" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Iceland</div><div class="country-album-line"></div><div class="country-album-hint">46 Photos</div></div></div>
@@ -493,6 +493,93 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/france-versailles-battles.jpeg" alt="Versailles" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/france-louvre-venus.jpeg" alt="Venus de Milo" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+  <div class="country-photos" id="uk-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+      <h3 style="font-family:var(--font-display);font-size:2rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-primary)">United Kingdom</h3>
+      <button onclick="toggleCountry('uk')" style="font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;color:var(--text-muted);background:none;border:1px solid var(--border);padding:.5rem 1.2rem;cursor:pointer;transition:all .3s">Close</button>
+    </div>
+    <div class="art-grid">
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/uk-foggy-town-rooftops.jpg" alt="Foggy Scottish town" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-church-stained-glass-saints.jpg" alt="Stained glass saints" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-highlands-golden-hills.jpg" alt="Scottish Highlands golden hour" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-reservoir-bridge-blue.jpg" alt="Reservoir bridge" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-edinburgh-uni-quad-evening.jpg" alt="Edinburgh University quad" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-blackpool-tower-sky.jpg" alt="Blackpool Tower" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-glenfinnan-viaduct-portrait.jpg" alt="Glenfinnan Viaduct" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-hiker-forest-path.jpg" alt="Walking through forest" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-gothic-ivy-red-leaves.jpg" alt="Gothic wall with autumn ivy" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/uk-blackpool-tower-square.jpg" alt="Blackpool Tower square" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-pine-tree-golden-cones.jpg" alt="Pine tree with golden cones" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-edinburgh-panorama.jpg" alt="Edinburgh panorama" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-river-rapids-branches.jpg" alt="River rapids" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-road-sign-speed.jpg" alt="Country road sign" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-tree-branches-silhouette.jpg" alt="Tree branches silhouette" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-pub-interior.jpg" alt="Edinburgh pub" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/uk-balmoral-calton-hill.jpg" alt="Balmoral and Calton Hill" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-aberdeen-signpost-glass.jpg" alt="University signpost" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-highlands-arm-raised.jpg" alt="Arm raised in Highlands" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-birch-forest-trunks.jpg" alt="Birch forest trunks" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-calton-hill-monument.jpg" alt="Calton Hill monument" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-gothic-stone-doorway.jpg" alt="Gothic stone doorway" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-edinburgh-child-umbrella.jpg" alt="Child with umbrella" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-reservoir-warning-sign.jpg" alt="Reservoir warning sign" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-highlands-village-portrait.jpg" alt="Highland village" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/uk-bonfire-flames.jpg" alt="Bonfire" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-night-moon-graffiti.jpg" alt="Moon and graffiti" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-bonfire-music-sand.jpg" alt="Music by the fire" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-night-street-varsity-jacket.jpg" alt="Night street portrait" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-bonfire-night-phones.jpg" alt="Night by the fire" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-night-closeup-flash.jpg" alt="Night closeup" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/uk-church-nave-stained-glass.jpg" alt="Church nave" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-blue-door-bare-tree.jpg" alt="Blue door and bare tree" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-river-birch-trees.jpg" alt="River and birch trees" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-blackpool-typography-floor.jpg" alt="Blackpool comedy carpet" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-friends-backstage-flowers.jpg" alt="Friends backstage" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-church-stained-glass-reading.jpg" alt="Reading by stained glass" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-pentland-hills-cafe.jpg" alt="Pentland Hills Cafe" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-highlands-loch-view.jpg" alt="Highland loch view" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-forest-canopy-lookup.jpg" alt="Forest canopy" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/uk-edinburgh-castle.jpg" alt="Edinburgh Castle" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-cottage-blue-car-garden.jpg" alt="Cottage with blue car" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-dance-studio-discussion.jpg" alt="Dance studio discussion" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-countryside-fence-gorse.jpg" alt="Countryside fence" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-balmoral-clock-tower.jpg" alt="Balmoral clock tower" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-winter-trees-blue-sky.jpg" alt="Winter trees" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-church-altar-cross.jpg" alt="Church altar" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-cottage-blue-sky.jpg" alt="Scottish cottage" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-reservoir-wide-view.jpg" alt="Reservoir wide view" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/uk-princes-street-silhouette.jpg" alt="Princes Street golden hour" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-brick-building-rain.jpg" alt="Brick building in rain" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-stage-bow.jpg" alt="Stage bow" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-night-friends-bottles.jpg" alt="Friends at night" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-edinburgh-university.jpg" alt="University of Edinburgh" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-calton-hill-dusk.jpg" alt="Calton Hill at dusk" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-balmoral-hotel-daytime.jpg" alt="Balmoral Hotel" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/uk-friends-portrait.jpg" alt="Friends" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/uk-seaside-portrait.jpg" alt="By the sea" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
