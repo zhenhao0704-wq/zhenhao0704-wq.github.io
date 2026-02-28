@@ -413,10 +413,49 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="country-album" onclick="toggleCountry('switzerland')" style="cursor:pointer"><img src="img/switzerland-train-window.jpg" alt="Switzerland" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Switzerland</div><div class="country-album-line"></div><div class="country-album-hint">19 Photos</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">United States</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Thailand</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
-    <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Nepal</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
+    <div class="country-album" onclick="toggleCountry('nepal')" style="cursor:pointer"><img src="img/nepal-photos/nepal-prayer-flags-valley.jpg" alt="Nepal" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Nepal</div><div class="country-album-line"></div><div class="country-album-hint">25 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('egypt')" style="cursor:pointer"><img src="img/egypt-ancient-painting.jpg" alt="Egypt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Egypt</div><div class="country-album-line"></div><div class="country-album-hint">25 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('indonesia')" style="cursor:pointer"><img src="img/indonesia-nusa-penida-aerial-cove.jpg" alt="Indonesia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Indonesia</div><div class="country-album-line"></div><div class="country-album-hint">28 Photos</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Malaysia</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
+  </div>
+  <div class="country-photos" id="nepal-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+      <h3 style="font-family:var(--font-display);font-size:2rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-primary)">Nepal</h3>
+      <button onclick="toggleCountry('nepal')" style="font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;color:var(--text-muted);background:none;border:1px solid var(--border);padding:.5rem 1.2rem;cursor:pointer;transition:all .3s">Close</button>
+    </div>
+    <div class="art-grid">
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-abc-silhouette-doorway.jpg" alt="Silhouette in doorway, ABC trek" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-abc-forest-roots-trek.jpg" alt="Forest roots, ABC trek" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-abc-river-bridge-cliff.jpg" alt="River bridge and cliff, ABC" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-abc-bridge-crossing-mountains.jpg" alt="Bridge crossing, mountains" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-village-shop-ayurvedic.jpg" alt="Village ayurvedic shop" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-abc-snow-valley-wide.jpg" alt="Snow valley, ABC trek" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-lodge-breakfast-coffee.jpg" alt="Lodge breakfast and coffee" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-trail-mule-caravan.jpg" alt="Mule caravan on trail" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-tree-silhouette-blue-mountain.jpg" alt="Tree silhouette, blue mountain" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-himalaya-guesthouse-sign.jpg" alt="Himalaya Guest House sign" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-dog-balcony-mountains.jpg" alt="Dog on balcony, mountains" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-dog-portrait-balcony.jpg" alt="Dog portrait on balcony" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-jeep-mountain-road.jpg" alt="Jeep on mountain road" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-trek-dirt-road-sky.jpg" alt="Trekking dirt road under sky" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-prayer-flags-valley.jpg" alt="Prayer flags over valley" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-rest-stone-house.jpg" alt="Resting by stone house" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-pokhara-street-smoke.jpg" alt="Pokhara street with smoke" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-pokhara-blue-bus.jpg" alt="Blue bus in Pokhara" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-breakfast-croissant.jpg" alt="Breakfast croissant" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-bus-dashboard-interior.jpg" alt="Bus dashboard interior" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-dog-photo-wall.jpg" alt="Dog photo wall" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-cafe-guestbook-notes.jpg" alt="Cafe guestbook notes" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-cafe-dog-sleeping.jpg" alt="Dog sleeping in cafe" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-pashupatinath-temple-night.jpg" alt="Pashupatinath temple at night" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/nepal-photos/nepal-pashupatinath-overlook-bw.jpg" alt="Pashupatinath overlook" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+    </div>
   </div>
   <div class="country-photos" id="france-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
@@ -425,34 +464,38 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     </div>
     <div class="art-grid">
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/france-paris-hotel-de-ville.jpeg" alt="Hôtel de Ville, Paris" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div><div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/france-sculpture-grief.jpeg" alt="Sculpture" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/france-louvre-cupid.jpeg" alt="Louvre" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/france-louvre-nike.jpeg" alt="Winged Victory" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/france-orsay-silhouette.jpeg" alt="Musée d'Orsay" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/france-eiffel-night.jpeg" alt="Eiffel Tower at night" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
+      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/france-louvre-gallery.jpeg" alt="Louvre gallery" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div><div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/france-louvre-monalisa.jpeg" alt="Mona Lisa" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/france-opera-hall.jpeg" alt="Opéra Garnier" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/france-sculpture-nature.jpeg" alt="Sculpture" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/france-sculpture-gladiator.jpeg" alt="Sculpture" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/france-louvre-reclining.jpeg" alt="Louvre" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/france-versailles-chandeliers.jpeg" alt="Versailles" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/france-versailles-room.jpeg" alt="Versailles" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/france-orsay-clock.jpeg" alt="Musée d'Orsay clock" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/france-versailles-gallery.jpeg" alt="Versailles" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/france-louvre-old-man.jpeg" alt="Louvre" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/france-versailles-battles.jpeg" alt="Versailles" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
-      <div class="spacer"></div><div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/france-louvre-venus.jpeg" alt="Venus de Milo" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
     </div>
   </div>
   <div class="country-photos" id="italy-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
@@ -462,45 +505,27 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     </div>
     <div class="art-grid">
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/italy-botticelli-primavera.jpg" alt="Botticelli Primavera" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-trevi-neptune.jpg" alt="Trevi Neptune" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/italy-birth-of-venus.jpg" alt="Birth of Venus" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/italy-piazza-navona.jpg" alt="Piazza Navona" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-piazza-navona-church.jpg" alt="Piazza Navona Church" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-trevi-fountain.jpg" alt="Trevi Fountain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-church-apse.jpg" alt="Church Apse Fresco" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/italy-gregory-monument.jpg" alt="Gregory XV Monument" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-church-apse-detail.jpg" alt="Church Apse Detail" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-sant-ignazio-ceiling.jpg" alt="Sant Ignazio Ceiling" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/italy-dome-fresco.jpg" alt="Dome Fresco" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-duomo-entrance.jpg" alt="Duomo Entrance" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/italy-piazzale-sunset.jpg" alt="Piazzale Sunset" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-loggia-sculpture.jpg" alt="Loggia Sculpture" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/italy-dancing-faun.jpg" alt="Dancing Faun" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-area-pedonale.jpg" alt="Area Pedonale" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/italy-rome-domes-skyline.jpg" alt="Rome Skyline" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-winged-victory-horses.jpg" alt="Winged Victory" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/italy-colosseum-interior.jpg" alt="Colosseum Interior" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
       <div class="spacer"></div>
     </div>
   </div>
@@ -511,88 +536,58 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     </div>
     <div class="art-grid">
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/japan-museum-painting.jpg" alt="Museum Painting" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-fuji-morning-portrait.jpg" alt="Fuji Morning" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-ryokan-exterior.jpg" alt="Ryokan Exterior" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-village-stream.jpg" alt="Village Stream" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-houtou-fuji-lantern.jpg" alt="Houtou Lantern with Fuji" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-street-vendor.jpg" alt="Street Vendor" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-fuji-village-view.jpg" alt="Fuji Village View" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/japan-ryokan-fuji-window.jpg" alt="Ryokan Window with Fuji" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-fuji-trees-portrait.jpg" alt="Fuji Through Trees" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-owakudani-steam.jpg" alt="Owakudani Steam" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-hakone-lake-torii.jpg" alt="Hakone Lake Torii" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/japan-tokyo-tower-wide.jpg" alt="Tokyo Tower" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-tokyo-tower-detail.jpg" alt="Tokyo Tower Detail" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-cafe-terrace.jpg" alt="Cafe Terrace" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-tokyo-tower-close.jpg" alt="Tokyo Tower Close" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-street-worker.jpg" alt="Street Worker" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-tokyo-tower-skyline.jpg" alt="Tokyo Tower Skyline" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-art-center-interior.jpg" alt="Art Center Interior" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/japan-nakameguro-crowd.jpg" alt="Nakameguro Crowd" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-nakameguro-street.jpg" alt="Nakameguro Street" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/japan-art-center-glass.jpg" alt="Art Center Glass" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-tower-reflection-building.jpg" alt="Tower Reflection" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-autumn-window-reflection.jpg" alt="Autumn Window" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-noa-dance-cityscape.jpg" alt="NOA Dance Cityscape" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-garden-lantern.jpg" alt="Garden Lantern" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-taxi-restaurant.jpg" alt="Taxi and Restaurant" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-shinjuku-signs.jpg" alt="Shinjuku Signs" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/japan-crosswalk-shadow.jpg" alt="Crosswalk Shadow" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-shrine-torii-ginkgo.jpg" alt="Shrine Torii Ginkgo" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-ginkgo-leaves-street.jpg" alt="Ginkgo Leaves" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-shibuya-night.jpg" alt="Shibuya Night" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-shibuya-night.jpg" alt="Shibuya Night" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-bicycle-ginkgo.jpg" alt="Bicycle Ginkgo" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-bus-interior.jpg" alt="Bus Interior" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-temple-plaza.jpg" alt="Temple Plaza" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-cafe-camera-portrait.jpg" alt="Cafe Camera Portrait" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-noh-masks-women.jpg" alt="Noh Masks" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-noh-masks-hannya.jpg" alt="Noh Hannya Mask" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-narukawa-museum-sign.jpg" alt="Narukawa Museum" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/japan-nankai-train-interior.jpg" alt="Nankai Train" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-osaka-tsutenkaku-street.jpg" alt="Tsutenkaku Street" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-osaka-tsutenkaku-tower.jpg" alt="Tsutenkaku Tower" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-osaka-shinsaibashi-signs.jpg" alt="Shinsaibashi Signs" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/japan-osaka-shinsekai-portrait.jpg" alt="Shinsekai Portrait" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
@@ -607,45 +602,27 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     </div>
     <div class="art-grid">
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/switzerland-zermatt-matterhorn.jpg" alt="Zermatt with Matterhorn" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/switzerland-snow-peak.jpg" alt="Snow peak" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/switzerland-snow-reflection.jpg" alt="Mountain reflection" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/switzerland-observatory.jpg" alt="Observatory" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/switzerland-swiss-flag.jpg" alt="Swiss flag" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/switzerland-zermatt-portrait.jpg" alt="Zermatt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/switzerland-cathedral-statues.jpg" alt="Cathedral statues" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/switzerland-cathedral-aisle.jpg" alt="Cathedral aisle" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/switzerland-cathedral-apse.jpg" alt="Cathedral apse" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/switzerland-cathedral-entrance.jpg" alt="Cathedral entrance" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/switzerland-gondola.jpg" alt="Gondola" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/switzerland-sticker-pole.jpg" alt="Sticker pole" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/switzerland-sticker-pole.jpg" alt="Sticker pole" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/switzerland-snow-dance.jpg" alt="Snow dance" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/switzerland-snow-joy.jpg" alt="Snow joy" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/switzerland-train-window.jpg" alt="Train window" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/switzerland-village-green.jpg" alt="Swiss village" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/switzerland-gornergrat-bahn.jpg" alt="Gornergrat Bahn" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/switzerland-campervans.jpg" alt="Campervans" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/switzerland-chalet-aerial.jpg" alt="Swiss chalet" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="spacer"></div>
     </div>
   </div>
@@ -656,96 +633,54 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     </div>
     <div class="art-grid">
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/iceland-kirkjufell.jpg" alt="Kirkjufell" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-lone-house.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-gullfoss-overlook.jpg" alt="Gullfoss" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-red-canyon.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-ice-cave-camera.jpg" alt="Ice cave" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-ice-cave-silhouette.jpg" alt="Ice cave" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-ice-cave-touch.jpg" alt="Ice cave" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/iceland-diamond-beach.jpg" alt="Diamond Beach" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-gullfoss-aerial.jpg" alt="Gullfoss" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-horse-pet.jpg" alt="Icelandic horse" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/iceland-mountain-walk.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-flag-boat.jpg" alt="Iceland flag" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-waves-rocks-above.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-waves-crash.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-mossy-pinnacle.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-lava-waves.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/iceland-cliff-arms-ocean.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-whale-card.jpg" alt="Whale watching" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-cliff-silhouette.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-cliff-sunset.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-harbor-fjord.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-boat-deck.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-ferry-couple.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-boat-window-sea.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-headlamp.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/iceland-snow-dance.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-night-portrait.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-night-duo-dance.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-snow-crouch.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-night-group.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-blur-portrait.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-snowfall-arms.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/iceland-glacier-van.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-swing-mountains.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-black-sand-rocks.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-blue-water.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/iceland-walk-pink-sky.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-bus-window.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-troll-van.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-mountain-gaze.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-road-arms-up.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-road-celebrate.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-hand-mountains.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/iceland-dusk-reach.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/iceland-modern-building.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/iceland-black-beach-walk.jpg" alt="Iceland" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
     </div>
   </div>
   <div class="country-photos" id="egypt-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
@@ -755,53 +690,29 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     </div>
     <div class="art-grid">
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/egypt-rock-arch.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-pyramids.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-cliff-ocean-sit.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-cliff-arms-raised.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-sand-bay-backpack.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-sand-beach-gaze.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-cliff-edge-sit.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-cliff-top-perch.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-cliff-ocean-wide.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/egypt-cave-church-interior.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-amphitheater-statue.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-cave-church-selfie.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-cave-church-arms.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/egypt-amphitheater-steps.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-mosque-chandeliers.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-rocks-ocean-closeup.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-ancient-painting.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/egypt-camel-ride-desert.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-camel-caravan.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-pyramid-palms.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/egypt-museum-fresco.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-museum-hall.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-museum-sarcophagus.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/egypt-museum-busts.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/egypt-museum-artifacts.jpg" alt="Egypt" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
@@ -830,83 +741,47 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-barceloneta-beach-crowd.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-pedrera-facade-wide.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-sagrada-golden-light.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-batllo-arches.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-gallery-body-screen.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-gallery-body-screen.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-barcelona-palm-blue.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-gallery-projection.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-beach-dusk-whotel.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/spain-batllo-kitchen.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-seville-palms-building.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-canary-sunset-clouds.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-gallery-tv-bw.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/spain-seville-plaza-arcade.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-canary-ocean-rocks.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/spain-orange-wall-cables.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-canary-resort-flowers.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-gallery-vitrine.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-gallery-installation-cube.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-seville-alley.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-gallery-puppets.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-sagrada-blue-vault.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-batllo-stained-glass.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/spain-batllo-roof-mosaic.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-seville-protest.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-canary-road-signs.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-pedrera-balcony.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-seville-cathedral.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-canary-resort-flowers2.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/spain-beach-night-portrait.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-canary-sunset-silhouette.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-seville-street-warm.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/spain-sagrada-interior-blue.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/spain-seville-courtyard.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-pedrera-facade-closeup.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/spain-barcelona-skyline-sagrada.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-pedrera-chimney-sky.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-macba-skaters.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/spain-silhouette-green-text.jpg" alt="Spain" loading="lazy"><div class="photo-overlay"></div></div>
@@ -930,70 +805,42 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <button onclick="toggleCountry('indonesia')" style="font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;color:var(--text-muted);background:none;border:1px solid var(--border);padding:.5rem 1.2rem;cursor:pointer;transition:all .3s">Close</button>
     </div>
     <div class="art-grid">
-      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-aerial-cove.jpg" alt="Nusa Penida aerial cove" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-aerial-shore.jpg" alt="Nusa Penida aerial" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-aerial-cove.jpg" alt="Nusa Penida aerial cove" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-aerial-shore.jpg" alt="Nusa Penida aerial" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-sea-cliffs.jpg" alt="Nusa Penida sea cliffs" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-wave-crash.jpg" alt="Nusa Penida wave" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-aerial-foliage.jpg" alt="Nusa Penida aerial" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-beach-gaze-ocean.jpg" alt="Nusa Penida beach gaze" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-beach-action.jpg" alt="Nusa Penida beach action" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-beach-wide.jpg" alt="Nusa Penida beach" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-nusa-penida-beach-dance.jpg" alt="Nusa Penida beach dance" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-beach-gear-sand.jpg" alt="Beach gear on sand" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-tumpak-sewu-waterfall-arms.jpg" alt="Tumpak Sewu waterfall" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-tumpak-sewu-waterfall-arms.jpg" alt="Tumpak Sewu waterfall" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/indonesia-tumpak-sewu-waterfall-selfie.jpg" alt="Tumpak Sewu waterfall selfie" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-tree-frame-clouds.jpg" alt="Bromo through trees" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-foggy-walk.jpg" alt="Bromo foggy walk" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-dawn-portrait.jpg" alt="Bromo dawn portrait" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/indonesia-bromo-volcano-wide.jpg" alt="Bromo volcano" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-smoke.jpg" alt="Bromo crater smoke" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-silhouette-dawn.jpg" alt="Bromo silhouette dawn" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-interior.jpg" alt="Bromo crater interior" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-interior.jpg" alt="Bromo crater interior" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-sign.jpg" alt="Bromo crater sign" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-dance.jpg" alt="Bromo crater dance" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-sit.jpg" alt="Bromo crater" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-dance.jpg" alt="Bromo crater dance" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-crater-sit.jpg" alt="Bromo crater" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bromo-street-motorcycle.jpg" alt="Bromo street motorcycle" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bali-temple-gate-night.jpg" alt="Bali temple gate" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
-      <div class="spacer"></div>
-      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bali-temple-ceremony.jpg" alt="Bali temple ceremony" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bali-temple-ceremony.jpg" alt="Bali temple ceremony" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bali-warrior-sculpture.jpg" alt="Bali warrior sculpture" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/indonesia-bali-jungle-palms.jpg" alt="Bali jungle palms" loading="lazy"><div class="photo-overlay"></div></div>
-      <div class="spacer"></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bali-jungle-palms.jpg" alt="Bali jungle palms" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bali-palm-sunset.jpg" alt="Bali palm sunset" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
     </div>
   </div>
 
