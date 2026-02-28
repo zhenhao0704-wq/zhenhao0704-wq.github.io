@@ -412,7 +412,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="country-album wide" onclick="toggleCountry('iceland')" style="cursor:pointer"><img src="img/iceland-snow-crouch.jpg" alt="Iceland" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Iceland</div><div class="country-album-line"></div><div class="country-album-hint">46 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('switzerland')" style="cursor:pointer"><img src="img/switzerland-train-window.jpg" alt="Switzerland" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Switzerland</div><div class="country-album-line"></div><div class="country-album-hint">19 Photos</div></div></div>
     <div class="country-album"><div class="country-album-inner"><div class="country-album-name">United States</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
-    <div class="country-album"><div class="country-album-inner"><div class="country-album-name">Thailand</div><div class="country-album-line"></div><div class="country-album-hint">Coming Soon</div></div></div>
+    <div class="country-album" onclick="toggleCountry('thailand')" style="cursor:pointer"><img src="img/thailand-seated-buddha.jpeg" alt="Thailand" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Thailand</div><div class="country-album-line"></div><div class="country-album-hint">34 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('nepal')" style="cursor:pointer"><img src="img/nepal-prayer-flags-valley.jpg" alt="Nepal" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Nepal</div><div class="country-album-line"></div><div class="country-album-hint">25 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('egypt')" style="cursor:pointer"><img src="img/egypt-ancient-painting.jpg" alt="Egypt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Egypt</div><div class="country-album-line"></div><div class="country-album-hint">25 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('indonesia')" style="cursor:pointer"><img src="img/indonesia-nusa-penida-aerial-cove.jpg" alt="Indonesia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Indonesia</div><div class="country-album-line"></div><div class="country-album-hint">28 Photos</div></div></div>
@@ -840,6 +840,57 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bali-jungle-palms.jpg" alt="Bali jungle palms" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/indonesia-bali-palm-sunset.jpg" alt="Bali palm sunset" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+
+  <div class="country-photos" id="thailand-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+      <h3 style="font-family:var(--font-display);font-size:2rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-primary)">Thailand</h3>
+      <button onclick="toggleCountry('thailand')" style="font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;color:var(--text-muted);background:none;border:1px solid var(--border);padding:.5rem 1.2rem;cursor:pointer;transition:all .3s">Close</button>
+    </div>
+    <div class="art-grid">
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/thailand-hotel-morning.jpeg" alt="Hotel morning light" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-golden-pagoda.jpeg" alt="Golden pagoda" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-spires-dusk.jpeg" alt="Temple spires at dusk" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-chiang-mai-temple.jpeg" alt="Chiang Mai temple" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-temple-monk.jpeg" alt="Temple with monk" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-selfie.jpeg" alt="Selfie" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-street-signs.jpeg" alt="Street signs" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/thailand-cafe-above.jpeg" alt="Cafe from above" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-khon-collection.jpeg" alt="Khon mask collection" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-brahma-head.jpeg" alt="Brahma head sculpture" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-khon-masks.jpeg" alt="Khon masks" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-iced-drink.jpeg" alt="Thai iced drink" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-cafe-drinks.jpeg" alt="Cafe drinks" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/thailand-temple-ceiling.jpeg" alt="Temple ceiling interior" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-buddha-canal.jpeg" alt="Buddha overlooking canal" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-buddha-back-spire.jpeg" alt="Buddha back and spire" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-giant-buddha-profile.jpeg" alt="Giant Buddha profile" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-reclining-buddha.jpeg" alt="Reclining Buddha" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/thailand-seated-buddha.jpeg" alt="Seated Buddha" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-stone-relief.jpeg" alt="Stone relief carving" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-longtail-dragon.jpeg" alt="Longtail boat and dragon" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-grand-palace-roof.jpeg" alt="Grand Palace roof detail" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-bangkok-street.jpeg" alt="Bangkok street scene" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-street-food.jpeg" alt="Street food" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-national-museum.jpeg" alt="National Museum" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-motorbikes.jpeg" alt="Motorbikes" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/thailand-buddha-statues.jpeg" alt="Buddha statues" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-cafe-thai-wall.jpeg" alt="Cafe Thai script wall" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-temple-cat.jpeg" alt="Temple cat" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-rice-bowl.jpeg" alt="Thai rice bowl" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/thailand-ivory-carvings.jpeg" alt="Ivory carvings" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/thailand-gold-artifacts.jpeg" alt="Gold artifacts" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-bts-station.jpeg" alt="BTS station" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/thailand-bangkok-traffic.jpeg" alt="Bangkok traffic" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
     </div>
   </div>
