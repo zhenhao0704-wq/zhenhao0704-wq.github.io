@@ -417,6 +417,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
     <div class="country-album" onclick="toggleCountry('egypt')" style="cursor:pointer"><img src="img/egypt-ancient-painting.jpg" alt="Egypt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Egypt</div><div class="country-album-line"></div><div class="country-album-hint">25 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('indonesia')" style="cursor:pointer"><img src="img/indonesia-nusa-penida-aerial-cove.jpg" alt="Indonesia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Indonesia</div><div class="country-album-line"></div><div class="country-album-hint">28 Photos</div></div></div>
     <div class="country-album" onclick="toggleCountry('malaysia')" style="cursor:pointer"><img src="img/malaysia-petronas-towers-portrait.jpg" alt="Malaysia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">Malaysia</div><div class="country-album-line"></div><div class="country-album-hint">7 Photos</div></div></div>
+    <div class="country-album wide" onclick="toggleCountry('china')" style="cursor:pointer"><img src="img/china-tibet-highland-road.jpg" alt="China" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;filter:brightness(.4)"><div class="country-album-inner" style="background:linear-gradient(135deg,rgba(10,10,10,.6),rgba(10,10,10,.4))"><div class="country-album-name">China</div><div class="country-album-line"></div><div class="country-album-hint">29 Photos</div></div></div>
   </div>
   <div class="country-photos" id="nepal-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
@@ -1004,6 +1005,55 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/malaysia-kl-skyline-night.jpg" alt="KL skyline at night" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item md" onclick="openLightbox(this)"><img src="img/malaysia-batu-caves-temple.jpg" alt="Batu Caves temple" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/malaysia-petronas-selfie.jpg" alt="Petronas selfie" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+
+  <div class="country-photos" id="china-photos" style="display:none;margin-top:3rem;max-width:1100px;margin-left:auto;margin-right:auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+      <h3 style="font-family:var(--font-display);font-size:2rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-primary)">China</h3>
+      <button onclick="toggleCountry('china')" style="font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;color:var(--text-muted);background:none;border:1px solid var(--border);padding:.5rem 1.2rem;cursor:pointer;transition:all .3s">Close</button>
+    </div>
+    <div class="art-grid">
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/china-tibet-highland-road.jpg" alt="Tibet highland road" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-tibet-prayer-flags-mountains.jpg" alt="Tibet prayer flags" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-buddha-stone-carving.jpg" alt="Buddha stone carving" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-glacier-turquoise-lake.jpg" alt="Glacier turquoise lake" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-museum-mountain-mural.jpg" alt="Museum mountain mural" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-snow-mountain-peak.jpg" alt="Snow mountain peak" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/china-temple-yellow-wall.jpg" alt="Temple yellow wall" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-traditional-barbershop.jpg" alt="Traditional barbershop" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-tea-village-cablecar.jpg" alt="Tea village" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-museum-wood-buddha.jpg" alt="Museum wood Buddha" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-snow-portrait-bw.jpg" alt="Snow portrait" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/china-river-worker-boat.jpg" alt="River worker on boat" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-metro-red-suitcase.jpg" alt="Metro red suitcase" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-reed-photographer.jpg" alt="Reed photographer" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-tsingtao-vintage-poster.jpg" alt="Tsingtao vintage poster" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-tibet-plateau-portrait.jpg" alt="Tibet plateau" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-museum-bodhisattva.jpg" alt="Museum bodhisattva" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-coffee-roasters.jpg" alt="Coffee roasters" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/china-sichuan-lake-portrait.jpg" alt="Sichuan lake portrait" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-calligraphy-scroll.jpg" alt="Calligraphy scroll" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-tang-figurines.jpg" alt="Tang dynasty figurines" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-mountain-hiking-selfie.jpg" alt="Mountain hiking" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-museum-ceramic-wall.jpg" alt="Museum ceramic wall" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-pagoda-golden-spire.jpg" alt="Pagoda golden spire" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-snowboard-gear-bw.jpg" alt="Snowboard gear" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-backpacker-campus.jpg" alt="Backpacker on campus" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item md" onclick="openLightbox(this)"><img src="img/china-photo-studio-lights.jpg" alt="Photo studio" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-dagu-glacier-signpost.jpg" alt="Dagu glacier signpost" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer"></div>
+      <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/china-bronze-vessel-rubbing.jpg" alt="Bronze vessel rubbing" loading="lazy"><div class="photo-overlay"></div></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
       <div class="spacer"></div>
