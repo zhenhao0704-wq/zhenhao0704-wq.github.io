@@ -6,6 +6,49 @@
 <title>Zhenhao Wen | What Is Fragile Is Still Worth Keeping</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+/* Great Glass Elevator horizontal scroll grid */
+.photo-scroll-container {
+  position: relative;
+  padding: 0 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.photo-scroll-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 280px);
+  grid-auto-columns: 200px;
+  column-gap: 28px;
+  row-gap: 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 0 2.5rem;
+  scroll-behavior: smooth;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.photo-scroll-grid::-webkit-scrollbar { height: 6px; }
+.photo-scroll-grid::-webkit-scrollbar-track { background: transparent; }
+.photo-scroll-grid::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+.photo-scroll-grid:active { cursor: grabbing; }
+.photo-scroll-grid .photo-item { grid-row: span 1; grid-column: span 1; }
+.photo-scroll-grid .photo-item.wide { grid-column: span 2; }
+.photo-scroll-grid .photo-item.hero { grid-row: span 2; grid-column: span 3; }
+.photo-scroll-grid .spacer { background: transparent; pointer-events: none; grid-row: span 1; grid-column: span 1; }
+.photo-scroll-grid .spacer.wide { grid-column: span 2; }
+@media (max-width: 768px) {
+  .photo-scroll-container { padding: 0 0.5rem; }
+  .photo-scroll-grid {
+    grid-template-rows: repeat(2, 180px);
+    grid-auto-columns: 140px;
+    column-gap: 22px;
+    row-gap: 34px;
+    padding: 0.5rem 1rem 2rem;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -15,6 +58,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#works">Works</a></li>
     <li><a href="#photography">Photography</a></li>
+    <li><a href="#glass-elevator">Glass Elevator</a></li>
     <li><a href="#statement">Statement</a></li>
     <li class="nav-dropdown"><a href="#par">Research Journal</a>
       <div class="nav-dropdown-menu">
@@ -127,31 +171,65 @@
     <div class="section-divider"></div>
     <p>Production photography from Abe Kōbō's <em>Friends</em> (友達, 1967). A tragicomic drama in thirteen scenes about a family who forces their way into a man's apartment and refuses to leave.</p>
   </div>
-  <div class="art-grid">
-    <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/friends-hero.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="spacer"></div><div class="spacer"></div>
-    <div class="spacer"></div>
-    <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/friends-red-profile.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="photo-item md" onclick="openLightbox(this)"><img src="img/friends-table.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="photo-item md" onclick="openLightbox(this)"><img src="img/friends-embrace.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="spacer"></div>
-    <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/friends-fence.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="spacer"></div><div class="spacer"></div>
-    <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/friends-girl-fence.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/friends-cage.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/friends-blood-close.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="spacer"></div><div class="spacer"></div>
-    <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/friends-blood-fence.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="spacer"></div>
-    <div class="photo-item md" onclick="openLightbox(this)"><img src="img/friends-blood-stand.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="spacer"></div>
-    <div class="photo-item md" onclick="openLightbox(this)"><img src="img/friends-group.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/friends-applause.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="photo-item lg" onclick="openLightbox(this)"><img src="img/friends-wide.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="spacer"></div><div class="spacer"></div>
-    <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/friends-floor.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
-    <div class="spacer"></div><div class="spacer"></div>
-    <div class="photo-item sm" onclick="openLightbox(this)"><img src="img/friends-curly.jpeg" alt="Friends production"><div class="photo-overlay"></div></div>
+  <div class="photo-scroll-container">
+    <button class="scroll-arrow left" onclick="scrollRow(this,-1)">&#8249;</button>
+    <div class="photo-scroll-grid works-scroll">
+      <div class="photo-item hero" onclick="openLightbox(this)"><img src="img/friends-hero.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-red-profile.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-table.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-embrace.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer wide"></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-fence.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-girl-fence.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-cage.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer wide"></div>
+      <div class="photo-item hero" onclick="openLightbox(this)"><img src="img/friends-blood-close.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-blood-fence.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-blood-stand.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer wide"></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-group.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-applause.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item hero" onclick="openLightbox(this)"><img src="img/friends-wide.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-floor.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/friends-curly.jpeg" alt="Friends production" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer wide"></div>
+    </div>
+    <button class="scroll-arrow right" onclick="scrollRow(this,1)">&#8250;</button>
+  </div>
+</section>
+
+<section class="photo-section" id="glass-elevator">
+  <div class="photo-header">
+    <p class="section-label">Photography</p>
+    <h2 class="section-title">Great Glass Elevator</h2>
+    <div class="section-divider"></div>
+    <p>Production photography from Mark Branner's adaptation of Roald Dahl's <em>Charlie and the Great Glass Elevator</em> at Kaimuki Christian School, 2026.</p>
+  </div>
+  <div class="photo-scroll-container">
+    <button class="scroll-arrow left" onclick="scrollRow(this,-1)">&#8249;</button>
+    <div class="photo-scroll-grid works-scroll">
+      <div class="photo-item hero" onclick="openLightbox(this)"><img src="img/glass-01.jpg" alt="Mark Branner directing the galaxy sequence" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-02.jpg" alt="Wonka singing, arms raised" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-03.jpg" alt="Wonka portrait" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-04.jpg" alt="Wonka on stage" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer wide"></div>
+      <div class="photo-item hero" onclick="openLightbox(this)"><img src="img/glass-05.jpg" alt="Grandmothers in the flying bed" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-06.jpg" alt="Family at the bed" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-07.jpg" alt="Knids and rocket projection" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item hero" onclick="openLightbox(this)"><img src="img/glass-08.jpg" alt="Hand reaching the glass pyramid" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-09.jpg" alt="Paper lantern planets" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer wide"></div>
+      <div class="photo-item hero" onclick="openLightbox(this)"><img src="img/glass-10.jpg" alt="Astronauts at the control panel" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-11.jpg" alt="Presidential address" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-12.jpg" alt="Wide shot of the podium scene" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-13.jpg" alt="Character in navy suit, arms crossed" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer wide"></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-14.jpg" alt="Black and white podium scene" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-15.jpg" alt="Camera operator at the shoot" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="photo-item wide" onclick="openLightbox(this)"><img src="img/glass-16.jpg" alt="Mark Branner directing" loading="lazy"><div class="photo-overlay"></div></div>
+      <div class="spacer wide"></div>
+    </div>
+    <button class="scroll-arrow right" onclick="scrollRow(this,1)">&#8250;</button>
   </div>
 </section>
 
