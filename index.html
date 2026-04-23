@@ -33,11 +33,24 @@
 .photo-scroll-grid::-webkit-scrollbar-track { background: transparent; }
 .photo-scroll-grid::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 .photo-scroll-grid:active { cursor: grabbing; }
+
+/* Size classes */
 .photo-scroll-grid .photo-item { grid-row: span 1; grid-column: span 1; }
 .photo-scroll-grid .photo-item.wide { grid-column: span 2; }
 .photo-scroll-grid .photo-item.hero { grid-row: span 2; grid-column: span 3; }
 
-/* Spacer: force fully invisible regardless of existing styles.css */
+/* KILL the gray border: override aspect-ratio:16/10 and bg-card from main styles.css */
+.photo-scroll-grid .photo-item {
+  background: transparent !important;
+}
+.photo-scroll-grid .photo-item img {
+  aspect-ratio: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Spacer: force fully invisible */
 .photo-scroll-grid .spacer,
 .photo-scroll-grid .spacer.wide {
   background: transparent !important;
@@ -63,7 +76,7 @@
     grid-row: span 1;
     grid-column: span 2;
   }
-  /* Mobile: remove spacers entirely, they just waste scroll distance */
+  /* Mobile: remove spacers entirely */
   .photo-scroll-grid .spacer,
   .photo-scroll-grid .spacer.wide {
     display: none;
