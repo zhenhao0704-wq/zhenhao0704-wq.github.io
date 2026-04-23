@@ -7,17 +7,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-/* Horizontal scroll grid for Friends & Great Glass Elevator */
+/* ============================================================
+   Horizontal scroll grid for Friends (#photography) & Great Glass Elevator (#glass-elevator)
+   
+   Core design:
+   - Photos keep their natural 16:10 aspect from main styles.css (no forced resizing)
+   - Container background is transparent so empty space blends with page black
+   - Grid row heights are calculated to match the 16:10 image height at each col-span
+   - Images are centered in cells (vertical + horizontal) so they "float" in black
+   - Spacers are fully invisible on desktop (create breathing) and removed on mobile
+   ============================================================ */
+
 .photo-scroll-container {
   position: relative;
   padding: 0 3rem;
   max-width: 1400px;
   margin: 0 auto;
 }
+
+/* Desktop base.
+   Column width 200px. Wide (2 cols) = 200+28+200 = 428px wide, 16:10 height = 267.5px.
+   Row height 270 fits wide exactly. Hero (3 cols, 2 rows) = 656 wide x (270+40+270)=580 tall,
+   which gives hero image a "floating" feel with breathing room. */
 .photo-scroll-grid {
   display: grid;
   grid-auto-flow: column;
-  grid-template-rows: repeat(2, 280px);
+  grid-template-rows: 270px 270px;
   grid-auto-columns: 200px;
   column-gap: 28px;
   row-gap: 40px;
@@ -35,47 +50,62 @@
 .photo-scroll-grid:active { cursor: grabbing; }
 
 /* Size classes */
-.photo-scroll-grid .photo-item { grid-row: span 1; grid-column: span 1; }
-.photo-scroll-grid .photo-item.wide { grid-column: span 2; }
-.photo-scroll-grid .photo-item.hero { grid-row: span 2; grid-column: span 3; }
+.photo-scroll-grid > .photo-item { grid-row: span 1; grid-column: span 1; }
+.photo-scroll-grid > .photo-item.wide { grid-column: span 2; }
+.photo-scroll-grid > .photo-item.hero { grid-row: span 2; grid-column: span 3; }
 
-/* KILL the gray border: make photo-item background blend with page background.
-   Let images keep their natural 16:10 aspect ratio from styles.css,
-   any empty space in the cell will blend with the page's black. */
-.photo-scroll-grid .photo-item {
+/* Photo-item: transparent bg (kills the gray rectangle), flex for centering img in cell */
+.photo-scroll-grid > .photo-item {
   background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden;
 }
 
-/* Spacer: force fully invisible */
-.photo-scroll-grid .spacer,
-.photo-scroll-grid .spacer.wide {
+/* Images: keep natural 16:10 ratio inherited from main styles.css.
+   max-width/height 100% prevents any overflow. No aspect override, no stretching. */
+.photo-scroll-grid > .photo-item > img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+/* Spacer: fully invisible on desktop (creates breathing), removed on mobile */
+.photo-scroll-grid > .spacer {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   pointer-events: none;
   visibility: hidden;
+  grid-row: span 1;
+  grid-column: span 1;
 }
-.photo-scroll-grid .spacer { grid-row: span 1; grid-column: span 1; }
-.photo-scroll-grid .spacer.wide { grid-column: span 2; }
+.photo-scroll-grid > .spacer.wide { grid-column: span 2; }
 
+/* ==================== MOBILE ==================== */
 @media (max-width: 768px) {
   .photo-scroll-container { padding: 0 0.5rem; }
+  /* Mobile: column 140px. Wide (2 cols) = 140+22+140 = 302, 16:10 height = 188.75.
+     Row height 190 fits wide exactly. No overflow, no overlap. */
   .photo-scroll-grid {
-    grid-template-rows: repeat(2, 180px);
+    grid-template-rows: 190px 190px;
     grid-auto-columns: 140px;
     column-gap: 22px;
-    row-gap: 34px;
+    row-gap: 30px;
     padding: 0.5rem 1rem 2rem;
   }
-  /* Mobile: hero shrinks to wide size, fits in viewport */
-  .photo-scroll-grid .photo-item.hero {
+  /* Hero demoted to wide size on mobile (otherwise it overflows viewport) */
+  .photo-scroll-grid > .photo-item.hero {
     grid-row: span 1;
     grid-column: span 2;
   }
-  /* Mobile: remove spacers entirely */
-  .photo-scroll-grid .spacer,
-  .photo-scroll-grid .spacer.wide {
-    display: none;
+  /* Spacers removed entirely on mobile to save space */
+  .photo-scroll-grid > .spacer,
+  .photo-scroll-grid > .spacer.wide {
+    display: none !important;
   }
 }
 </style>
