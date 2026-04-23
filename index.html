@@ -85,24 +85,59 @@
 }
 .photo-scroll-grid > .spacer.wide { grid-column: span 2; }
 
-/* ==================== MOBILE ==================== */
+/* ==================== MOBILE: bulletproof single-row filmstrip ==================== */
+/* Grid on mobile was creating overlap issues. Switch to flexbox single row.
+   No rows = no row overlap possible. Every photo is 200px tall, width auto (natural aspect). */
 @media (max-width: 768px) {
-  .photo-scroll-container { padding: 0 0.5rem; }
-  /* Mobile: column 140px. Wide (2 cols) = 140+22+140 = 302, 16:10 height = 188.75.
-     Row height 190 fits wide exactly. No overflow, no overlap. */
+  .photo-scroll-container { padding: 0 !important; }
+
+  /* Reset grid, become horizontal flex */
   .photo-scroll-grid {
-    grid-template-rows: 190px 190px;
-    grid-auto-columns: 140px;
-    column-gap: 22px;
-    row-gap: 30px;
-    padding: 0.5rem 1rem 2rem;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    grid-template-rows: none !important;
+    grid-template-columns: none !important;
+    grid-auto-columns: none !important;
+    grid-auto-rows: none !important;
+    grid-auto-flow: unset !important;
+    column-gap: 0 !important;
+    row-gap: 0 !important;
+    gap: 10px !important;
+    padding: 0.5rem 1rem 2rem !important;
+    align-items: center !important;
+    height: auto !important;
+    min-height: 0 !important;
   }
-  /* Hero demoted to wide size on mobile (otherwise it overflows viewport) */
+
+  /* Every photo: fixed 200px height, width auto = natural aspect, block-level */
+  .photo-scroll-grid > .photo-item,
+  .photo-scroll-grid > .photo-item.wide,
   .photo-scroll-grid > .photo-item.hero {
-    grid-row: span 1;
-    grid-column: span 2;
+    flex: 0 0 auto !important;
+    display: block !important;
+    height: 200px !important;
+    width: auto !important;
+    grid-row: auto !important;
+    grid-column: auto !important;
+    background: transparent !important;
+    overflow: hidden !important;
+    align-items: unset !important;
+    justify-content: unset !important;
   }
-  /* Spacers removed entirely on mobile to save space */
+
+  /* Image: fixed height, natural width, override main styles.css aspect-ratio:16/10 */
+  .photo-scroll-grid > .photo-item > img {
+    height: 200px !important;
+    width: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* Spacers gone on mobile */
   .photo-scroll-grid > .spacer,
   .photo-scroll-grid > .spacer.wide {
     display: none !important;
