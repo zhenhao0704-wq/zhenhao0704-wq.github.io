@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-/* Great Glass Elevator horizontal scroll grid */
+/* Horizontal scroll grid for Friends & Great Glass Elevator */
 .photo-scroll-container {
   position: relative;
   padding: 0 3rem;
@@ -36,8 +36,19 @@
 .photo-scroll-grid .photo-item { grid-row: span 1; grid-column: span 1; }
 .photo-scroll-grid .photo-item.wide { grid-column: span 2; }
 .photo-scroll-grid .photo-item.hero { grid-row: span 2; grid-column: span 3; }
-.photo-scroll-grid .spacer { background: transparent; pointer-events: none; grid-row: span 1; grid-column: span 1; }
+
+/* Spacer: force fully invisible regardless of existing styles.css */
+.photo-scroll-grid .spacer,
+.photo-scroll-grid .spacer.wide {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  pointer-events: none;
+  visibility: hidden;
+}
+.photo-scroll-grid .spacer { grid-row: span 1; grid-column: span 1; }
 .photo-scroll-grid .spacer.wide { grid-column: span 2; }
+
 @media (max-width: 768px) {
   .photo-scroll-container { padding: 0 0.5rem; }
   .photo-scroll-grid {
@@ -46,6 +57,16 @@
     column-gap: 22px;
     row-gap: 34px;
     padding: 0.5rem 1rem 2rem;
+  }
+  /* Mobile: hero shrinks to wide size, fits in viewport */
+  .photo-scroll-grid .photo-item.hero {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+  /* Mobile: remove spacers entirely, they just waste scroll distance */
+  .photo-scroll-grid .spacer,
+  .photo-scroll-grid .spacer.wide {
+    display: none;
   }
 }
 </style>
