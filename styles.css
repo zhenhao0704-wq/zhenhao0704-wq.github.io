@@ -165,7 +165,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
 
 /* Teaching section media */
 .teaching-media{margin-top:1rem;display:flex;flex-wrap:wrap;gap:1rem}
-.teaching-media img,.teaching-media video{max-width:100%;width:480px;border-radius:4px;display:block}
+.teaching-media img,.teaching-media video{max-width:100%;width:320px;border-radius:4px;display:block;margin:0 auto}
 @media (max-width:700px){
   .teaching-media img,.teaching-media video{width:100%}
 }
