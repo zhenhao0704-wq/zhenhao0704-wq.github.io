@@ -164,7 +164,7 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
 
 
 /* Teaching section media */
-.teaching-media{margin-top:1rem;display:flex;flex-wrap:wrap;gap:1rem}@media (min-width:900px){.teaching-media{width:150%;margin-left:-25%;max-width:none}}
+.teaching-media{margin-top:1rem;display:flex;flex-wrap:wrap;gap:1rem}@media (min-width:900px){.teaching-media{max-width:520px}}
 .teaching-media img,.teaching-media video,.teaching-media iframe{flex:1 1 0;min-width:0;width:auto;height:auto;aspect-ratio:16/10;object-fit:cover;border:none;border-radius:4px;display:block;margin:0;align-self:stretch}
 @media (max-width:700px){
   .teaching-media img,.teaching-media video{width:100%}
