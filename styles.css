@@ -169,3 +169,16 @@ footer{text-align:center;padding:3rem 4rem;border-top:1px solid var(--border)}fo
 @media (max-width:700px){
   .teaching-media img,.teaching-media video{width:100%}
 }
+
+/* Teaching carousel */
+.teaching-carousel{position:relative;margin-top:1rem;max-width:520px;width:100%;aspect-ratio:16/10;overflow:hidden;border-radius:4px;background:#000}
+.teaching-carousel-track{position:relative;width:100%;height:100%}
+.teaching-carousel-slide{position:absolute;inset:0;opacity:0;transition:opacity .35s ease;pointer-events:none;display:flex;align-items:center;justify-content:center}
+.teaching-carousel-slide.active{opacity:1;pointer-events:auto}
+.teaching-carousel-slide img,.teaching-carousel-slide iframe{width:100%;height:100%;object-fit:cover;border:none;display:block}
+.teaching-carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.25);font-size:1.4rem;line-height:1;cursor:pointer;opacity:.55;transition:opacity .25s ease,background .25s ease;display:flex;align-items:center;justify-content:center;z-index:2;padding:0}
+.teaching-carousel-arrow:hover{opacity:1;background:rgba(0,0,0,.75)}
+.teaching-carousel-arrow.prev{left:10px}.teaching-carousel-arrow.next{right:10px}
+.teaching-carousel-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
+.teaching-carousel-dots .dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);transition:background .25s ease}
+.teaching-carousel-dots .dot.active{background:#fff}
