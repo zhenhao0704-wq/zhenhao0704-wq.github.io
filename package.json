@@ -1,0 +1,17 @@
+{
+  "name": "zhenhao-wen-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal art portfolio site — lightweight test safety net",
+  "type": "module",
+  "scripts": {
+    "check:ids": "node scripts/check-id-references.mjs",
+    "check:html": "html-validate index.html bodies-left-out.html returned-on-loan.html",
+    "test:e2e": "playwright test",
+    "test": "npm run check:ids && npm run check:html && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "html-validate": "^9.5.0"
+  }
+}
