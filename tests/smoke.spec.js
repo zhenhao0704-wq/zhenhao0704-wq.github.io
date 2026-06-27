@@ -54,7 +54,9 @@ test('clicking a video card opens the video modal, Escape closes it', async ({ p
   const modal = page.locator('#videoModal');
   await expect(modal).not.toHaveClass(/active/);
 
-  const card = page.locator('.work-card').first();
+  // Target a card that actually opens a video (some cards are placeholders
+  // with no onclick, e.g. films still in post-production).
+  const card = page.locator('.work-card[onclick*="openVideo"]').first();
   await card.scrollIntoViewIfNeeded();
   await card.click();
 
