@@ -116,7 +116,7 @@ test('the five-level text palette follows content hierarchy', async ({ page }) =
   )).toContain('rgba(0, 0, 0, 0.5)');
 });
 
-test('the intro is optional and releases the page when skipped', async ({ page }) => {
+test('the intro plays on every home-page load, reveals the name, and remains skippable', async ({ page }) => {
   await page.goto('/index.html');
 
   await expect(page.locator('body')).toHaveClass(/intro-active/);
@@ -129,8 +129,18 @@ test('the intro is optional and releases the page when skipped', async ({ page }
   await expect(page.locator('#main')).toBeFocused();
 
   await page.reload();
-  await expect(page.locator('body')).not.toHaveClass(/intro-active/);
-  await expect(page.locator('#site-intro')).toBeHidden();
+  await expect(page.locator('body')).toHaveClass(/intro-active/);
+  await expect(page.locator('#site-intro')).toBeVisible();
+
+  await page.locator('#intro-video').evaluate((video) => video.dispatchEvent(new Event('ended')));
+  await expect(page.locator('#site-intro')).toHaveClass(/is-name-reveal/);
+  await expect(page.locator('#intro-name')).toBeVisible();
+  await expect(page.locator('#main')).toHaveAttribute('inert', '');
+  expect(await page.locator('.landing-video').evaluateAll((videos) => videos.every((video) => video.paused))).toBe(true);
+
+  await expect(page.locator('body')).not.toHaveClass(/intro-active/, { timeout: 5000 });
+  await expect(page.locator('#main')).not.toHaveAttribute('inert', '');
+  await expect.poll(() => page.locator('.landing-video').evaluateAll((videos) => videos.some((video) => !video.paused))).toBe(true);
 });
 
 test('the site remains usable if the enhancement script fails', async ({ page }) => {
@@ -155,8 +165,8 @@ test('deep links and reduced motion bypass the intro', async ({ page }) => {
 });
 
 test('the landing page loops the visual opening and keeps a static motion fallback', async ({ page }) => {
-  await page.addInitScript(() => window.sessionStorage.setItem('zhenhao-intro-seen', 'true'));
   await page.goto('/index.html#top');
+  await page.locator('#intro-skip').click();
 
   await expect(page.locator('.landing-video')).toHaveCount(2);
   await expect(page.locator('.landing-video').first()).toHaveAttribute('poster', 'media/landing-poster.jpg');
@@ -182,9 +192,9 @@ test('the landing page loops the visual opening and keeps a static motion fallba
 });
 
 test('the portrait landing crop follows people across the longer native-speed edit', async ({ page }) => {
-  await page.addInitScript(() => window.sessionStorage.setItem('zhenhao-intro-seen', 'true'));
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/index.html#top');
+  await page.locator('#intro-skip').click();
   const activeVideo = page.locator('.landing-video.is-visible');
   await page.waitForFunction(() => document.querySelector('.landing-video.is-visible')?.readyState >= 1);
   expect(await page.evaluate(() => window.matchMedia('(orientation: portrait) and (max-width: 900px)').matches)).toBe(true);

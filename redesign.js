@@ -1,6 +1,7 @@
 const body = document.body;
 const intro = document.getElementById("site-intro");
 const introVideo = document.getElementById("intro-video");
+const introName = document.getElementById("intro-name");
 const introSkip = document.getElementById("intro-skip");
 const progressBar = document.getElementById("intro-progress-bar");
 const skipLink = document.querySelector(".skip-link");
@@ -16,43 +17,15 @@ const landingMotionToggle = document.getElementById("landing-motion-toggle");
 const reducedMotion = Boolean(window.matchMedia?.("(prefers-reduced-motion: reduce)").matches);
 const saveData = Boolean(window.navigator?.connection?.saveData);
 const isDeepLink = Boolean(window.location.hash && window.location.hash !== "#top");
-let introTimeout;
-
-function hasSeenIntro() {
-  try {
-    if (window.sessionStorage?.getItem("zhenhao-intro-seen") === "true") return true;
-  } catch {
-    // Some privacy-focused previews disable web storage.
-  }
-  if (window.history?.state?.zhenhaoIntroSeen) return true;
-  const windowName = typeof window.name === "string" ? window.name : "";
-  return windowName.split(" ").includes("zhenhao-intro-seen");
-}
-
-function markIntroSeen() {
-  try {
-    window.sessionStorage?.setItem("zhenhao-intro-seen", "true");
-  } catch {
-    // The window-name fallback below keeps repeat visits quiet.
-  }
-  try {
-    window.history?.replaceState({ ...(window.history.state || {}), zhenhaoIntroSeen: true }, "");
-  } catch {
-    // The page remains usable if history state is unavailable.
-  }
-  const windowName = typeof window.name === "string" ? window.name : "";
-  if (!windowName.split(" ").includes("zhenhao-intro-seen")) {
-    try {
-      window.name = `${windowName} zhenhao-intro-seen`.trim();
-    } catch {
-      // Some embedded previews do not expose window.name.
-    }
-  }
-}
+let introFallbackTimeout;
+let introNameTimeout;
+let introPhase = "idle";
 
 function finishIntro({ moveFocus = false } = {}) {
   if (!body.classList.contains("intro-active")) return;
-  window.clearTimeout(introTimeout);
+  window.clearTimeout(introFallbackTimeout);
+  window.clearTimeout(introNameTimeout);
+  introPhase = "complete";
   intro.classList.add("is-complete");
   intro.setAttribute("aria-hidden", "true");
   intro.setAttribute("inert", "");
@@ -60,16 +33,28 @@ function finishIntro({ moveFocus = false } = {}) {
   siteHeader.removeAttribute("inert");
   main.removeAttribute("inert");
   introVideo.pause();
+  startLandingPlayback();
   window.setTimeout(() => {
     intro.hidden = true;
   }, 1150);
   if (moveFocus) requestAnimationFrame(() => main.focus({ preventScroll: true }));
 }
 
+function revealIntroName() {
+  if (!body.classList.contains("intro-active") || introPhase === "name") return;
+  window.clearTimeout(introFallbackTimeout);
+  introPhase = "name";
+  introVideo.pause();
+  intro.classList.add("is-name-reveal");
+  injectLandingSources();
+  introNameTimeout = window.setTimeout(finishIntro, 3200);
+}
+
 function startIntro() {
   const source = introVideo?.querySelector("source[data-src]");
-  if (!intro || !introVideo || !source) return;
+  if (!intro || !introVideo || !introName || !source) return;
 
+  introPhase = "video";
   body.classList.add("intro-active");
   siteHeader.setAttribute("inert", "");
   main.setAttribute("inert", "");
@@ -78,23 +63,22 @@ function startIntro() {
   intro.removeAttribute("inert");
   source.src = source.dataset.src;
   introVideo.load();
-  markIntroSeen();
-  introTimeout = window.setTimeout(finishIntro, 16000);
+  introFallbackTimeout = window.setTimeout(revealIntroName, 18000);
 
   const playAttempt = introVideo.play();
-  if (playAttempt) playAttempt.catch(() => finishIntro());
+  if (playAttempt) playAttempt.catch(revealIntroName);
 }
 
 skipLink.addEventListener("click", () => finishIntro({ moveFocus: true }));
 introSkip.addEventListener("click", () => finishIntro({ moveFocus: true }));
-introVideo.addEventListener("ended", finishIntro);
-["error", "abort", "stalled"].forEach((eventName) => introVideo.addEventListener(eventName, finishIntro));
+introVideo.addEventListener("ended", revealIntroName);
+["error", "abort"].forEach((eventName) => introVideo.addEventListener(eventName, revealIntroName));
 introVideo.addEventListener("timeupdate", () => {
   if (!introVideo.duration) return;
   progressBar.style.width = `${Math.min(100, (introVideo.currentTime / introVideo.duration) * 100)}%`;
 });
 
-if (!reducedMotion && !saveData && !isDeepLink && !hasSeenIntro()) startIntro();
+if (!reducedMotion && !saveData && !isDeepLink) startIntro();
 
 const LANDING_LOOP_START = 0;
 const LANDING_LOOP_END = 21.9;
@@ -130,7 +114,7 @@ function updateLandingMotionToggle() {
 }
 
 function shouldPlayLanding() {
-  return landingMotionEnabled && landingInView && !document.hidden;
+  return landingMotionEnabled && landingInView && !document.hidden && !body.classList.contains("intro-active");
 }
 
 function injectLandingSources() {
