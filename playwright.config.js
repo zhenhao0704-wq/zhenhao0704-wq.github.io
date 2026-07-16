@@ -7,6 +7,14 @@ import { join } from 'node:path';
 // are installed via `npx playwright install chromium`, this returns undefined
 // and Playwright falls back to its own managed browser.
 function preinstalledChromium() {
+  const macBrowsers = [
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+  ];
+  for (const bin of macBrowsers) {
+    if (existsSync(bin)) return bin;
+  }
+
   const base = process.env.PLAYWRIGHT_BROWSERS_PATH;
   if (!base || !existsSync(base)) return undefined;
   for (const dir of readdirSync(base)) {

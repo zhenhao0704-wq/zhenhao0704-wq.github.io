@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const files = ['index.html', 'bodies-left-out.html', 'returned-on-loan.html'];
+const files = ['index.html', 'cv.html', 'bodies-left-out.html', 'returned-on-loan.html'];
 
 let failures = 0;
 
@@ -17,7 +17,7 @@ for (const file of files) {
 
   // Collect declared ids.
   const declared = new Map(); // id -> count
-  for (const m of html.matchAll(/\bid\s*=\s*["']([^"']+)["']/g)) {
+  for (const m of html.matchAll(/(?:^|\s)id\s*=\s*["']([^"']+)["']/g)) {
     declared.set(m[1], (declared.get(m[1]) || 0) + 1);
   }
 

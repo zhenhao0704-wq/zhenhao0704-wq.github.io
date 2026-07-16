@@ -1,0 +1,130 @@
+import { readdir, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const imageDirectory = path.join(root, "img");
+
+const qatarItems = [
+  ["qatar-national-museum-passage.jpg", "Passage through the desert-rose forms of the National Museum of Qatar."],
+  ["qatar-katara-shade-sails.jpg", "Shade sails above a passage in Katara Cultural Village."],
+  ["qatar-museum-of-islamic-art.jpg", "Museum of Islamic Art on the Doha waterfront."],
+  ["qatar-national-museum-curves.jpg", "Overlapping architectural curves at the National Museum of Qatar."],
+  ["qatar-place-vendome-hands.jpg", "Hands sculpture at Place Vendome in Lusail."],
+  ["qatar-pastel-street-stop.jpg", "Pastel buildings and a stop sign in Qatar."],
+  ["qatar-national-museum-facade-wide.jpg", "Wide view of the National Museum of Qatar facade."],
+  ["qatar-katara-door-06.jpg", "Numbered wooden door in Katara Cultural Village."],
+  ["qatar-geometric-skylight.jpg", "Geometric skylight casting patterned light."],
+  ["qatar-palms-through-museum.jpg", "Palm trees framed by the National Museum of Qatar."],
+  ["qatar-katara-sails-lane.jpg", "Sail-covered lane in Katara Cultural Village."],
+  ["qatar-national-museum-sculpture.jpg", "Outdoor sculpture at the National Museum of Qatar."],
+  ["qatar-pink-buildings-wide.jpg", "Wide view of pink buildings in Qatar."],
+  ["qatar-pink-courtyard-plants.jpg", "Hanging plants in a pink courtyard."],
+  ["qatar-national-museum-city-frame.jpg", "Doha buildings framed by the National Museum of Qatar."],
+  ["qatar-blue-pots-calligraphy.jpg", "Blue pots beside an Arabic calligraphy wall."],
+  ["qatar-pink-door.jpg", "Wooden door set in a pink wall."],
+  ["qatar-stained-glass-hall.jpg", "Colourful stained-glass hall in Qatar."],
+  ["qatar-courtyard-arches.jpg", "Repeated arches around a quiet courtyard."],
+  ["qatar-katara-lantern-wall.jpg", "Lanterns mounted on a wall in Katara Cultural Village."],
+  ["qatar-black-door-13.jpg", "Black numbered door in Qatar."],
+  ["qatar-palm-walls.jpg", "Palm tree between pale architectural walls."],
+  ["qatar-katara-horse-mural.jpg", "Horse mural in Katara Cultural Village."],
+  ["qatar-bougainvillea-window.jpg", "Bougainvillea beside a shaded window."],
+  ["qatar-evening-building-frame.jpg", "Evening building framed by shade cloth."],
+  ["qatar-red-bougainvillea-arch.jpg", "Red bougainvillea beside an archway."],
+  ["qatar-national-museum-wide.jpg", "Desert-rose architecture of the National Museum of Qatar."],
+];
+
+const czechItems = [
+  ["czech-08-red-walled-passage.jpg", "A silhouetted person crossing a red-walled passage."],
+  ["czech-04-dark-restaurant-window.jpg", "Empty restaurant tables beside a bright window in a dark interior."],
+  ["czech-05-red-white-tram.jpg", "Red-and-white city tram beneath a blue, cloud-filled sky."],
+  ["czech-07-passengers-through-tram-window.jpg", "Passengers seen through the window of a red-and-white tram."],
+  ["czech-03-cobbled-street-cafe.jpg", "People seated at outdoor cafe tables on a cobbled street."],
+  ["czech-24-window-framed-architecture.jpg", "Sunlit stone architecture framed by dark window mullions."],
+  ["czech-11-sculpture-stained-glass.jpg", "Stone sculpture beside a stained-glass window inside a cathedral."],
+  ["czech-14-statue-stained-glass.jpg", "A dark religious statue silhouetted against stained glass."],
+  ["czech-16-statue-gilded-screen.jpg", "Stone statue and gilded screen lit by sunlight inside a cathedral."],
+  ["czech-17-bronze-figure-stained-glass.jpg", "Bronze praying figure beside tall stained-glass windows."],
+  ["czech-18-stained-glass-from-below.jpg", "Stained-glass windows and Gothic stonework seen from below."],
+  ["czech-10-visitors-cathedral-nave.jpg", "Visitors standing in a dim cathedral nave beside tall windows."],
+  ["czech-21-organ-pipes-circular-window.jpg", "Silver organ pipes framed by a circular stained-glass window."],
+  ["czech-15-blue-gold-religious-mural.jpg", "Blue-and-gold religious mural depicting a crowned figure."],
+  ["czech-09-gothic-cathedral-exterior.jpg", "Gothic cathedral exterior under a deep blue sky."],
+  ["czech-25-church-courtyard.jpg", "Historic church buildings around a crowded sunlit courtyard."],
+  ["czech-28-crowded-pastel-street.jpg", "Crowds walking along a narrow street between pastel buildings."],
+  ["czech-30-red-tiled-rooftops.jpg", "Red tiled rooftops across the historic city center."],
+  ["czech-32-prague-skyline-bridge.jpg", "Prague skyline and bridge seen across red rooftops and trees."],
+  ["czech-01-prague-castle-riverside.jpg", "Prague Castle and riverside buildings under a cloudy sky."],
+  ["czech-02-historic-street-tram-wires.jpg", "Sunlit street lined with historic buildings and tram wires."],
+  ["czech-29-quiet-cobbled-courtyard.jpg", "Parked cars in a quiet cobbled courtyard between pale buildings."],
+  ["czech-06-passengers-inside-tram.jpg", "Passengers seated inside a city tram beside sunlit doors."],
+  ["czech-12-gothic-windows-interior.jpg", "Gothic windows and carved details in a dim cathedral interior."],
+  ["czech-13-angels-gilded-crest.jpg", "Sculpted angels gathered around a gilded crest inside a cathedral."],
+  ["czech-19-large-stained-glass-window.jpg", "Large stained-glass window framed by Gothic stone arches."],
+  ["czech-20-organ-circular-window.jpg", "Cathedral organ beneath a circular stained-glass window."],
+  ["czech-22-windows-scaffolding.jpg", "Tall stained-glass windows and scaffolding inside a cathedral."],
+  ["czech-23-shadowed-gothic-arches.jpg", "Shadowed Gothic arches and windows inside a cathedral."],
+  ["czech-26-diners-sunlit-courtyard.jpg", "Diners in a sunlit courtyard outside a restaurant."],
+  ["czech-27-cafe-fountain.jpg", "Outdoor cafe tables around a small circular fountain."],
+  ["czech-31-rooftops-church-towers.jpg", "Historic rooftops and church towers beside a green hillside."],
+];
+
+const galleries = [
+  ["friends", "Friends", "Production photography from Kobo Abe's Friends (1967).", "friends-"],
+  ["glass", "Great Glass Elevator", "Production photography from Mark Branner's adaptation of Roald Dahl's Charlie and the Great Glass Elevator (2026).", "glass-"],
+  ["france", "France", "Travel photographs from France.", "france-"],
+  ["italy", "Italy", "Travel photographs from Italy.", "italy-"],
+  ["uk", "United Kingdom", "Travel photographs from the United Kingdom.", "uk-"],
+  ["japan", "Japan", "Travel photographs from Japan.", "japan-"],
+  ["spain", "Spain", "Travel photographs from Spain.", "spain-"],
+  ["iceland", "Iceland", "Travel photographs from Iceland.", "iceland-"],
+  ["switzerland", "Switzerland", "Travel photographs from Switzerland.", "switzerland-"],
+  ["us", "United States", "Travel photographs from the United States.", "us-"],
+  ["thailand", "Thailand", "Travel photographs from Thailand.", "thailand-"],
+  ["nepal", "Nepal", "Travel photographs from Nepal.", "nepal-"],
+  ["egypt", "Egypt", "Travel photographs from Egypt.", "egypt-"],
+  ["indonesia", "Indonesia", "Travel photographs from Indonesia.", "indonesia-"],
+  ["malaysia", "Malaysia", "Travel photographs from Malaysia.", "malaysia-"],
+  ["china", "China", "Travel photographs from China.", "china-"],
+  ["vietnam", "Vietnam", "Travel photographs from Vietnam.", "vietnam-"],
+  ["korea", "South Korea", "Travel photographs from South Korea.", "korea-"],
+  ["qatar", "Qatar", "Travel photographs from Doha and Lusail, Qatar.", "qatar-", qatarItems],
+  ["czech", "Czech Republic", "Travel photographs from Prague, Czech Republic.", "czech-", czechItems],
+];
+
+const files = (await readdir(imageDirectory)).sort((a, b) =>
+  a.localeCompare(b, undefined, { numeric: true }),
+);
+
+function labelFromFilename(filename, prefix) {
+  return filename
+    .slice(prefix.length)
+    .replace(/\.[^.]+$/, "")
+    .replace(/\b(bw|abc|kl|ngo|mon)\b/gi, (value) => value.toUpperCase())
+    .split("-")
+    .filter(Boolean)
+    .join(" ");
+}
+
+const output = Object.fromEntries(
+  galleries.map(([key, title, description, prefix, manifest]) => {
+    const items = manifest
+      ? manifest.map(([filename, alt]) => ({ src: `img/${filename}`, alt }))
+      : files
+        .filter((filename) => filename.startsWith(prefix))
+        .map((filename) => ({
+          src: `img/${filename}`,
+          alt: `${title}: ${labelFromFilename(filename, prefix)}`,
+        }));
+
+    return [key, { title, description, items }];
+  }),
+);
+
+const source = `// Generated by scripts/generate-gallery-data.mjs.\nwindow.PORTFOLIO_GALLERIES = ${JSON.stringify(output, null, 2)};\n`;
+await writeFile(path.join(root, "gallery-data.js"), source);
+
+console.log(
+  `Generated ${Object.keys(output).length} galleries with ${Object.values(output).reduce((sum, gallery) => sum + gallery.items.length, 0)} images.`,
+);
