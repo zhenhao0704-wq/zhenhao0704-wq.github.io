@@ -29,7 +29,7 @@ test('home page loads without errors and exposes the complete navigation', async
   ]);
   expect(await page.locator('#main > section.content-section').evaluateAll((sections) =>
     sections.map((section) => section.id),
-  )).toEqual(['about', 'works', 'research', 'photography', 'cv', 'teaching', 'travel', 'contact', 'comments']);
+  )).toEqual(['about', 'works', 'research', 'photography', 'cv', 'teaching', 'travel', 'contact']);
   await expect(page.getByRole('heading', { name: 'About', exact: true })).toBeVisible();
   expect(ownCodeErrors(errors), ownCodeErrors(errors).join('\n')).toEqual([]);
 });
@@ -43,7 +43,7 @@ test('the typography separates module labels from content titles', async ({ page
     '.home-page #about .about-copy > h2',
     '.home-page #contact > h2',
   ].join(', '));
-  await expect(moduleTitles).toHaveCount(9);
+  await expect(moduleTitles).toHaveCount(8);
   expect(await moduleTitles.allTextContents()).toEqual([
     'About',
     'Dance Films',
@@ -53,7 +53,6 @@ test('the typography separates module labels from content titles', async ({ page
     'Teaching',
     'Travel',
     'Contact',
-    'Comments',
   ]);
   expect(await moduleTitles.evaluateAll((titles) => titles.every((title) => {
     const style = getComputedStyle(title);
@@ -99,28 +98,24 @@ test('the five-level text palette follows content hierarchy', async ({ page }) =
     ['.travel-card strong', 'rgb(242, 240, 234)'],
     ['#travel .section-head > p', 'rgb(209, 206, 197)'],
     ['.travel-card small', 'rgb(160, 158, 150)'],
-    ['.future-travel p', 'rgb(133, 130, 122)'],
+    ['footer', 'rgb(133, 130, 122)'],
   ];
   for (const [selector, color] of samples) {
     await expect.poll(() => page.locator(selector).first().evaluate((element) => getComputedStyle(element).color)).toBe(color);
   }
 
-  await page.goto('/index.html#comments');
-  expect(await page.locator('#comment-name').evaluate((element) =>
-    getComputedStyle(element, '::placeholder').opacity,
-  )).toBe('1');
-
   await page.goto('/index.html?preview=text-colour#top');
   expect(await page.locator('.landing-shade').evaluate((element) =>
     getComputedStyle(element).backgroundImage,
-  )).toContain('rgba(0, 0, 0, 0.5)');
+  )).toContain('rgba(0, 0, 0, 0.76)');
 });
 
-test('the intro plays on every home-page load, reveals the name, and remains skippable', async ({ page }) => {
+test('the intro plays once, remains skippable, and return visits go straight to the site', async ({ page }) => {
   await page.goto('/index.html');
 
   await expect(page.locator('body')).toHaveClass(/intro-active/);
   await expect(page.locator('#main')).toHaveAttribute('inert', '');
+  await expect(page.locator('#intro-video')).toHaveAttribute('poster', 'media/intro-poster.jpg');
   await page.locator('#intro-skip').click();
 
   await expect(page.locator('body')).not.toHaveClass(/intro-active/);
@@ -129,8 +124,12 @@ test('the intro plays on every home-page load, reveals the name, and remains ski
   await expect(page.locator('#main')).toBeFocused();
 
   await page.reload();
+  await expect(page.locator('body')).not.toHaveClass(/intro-active/);
+  await expect(page.locator('#site-intro')).toBeHidden();
+
+  await page.evaluate(() => window.localStorage.removeItem('zhenhao-intro-seen-v1'));
+  await page.reload();
   await expect(page.locator('body')).toHaveClass(/intro-active/);
-  await expect(page.locator('#site-intro')).toBeVisible();
 
   await page.locator('#intro-video').evaluate((video) => video.dispatchEvent(new Event('ended')));
   await expect(page.locator('#site-intro')).toHaveClass(/is-name-reveal/);
@@ -304,10 +303,15 @@ test('production photography opens as a gallery and full-screen viewer', async (
   await expect(page.locator('#gallery-title')).toHaveText('Friends');
   await expect(page.locator('#gallery-count')).toHaveText('15 photographs');
   await expect(page.locator('#gallery-grid .gallery-thumb')).toHaveCount(15);
+  await expect(page.locator('#gallery-grid .gallery-thumb img').first()).toHaveAttribute('src', /img\/thumbs\/400\//);
+  expect(await page.locator('#gallery-grid .gallery-thumb img').evaluateAll((images) =>
+    images.every((image) => image.width > 0 && image.height > 0),
+  )).toBe(true);
 
   await page.locator('#gallery-grid .gallery-thumb').first().click();
   await expect(page.locator('#gallery-viewer')).toBeVisible();
   await expect(page.locator('#viewer-position')).toHaveText('1 of 15');
+  await expect(page.locator('#viewer-image')).toHaveAttribute('src', /img\/thumbs\/1200\//);
   await page.keyboard.press('ArrowRight');
   await expect(page.locator('#viewer-position')).toHaveText('2 of 15');
 
@@ -318,15 +322,15 @@ test('production photography opens as a gallery and full-screen viewer', async (
   await expect(trigger).toBeFocused();
 });
 
-test('all eighteen travel galleries are present and total 524 photographs', async ({ page }) => {
+test('all twenty travel galleries are present and total 553 photographs', async ({ page }) => {
   await page.goto('/index.html#travel');
   const cards = page.locator('#travel [data-gallery]');
-  await expect(cards).toHaveCount(18);
+  await expect(cards).toHaveCount(20);
 
   const total = await cards.locator('small').evaluateAll((labels) =>
     labels.reduce((sum, label) => sum + Number(label.textContent.match(/\d+/)?.[0] || 0), 0),
   );
-  expect(total).toBe(524);
+  expect(total).toBe(553);
 
   await page.locator('[data-gallery="france"]').click();
   await expect(page.locator('#gallery-count')).toHaveText('29 photographs');
@@ -343,6 +347,35 @@ test('all eighteen travel galleries are present and total 524 photographs', asyn
   await expect(page.locator('#gallery-title')).toHaveText('Czech Republic');
   await expect(page.locator('#gallery-count')).toHaveText('32 photographs');
   await expect(page.locator('#gallery-grid .gallery-thumb')).toHaveCount(32);
+
+  await page.keyboard.press('Escape');
+  await page.locator('[data-gallery="austria"]').click();
+  await expect(page.locator('#gallery-title')).toHaveText('Austria');
+  await expect(page.locator('#gallery-count')).toHaveText('19 photographs');
+  await expect(page.locator('#gallery-grid .gallery-thumb')).toHaveCount(19);
+
+  await page.keyboard.press('Escape');
+  await page.locator('[data-gallery="turkey"]').click();
+  await expect(page.locator('#gallery-title')).toHaveText('Turkey');
+  await expect(page.locator('#gallery-count')).toHaveText('10 photographs');
+  await expect(page.locator('#gallery-grid .gallery-thumb')).toHaveCount(10);
+});
+
+test('homepage images reserve their layout space and galleries use optimized derivatives', async ({ page }) => {
+  await page.goto('/index.html#top');
+
+  expect(await page.locator('#main img').evaluateAll((images) =>
+    images.every((image) => Number(image.getAttribute('width')) > 0 && Number(image.getAttribute('height')) > 0),
+  )).toBe(true);
+
+  expect(await page.evaluate(() => Object.values(window.PORTFOLIO_GALLERIES).every((gallery) =>
+    gallery.items.every((item) =>
+      item.thumb.includes('/thumbs/400/') &&
+      item.src.includes('/thumbs/1200/') &&
+      item.width > 0 &&
+      item.height > 0
+    ),
+  ))).toBe(true);
 });
 
 test('the mobile menu has usable targets and closes cleanly', async ({ page }) => {
@@ -363,106 +396,26 @@ test('the mobile menu has usable targets and closes cleanly', async ({ page }) =
   await expect(nav).not.toBeVisible();
 });
 
-test('the local comments preview supports anonymous posting, likes, and one-level replies', async ({ page }) => {
-  await page.goto('/index.html#comments');
-
-  await expect(page.getByRole('heading', { name: 'Comments', exact: true })).toBeVisible();
-  await expect(page.locator('#comment-preview-note')).toBeVisible();
-  await expect(page.locator('#comment-form input[type="email"], #comment-form input[type="password"]')).toHaveCount(0);
-  await expect(page.locator('#comment-message')).toHaveAttribute('required', '');
-  await expect(page.locator('#comment-message')).toHaveAttribute('maxlength', '500');
-
-  await page.locator('#comment-name').fill('Preview visitor');
-  await page.locator('#comment-message').fill('<img src=x onerror=alert(1)> A clear, quiet comment.');
-  await page.getByRole('button', { name: 'Post comment', exact: true }).click();
-
-  const comment = page.locator('.comment-entry').first();
-  await expect(page.locator('#comment-count')).toHaveText('1 comment');
-  await expect(comment.locator('.comment-body')).toHaveText('<img src=x onerror=alert(1)> A clear, quiet comment.');
-  await expect(comment.locator('img')).toHaveCount(0);
-
-  const like = comment.locator('.comment-like');
-  await like.click();
-  await expect(like).toHaveAttribute('aria-pressed', 'true');
-  await expect(like).toHaveText('Liked 1');
-  await expect(like).toBeFocused();
-
-  await comment.locator('.comment-reply-toggle').click();
-  const replyMessage = comment.locator('.comment-reply-form textarea');
-  await expect(replyMessage).toBeFocused();
-  await replyMessage.fill('A one-level reply.');
-  await comment.getByRole('button', { name: 'Post reply', exact: true }).click();
-  await expect(comment.locator('.comment-reply .comment-body')).toHaveText('A one-level reply.');
-
-  await page.reload();
-  await expect(page.locator('.comment-entry')).toHaveCount(1);
-  await expect(page.locator('.comment-like')).toHaveAttribute('aria-pressed', 'true');
-
-  await page.evaluate(() => window.localStorage.removeItem('zhenhao-comment-preview-v1'));
-  await page.reload();
-  await expect(page.locator('#comment-count')).toHaveText('0 comments');
-  await expect(page.locator('.comment-entry')).toHaveCount(0);
-});
-
-test('the comments front end uses the persistent API when public configuration is present', async ({ page }) => {
-  const rootId = '11111111-1111-4111-8111-111111111111';
-  const stored = [];
-  let liked = false;
-
-  await page.route('**/index.html**', async (route) => {
-    const response = await route.fetch();
-    const html = (await response.text())
-      .replace('<meta name="comment-api-url" content="">', '<meta name="comment-api-url" content="http://comments.test">')
-      .replace('<meta name="turnstile-sitekey" content="">', '<meta name="turnstile-sitekey" content="test-sitekey">');
-    await route.fulfill({ response, body: html });
-  });
-  await page.route('https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit', (route) => route.fulfill({
-    contentType: 'application/javascript',
-    body: `window.turnstile={render(el,o){el.textContent='Verified';setTimeout(()=>o.callback('token'),0);return 'widget'},getResponse(){return 'token'},reset(){}};`,
-  }));
-  await page.route('http://comments.test/**', async (route) => {
-    const request = route.request();
-    const url = new URL(request.url());
-    if (request.method() === 'GET' && url.pathname === '/api/comments') {
-      await route.fulfill({ json: { comments: stored, total: stored.length, nextCursor: null } });
-      return;
-    }
-    if (request.method() === 'POST' && url.pathname === '/api/comments') {
-      const body = request.postDataJSON();
-      const comment = { id: rootId, parentId: null, author: body.name || 'Anonymous', body: body.message, createdAt: '2026-07-15T12:00:00.000Z', likeCount: 0, liked: false, replies: [] };
-      stored.splice(0, stored.length, comment);
-      await route.fulfill({ status: 201, json: { comment, published: true } });
-      return;
-    }
-    if (request.method() === 'POST' && url.pathname === `/api/comments/${rootId}/like`) {
-      liked = request.postDataJSON().liked;
-      stored[0].liked = liked;
-      stored[0].likeCount = liked ? 1 : 0;
-      await route.fulfill({ json: { id: rootId, liked, likeCount: liked ? 1 : 0 } });
-      return;
-    }
-    await route.fulfill({ status: 404, json: { error: 'Not found' } });
-  });
-
-  await page.goto('/index.html#comments');
-  await expect(page.locator('#comment-preview-note')).toBeHidden();
-  await expect(page.getByRole('button', { name: 'Post comment', exact: true })).toBeEnabled();
-  await page.locator('#comment-name').fill('Remote visitor');
-  await page.locator('#comment-message').fill('Stored beyond this browser.');
-  await page.getByRole('button', { name: 'Post comment', exact: true }).click();
-  await expect(page.locator('#comment-count')).toHaveText('1 comment');
-  await expect(page.locator('.comment-body')).toHaveText('Stored beyond this browser.');
-  await page.locator('.comment-like').click();
-  await expect(page.locator('.comment-like')).toHaveText('Liked 1');
-
-  await page.reload();
-  await expect(page.locator('#comment-count')).toHaveText('1 comment');
-  await expect(page.locator('.comment-body')).toHaveText('Stored beyond this browser.');
+test('the disconnected comment interface is not exposed to visitors', async ({ page }) => {
+  await page.goto('/index.html');
+  await expect(page.locator('#comments, #comment-form')).toHaveCount(0);
+  await expect(page.locator('meta[name="comment-api-url"], meta[name="turnstile-sitekey"]')).toHaveCount(0);
+  await expect(page.locator('script[src^="comments.js"], link[href^="comments.css"]')).toHaveCount(0);
 });
 
 test('research journals share the new system and keep their content structure', async ({ page }) => {
   await page.goto('/bodies-left-out.html');
   await expect(page.locator('link[href^="project.css"]')).toHaveCount(1);
+  expect(await page.locator('.project-nav .nav-links a').allTextContents()).toEqual([
+    'About',
+    'Dance Films',
+    'Research',
+    'Photography',
+    'CV',
+    'Teaching',
+    'Travel',
+    'Contact',
+  ]);
   await expect(page.getByRole('heading', { level: 2, name: /^Week/ })).toHaveCount(7);
   await expect(page.locator('.par-week-video iframe')).toHaveCount(11);
   await expect(page.locator('.par-week-video iframe[title][loading="lazy"]')).toHaveCount(11);
@@ -510,7 +463,7 @@ test('desktop and mobile pages do not overflow', async ({ page }) => {
   }
 });
 
-test('featured imagery and gallery viewer never exceed source resolution at 2x', async ({ browser }) => {
+test('featured photography and gallery viewer load bounded optimized sources', async ({ browser }) => {
   const context = await browser.newContext({
     viewport: { width: 1440, height: 900 },
     deviceScaleFactor: 2,
@@ -519,10 +472,10 @@ test('featured imagery and gallery viewer never exceed source resolution at 2x',
   await page.goto('/index.html#photography');
 
   const selectors = [
-    '.lead-film-image img',
-    '.film-card-media img',
-    '.research-card img',
+    '.research-card:nth-child(2) img',
     '.photo-project > img',
+    '.teaching-media img',
+    '.travel-card img',
   ];
   for (const selector of selectors) {
     const images = page.locator(selector);
@@ -530,21 +483,15 @@ test('featured imagery and gallery viewer never exceed source resolution at 2x',
       const image = images.nth(index);
       await image.scrollIntoViewIfNeeded();
       await expect(image).toHaveJSProperty('complete', true);
-      const dimensions = await image.evaluate((element) => ({
-        source: element.naturalWidth,
-        rendered: element.getBoundingClientRect().width * window.devicePixelRatio,
-      }));
-      expect(dimensions.rendered, selector).toBeLessThanOrEqual(dimensions.source + 2);
+      expect(await image.evaluate((element) => element.currentSrc)).toMatch(/img\/thumbs\/(400|1200)\//);
+      expect(await image.evaluate((element) => element.naturalWidth)).toBeLessThanOrEqual(1200);
     }
   }
 
   await page.locator('[data-gallery="friends"]').click();
   await page.locator('#gallery-grid .gallery-thumb').first().click();
   await expect(page.locator('#viewer-image')).toHaveJSProperty('complete', true);
-  const viewerDimensions = await page.locator('#viewer-image').evaluate((element) => ({
-    source: element.naturalWidth,
-    rendered: element.getBoundingClientRect().width * window.devicePixelRatio,
-  }));
-  expect(viewerDimensions.rendered).toBeLessThanOrEqual(viewerDimensions.source + 2);
+  await expect(page.locator('#viewer-image')).toHaveAttribute('src', /img\/thumbs\/1200\//);
+  expect(await page.locator('#viewer-image').evaluate((element) => element.naturalWidth)).toBeLessThanOrEqual(1200);
   await context.close();
 });

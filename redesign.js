@@ -17,13 +17,32 @@ const landingMotionToggle = document.getElementById("landing-motion-toggle");
 const reducedMotion = Boolean(window.matchMedia?.("(prefers-reduced-motion: reduce)").matches);
 const saveData = Boolean(window.navigator?.connection?.saveData);
 const isDeepLink = Boolean(window.location.hash && window.location.hash !== "#top");
+const INTRO_STORAGE_KEY = "zhenhao-intro-seen-v1";
 let introFallbackTimeout;
+let introStartupTimeout;
 let introNameTimeout;
 let introPhase = "idle";
+
+function hasSeenIntro() {
+  try {
+    return window.localStorage.getItem(INTRO_STORAGE_KEY) === "true";
+  } catch {
+    return false;
+  }
+}
+
+function rememberIntro() {
+  try {
+    window.localStorage.setItem(INTRO_STORAGE_KEY, "true");
+  } catch {
+    // Storage can be unavailable in privacy modes; the intro still remains skippable.
+  }
+}
 
 function finishIntro({ moveFocus = false } = {}) {
   if (!body.classList.contains("intro-active")) return;
   window.clearTimeout(introFallbackTimeout);
+  window.clearTimeout(introStartupTimeout);
   window.clearTimeout(introNameTimeout);
   introPhase = "complete";
   intro.classList.add("is-complete");
@@ -43,6 +62,7 @@ function finishIntro({ moveFocus = false } = {}) {
 function revealIntroName() {
   if (!body.classList.contains("intro-active") || introPhase === "name") return;
   window.clearTimeout(introFallbackTimeout);
+  window.clearTimeout(introStartupTimeout);
   introPhase = "name";
   introVideo.pause();
   intro.classList.add("is-name-reveal");
@@ -55,6 +75,7 @@ function startIntro() {
   if (!intro || !introVideo || !introName || !source) return;
 
   introPhase = "video";
+  rememberIntro();
   body.classList.add("intro-active");
   siteHeader.setAttribute("inert", "");
   main.setAttribute("inert", "");
@@ -63,7 +84,8 @@ function startIntro() {
   intro.removeAttribute("inert");
   source.src = source.dataset.src;
   introVideo.load();
-  introFallbackTimeout = window.setTimeout(revealIntroName, 18000);
+  introStartupTimeout = window.setTimeout(revealIntroName, 4500);
+  introFallbackTimeout = window.setTimeout(revealIntroName, 16000);
 
   const playAttempt = introVideo.play();
   if (playAttempt) playAttempt.catch(revealIntroName);
@@ -72,13 +94,14 @@ function startIntro() {
 skipLink.addEventListener("click", () => finishIntro({ moveFocus: true }));
 introSkip.addEventListener("click", () => finishIntro({ moveFocus: true }));
 introVideo.addEventListener("ended", revealIntroName);
+introVideo.addEventListener("playing", () => window.clearTimeout(introStartupTimeout));
 ["error", "abort"].forEach((eventName) => introVideo.addEventListener(eventName, revealIntroName));
 introVideo.addEventListener("timeupdate", () => {
   if (!introVideo.duration) return;
   progressBar.style.width = `${Math.min(100, (introVideo.currentTime / introVideo.duration) * 100)}%`;
 });
 
-if (!reducedMotion && !saveData && !isDeepLink) startIntro();
+if (!reducedMotion && !saveData && !isDeepLink && !hasSeenIntro()) startIntro();
 
 const LANDING_LOOP_START = 0;
 const LANDING_LOOP_END = 21.9;
@@ -403,9 +426,8 @@ let activeThumbnail = null;
 function applyNativeResolutionLimit(image) {
   const setLimit = () => {
     if (!image.naturalWidth || !image.naturalHeight) return;
-    const scale = Math.max(1, window.devicePixelRatio || 1);
-    image.style.setProperty("--native-width", `${Math.floor(image.naturalWidth / scale)}px`);
-    image.style.setProperty("--native-height", `${Math.floor(image.naturalHeight / scale)}px`);
+    image.style.setProperty("--native-width", `${image.naturalWidth}px`);
+    image.style.setProperty("--native-height", `${image.naturalHeight}px`);
   };
 
   if (image.complete) setLimit();
@@ -418,6 +440,8 @@ function renderViewer(index) {
   const item = activeGallery.items[activeImageIndex];
   viewerImage.style.removeProperty("--native-width");
   viewerImage.style.removeProperty("--native-height");
+  viewerImage.width = item.width;
+  viewerImage.height = item.height;
   viewerImage.src = item.src;
   viewerImage.alt = item.alt;
   applyNativeResolutionLimit(viewerImage);
@@ -460,11 +484,12 @@ function openGallery(trigger, key) {
     button.type = "button";
     button.className = "gallery-thumb";
     button.setAttribute("aria-label", `View ${item.alt}`);
-    image.src = item.src;
+    image.src = item.thumb || item.src;
     image.alt = item.alt;
-    image.loading = "lazy";
+    image.width = item.width;
+    image.height = item.height;
+    image.loading = index < 8 ? "eager" : "lazy";
     image.decoding = "async";
-    applyNativeResolutionLimit(image);
     button.append(image);
     button.addEventListener("click", () => openViewer(index, button));
     fragment.append(button);
