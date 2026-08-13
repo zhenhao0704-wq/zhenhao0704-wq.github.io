@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { mkdir, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -33,6 +33,15 @@ function readDimensions(source) {
   return { width: stream.width, height: stream.height };
 }
 
+async function isCurrent(source, output) {
+  try {
+    const [sourceStat, outputStat] = await Promise.all([stat(source), stat(output)]);
+    return outputStat.mtimeMs >= sourceStat.mtimeMs;
+  } catch {
+    return false;
+  }
+}
+
 await Promise.all([
   mkdir(smallDirectory, { recursive: true }),
   mkdir(largeDirectory, { recursive: true }),
@@ -56,14 +65,21 @@ for (const [index, filename] of files.entries()) {
   const largeOutput = path.join(largeDirectory, largeFilename);
   const { width, height } = readDimensions(source);
 
-  run(ffmpeg, [
-    "-y", "-hide_banner", "-loglevel", "error",
-    "-i", source,
-    "-filter_complex",
-    "[0:v]split=2[small][large];[small]scale=w='min(400,iw)':h=-2:flags=lanczos[smallout];[large]scale=w='min(1200,iw)':h=-2:flags=lanczos[largeout]",
-    "-map", "[smallout]", "-frames:v", "1", "-c:v", "libwebp", "-quality", "76", "-preset", "photo", smallOutput,
-    "-map", "[largeout]", "-frames:v", "1", "-c:v", "libwebp", "-quality", "80", "-preset", "photo", largeOutput,
-  ], `Could not convert ${filename}`);
+  const outputsAreCurrent = (await Promise.all([
+    isCurrent(source, smallOutput),
+    isCurrent(source, largeOutput),
+  ])).every(Boolean);
+
+  if (!outputsAreCurrent) {
+    run(ffmpeg, [
+      "-y", "-hide_banner", "-loglevel", "error",
+      "-i", source,
+      "-filter_complex",
+      "[0:v]split=2[small][large];[small]scale=w='min(400,iw)':h=-2:flags=lanczos[smallout];[large]scale=w='min(1200,iw)':h=-2:flags=lanczos[largeout]",
+      "-map", "[smallout]", "-frames:v", "1", "-c:v", "libwebp", "-quality", "76", "-preset", "photo", smallOutput,
+      "-map", "[largeout]", "-frames:v", "1", "-c:v", "libwebp", "-quality", "80", "-preset", "photo", largeOutput,
+    ], `Could not convert ${filename}`);
+  }
 
   manifest[filename] = {
     original: `img/${filename}`,

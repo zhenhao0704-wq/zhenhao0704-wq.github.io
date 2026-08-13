@@ -1,4 +1,137 @@
 {
+  "austria-01-museum-grand-staircase.jpg": {
+    "original": "img/austria-01-museum-grand-staircase.jpg",
+    "small": "img/thumbs/400/austria-01-museum-grand-staircase.webp",
+    "large": "img/thumbs/1200/austria-01-museum-grand-staircase.webp",
+    "width": 2400,
+    "height": 1350
+  },
+  "austria-02-bronze-male-statue.jpg": {
+    "original": "img/austria-02-bronze-male-statue.jpg",
+    "small": "img/thumbs/400/austria-02-bronze-male-statue.webp",
+    "large": "img/thumbs/1200/austria-02-bronze-male-statue.webp",
+    "width": 2400,
+    "height": 1350
+  },
+  "austria-03-marble-head-sculpture.jpg": {
+    "original": "img/austria-03-marble-head-sculpture.jpg",
+    "small": "img/thumbs/400/austria-03-marble-head-sculpture.webp",
+    "large": "img/thumbs/1200/austria-03-marble-head-sculpture.webp",
+    "width": 2400,
+    "height": 1350
+  },
+  "austria-04-illuminated-gothic-spires.jpg": {
+    "original": "img/austria-04-illuminated-gothic-spires.jpg",
+    "small": "img/thumbs/400/austria-04-illuminated-gothic-spires.webp",
+    "large": "img/thumbs/1200/austria-04-illuminated-gothic-spires.webp",
+    "width": 1672,
+    "height": 941
+  },
+  "austria-05-chapel-nave-altar.jpg": {
+    "original": "img/austria-05-chapel-nave-altar.jpg",
+    "small": "img/thumbs/400/austria-05-chapel-nave-altar.webp",
+    "large": "img/thumbs/1200/austria-05-chapel-nave-altar.webp",
+    "width": 1337,
+    "height": 2400
+  },
+  "austria-06-crowned-madonna-and-child.jpg": {
+    "original": "img/austria-06-crowned-madonna-and-child.jpg",
+    "small": "img/thumbs/400/austria-06-crowned-madonna-and-child.webp",
+    "large": "img/thumbs/1200/austria-06-crowned-madonna-and-child.webp",
+    "width": 1349,
+    "height": 2400
+  },
+  "austria-07-baroque-main-altar.jpg": {
+    "original": "img/austria-07-baroque-main-altar.jpg",
+    "small": "img/thumbs/400/austria-07-baroque-main-altar.webp",
+    "large": "img/thumbs/1200/austria-07-baroque-main-altar.webp",
+    "width": 1349,
+    "height": 2400
+  },
+  "austria-08-dome-fresco-close.jpg": {
+    "original": "img/austria-08-dome-fresco-close.jpg",
+    "small": "img/thumbs/400/austria-08-dome-fresco-close.webp",
+    "large": "img/thumbs/1200/austria-08-dome-fresco-close.webp",
+    "width": 1349,
+    "height": 2400
+  },
+  "austria-09-dome-fresco-wide.jpg": {
+    "original": "img/austria-09-dome-fresco-wide.jpg",
+    "small": "img/thumbs/400/austria-09-dome-fresco-wide.webp",
+    "large": "img/thumbs/1200/austria-09-dome-fresco-wide.webp",
+    "width": 1349,
+    "height": 2400
+  },
+  "austria-10-medusa-painting.jpg": {
+    "original": "img/austria-10-medusa-painting.jpg",
+    "small": "img/thumbs/400/austria-10-medusa-painting.webp",
+    "large": "img/thumbs/1200/austria-10-medusa-painting.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "austria-11-renaissance-portrait-pair.jpg": {
+    "original": "img/austria-11-renaissance-portrait-pair.jpg",
+    "small": "img/thumbs/400/austria-11-renaissance-portrait-pair.webp",
+    "large": "img/thumbs/1200/austria-11-renaissance-portrait-pair.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "austria-12-garden-hedge-path.jpg": {
+    "original": "img/austria-12-garden-hedge-path.jpg",
+    "small": "img/thumbs/400/austria-12-garden-hedge-path.webp",
+    "large": "img/thumbs/1200/austria-12-garden-hedge-path.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "austria-13-baroque-altar-wide.jpg": {
+    "original": "img/austria-13-baroque-altar-wide.jpg",
+    "small": "img/thumbs/400/austria-13-baroque-altar-wide.webp",
+    "large": "img/thumbs/1200/austria-13-baroque-altar-wide.webp",
+    "width": 1349,
+    "height": 2400
+  },
+  "austria-14-radiant-altar-detail.jpg": {
+    "original": "img/austria-14-radiant-altar-detail.jpg",
+    "small": "img/thumbs/400/austria-14-radiant-altar-detail.webp",
+    "large": "img/thumbs/1200/austria-14-radiant-altar-detail.webp",
+    "width": 1349,
+    "height": 2400
+  },
+  "austria-15-side-altar-painting.jpg": {
+    "original": "img/austria-15-side-altar-painting.jpg",
+    "small": "img/thumbs/400/austria-15-side-altar-painting.webp",
+    "large": "img/thumbs/1200/austria-15-side-altar-painting.webp",
+    "width": 1349,
+    "height": 2400
+  },
+  "austria-16-architectural-painting.jpg": {
+    "original": "img/austria-16-architectural-painting.jpg",
+    "small": "img/thumbs/400/austria-16-architectural-painting.webp",
+    "large": "img/thumbs/1200/austria-16-architectural-painting.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "austria-17-church-visitor-aisle.jpg": {
+    "original": "img/austria-17-church-visitor-aisle.jpg",
+    "small": "img/thumbs/400/austria-17-church-visitor-aisle.webp",
+    "large": "img/thumbs/1200/austria-17-church-visitor-aisle.webp",
+    "width": 1349,
+    "height": 2400
+  },
+  "austria-18-floral-still-life.jpg": {
+    "original": "img/austria-18-floral-still-life.jpg",
+    "small": "img/thumbs/400/austria-18-floral-still-life.webp",
+    "large": "img/thumbs/1200/austria-18-floral-still-life.webp",
+    "width": 1349,
+    "height": 2400
+  },
+  "austria-19-museum-exhibition-hall.jpg": {
+    "original": "img/austria-19-museum-exhibition-hall.jpg",
+    "small": "img/thumbs/400/austria-19-museum-exhibition-hall.webp",
+    "large": "img/thumbs/1200/austria-19-museum-exhibition-hall.webp",
+    "width": 2400,
+    "height": 1349
+  },
   "china-backpacker-campus.jpg": {
     "original": "img/china-backpacker-campus.jpg",
     "small": "img/thumbs/400/china-backpacker-campus.webp",
@@ -3197,6 +3330,76 @@
     "large": "img/thumbs/1200/thailand-temple-monk.webp",
     "width": 1600,
     "height": 899
+  },
+  "turkey-01-blue-mosque-rooftops.jpg": {
+    "original": "img/turkey-01-blue-mosque-rooftops.jpg",
+    "small": "img/thumbs/400/turkey-01-blue-mosque-rooftops.webp",
+    "large": "img/thumbs/1200/turkey-01-blue-mosque-rooftops.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "turkey-02-blue-mosque-clouds.jpg": {
+    "original": "img/turkey-02-blue-mosque-clouds.jpg",
+    "small": "img/thumbs/400/turkey-02-blue-mosque-clouds.webp",
+    "large": "img/thumbs/1200/turkey-02-blue-mosque-clouds.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "turkey-03-blue-mosque-six-minarets.jpg": {
+    "original": "img/turkey-03-blue-mosque-six-minarets.jpg",
+    "small": "img/thumbs/400/turkey-03-blue-mosque-six-minarets.webp",
+    "large": "img/thumbs/1200/turkey-03-blue-mosque-six-minarets.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "turkey-04-man-child-waterfront.jpg": {
+    "original": "img/turkey-04-man-child-waterfront.jpg",
+    "small": "img/thumbs/400/turkey-04-man-child-waterfront.webp",
+    "large": "img/thumbs/1200/turkey-04-man-child-waterfront.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "turkey-05-flags-blue-sky.jpg": {
+    "original": "img/turkey-05-flags-blue-sky.jpg",
+    "small": "img/thumbs/400/turkey-05-flags-blue-sky.webp",
+    "large": "img/thumbs/1200/turkey-05-flags-blue-sky.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "turkey-06-mosque-dome-sea.jpg": {
+    "original": "img/turkey-06-mosque-dome-sea.jpg",
+    "small": "img/thumbs/400/turkey-06-mosque-dome-sea.webp",
+    "large": "img/thumbs/1200/turkey-06-mosque-dome-sea.webp",
+    "width": 1349,
+    "height": 2400
+  },
+  "turkey-07-galata-tower-skyline.jpg": {
+    "original": "img/turkey-07-galata-tower-skyline.jpg",
+    "small": "img/thumbs/400/turkey-07-galata-tower-skyline.webp",
+    "large": "img/thumbs/1200/turkey-07-galata-tower-skyline.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "turkey-08-ferry-cruise-ship.jpg": {
+    "original": "img/turkey-08-ferry-cruise-ship.jpg",
+    "small": "img/thumbs/400/turkey-08-ferry-cruise-ship.webp",
+    "large": "img/thumbs/1200/turkey-08-ferry-cruise-ship.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "turkey-09-blue-mosque-sea.jpg": {
+    "original": "img/turkey-09-blue-mosque-sea.jpg",
+    "small": "img/thumbs/400/turkey-09-blue-mosque-sea.webp",
+    "large": "img/thumbs/1200/turkey-09-blue-mosque-sea.webp",
+    "width": 2400,
+    "height": 1349
+  },
+  "turkey-10-waterfront-fishermen.jpg": {
+    "original": "img/turkey-10-waterfront-fishermen.jpg",
+    "small": "img/thumbs/400/turkey-10-waterfront-fishermen.webp",
+    "large": "img/thumbs/1200/turkey-10-waterfront-fishermen.webp",
+    "width": 2400,
+    "height": 1349
   },
   "uk-aberdeen-signpost-glass.jpg": {
     "original": "img/uk-aberdeen-signpost-glass.jpg",

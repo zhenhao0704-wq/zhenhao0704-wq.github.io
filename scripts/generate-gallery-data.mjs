@@ -73,6 +73,41 @@ const czechItems = [
   ["czech-31-rooftops-church-towers.jpg", "Historic rooftops and church towers beside a green hillside."],
 ];
 
+const austriaItems = [
+  ["austria-01-museum-grand-staircase.jpg", "Grand marble staircase and sculpture hall inside Vienna's Kunsthistorisches Museum."],
+  ["austria-02-bronze-male-statue.jpg", "Bronze male statue lit from behind in a Vienna museum gallery."],
+  ["austria-03-marble-head-sculpture.jpg", "Classical marble head displayed among sculptures in a Vienna museum."],
+  ["austria-04-illuminated-gothic-spires.jpg", "Illuminated twin Gothic spires against the night sky in Vienna."],
+  ["austria-05-chapel-nave-altar.jpg", "Chapel nave leading to a gilded altar beneath a religious painting."],
+  ["austria-06-crowned-madonna-and-child.jpg", "Crowned Madonna and child statue framed by gold rays."],
+  ["austria-07-baroque-main-altar.jpg", "Baroque main altar with marble columns, white figures, and gold rays."],
+  ["austria-08-dome-fresco-close.jpg", "Close upward view of a Baroque dome fresco surrounding an oval opening."],
+  ["austria-09-dome-fresco-wide.jpg", "Wide upward view of a painted Baroque dome and its windows."],
+  ["austria-10-medusa-painting.jpg", "Framed painting of Medusa surrounded by snakes."],
+  ["austria-11-renaissance-portrait-pair.jpg", "Paired Renaissance portraits of a man and woman in richly coloured dress."],
+  ["austria-12-garden-hedge-path.jpg", "Sunlit path between tall green hedges in an Austrian garden."],
+  ["austria-13-baroque-altar-wide.jpg", "Wide view of a monumental Baroque altar beneath gold rays."],
+  ["austria-14-radiant-altar-detail.jpg", "White Baroque figures beneath a radiant triangle above the altar."],
+  ["austria-15-side-altar-painting.jpg", "Ornate side altar with a tall religious painting and marble columns."],
+  ["austria-16-architectural-painting.jpg", "Framed architectural painting of an elaborate European courtyard."],
+  ["austria-17-church-visitor-aisle.jpg", "Visitor silhouetted in the aisle before an illuminated Baroque altar."],
+  ["austria-18-floral-still-life.jpg", "Framed still life of tulips, roses, fruit, and small insects."],
+  ["austria-19-museum-exhibition-hall.jpg", "Ornate museum hall with marble columns and Canaletto and Bellotto exhibition displays."],
+];
+
+const turkeyItems = [
+  ["turkey-01-blue-mosque-rooftops.jpg", "The Blue Mosque beyond domes and a minaret in Istanbul."],
+  ["turkey-02-blue-mosque-clouds.jpg", "The Blue Mosque and surrounding domes beneath a cloud-filled sky."],
+  ["turkey-03-blue-mosque-six-minarets.jpg", "The Blue Mosque framed by its six minarets in Istanbul."],
+  ["turkey-04-man-child-waterfront.jpg", "A man and child sitting beside the blue water on Istanbul's waterfront."],
+  ["turkey-05-flags-blue-sky.jpg", "Turkish and Istanbul maritime flags flying against a deep blue sky."],
+  ["turkey-06-mosque-dome-sea.jpg", "Mosque dome above trees with the Sea of Marmara and islands beyond."],
+  ["turkey-07-galata-tower-skyline.jpg", "Galata Tower rising above Istanbul's dense hillside buildings."],
+  ["turkey-08-ferry-cruise-ship.jpg", "A small Istanbul ferry crossing in front of a large cruise ship."],
+  ["turkey-09-blue-mosque-sea.jpg", "The Blue Mosque and a foreground dome overlooking the Sea of Marmara."],
+  ["turkey-10-waterfront-fishermen.jpg", "Fishermen gathering with rods and chairs on Istanbul's waterfront."],
+];
+
 const galleries = [
   ["friends", "Friends", "Production photography from Kobo Abe's Friends (1967).", "friends-"],
   ["glass", "Great Glass Elevator", "Production photography from Mark Branner's adaptation of Roald Dahl's Charlie and the Great Glass Elevator (2026).", "glass-"],
@@ -94,6 +129,8 @@ const galleries = [
   ["korea", "South Korea", "Travel photographs from South Korea.", "korea-"],
   ["qatar", "Qatar", "Travel photographs from Doha and Lusail, Qatar.", "qatar-", qatarItems],
   ["czech", "Czech Republic", "Travel photographs from Prague, Czech Republic.", "czech-", czechItems],
+  ["austria", "Austria", "Travel photographs from Vienna, Austria.", "austria-", austriaItems],
+  ["turkey", "Turkey", "Travel photographs from Istanbul, Turkey.", "turkey-", turkeyItems],
 ];
 
 const files = (await readdir(imageDirectory)).sort((a, b) =>

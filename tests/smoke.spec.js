@@ -98,7 +98,7 @@ test('the five-level text palette follows content hierarchy', async ({ page }) =
     ['.travel-card strong', 'rgb(242, 240, 234)'],
     ['#travel .section-head > p', 'rgb(209, 206, 197)'],
     ['.travel-card small', 'rgb(160, 158, 150)'],
-    ['.future-travel p', 'rgb(133, 130, 122)'],
+    ['footer', 'rgb(133, 130, 122)'],
   ];
   for (const [selector, color] of samples) {
     await expect.poll(() => page.locator(selector).first().evaluate((element) => getComputedStyle(element).color)).toBe(color);
@@ -322,15 +322,15 @@ test('production photography opens as a gallery and full-screen viewer', async (
   await expect(trigger).toBeFocused();
 });
 
-test('all eighteen travel galleries are present and total 524 photographs', async ({ page }) => {
+test('all twenty travel galleries are present and total 553 photographs', async ({ page }) => {
   await page.goto('/index.html#travel');
   const cards = page.locator('#travel [data-gallery]');
-  await expect(cards).toHaveCount(18);
+  await expect(cards).toHaveCount(20);
 
   const total = await cards.locator('small').evaluateAll((labels) =>
     labels.reduce((sum, label) => sum + Number(label.textContent.match(/\d+/)?.[0] || 0), 0),
   );
-  expect(total).toBe(524);
+  expect(total).toBe(553);
 
   await page.locator('[data-gallery="france"]').click();
   await expect(page.locator('#gallery-count')).toHaveText('29 photographs');
@@ -347,6 +347,18 @@ test('all eighteen travel galleries are present and total 524 photographs', asyn
   await expect(page.locator('#gallery-title')).toHaveText('Czech Republic');
   await expect(page.locator('#gallery-count')).toHaveText('32 photographs');
   await expect(page.locator('#gallery-grid .gallery-thumb')).toHaveCount(32);
+
+  await page.keyboard.press('Escape');
+  await page.locator('[data-gallery="austria"]').click();
+  await expect(page.locator('#gallery-title')).toHaveText('Austria');
+  await expect(page.locator('#gallery-count')).toHaveText('19 photographs');
+  await expect(page.locator('#gallery-grid .gallery-thumb')).toHaveCount(19);
+
+  await page.keyboard.press('Escape');
+  await page.locator('[data-gallery="turkey"]').click();
+  await expect(page.locator('#gallery-title')).toHaveText('Turkey');
+  await expect(page.locator('#gallery-count')).toHaveText('10 photographs');
+  await expect(page.locator('#gallery-grid .gallery-thumb')).toHaveCount(10);
 });
 
 test('homepage images reserve their layout space and galleries use optimized derivatives', async ({ page }) => {

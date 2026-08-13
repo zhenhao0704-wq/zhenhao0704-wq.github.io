@@ -4004,5 +4004,220 @@ window.PORTFOLIO_GALLERIES = {
         "alt": "Historic rooftops and church towers beside a green hillside."
       }
     ]
+  },
+  "austria": {
+    "title": "Austria",
+    "description": "Travel photographs from Vienna, Austria.",
+    "items": [
+      {
+        "src": "img/thumbs/1200/austria-01-museum-grand-staircase.webp",
+        "thumb": "img/thumbs/400/austria-01-museum-grand-staircase.webp",
+        "width": 2400,
+        "height": 1350,
+        "alt": "Grand marble staircase and sculpture hall inside Vienna's Kunsthistorisches Museum."
+      },
+      {
+        "src": "img/thumbs/1200/austria-02-bronze-male-statue.webp",
+        "thumb": "img/thumbs/400/austria-02-bronze-male-statue.webp",
+        "width": 2400,
+        "height": 1350,
+        "alt": "Bronze male statue lit from behind in a Vienna museum gallery."
+      },
+      {
+        "src": "img/thumbs/1200/austria-03-marble-head-sculpture.webp",
+        "thumb": "img/thumbs/400/austria-03-marble-head-sculpture.webp",
+        "width": 2400,
+        "height": 1350,
+        "alt": "Classical marble head displayed among sculptures in a Vienna museum."
+      },
+      {
+        "src": "img/thumbs/1200/austria-04-illuminated-gothic-spires.webp",
+        "thumb": "img/thumbs/400/austria-04-illuminated-gothic-spires.webp",
+        "width": 1672,
+        "height": 941,
+        "alt": "Illuminated twin Gothic spires against the night sky in Vienna."
+      },
+      {
+        "src": "img/thumbs/1200/austria-05-chapel-nave-altar.webp",
+        "thumb": "img/thumbs/400/austria-05-chapel-nave-altar.webp",
+        "width": 1337,
+        "height": 2400,
+        "alt": "Chapel nave leading to a gilded altar beneath a religious painting."
+      },
+      {
+        "src": "img/thumbs/1200/austria-06-crowned-madonna-and-child.webp",
+        "thumb": "img/thumbs/400/austria-06-crowned-madonna-and-child.webp",
+        "width": 1349,
+        "height": 2400,
+        "alt": "Crowned Madonna and child statue framed by gold rays."
+      },
+      {
+        "src": "img/thumbs/1200/austria-07-baroque-main-altar.webp",
+        "thumb": "img/thumbs/400/austria-07-baroque-main-altar.webp",
+        "width": 1349,
+        "height": 2400,
+        "alt": "Baroque main altar with marble columns, white figures, and gold rays."
+      },
+      {
+        "src": "img/thumbs/1200/austria-08-dome-fresco-close.webp",
+        "thumb": "img/thumbs/400/austria-08-dome-fresco-close.webp",
+        "width": 1349,
+        "height": 2400,
+        "alt": "Close upward view of a Baroque dome fresco surrounding an oval opening."
+      },
+      {
+        "src": "img/thumbs/1200/austria-09-dome-fresco-wide.webp",
+        "thumb": "img/thumbs/400/austria-09-dome-fresco-wide.webp",
+        "width": 1349,
+        "height": 2400,
+        "alt": "Wide upward view of a painted Baroque dome and its windows."
+      },
+      {
+        "src": "img/thumbs/1200/austria-10-medusa-painting.webp",
+        "thumb": "img/thumbs/400/austria-10-medusa-painting.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "Framed painting of Medusa surrounded by snakes."
+      },
+      {
+        "src": "img/thumbs/1200/austria-11-renaissance-portrait-pair.webp",
+        "thumb": "img/thumbs/400/austria-11-renaissance-portrait-pair.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "Paired Renaissance portraits of a man and woman in richly coloured dress."
+      },
+      {
+        "src": "img/thumbs/1200/austria-12-garden-hedge-path.webp",
+        "thumb": "img/thumbs/400/austria-12-garden-hedge-path.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "Sunlit path between tall green hedges in an Austrian garden."
+      },
+      {
+        "src": "img/thumbs/1200/austria-13-baroque-altar-wide.webp",
+        "thumb": "img/thumbs/400/austria-13-baroque-altar-wide.webp",
+        "width": 1349,
+        "height": 2400,
+        "alt": "Wide view of a monumental Baroque altar beneath gold rays."
+      },
+      {
+        "src": "img/thumbs/1200/austria-14-radiant-altar-detail.webp",
+        "thumb": "img/thumbs/400/austria-14-radiant-altar-detail.webp",
+        "width": 1349,
+        "height": 2400,
+        "alt": "White Baroque figures beneath a radiant triangle above the altar."
+      },
+      {
+        "src": "img/thumbs/1200/austria-15-side-altar-painting.webp",
+        "thumb": "img/thumbs/400/austria-15-side-altar-painting.webp",
+        "width": 1349,
+        "height": 2400,
+        "alt": "Ornate side altar with a tall religious painting and marble columns."
+      },
+      {
+        "src": "img/thumbs/1200/austria-16-architectural-painting.webp",
+        "thumb": "img/thumbs/400/austria-16-architectural-painting.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "Framed architectural painting of an elaborate European courtyard."
+      },
+      {
+        "src": "img/thumbs/1200/austria-17-church-visitor-aisle.webp",
+        "thumb": "img/thumbs/400/austria-17-church-visitor-aisle.webp",
+        "width": 1349,
+        "height": 2400,
+        "alt": "Visitor silhouetted in the aisle before an illuminated Baroque altar."
+      },
+      {
+        "src": "img/thumbs/1200/austria-18-floral-still-life.webp",
+        "thumb": "img/thumbs/400/austria-18-floral-still-life.webp",
+        "width": 1349,
+        "height": 2400,
+        "alt": "Framed still life of tulips, roses, fruit, and small insects."
+      },
+      {
+        "src": "img/thumbs/1200/austria-19-museum-exhibition-hall.webp",
+        "thumb": "img/thumbs/400/austria-19-museum-exhibition-hall.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "Ornate museum hall with marble columns and Canaletto and Bellotto exhibition displays."
+      }
+    ]
+  },
+  "turkey": {
+    "title": "Turkey",
+    "description": "Travel photographs from Istanbul, Turkey.",
+    "items": [
+      {
+        "src": "img/thumbs/1200/turkey-01-blue-mosque-rooftops.webp",
+        "thumb": "img/thumbs/400/turkey-01-blue-mosque-rooftops.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "The Blue Mosque beyond domes and a minaret in Istanbul."
+      },
+      {
+        "src": "img/thumbs/1200/turkey-02-blue-mosque-clouds.webp",
+        "thumb": "img/thumbs/400/turkey-02-blue-mosque-clouds.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "The Blue Mosque and surrounding domes beneath a cloud-filled sky."
+      },
+      {
+        "src": "img/thumbs/1200/turkey-03-blue-mosque-six-minarets.webp",
+        "thumb": "img/thumbs/400/turkey-03-blue-mosque-six-minarets.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "The Blue Mosque framed by its six minarets in Istanbul."
+      },
+      {
+        "src": "img/thumbs/1200/turkey-04-man-child-waterfront.webp",
+        "thumb": "img/thumbs/400/turkey-04-man-child-waterfront.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "A man and child sitting beside the blue water on Istanbul's waterfront."
+      },
+      {
+        "src": "img/thumbs/1200/turkey-05-flags-blue-sky.webp",
+        "thumb": "img/thumbs/400/turkey-05-flags-blue-sky.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "Turkish and Istanbul maritime flags flying against a deep blue sky."
+      },
+      {
+        "src": "img/thumbs/1200/turkey-06-mosque-dome-sea.webp",
+        "thumb": "img/thumbs/400/turkey-06-mosque-dome-sea.webp",
+        "width": 1349,
+        "height": 2400,
+        "alt": "Mosque dome above trees with the Sea of Marmara and islands beyond."
+      },
+      {
+        "src": "img/thumbs/1200/turkey-07-galata-tower-skyline.webp",
+        "thumb": "img/thumbs/400/turkey-07-galata-tower-skyline.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "Galata Tower rising above Istanbul's dense hillside buildings."
+      },
+      {
+        "src": "img/thumbs/1200/turkey-08-ferry-cruise-ship.webp",
+        "thumb": "img/thumbs/400/turkey-08-ferry-cruise-ship.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "A small Istanbul ferry crossing in front of a large cruise ship."
+      },
+      {
+        "src": "img/thumbs/1200/turkey-09-blue-mosque-sea.webp",
+        "thumb": "img/thumbs/400/turkey-09-blue-mosque-sea.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "The Blue Mosque and a foreground dome overlooking the Sea of Marmara."
+      },
+      {
+        "src": "img/thumbs/1200/turkey-10-waterfront-fishermen.webp",
+        "thumb": "img/thumbs/400/turkey-10-waterfront-fishermen.webp",
+        "width": 2400,
+        "height": 1349,
+        "alt": "Fishermen gathering with rods and chairs on Istanbul's waterfront."
+      }
+    ]
   }
 };
