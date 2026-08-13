@@ -1,9 +1,12 @@
-import { readdir, writeFile } from "node:fs/promises";
+import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const imageDirectory = path.join(root, "img");
+const derivativeManifest = JSON.parse(
+  await readFile(path.join(imageDirectory, "image-derivatives.json"), "utf8"),
+);
 
 const qatarItems = [
   ["qatar-national-museum-passage.jpg", "Passage through the desert-rose forms of the National Museum of Qatar."],
@@ -110,15 +113,27 @@ function labelFromFilename(filename, prefix) {
 const output = Object.fromEntries(
   galleries.map(([key, title, description, prefix, manifest]) => {
     const items = manifest
-      ? manifest.map(([filename, alt]) => ({ src: `img/${filename}`, alt }))
+      ? manifest.map(([filename, alt]) => ({ filename, alt }))
       : files
         .filter((filename) => filename.startsWith(prefix))
         .map((filename) => ({
-          src: `img/${filename}`,
+          filename,
           alt: `${title}: ${labelFromFilename(filename, prefix)}`,
         }));
 
-    return [key, { title, description, items }];
+    const optimizedItems = items.map(({ filename, alt }) => {
+      const derivative = derivativeManifest[filename];
+      if (!derivative) throw new Error(`Missing derivative metadata for ${filename}`);
+      return {
+        src: derivative.large,
+        thumb: derivative.small,
+        width: derivative.width,
+        height: derivative.height,
+        alt,
+      };
+    });
+
+    return [key, { title, description, items: optimizedItems }];
   }),
 );
 

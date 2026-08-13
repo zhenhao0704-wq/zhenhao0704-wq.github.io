@@ -3,23 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Zhenhao Wen is a performer, researcher, photographer, and educator based in Honolulu, Hawaii.">
-  <meta name="comment-api-url" content="">
-  <meta name="turnstile-sitekey" content="">
+  <meta name="description" content="Zhenhao Wen is a performer, researcher, photographer, and educator based in Honolulu, Hawaiʻi.">
   <title>Zhenhao Wen</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="redesign.css?v=20260716-21">
-  <link rel="stylesheet" href="comments.css?v=20260716-5">
-  <script src="gallery-data.js?v=20260715-14" defer></script>
-  <script src="redesign.js?v=20260716-17" defer></script>
-  <script src="comments.js?v=20260715-4" defer></script>
+  <link rel="stylesheet" href="redesign.css?v=20260812-1">
+  <script src="gallery-data.js?v=20260812-1" defer></script>
+  <script src="redesign.js?v=20260812-1" defer></script>
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="site-intro" id="site-intro" hidden aria-hidden="true">
-    <video id="intro-video" muted playsinline preload="none">
+    <video id="intro-video" muted playsinline preload="metadata" poster="media/intro-poster.jpg">
       <source data-src="media/intro.mp4" type="video/mp4">
     </video>
     <div class="intro-name" id="intro-name" aria-hidden="true">
@@ -59,7 +55,7 @@
         <h1>Zhenhao Wen</h1>
         <div class="landing-summary">
           <p>Performance studies, dance film, photography, and teaching.</p>
-          <p>Honolulu, Hawaii</p>
+          <p>Honolulu, Hawaiʻi</p>
         </div>
       </div>
       <button class="landing-motion-toggle" id="landing-motion-toggle" type="button" aria-pressed="false" hidden>Pause background video</button>
@@ -68,12 +64,12 @@
     <section class="content-section about" id="about">
       <div class="about-layout">
         <figure class="portrait-wrap" data-reveal>
-          <img src="media/portrait.jpg" alt="Black-and-white portrait of Zhenhao Wen">
+          <img src="media/portrait.jpg" alt="Black-and-white portrait of Zhenhao Wen" width="1200" height="1600">
         </figure>
         <div class="about-copy" data-reveal>
           <h2>About</h2>
           <p class="lead">Zhenhao Wen is a performer, researcher, photographer, and educator.</p>
-          <p>He is a Ph.D. student in Performance Studies at the University of Hawaii at Manoa. His research examines how bodies produce knowledge through movement, improvisation, image-making, and teaching.</p>
+          <p>He is a Ph.D. student in Performance Studies at the University of Hawaiʻi at Mānoa. His research examines how bodies produce knowledge through movement, improvisation, image-making, and teaching.</p>
           <p class="statement-note">His creative work focuses on bodies that are ordinary, unfinished, or overlooked, and on how performance and images can keep their experience visible.</p>
         </div>
       </div>
@@ -87,7 +83,7 @@
 
       <article class="lead-film" data-reveal>
         <figure class="lead-film-image">
-          <img src="media/to-leave-a-trace-still.jpg" alt="Film still from To Leave a Trace" loading="lazy">
+          <img src="media/films/to-leave-a-trace-still.jpg" alt="Film still from To Leave a Trace" loading="lazy" width="1600" height="642">
         </figure>
         <div class="wall-label film-label">
           <div class="title-block">
@@ -102,7 +98,7 @@
       <div class="film-grid" role="list" aria-label="More dance films">
         <article class="film-card" role="listitem" data-reveal>
           <figure class="film-card-media">
-            <img src="img/facing-the-mirror.jpeg" alt="Facing the Mirror poster for a dance film on Chinese Jingju" loading="lazy">
+            <img src="media/films/facing-the-mirror.jpg" alt="Facing the Mirror poster for a dance film on Chinese Jingju" loading="lazy" width="1280" height="719">
           </figure>
           <div class="film-card-copy">
             <div class="title-block"><h3>Facing the Mirror</h3><p class="item-meta">In post-production</p></div>
@@ -112,7 +108,7 @@
 
         <article class="film-card" role="listitem" data-reveal>
           <button class="film-card-media" type="button" data-video-id="Q-Nhm69mwGU" data-video-title="Makeup" aria-label="Play Makeup">
-            <img src="media/films/makeup.jpg" alt="" loading="lazy">
+            <img src="media/films/makeup.jpg" alt="Makeup poster with a woman in a corridor behind bright pink title text" loading="lazy" width="1280" height="720">
           </button>
           <div class="film-card-copy">
             <div class="title-block"><h3>Makeup</h3><p class="item-meta">Dance film, 2025, 10:57</p></div>
@@ -122,7 +118,7 @@
 
         <article class="film-card" role="listitem" data-reveal>
           <button class="film-card-media" type="button" data-video-id="uSJY9lDNZ8s" data-video-title="Metamorphosis" aria-label="Play Metamorphosis">
-            <img src="media/films/metamorphosis.jpg" alt="" loading="lazy">
+            <img src="media/films/metamorphosis.jpg" alt="Metamorphosis title over sunlight filtering through a green forest" loading="lazy" width="1280" height="720">
           </button>
           <div class="film-card-copy">
             <div class="title-block"><h3>Metamorphosis</h3><p class="item-meta">Dance film, 2025, 10:15</p></div>
@@ -132,7 +128,7 @@
 
         <article class="film-card" role="listitem" data-reveal>
           <button class="film-card-media" type="button" data-video-id="zrJrTZVFWXY" data-video-title="Who Is Watching Who" aria-label="Play Who Is Watching Who">
-            <img src="media/films/who-is-watching-who.jpg" alt="" loading="lazy">
+            <img src="media/films/who-is-watching-who.jpg" alt="A dancer folded forward beside a glowing laptop on a dark stage" loading="lazy" width="1280" height="720">
           </button>
           <div class="film-card-copy">
             <div class="title-block"><h3>Who Is Watching Who</h3><p class="item-meta">Dance film, 2025, 9:47</p></div>
@@ -142,7 +138,7 @@
 
         <article class="film-card" role="listitem" data-reveal>
           <button class="film-card-media" type="button" data-video-id="PiYInr_Njfg" data-video-title="Nightmare" aria-label="Play Nightmare">
-            <img src="media/films/nightmare.jpg" alt="" loading="lazy">
+            <img src="media/films/nightmare.jpg" alt="Nightmare poster with a green-tinted close-up of a performer in a black cap" loading="lazy" width="1280" height="720">
           </button>
           <div class="film-card-copy">
             <div class="title-block"><h3>Nightmare</h3><p class="item-meta">Dance film, 2022, 4:17</p></div>
@@ -152,7 +148,7 @@
 
         <article class="film-card" role="listitem" data-reveal>
           <button class="film-card-media" type="button" data-video-id="8a7t169MjLk" data-video-title="2022" aria-label="Play 2022">
-            <img src="media/films/2022.jpg" alt="" loading="lazy">
+            <img src="media/films/2022.jpg" alt="Black-and-white 2022 poster showing a performer among scattered chairs" loading="lazy" width="1280" height="720">
           </button>
           <div class="film-card-copy">
             <div class="title-block"><h3>2022</h3><p class="item-meta">Dance film, 2022, 3:28</p></div>
@@ -170,7 +166,7 @@
 
       <div class="research-grid">
         <article class="research-card" data-reveal>
-          <img src="media/bodies-left-out-still.jpg" alt="Motion-blurred still from Bodies Left Out" loading="lazy">
+          <img src="media/bodies-left-out-still.jpg" alt="Motion-blurred still from Bodies Left Out" loading="lazy" width="1600" height="899">
           <div class="card-copy">
             <h3>Bodies Left Out</h3>
             <p class="item-meta">Practice as research, Fall 2025</p>
@@ -182,7 +178,7 @@
           </div>
         </article>
         <article class="research-card" data-reveal>
-          <img src="img/us-cast-faces.jpeg" alt="Fieldwork photograph from Bishop Museum" loading="lazy">
+          <img src="img/thumbs/400/us-cast-faces.webp" srcset="img/thumbs/400/us-cast-faces.webp 400w, img/thumbs/1200/us-cast-faces.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw" alt="Fieldwork photograph from Bishop Museum" loading="lazy" width="1600" height="899">
           <div class="card-copy">
             <h3>Returned on Loan</h3>
             <p class="item-meta">Documentary video essay, Spring 2026, 16:11</p>
@@ -208,7 +204,7 @@
       </header>
       <div class="photo-project-grid">
         <article class="photo-project" data-reveal>
-          <img src="img/friends-hero.jpeg" alt="Production photograph from Friends" loading="lazy">
+          <img src="img/thumbs/400/friends-hero.webp" srcset="img/thumbs/400/friends-hero.webp 400w, img/thumbs/1200/friends-hero.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw" alt="Production photograph from Friends" loading="lazy" width="1182" height="664">
           <div class="wall-label">
             <div class="title-block"><h3>Friends</h3><p class="item-meta">November 2025, 15 photographs</p></div>
             <p>Kobo Abe's tragicomic drama in thirteen scenes, about a family who enters a man's apartment and refuses to leave.</p>
@@ -216,7 +212,7 @@
           </div>
         </article>
         <article class="photo-project" data-reveal>
-          <img src="img/glass-01.jpg" alt="Production photograph from Great Glass Elevator" loading="lazy">
+          <img src="img/thumbs/400/glass-01.webp" srcset="img/thumbs/400/glass-01.webp 400w, img/thumbs/1200/glass-01.webp 1200w" sizes="(max-width: 760px) 100vw, 50vw" alt="Production photograph from Great Glass Elevator" loading="lazy" width="2400" height="1349">
           <div class="wall-label">
             <div class="title-block"><h3>Great Glass Elevator</h3><p class="item-meta">April 2026, 16 photographs</p></div>
             <p>Production photography from Mark Branner's adaptation of Roald Dahl's Charlie and the Great Glass Elevator.</p>
@@ -232,7 +228,7 @@
         <p>Education and selected experience. The full CV includes publications, presentations, funding, performances, and teaching.</p>
       </header>
       <div class="education-list">
-        <article data-reveal><h3>University of Hawaii at Manoa</h3><p>2025 to present, Honolulu</p><span>Ph.D. in Performance Studies</span></article>
+        <article data-reveal><h3>University of Hawaiʻi at Mānoa</h3><p>2025 to present, Honolulu</p><span>Ph.D. in Performance Studies</span></article>
         <article data-reveal><h3>The University of Edinburgh</h3><p>2023 to 2024, Edinburgh</p><span>M.Sc. Dance Science and Education</span></article>
         <article data-reveal><h3>Shanghai Theatre Academy</h3><p>2019 to 2023, Shanghai</p><span>B.A. Dance Performance</span></article>
       </div>
@@ -255,8 +251,8 @@
           </div>
         </div>
         <div class="teaching-media" data-reveal>
-          <figure><img src="img/dnce131-fall2025.jpg" alt="DNCE 131 Fall 2025 class" loading="lazy"><figcaption>Fall 2025</figcaption></figure>
-          <figure><img src="img/dnce131-spring2026.jpg" alt="DNCE 131 Spring 2026 class" loading="lazy"><figcaption>Spring 2026</figcaption></figure>
+          <figure><img src="img/thumbs/400/dnce131-fall2025.webp" srcset="img/thumbs/400/dnce131-fall2025.webp 400w, img/thumbs/1200/dnce131-fall2025.webp 1200w" sizes="(max-width: 1080px) 34rem, 32vw" alt="DNCE 131 Fall 2025 class" loading="lazy" width="2000" height="1124"><figcaption>Fall 2025</figcaption></figure>
+          <figure><img src="img/thumbs/400/dnce131-spring2026.webp" srcset="img/thumbs/400/dnce131-spring2026.webp 400w, img/thumbs/1200/dnce131-spring2026.webp 1200w" sizes="(max-width: 1080px) 34rem, 32vw" alt="DNCE 131 Spring 2026 class" loading="lazy" width="6025" height="3642"><figcaption>Spring 2026</figcaption></figure>
           <div class="teaching-action"><button class="action-link" type="button" data-video-id="kV3aLCKsOJk" data-video-title="DNCE 131, Spring 2026">Watch class video</button><span>2:53</span></div>
         </div>
       </div>
@@ -268,24 +264,24 @@
         <p>Personal travel archive. Eighteen open galleries contain 524 photographs; two additional locations are in preparation.</p>
       </header>
       <div class="travel-grid">
-        <button class="travel-card" type="button" data-gallery="france"><img src="img/france-louvre-pyramid.jpg" alt="The Louvre Pyramid and palace in Paris, France" loading="lazy"><span><strong>France</strong><small>Open gallery, 29 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="italy"><img src="img/italy-piazza-navona.jpg" alt="Fountain and obelisk in Piazza Navona, Rome, Italy" loading="lazy"><span><strong>Italy</strong><small>Open gallery, 19 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="uk"><img src="img/uk-edinburgh-castle.jpg" alt="Edinburgh Castle on Castle Rock in the United Kingdom" loading="lazy"><span><strong>United Kingdom</strong><small>Open gallery, 65 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="japan" style="--travel-position: 50% 48%"><img src="img/japan-fuji-morning-portrait.jpg" alt="Mount Fuji framed by a Japanese lantern and roofline" loading="lazy"><span><strong>Japan</strong><small>Open gallery, 43 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="spain"><img src="img/spain-barcelona-skyline-sagrada.jpg" alt="The Sagrada Familia above the Barcelona skyline in Spain" loading="lazy"><span><strong>Spain</strong><small>Open gallery, 47 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="iceland"><img src="img/iceland-black-sand-rocks.jpg" alt="Kirkjufell mountain reflected in still water in Iceland" loading="lazy"><span><strong>Iceland</strong><small>Open gallery, 47 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="switzerland"><img src="img/switzerland-zermatt-matterhorn.jpg" alt="The Matterhorn above Zermatt, Switzerland" loading="lazy"><span><strong>Switzerland</strong><small>Open gallery, 19 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="us"><img src="img/us-flags.jpeg" alt="United States flags against a blue sky" loading="lazy"><span><strong>United States</strong><small>Open gallery, 20 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="thailand" style="--travel-position: 50% 58%"><img src="img/thailand-buddha-back-spire.jpeg" alt="A gilded Buddha and temple spire in Thailand" loading="lazy"><span><strong>Thailand</strong><small>Open gallery, 34 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="nepal" style="--travel-position: 56% 50%"><img src="img/nepal-prayer-flags-valley.jpg" alt="Prayer flags above a Himalayan valley in Nepal" loading="lazy"><span><strong>Nepal</strong><small>Open gallery, 25 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="egypt"><img src="img/egypt-cave-church-selfie.jpg" alt="A pyramid rising above palm groves in Giza, Egypt" loading="lazy"><span><strong>Egypt</strong><small>Open gallery, 25 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="indonesia"><img src="img/indonesia-nusa-penida-aerial-shore.jpg" alt="Aerial view of the cliffs and turquoise coast of Nusa Penida, Indonesia" loading="lazy"><span><strong>Indonesia</strong><small>Open gallery, 28 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="malaysia"><img src="img/malaysia-batu-caves-stairs.jpg" alt="The Petronas Twin Towers at night in Kuala Lumpur, Malaysia" loading="lazy"><span><strong>Malaysia</strong><small>Open gallery, 7 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="china"><img src="img/china-tibet-prayer-flags-peak.jpg" alt="Prayer flags and a mountain peak in Tibet, China" loading="lazy"><span><strong>China</strong><small>Open gallery, 33 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="vietnam"><img src="img/vietnam-marble-mountains.jpeg" alt="A Buddha silhouette and karst mountains in Vietnam" loading="lazy"><span><strong>Vietnam</strong><small>Open gallery, 16 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="korea" style="--travel-position: 58% 50%"><img src="img/korea-gold-crown.jpeg" alt="A Silla gold crown from Korea" loading="lazy"><span><strong>South Korea</strong><small>Open gallery, 8 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="qatar"><img src="img/qatar-national-museum-wide.jpg" alt="The desert-rose architecture of the National Museum of Qatar in Doha" loading="lazy"><span><strong>Qatar</strong><small>Open gallery, 27 photographs</small></span></button>
-        <button class="travel-card" type="button" data-gallery="czech"><img src="img/czech-01-prague-castle-riverside.jpg" alt="Prague Castle, red roofs, and the Vltava River in the Czech Republic" loading="lazy"><span><strong>Czech Republic</strong><small>Open gallery, 32 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="france"><img src="img/thumbs/400/france-louvre-pyramid.webp" srcset="img/thumbs/400/france-louvre-pyramid.webp 400w, img/thumbs/1200/france-louvre-pyramid.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="The Louvre Pyramid and palace in Paris, France" loading="lazy" width="1907" height="1071"><span><strong>France</strong><small>Open gallery, 29 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="italy"><img src="img/thumbs/400/italy-piazza-navona.webp" srcset="img/thumbs/400/italy-piazza-navona.webp 400w, img/thumbs/1200/italy-piazza-navona.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="Fountain and obelisk in Piazza Navona, Rome, Italy" loading="lazy" width="1182" height="664"><span><strong>Italy</strong><small>Open gallery, 19 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="uk"><img src="img/thumbs/400/uk-edinburgh-castle.webp" srcset="img/thumbs/400/uk-edinburgh-castle.webp 400w, img/thumbs/1200/uk-edinburgh-castle.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="Edinburgh Castle on Castle Rock in the United Kingdom" loading="lazy" width="1600" height="1064"><span><strong>United Kingdom</strong><small>Open gallery, 65 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="japan" style="--travel-position: 50% 48%"><img src="img/thumbs/400/japan-fuji-morning-portrait.webp" srcset="img/thumbs/400/japan-fuji-morning-portrait.webp 400w, img/thumbs/1200/japan-fuji-morning-portrait.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="Mount Fuji framed by a Japanese lantern and roofline" loading="lazy" width="900" height="1600"><span><strong>Japan</strong><small>Open gallery, 43 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="spain"><img src="img/thumbs/400/spain-barcelona-skyline-sagrada.webp" srcset="img/thumbs/400/spain-barcelona-skyline-sagrada.webp 400w, img/thumbs/1200/spain-barcelona-skyline-sagrada.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="The Sagrada Familia above the Barcelona skyline in Spain" loading="lazy" width="899" height="1600"><span><strong>Spain</strong><small>Open gallery, 47 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="iceland"><img src="img/thumbs/400/iceland-black-sand-rocks.webp" srcset="img/thumbs/400/iceland-black-sand-rocks.webp 400w, img/thumbs/1200/iceland-black-sand-rocks.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="Kirkjufell mountain reflected in still water in Iceland" loading="lazy" width="2000" height="1333"><span><strong>Iceland</strong><small>Open gallery, 47 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="switzerland"><img src="img/thumbs/400/switzerland-zermatt-matterhorn.webp" srcset="img/thumbs/400/switzerland-zermatt-matterhorn.webp 400w, img/thumbs/1200/switzerland-zermatt-matterhorn.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="The Matterhorn above Zermatt, Switzerland" loading="lazy" width="2000" height="1124"><span><strong>Switzerland</strong><small>Open gallery, 19 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="us"><img src="img/thumbs/400/us-flags.webp" srcset="img/thumbs/400/us-flags.webp 400w, img/thumbs/1200/us-flags.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="United States flags against a blue sky" loading="lazy" width="900" height="1600"><span><strong>United States</strong><small>Open gallery, 20 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="thailand" style="--travel-position: 50% 58%"><img src="img/thumbs/400/thailand-buddha-back-spire.webp" srcset="img/thumbs/400/thailand-buddha-back-spire.webp 400w, img/thumbs/1200/thailand-buddha-back-spire.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="A gilded Buddha and temple spire in Thailand" loading="lazy" width="1066" height="1600"><span><strong>Thailand</strong><small>Open gallery, 34 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="nepal" style="--travel-position: 56% 50%"><img src="img/thumbs/400/nepal-prayer-flags-valley.webp" srcset="img/thumbs/400/nepal-prayer-flags-valley.webp 400w, img/thumbs/1200/nepal-prayer-flags-valley.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="Prayer flags above a Himalayan valley in Nepal" loading="lazy" width="800" height="1200"><span><strong>Nepal</strong><small>Open gallery, 25 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="egypt"><img src="img/thumbs/400/egypt-cave-church-selfie.webp" srcset="img/thumbs/400/egypt-cave-church-selfie.webp 400w, img/thumbs/1200/egypt-cave-church-selfie.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="A pyramid rising above palm groves in Giza, Egypt" loading="lazy" width="2000" height="1124"><span><strong>Egypt</strong><small>Open gallery, 25 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="indonesia"><img src="img/thumbs/400/indonesia-nusa-penida-aerial-shore.webp" srcset="img/thumbs/400/indonesia-nusa-penida-aerial-shore.webp 400w, img/thumbs/1200/indonesia-nusa-penida-aerial-shore.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="Aerial view of the cliffs and turquoise coast of Nusa Penida, Indonesia" loading="lazy" width="899" height="1600"><span><strong>Indonesia</strong><small>Open gallery, 28 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="malaysia"><img src="img/thumbs/400/malaysia-batu-caves-stairs.webp" srcset="img/thumbs/400/malaysia-batu-caves-stairs.webp 400w, img/thumbs/1200/malaysia-batu-caves-stairs.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="The Petronas Twin Towers at night in Kuala Lumpur, Malaysia" loading="lazy" width="899" height="1600"><span><strong>Malaysia</strong><small>Open gallery, 7 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="china"><img src="img/thumbs/400/china-tibet-prayer-flags-peak.webp" srcset="img/thumbs/400/china-tibet-prayer-flags-peak.webp 400w, img/thumbs/1200/china-tibet-prayer-flags-peak.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="Prayer flags and a mountain peak in Tibet, China" loading="lazy" width="1024" height="768"><span><strong>China</strong><small>Open gallery, 33 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="vietnam"><img src="img/thumbs/400/vietnam-marble-mountains.webp" srcset="img/thumbs/400/vietnam-marble-mountains.webp 400w, img/thumbs/1200/vietnam-marble-mountains.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="A Buddha silhouette and karst mountains in Vietnam" loading="lazy" width="1600" height="899"><span><strong>Vietnam</strong><small>Open gallery, 16 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="korea" style="--travel-position: 58% 50%"><img src="img/thumbs/400/korea-gold-crown.webp" srcset="img/thumbs/400/korea-gold-crown.webp 400w, img/thumbs/1200/korea-gold-crown.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="A Silla gold crown from Korea" loading="lazy" width="1182" height="664"><span><strong>South Korea</strong><small>Open gallery, 8 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="qatar"><img src="img/thumbs/400/qatar-national-museum-wide.webp" srcset="img/thumbs/400/qatar-national-museum-wide.webp 400w, img/thumbs/1200/qatar-national-museum-wide.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="The desert-rose architecture of the National Museum of Qatar in Doha" loading="lazy" width="2200" height="1237"><span><strong>Qatar</strong><small>Open gallery, 27 photographs</small></span></button>
+        <button class="travel-card" type="button" data-gallery="czech"><img src="img/thumbs/400/czech-01-prague-castle-riverside.webp" srcset="img/thumbs/400/czech-01-prague-castle-riverside.webp 400w, img/thumbs/1200/czech-01-prague-castle-riverside.webp 1200w" sizes="(max-width: 560px) 100vw, (max-width: 760px) 50vw, (max-width: 1080px) 33vw, 25vw" alt="Prague Castle, red roofs, and the Vltava River in the Czech Republic" loading="lazy" width="2400" height="1350"><span><strong>Czech Republic</strong><small>Open gallery, 32 photographs</small></span></button>
       </div>
       <div class="future-travel" data-reveal>
         <p>Archive in preparation</p>
@@ -302,49 +298,6 @@
       </div>
     </section>
 
-    <section class="comments-section content-section section-alt" id="comments" aria-labelledby="comments-title">
-      <header class="section-head" data-reveal>
-        <h2 id="comments-title">Comments</h2>
-        <p>Leave a comment. No account is required.</p>
-      </header>
-
-      <div class="comments-layout">
-        <div class="comment-compose" data-reveal>
-          <form class="comment-form" id="comment-form" action="#comments" method="post">
-            <div class="comment-field">
-              <label for="comment-name">Name <span>optional</span></label>
-              <input id="comment-name" name="name" type="text" maxlength="40" autocomplete="name" placeholder="Anonymous">
-            </div>
-            <div class="comment-field">
-              <label for="comment-message">Comment <span>500 characters</span></label>
-              <textarea id="comment-message" name="message" rows="5" maxlength="500" required></textarea>
-            </div>
-            <div class="comment-honeypot" aria-hidden="true">
-              <label for="comment-website">Website</label>
-              <input id="comment-website" name="website" type="text" tabindex="-1" autocomplete="off">
-            </div>
-            <div class="comment-verification" id="comment-verification" hidden></div>
-            <div class="comment-form-foot">
-              <button class="action-link comment-submit" type="submit" disabled>Post comment</button>
-            </div>
-            <p class="comment-form-status" id="comment-form-status" role="status" aria-live="polite"></p>
-          </form>
-          <p class="comment-preview-note" id="comment-preview-note" hidden>
-            Preview only. Saved in this browser.
-          </p>
-          <noscript><p class="comment-noscript">Comments are unavailable without JavaScript in this preview.</p></noscript>
-        </div>
-
-        <section class="comments-feed" aria-labelledby="comment-feed-title" data-reveal>
-          <h3 class="visually-hidden" id="comment-feed-title">Published comments</h3>
-          <div class="comments-feed-head">
-            <p class="item-meta" id="comment-count">0 comments</p>
-          </div>
-          <ol class="comment-list" id="comment-list" aria-busy="false" aria-live="polite"></ol>
-          <button class="action-link comment-load-more" id="comment-load-more" type="button" hidden>Load more</button>
-        </section>
-      </div>
-    </section>
   </main>
 
   <footer>

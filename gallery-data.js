@@ -5,63 +5,108 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Production photography from Kobo Abe's Friends (1967).",
     "items": [
       {
-        "src": "img/friends-applause.jpeg",
+        "src": "img/thumbs/1200/friends-applause.webp",
+        "thumb": "img/thumbs/400/friends-applause.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: applause"
       },
       {
-        "src": "img/friends-blood-close.jpeg",
+        "src": "img/thumbs/1200/friends-blood-close.webp",
+        "thumb": "img/thumbs/400/friends-blood-close.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: blood close"
       },
       {
-        "src": "img/friends-blood-fence.jpeg",
+        "src": "img/thumbs/1200/friends-blood-fence.webp",
+        "thumb": "img/thumbs/400/friends-blood-fence.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: blood fence"
       },
       {
-        "src": "img/friends-blood-stand.jpeg",
+        "src": "img/thumbs/1200/friends-blood-stand.webp",
+        "thumb": "img/thumbs/400/friends-blood-stand.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: blood stand"
       },
       {
-        "src": "img/friends-cage.jpeg",
+        "src": "img/thumbs/1200/friends-cage.webp",
+        "thumb": "img/thumbs/400/friends-cage.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: cage"
       },
       {
-        "src": "img/friends-curly.jpeg",
+        "src": "img/thumbs/1200/friends-curly.webp",
+        "thumb": "img/thumbs/400/friends-curly.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: curly"
       },
       {
-        "src": "img/friends-embrace.jpeg",
+        "src": "img/thumbs/1200/friends-embrace.webp",
+        "thumb": "img/thumbs/400/friends-embrace.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: embrace"
       },
       {
-        "src": "img/friends-fence.jpeg",
+        "src": "img/thumbs/1200/friends-fence.webp",
+        "thumb": "img/thumbs/400/friends-fence.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: fence"
       },
       {
-        "src": "img/friends-floor.jpeg",
+        "src": "img/thumbs/1200/friends-floor.webp",
+        "thumb": "img/thumbs/400/friends-floor.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: floor"
       },
       {
-        "src": "img/friends-girl-fence.jpeg",
+        "src": "img/thumbs/1200/friends-girl-fence.webp",
+        "thumb": "img/thumbs/400/friends-girl-fence.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: girl fence"
       },
       {
-        "src": "img/friends-group.jpeg",
+        "src": "img/thumbs/1200/friends-group.webp",
+        "thumb": "img/thumbs/400/friends-group.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: group"
       },
       {
-        "src": "img/friends-hero.jpeg",
+        "src": "img/thumbs/1200/friends-hero.webp",
+        "thumb": "img/thumbs/400/friends-hero.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: hero"
       },
       {
-        "src": "img/friends-red-profile.jpeg",
+        "src": "img/thumbs/1200/friends-red-profile.webp",
+        "thumb": "img/thumbs/400/friends-red-profile.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: red profile"
       },
       {
-        "src": "img/friends-table.jpeg",
+        "src": "img/thumbs/1200/friends-table.webp",
+        "thumb": "img/thumbs/400/friends-table.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Friends: table"
       },
       {
-        "src": "img/friends-wide.jpeg",
+        "src": "img/thumbs/1200/friends-wide.webp",
+        "thumb": "img/thumbs/400/friends-wide.webp",
+        "width": 1210,
+        "height": 648,
         "alt": "Friends: wide"
       }
     ]
@@ -71,67 +116,115 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Production photography from Mark Branner's adaptation of Roald Dahl's Charlie and the Great Glass Elevator (2026).",
     "items": [
       {
-        "src": "img/glass-01.jpg",
+        "src": "img/thumbs/1200/glass-01.webp",
+        "thumb": "img/thumbs/400/glass-01.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 01"
       },
       {
-        "src": "img/glass-02.jpg",
+        "src": "img/thumbs/1200/glass-02.webp",
+        "thumb": "img/thumbs/400/glass-02.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 02"
       },
       {
-        "src": "img/glass-03.jpg",
+        "src": "img/thumbs/1200/glass-03.webp",
+        "thumb": "img/thumbs/400/glass-03.webp",
+        "width": 2400,
+        "height": 1808,
         "alt": "Great Glass Elevator: 03"
       },
       {
-        "src": "img/glass-04.jpg",
+        "src": "img/thumbs/1200/glass-04.webp",
+        "thumb": "img/thumbs/400/glass-04.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 04"
       },
       {
-        "src": "img/glass-05.jpg",
+        "src": "img/thumbs/1200/glass-05.webp",
+        "thumb": "img/thumbs/400/glass-05.webp",
+        "width": 2400,
+        "height": 1564,
         "alt": "Great Glass Elevator: 05"
       },
       {
-        "src": "img/glass-06.jpg",
+        "src": "img/thumbs/1200/glass-06.webp",
+        "thumb": "img/thumbs/400/glass-06.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 06"
       },
       {
-        "src": "img/glass-07.jpg",
+        "src": "img/thumbs/1200/glass-07.webp",
+        "thumb": "img/thumbs/400/glass-07.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 07"
       },
       {
-        "src": "img/glass-08.jpg",
+        "src": "img/thumbs/1200/glass-08.webp",
+        "thumb": "img/thumbs/400/glass-08.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 08"
       },
       {
-        "src": "img/glass-09.jpg",
+        "src": "img/thumbs/1200/glass-09.webp",
+        "thumb": "img/thumbs/400/glass-09.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 09"
       },
       {
-        "src": "img/glass-10.jpg",
+        "src": "img/thumbs/1200/glass-10.webp",
+        "thumb": "img/thumbs/400/glass-10.webp",
+        "width": 2400,
+        "height": 1513,
         "alt": "Great Glass Elevator: 10"
       },
       {
-        "src": "img/glass-11.jpg",
+        "src": "img/thumbs/1200/glass-11.webp",
+        "thumb": "img/thumbs/400/glass-11.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 11"
       },
       {
-        "src": "img/glass-12.jpg",
+        "src": "img/thumbs/1200/glass-12.webp",
+        "thumb": "img/thumbs/400/glass-12.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 12"
       },
       {
-        "src": "img/glass-13.jpg",
+        "src": "img/thumbs/1200/glass-13.webp",
+        "thumb": "img/thumbs/400/glass-13.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 13"
       },
       {
-        "src": "img/glass-14.jpg",
+        "src": "img/thumbs/1200/glass-14.webp",
+        "thumb": "img/thumbs/400/glass-14.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 14"
       },
       {
-        "src": "img/glass-15.jpg",
+        "src": "img/thumbs/1200/glass-15.webp",
+        "thumb": "img/thumbs/400/glass-15.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 15"
       },
       {
-        "src": "img/glass-16.jpg",
+        "src": "img/thumbs/1200/glass-16.webp",
+        "thumb": "img/thumbs/400/glass-16.webp",
+        "width": 2400,
+        "height": 1349,
         "alt": "Great Glass Elevator: 16"
       }
     ]
@@ -141,119 +234,206 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from France.",
     "items": [
       {
-        "src": "img/france-eiffel-night.jpeg",
+        "src": "img/thumbs/1200/france-eiffel-night.webp",
+        "thumb": "img/thumbs/400/france-eiffel-night.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "France: eiffel night"
       },
       {
-        "src": "img/france-grand-palais-friends.jpg",
+        "src": "img/thumbs/1200/france-grand-palais-friends.webp",
+        "thumb": "img/thumbs/400/france-grand-palais-friends.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "France: grand palais friends"
       },
       {
-        "src": "img/france-invalides-cross.jpg",
+        "src": "img/thumbs/1200/france-invalides-cross.webp",
+        "thumb": "img/thumbs/400/france-invalides-cross.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "France: invalides cross"
       },
       {
-        "src": "img/france-invalides-crucifix.jpg",
+        "src": "img/thumbs/1200/france-invalides-crucifix.webp",
+        "thumb": "img/thumbs/400/france-invalides-crucifix.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "France: invalides crucifix"
       },
       {
-        "src": "img/france-invalides-turenne.jpg",
+        "src": "img/thumbs/1200/france-invalides-turenne.webp",
+        "thumb": "img/thumbs/400/france-invalides-turenne.webp",
+        "width": 1957,
+        "height": 1122,
         "alt": "France: invalides turenne"
       },
       {
-        "src": "img/france-louvre-bust.jpg",
+        "src": "img/thumbs/1200/france-louvre-bust.webp",
+        "thumb": "img/thumbs/400/france-louvre-bust.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "France: louvre bust"
       },
       {
-        "src": "img/france-louvre-cupid.jpeg",
+        "src": "img/thumbs/1200/france-louvre-cupid.webp",
+        "thumb": "img/thumbs/400/france-louvre-cupid.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "France: louvre cupid"
       },
       {
-        "src": "img/france-louvre-gallery.jpeg",
+        "src": "img/thumbs/1200/france-louvre-gallery.webp",
+        "thumb": "img/thumbs/400/france-louvre-gallery.webp",
+        "width": 1600,
+        "height": 898,
         "alt": "France: louvre gallery"
       },
       {
-        "src": "img/france-louvre-monalisa.jpeg",
+        "src": "img/thumbs/1200/france-louvre-monalisa.webp",
+        "thumb": "img/thumbs/400/france-louvre-monalisa.webp",
+        "width": 1600,
+        "height": 963,
         "alt": "France: louvre monalisa"
       },
       {
-        "src": "img/france-louvre-nike.jpeg",
+        "src": "img/thumbs/1200/france-louvre-nike.webp",
+        "thumb": "img/thumbs/400/france-louvre-nike.webp",
+        "width": 1600,
+        "height": 898,
         "alt": "France: louvre nike"
       },
       {
-        "src": "img/france-louvre-old-man.jpeg",
+        "src": "img/thumbs/1200/france-louvre-old-man.webp",
+        "thumb": "img/thumbs/400/france-louvre-old-man.webp",
+        "width": 1600,
+        "height": 898,
         "alt": "France: louvre old man"
       },
       {
-        "src": "img/france-louvre-psyche.jpg",
+        "src": "img/thumbs/1200/france-louvre-psyche.webp",
+        "thumb": "img/thumbs/400/france-louvre-psyche.webp",
+        "width": 2000,
+        "height": 1123,
         "alt": "France: louvre psyche"
       },
       {
-        "src": "img/france-louvre-pyramid.jpg",
+        "src": "img/thumbs/1200/france-louvre-pyramid.webp",
+        "thumb": "img/thumbs/400/france-louvre-pyramid.webp",
+        "width": 1907,
+        "height": 1071,
         "alt": "France: louvre pyramid"
       },
       {
-        "src": "img/france-louvre-reclining.jpeg",
+        "src": "img/thumbs/1200/france-louvre-reclining.webp",
+        "thumb": "img/thumbs/400/france-louvre-reclining.webp",
+        "width": 1600,
+        "height": 898,
         "alt": "France: louvre reclining"
       },
       {
-        "src": "img/france-louvre-three-graces.jpg",
+        "src": "img/thumbs/1200/france-louvre-three-graces.webp",
+        "thumb": "img/thumbs/400/france-louvre-three-graces.webp",
+        "width": 2000,
+        "height": 1123,
         "alt": "France: louvre three graces"
       },
       {
-        "src": "img/france-louvre-venus.jpeg",
+        "src": "img/thumbs/1200/france-louvre-venus.webp",
+        "thumb": "img/thumbs/400/france-louvre-venus.webp",
+        "width": 1600,
+        "height": 898,
         "alt": "France: louvre venus"
       },
       {
-        "src": "img/france-opera-hall.jpeg",
+        "src": "img/thumbs/1200/france-opera-hall.webp",
+        "thumb": "img/thumbs/400/france-opera-hall.webp",
+        "width": 1600,
+        "height": 898,
         "alt": "France: opera hall"
       },
       {
-        "src": "img/france-orsay-clock.jpeg",
+        "src": "img/thumbs/1200/france-orsay-clock.webp",
+        "thumb": "img/thumbs/400/france-orsay-clock.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "France: orsay clock"
       },
       {
-        "src": "img/france-orsay-silhouette.jpeg",
+        "src": "img/thumbs/1200/france-orsay-silhouette.webp",
+        "thumb": "img/thumbs/400/france-orsay-silhouette.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "France: orsay silhouette"
       },
       {
-        "src": "img/france-orsay-starry-night.jpg",
+        "src": "img/thumbs/1200/france-orsay-starry-night.webp",
+        "thumb": "img/thumbs/400/france-orsay-starry-night.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "France: orsay starry night"
       },
       {
-        "src": "img/france-orsay-vangogh-portrait.jpg",
+        "src": "img/thumbs/1200/france-orsay-vangogh-portrait.webp",
+        "thumb": "img/thumbs/400/france-orsay-vangogh-portrait.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "France: orsay vangogh portrait"
       },
       {
-        "src": "img/france-paris-hotel-de-ville.jpeg",
+        "src": "img/thumbs/1200/france-paris-hotel-de-ville.webp",
+        "thumb": "img/thumbs/400/france-paris-hotel-de-ville.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "France: paris hotel de ville"
       },
       {
-        "src": "img/france-sculpture-gladiator.jpeg",
+        "src": "img/thumbs/1200/france-sculpture-gladiator.webp",
+        "thumb": "img/thumbs/400/france-sculpture-gladiator.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "France: sculpture gladiator"
       },
       {
-        "src": "img/france-sculpture-grief.jpeg",
+        "src": "img/thumbs/1200/france-sculpture-grief.webp",
+        "thumb": "img/thumbs/400/france-sculpture-grief.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "France: sculpture grief"
       },
       {
-        "src": "img/france-sculpture-nature.jpeg",
+        "src": "img/thumbs/1200/france-sculpture-nature.webp",
+        "thumb": "img/thumbs/400/france-sculpture-nature.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "France: sculpture nature"
       },
       {
-        "src": "img/france-versailles-battles.jpeg",
+        "src": "img/thumbs/1200/france-versailles-battles.webp",
+        "thumb": "img/thumbs/400/france-versailles-battles.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "France: versailles battles"
       },
       {
-        "src": "img/france-versailles-chandeliers.jpeg",
+        "src": "img/thumbs/1200/france-versailles-chandeliers.webp",
+        "thumb": "img/thumbs/400/france-versailles-chandeliers.webp",
+        "width": 1600,
+        "height": 928,
         "alt": "France: versailles chandeliers"
       },
       {
-        "src": "img/france-versailles-gallery.jpeg",
+        "src": "img/thumbs/1200/france-versailles-gallery.webp",
+        "thumb": "img/thumbs/400/france-versailles-gallery.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "France: versailles gallery"
       },
       {
-        "src": "img/france-versailles-room.jpeg",
+        "src": "img/thumbs/1200/france-versailles-room.webp",
+        "thumb": "img/thumbs/400/france-versailles-room.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "France: versailles room"
       }
     ]
@@ -263,79 +443,136 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Italy.",
     "items": [
       {
-        "src": "img/italy-area-pedonale.jpg",
+        "src": "img/thumbs/1200/italy-area-pedonale.webp",
+        "thumb": "img/thumbs/400/italy-area-pedonale.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Italy: area pedonale"
       },
       {
-        "src": "img/italy-birth-of-venus.jpg",
+        "src": "img/thumbs/1200/italy-birth-of-venus.webp",
+        "thumb": "img/thumbs/400/italy-birth-of-venus.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Italy: birth of venus"
       },
       {
-        "src": "img/italy-botticelli-primavera.jpg",
+        "src": "img/thumbs/1200/italy-botticelli-primavera.webp",
+        "thumb": "img/thumbs/400/italy-botticelli-primavera.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Italy: botticelli primavera"
       },
       {
-        "src": "img/italy-church-apse-detail.jpg",
+        "src": "img/thumbs/1200/italy-church-apse-detail.webp",
+        "thumb": "img/thumbs/400/italy-church-apse-detail.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Italy: church apse detail"
       },
       {
-        "src": "img/italy-church-apse.jpg",
+        "src": "img/thumbs/1200/italy-church-apse.webp",
+        "thumb": "img/thumbs/400/italy-church-apse.webp",
+        "width": 655,
+        "height": 1198,
         "alt": "Italy: church apse"
       },
       {
-        "src": "img/italy-colosseum-interior.jpg",
+        "src": "img/thumbs/1200/italy-colosseum-interior.webp",
+        "thumb": "img/thumbs/400/italy-colosseum-interior.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Italy: colosseum interior"
       },
       {
-        "src": "img/italy-dancing-faun.jpg",
+        "src": "img/thumbs/1200/italy-dancing-faun.webp",
+        "thumb": "img/thumbs/400/italy-dancing-faun.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Italy: dancing faun"
       },
       {
-        "src": "img/italy-dome-fresco.jpg",
+        "src": "img/thumbs/1200/italy-dome-fresco.webp",
+        "thumb": "img/thumbs/400/italy-dome-fresco.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Italy: dome fresco"
       },
       {
-        "src": "img/italy-duomo-entrance.jpg",
+        "src": "img/thumbs/1200/italy-duomo-entrance.webp",
+        "thumb": "img/thumbs/400/italy-duomo-entrance.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Italy: duomo entrance"
       },
       {
-        "src": "img/italy-gregory-monument.jpg",
+        "src": "img/thumbs/1200/italy-gregory-monument.webp",
+        "thumb": "img/thumbs/400/italy-gregory-monument.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Italy: gregory monument"
       },
       {
-        "src": "img/italy-loggia-sculpture.jpg",
+        "src": "img/thumbs/1200/italy-loggia-sculpture.webp",
+        "thumb": "img/thumbs/400/italy-loggia-sculpture.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Italy: loggia sculpture"
       },
       {
-        "src": "img/italy-piazza-navona-church.jpg",
+        "src": "img/thumbs/1200/italy-piazza-navona-church.webp",
+        "thumb": "img/thumbs/400/italy-piazza-navona-church.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Italy: piazza navona church"
       },
       {
-        "src": "img/italy-piazza-navona.jpg",
+        "src": "img/thumbs/1200/italy-piazza-navona.webp",
+        "thumb": "img/thumbs/400/italy-piazza-navona.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Italy: piazza navona"
       },
       {
-        "src": "img/italy-piazzale-sunset.jpg",
+        "src": "img/thumbs/1200/italy-piazzale-sunset.webp",
+        "thumb": "img/thumbs/400/italy-piazzale-sunset.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Italy: piazzale sunset"
       },
       {
-        "src": "img/italy-rome-domes-skyline.jpg",
+        "src": "img/thumbs/1200/italy-rome-domes-skyline.webp",
+        "thumb": "img/thumbs/400/italy-rome-domes-skyline.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Italy: rome domes skyline"
       },
       {
-        "src": "img/italy-sant-ignazio-ceiling.jpg",
+        "src": "img/thumbs/1200/italy-sant-ignazio-ceiling.webp",
+        "thumb": "img/thumbs/400/italy-sant-ignazio-ceiling.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Italy: sant ignazio ceiling"
       },
       {
-        "src": "img/italy-trevi-fountain.jpg",
+        "src": "img/thumbs/1200/italy-trevi-fountain.webp",
+        "thumb": "img/thumbs/400/italy-trevi-fountain.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Italy: trevi fountain"
       },
       {
-        "src": "img/italy-trevi-neptune.jpg",
+        "src": "img/thumbs/1200/italy-trevi-neptune.webp",
+        "thumb": "img/thumbs/400/italy-trevi-neptune.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Italy: trevi neptune"
       },
       {
-        "src": "img/italy-winged-victory-horses.jpg",
+        "src": "img/thumbs/1200/italy-winged-victory-horses.webp",
+        "thumb": "img/thumbs/400/italy-winged-victory-horses.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Italy: winged victory horses"
       }
     ]
@@ -345,263 +582,458 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from the United Kingdom.",
     "items": [
       {
-        "src": "img/uk-aberdeen-signpost-glass.jpg",
+        "src": "img/thumbs/1200/uk-aberdeen-signpost-glass.webp",
+        "thumb": "img/thumbs/400/uk-aberdeen-signpost-glass.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: aberdeen signpost glass"
       },
       {
-        "src": "img/uk-balmoral-calton-hill.jpg",
+        "src": "img/thumbs/1200/uk-balmoral-calton-hill.webp",
+        "thumb": "img/thumbs/400/uk-balmoral-calton-hill.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: balmoral calton hill"
       },
       {
-        "src": "img/uk-balmoral-clock-tower.jpg",
+        "src": "img/thumbs/1200/uk-balmoral-clock-tower.webp",
+        "thumb": "img/thumbs/400/uk-balmoral-clock-tower.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: balmoral clock tower"
       },
       {
-        "src": "img/uk-balmoral-hotel-daytime.jpg",
+        "src": "img/thumbs/1200/uk-balmoral-hotel-daytime.webp",
+        "thumb": "img/thumbs/400/uk-balmoral-hotel-daytime.webp",
+        "width": 1600,
+        "height": 1200,
         "alt": "United Kingdom: balmoral hotel daytime"
       },
       {
-        "src": "img/uk-birch-forest-trunks.jpg",
+        "src": "img/thumbs/1200/uk-birch-forest-trunks.webp",
+        "thumb": "img/thumbs/400/uk-birch-forest-trunks.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: birch forest trunks"
       },
       {
-        "src": "img/uk-blackpool-tower-sky.jpg",
+        "src": "img/thumbs/1200/uk-blackpool-tower-sky.webp",
+        "thumb": "img/thumbs/400/uk-blackpool-tower-sky.webp",
+        "width": 1112,
+        "height": 1600,
         "alt": "United Kingdom: blackpool tower sky"
       },
       {
-        "src": "img/uk-blackpool-tower-square.jpg",
+        "src": "img/thumbs/1200/uk-blackpool-tower-square.webp",
+        "thumb": "img/thumbs/400/uk-blackpool-tower-square.webp",
+        "width": 1600,
+        "height": 923,
         "alt": "United Kingdom: blackpool tower square"
       },
       {
-        "src": "img/uk-blackpool-typography-floor.jpg",
+        "src": "img/thumbs/1200/uk-blackpool-typography-floor.webp",
+        "thumb": "img/thumbs/400/uk-blackpool-typography-floor.webp",
+        "width": 1600,
+        "height": 1116,
         "alt": "United Kingdom: blackpool typography floor"
       },
       {
-        "src": "img/uk-blue-door-bare-tree.jpg",
+        "src": "img/thumbs/1200/uk-blue-door-bare-tree.webp",
+        "thumb": "img/thumbs/400/uk-blue-door-bare-tree.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: blue door bare tree"
       },
       {
-        "src": "img/uk-bonfire-flames.jpg",
+        "src": "img/thumbs/1200/uk-bonfire-flames.webp",
+        "thumb": "img/thumbs/400/uk-bonfire-flames.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: bonfire flames"
       },
       {
-        "src": "img/uk-bonfire-music-sand.jpg",
+        "src": "img/thumbs/1200/uk-bonfire-music-sand.webp",
+        "thumb": "img/thumbs/400/uk-bonfire-music-sand.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: bonfire music sand"
       },
       {
-        "src": "img/uk-bonfire-night-phones.jpg",
+        "src": "img/thumbs/1200/uk-bonfire-night-phones.webp",
+        "thumb": "img/thumbs/400/uk-bonfire-night-phones.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: bonfire night phones"
       },
       {
-        "src": "img/uk-brick-building-rain.jpg",
+        "src": "img/thumbs/1200/uk-brick-building-rain.webp",
+        "thumb": "img/thumbs/400/uk-brick-building-rain.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: brick building rain"
       },
       {
-        "src": "img/uk-calton-hill-dusk.jpg",
+        "src": "img/thumbs/1200/uk-calton-hill-dusk.webp",
+        "thumb": "img/thumbs/400/uk-calton-hill-dusk.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: calton hill dusk"
       },
       {
-        "src": "img/uk-calton-hill-monument.jpg",
+        "src": "img/thumbs/1200/uk-calton-hill-monument.webp",
+        "thumb": "img/thumbs/400/uk-calton-hill-monument.webp",
+        "width": 1600,
+        "height": 1065,
         "alt": "United Kingdom: calton hill monument"
       },
       {
-        "src": "img/uk-church-nave-stained-glass.jpg",
+        "src": "img/thumbs/1200/uk-church-nave-stained-glass.webp",
+        "thumb": "img/thumbs/400/uk-church-nave-stained-glass.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "United Kingdom: church nave stained glass"
       },
       {
-        "src": "img/uk-church-stained-glass-reading.jpg",
+        "src": "img/thumbs/1200/uk-church-stained-glass-reading.webp",
+        "thumb": "img/thumbs/400/uk-church-stained-glass-reading.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: church stained glass reading"
       },
       {
-        "src": "img/uk-church-stained-glass-saints.jpg",
+        "src": "img/thumbs/1200/uk-church-stained-glass-saints.webp",
+        "thumb": "img/thumbs/400/uk-church-stained-glass-saints.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: church stained glass saints"
       },
       {
-        "src": "img/uk-cottage-blue-car-garden.jpg",
+        "src": "img/thumbs/1200/uk-cottage-blue-car-garden.webp",
+        "thumb": "img/thumbs/400/uk-cottage-blue-car-garden.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: cottage blue car garden"
       },
       {
-        "src": "img/uk-cottage-blue-sky.jpg",
+        "src": "img/thumbs/1200/uk-cottage-blue-sky.webp",
+        "thumb": "img/thumbs/400/uk-cottage-blue-sky.webp",
+        "width": 1600,
+        "height": 1064,
         "alt": "United Kingdom: cottage blue sky"
       },
       {
-        "src": "img/uk-countryside-fence-gorse.jpg",
+        "src": "img/thumbs/1200/uk-countryside-fence-gorse.webp",
+        "thumb": "img/thumbs/400/uk-countryside-fence-gorse.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: countryside fence gorse"
       },
       {
-        "src": "img/uk-dance-studio-discussion.jpg",
+        "src": "img/thumbs/1200/uk-dance-studio-discussion.webp",
+        "thumb": "img/thumbs/400/uk-dance-studio-discussion.webp",
+        "width": 1600,
+        "height": 1119,
         "alt": "United Kingdom: dance studio discussion"
       },
       {
-        "src": "img/uk-edinburgh-castle.jpg",
+        "src": "img/thumbs/1200/uk-edinburgh-castle.webp",
+        "thumb": "img/thumbs/400/uk-edinburgh-castle.webp",
+        "width": 1600,
+        "height": 1064,
         "alt": "United Kingdom: edinburgh castle"
       },
       {
-        "src": "img/uk-edinburgh-child-umbrella.jpg",
+        "src": "img/thumbs/1200/uk-edinburgh-child-umbrella.webp",
+        "thumb": "img/thumbs/400/uk-edinburgh-child-umbrella.webp",
+        "width": 1600,
+        "height": 1064,
         "alt": "United Kingdom: edinburgh child umbrella"
       },
       {
-        "src": "img/uk-edinburgh-graduation-friends.jpg",
+        "src": "img/thumbs/1200/uk-edinburgh-graduation-friends.webp",
+        "thumb": "img/thumbs/400/uk-edinburgh-graduation-friends.webp",
+        "width": 1600,
+        "height": 900,
         "alt": "United Kingdom: edinburgh graduation friends"
       },
       {
-        "src": "img/uk-edinburgh-graduation-solo.jpg",
+        "src": "img/thumbs/1200/uk-edinburgh-graduation-solo.webp",
+        "thumb": "img/thumbs/400/uk-edinburgh-graduation-solo.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "United Kingdom: edinburgh graduation solo"
       },
       {
-        "src": "img/uk-edinburgh-panorama.jpg",
+        "src": "img/thumbs/1200/uk-edinburgh-panorama.webp",
+        "thumb": "img/thumbs/400/uk-edinburgh-panorama.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: edinburgh panorama"
       },
       {
-        "src": "img/uk-edinburgh-uni-quad-evening.jpg",
+        "src": "img/thumbs/1200/uk-edinburgh-uni-quad-evening.webp",
+        "thumb": "img/thumbs/400/uk-edinburgh-uni-quad-evening.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: edinburgh uni quad evening"
       },
       {
-        "src": "img/uk-edinburgh-university.jpg",
+        "src": "img/thumbs/1200/uk-edinburgh-university.webp",
+        "thumb": "img/thumbs/400/uk-edinburgh-university.webp",
+        "width": 1600,
+        "height": 1134,
         "alt": "United Kingdom: edinburgh university"
       },
       {
-        "src": "img/uk-foggy-town-rooftops.jpg",
+        "src": "img/thumbs/1200/uk-foggy-town-rooftops.webp",
+        "thumb": "img/thumbs/400/uk-foggy-town-rooftops.webp",
+        "width": 1600,
+        "height": 1065,
         "alt": "United Kingdom: foggy town rooftops"
       },
       {
-        "src": "img/uk-forest-canopy-lookup.jpg",
+        "src": "img/thumbs/1200/uk-forest-canopy-lookup.webp",
+        "thumb": "img/thumbs/400/uk-forest-canopy-lookup.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: forest canopy lookup"
       },
       {
-        "src": "img/uk-friends-backstage-flowers.jpg",
+        "src": "img/thumbs/1200/uk-friends-backstage-flowers.webp",
+        "thumb": "img/thumbs/400/uk-friends-backstage-flowers.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: friends backstage flowers"
       },
       {
-        "src": "img/uk-friends-portrait.jpg",
+        "src": "img/thumbs/1200/uk-friends-portrait.webp",
+        "thumb": "img/thumbs/400/uk-friends-portrait.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: friends portrait"
       },
       {
-        "src": "img/uk-glasgow-kelvinbridge-sign.jpg",
+        "src": "img/thumbs/1200/uk-glasgow-kelvinbridge-sign.webp",
+        "thumb": "img/thumbs/400/uk-glasgow-kelvinbridge-sign.webp",
+        "width": 1086,
+        "height": 724,
         "alt": "United Kingdom: glasgow kelvinbridge sign"
       },
       {
-        "src": "img/uk-glasgow-uni-gothic.jpg",
+        "src": "img/thumbs/1200/uk-glasgow-uni-gothic.webp",
+        "thumb": "img/thumbs/400/uk-glasgow-uni-gothic.webp",
+        "width": 1086,
+        "height": 724,
         "alt": "United Kingdom: glasgow uni gothic"
       },
       {
-        "src": "img/uk-glenfinnan-viaduct-portrait.jpg",
+        "src": "img/thumbs/1200/uk-glenfinnan-viaduct-portrait.webp",
+        "thumb": "img/thumbs/400/uk-glenfinnan-viaduct-portrait.webp",
+        "width": 1600,
+        "height": 1147,
         "alt": "United Kingdom: glenfinnan viaduct portrait"
       },
       {
-        "src": "img/uk-gothic-ivy-red-leaves.jpg",
+        "src": "img/thumbs/1200/uk-gothic-ivy-red-leaves.webp",
+        "thumb": "img/thumbs/400/uk-gothic-ivy-red-leaves.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: gothic ivy red leaves"
       },
       {
-        "src": "img/uk-gothic-stone-doorway.jpg",
+        "src": "img/thumbs/1200/uk-gothic-stone-doorway.webp",
+        "thumb": "img/thumbs/400/uk-gothic-stone-doorway.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: gothic stone doorway"
       },
       {
-        "src": "img/uk-highlands-arm-raised.jpg",
+        "src": "img/thumbs/1200/uk-highlands-arm-raised.webp",
+        "thumb": "img/thumbs/400/uk-highlands-arm-raised.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: highlands arm raised"
       },
       {
-        "src": "img/uk-highlands-golden-hills.jpg",
+        "src": "img/thumbs/1200/uk-highlands-golden-hills.webp",
+        "thumb": "img/thumbs/400/uk-highlands-golden-hills.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: highlands golden hills"
       },
       {
-        "src": "img/uk-highlands-loch-view.jpg",
+        "src": "img/thumbs/1200/uk-highlands-loch-view.webp",
+        "thumb": "img/thumbs/400/uk-highlands-loch-view.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "United Kingdom: highlands loch view"
       },
       {
-        "src": "img/uk-highlands-village-portrait.jpg",
+        "src": "img/thumbs/1200/uk-highlands-village-portrait.webp",
+        "thumb": "img/thumbs/400/uk-highlands-village-portrait.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: highlands village portrait"
       },
       {
-        "src": "img/uk-hiker-forest-path.jpg",
+        "src": "img/thumbs/1200/uk-hiker-forest-path.webp",
+        "thumb": "img/thumbs/400/uk-hiker-forest-path.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: hiker forest path"
       },
       {
-        "src": "img/uk-london-big-ben.jpg",
+        "src": "img/thumbs/1200/uk-london-big-ben.webp",
+        "thumb": "img/thumbs/400/uk-london-big-ben.webp",
+        "width": 1600,
+        "height": 1200,
         "alt": "United Kingdom: london big ben"
       },
       {
-        "src": "img/uk-london-bridge-sunset.jpg",
+        "src": "img/thumbs/1200/uk-london-bridge-sunset.webp",
+        "thumb": "img/thumbs/400/uk-london-bridge-sunset.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "United Kingdom: london bridge sunset"
       },
       {
-        "src": "img/uk-london-eye-river.jpg",
+        "src": "img/thumbs/1200/uk-london-eye-river.webp",
+        "thumb": "img/thumbs/400/uk-london-eye-river.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "United Kingdom: london eye river"
       },
       {
-        "src": "img/uk-london-street-scene.jpg",
+        "src": "img/thumbs/1200/uk-london-street-scene.webp",
+        "thumb": "img/thumbs/400/uk-london-street-scene.webp",
+        "width": 1600,
+        "height": 898,
         "alt": "United Kingdom: london street scene"
       },
       {
-        "src": "img/uk-night-closeup-flash.jpg",
+        "src": "img/thumbs/1200/uk-night-closeup-flash.webp",
+        "thumb": "img/thumbs/400/uk-night-closeup-flash.webp",
+        "width": 1600,
+        "height": 1065,
         "alt": "United Kingdom: night closeup flash"
       },
       {
-        "src": "img/uk-night-friends-bottles.jpg",
+        "src": "img/thumbs/1200/uk-night-friends-bottles.webp",
+        "thumb": "img/thumbs/400/uk-night-friends-bottles.webp",
+        "width": 1600,
+        "height": 1064,
         "alt": "United Kingdom: night friends bottles"
       },
       {
-        "src": "img/uk-night-moon-graffiti.jpg",
+        "src": "img/thumbs/1200/uk-night-moon-graffiti.webp",
+        "thumb": "img/thumbs/400/uk-night-moon-graffiti.webp",
+        "width": 1600,
+        "height": 1064,
         "alt": "United Kingdom: night moon graffiti"
       },
       {
-        "src": "img/uk-night-street-varsity-jacket.jpg",
+        "src": "img/thumbs/1200/uk-night-street-varsity-jacket.webp",
+        "thumb": "img/thumbs/400/uk-night-street-varsity-jacket.webp",
+        "width": 1600,
+        "height": 1065,
         "alt": "United Kingdom: night street varsity jacket"
       },
       {
-        "src": "img/uk-pentland-hills-cafe.jpg",
+        "src": "img/thumbs/1200/uk-pentland-hills-cafe.webp",
+        "thumb": "img/thumbs/400/uk-pentland-hills-cafe.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: pentland hills cafe"
       },
       {
-        "src": "img/uk-pine-tree-golden-cones.jpg",
+        "src": "img/thumbs/1200/uk-pine-tree-golden-cones.webp",
+        "thumb": "img/thumbs/400/uk-pine-tree-golden-cones.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: pine tree golden cones"
       },
       {
-        "src": "img/uk-princes-street-silhouette.jpg",
+        "src": "img/thumbs/1200/uk-princes-street-silhouette.webp",
+        "thumb": "img/thumbs/400/uk-princes-street-silhouette.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: princes street silhouette"
       },
       {
-        "src": "img/uk-pub-interior.jpg",
+        "src": "img/thumbs/1200/uk-pub-interior.webp",
+        "thumb": "img/thumbs/400/uk-pub-interior.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: pub interior"
       },
       {
-        "src": "img/uk-reservoir-bridge-blue.jpg",
+        "src": "img/thumbs/1200/uk-reservoir-bridge-blue.webp",
+        "thumb": "img/thumbs/400/uk-reservoir-bridge-blue.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: reservoir bridge blue"
       },
       {
-        "src": "img/uk-reservoir-warning-sign.jpg",
+        "src": "img/thumbs/1200/uk-reservoir-warning-sign.webp",
+        "thumb": "img/thumbs/400/uk-reservoir-warning-sign.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: reservoir warning sign"
       },
       {
-        "src": "img/uk-reservoir-wide-view.jpg",
+        "src": "img/thumbs/1200/uk-reservoir-wide-view.webp",
+        "thumb": "img/thumbs/400/uk-reservoir-wide-view.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: reservoir wide view"
       },
       {
-        "src": "img/uk-river-birch-trees.jpg",
+        "src": "img/thumbs/1200/uk-river-birch-trees.webp",
+        "thumb": "img/thumbs/400/uk-river-birch-trees.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: river birch trees"
       },
       {
-        "src": "img/uk-river-rapids-branches.jpg",
+        "src": "img/thumbs/1200/uk-river-rapids-branches.webp",
+        "thumb": "img/thumbs/400/uk-river-rapids-branches.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: river rapids branches"
       },
       {
-        "src": "img/uk-road-sign-speed.jpg",
+        "src": "img/thumbs/1200/uk-road-sign-speed.webp",
+        "thumb": "img/thumbs/400/uk-road-sign-speed.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "United Kingdom: road sign speed"
       },
       {
-        "src": "img/uk-seaside-portrait.jpg",
+        "src": "img/thumbs/1200/uk-seaside-portrait.webp",
+        "thumb": "img/thumbs/400/uk-seaside-portrait.webp",
+        "width": 1600,
+        "height": 1064,
         "alt": "United Kingdom: seaside portrait"
       },
       {
-        "src": "img/uk-stage-bow.jpg",
+        "src": "img/thumbs/1200/uk-stage-bow.webp",
+        "thumb": "img/thumbs/400/uk-stage-bow.webp",
+        "width": 1600,
+        "height": 900,
         "alt": "United Kingdom: stage bow"
       },
       {
-        "src": "img/uk-tree-branches-silhouette.jpg",
+        "src": "img/thumbs/1200/uk-tree-branches-silhouette.webp",
+        "thumb": "img/thumbs/400/uk-tree-branches-silhouette.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "United Kingdom: tree branches silhouette"
       },
       {
-        "src": "img/uk-winter-trees-blue-sky.jpg",
+        "src": "img/thumbs/1200/uk-winter-trees-blue-sky.webp",
+        "thumb": "img/thumbs/400/uk-winter-trees-blue-sky.webp",
+        "width": 1600,
+        "height": 1065,
         "alt": "United Kingdom: winter trees blue sky"
       }
     ]
@@ -611,175 +1043,304 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Japan.",
     "items": [
       {
-        "src": "img/japan-art-center-glass.jpg",
+        "src": "img/thumbs/1200/japan-art-center-glass.webp",
+        "thumb": "img/thumbs/400/japan-art-center-glass.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: art center glass"
       },
       {
-        "src": "img/japan-art-center-interior.jpg",
+        "src": "img/thumbs/1200/japan-art-center-interior.webp",
+        "thumb": "img/thumbs/400/japan-art-center-interior.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: art center interior"
       },
       {
-        "src": "img/japan-autumn-window-reflection.jpg",
+        "src": "img/thumbs/1200/japan-autumn-window-reflection.webp",
+        "thumb": "img/thumbs/400/japan-autumn-window-reflection.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: autumn window reflection"
       },
       {
-        "src": "img/japan-bicycle-ginkgo.jpg",
+        "src": "img/thumbs/1200/japan-bicycle-ginkgo.webp",
+        "thumb": "img/thumbs/400/japan-bicycle-ginkgo.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: bicycle ginkgo"
       },
       {
-        "src": "img/japan-bus-interior.jpg",
+        "src": "img/thumbs/1200/japan-bus-interior.webp",
+        "thumb": "img/thumbs/400/japan-bus-interior.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: bus interior"
       },
       {
-        "src": "img/japan-cafe-camera-portrait.jpg",
+        "src": "img/thumbs/1200/japan-cafe-camera-portrait.webp",
+        "thumb": "img/thumbs/400/japan-cafe-camera-portrait.webp",
+        "width": 1124,
+        "height": 1600,
         "alt": "Japan: cafe camera portrait"
       },
       {
-        "src": "img/japan-cafe-terrace.jpg",
+        "src": "img/thumbs/1200/japan-cafe-terrace.webp",
+        "thumb": "img/thumbs/400/japan-cafe-terrace.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: cafe terrace"
       },
       {
-        "src": "img/japan-crosswalk-shadow.jpg",
+        "src": "img/thumbs/1200/japan-crosswalk-shadow.webp",
+        "thumb": "img/thumbs/400/japan-crosswalk-shadow.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: crosswalk shadow"
       },
       {
-        "src": "img/japan-fuji-morning-portrait.jpg",
+        "src": "img/thumbs/1200/japan-fuji-morning-portrait.webp",
+        "thumb": "img/thumbs/400/japan-fuji-morning-portrait.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Japan: fuji morning portrait"
       },
       {
-        "src": "img/japan-fuji-trees-portrait.jpg",
+        "src": "img/thumbs/1200/japan-fuji-trees-portrait.webp",
+        "thumb": "img/thumbs/400/japan-fuji-trees-portrait.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: fuji trees portrait"
       },
       {
-        "src": "img/japan-fuji-village-view.jpg",
+        "src": "img/thumbs/1200/japan-fuji-village-view.webp",
+        "thumb": "img/thumbs/400/japan-fuji-village-view.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: fuji village view"
       },
       {
-        "src": "img/japan-garden-lantern.jpg",
+        "src": "img/thumbs/1200/japan-garden-lantern.webp",
+        "thumb": "img/thumbs/400/japan-garden-lantern.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: garden lantern"
       },
       {
-        "src": "img/japan-ginkgo-leaves-street.jpg",
+        "src": "img/thumbs/1200/japan-ginkgo-leaves-street.webp",
+        "thumb": "img/thumbs/400/japan-ginkgo-leaves-street.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: ginkgo leaves street"
       },
       {
-        "src": "img/japan-hakone-lake-torii.jpg",
+        "src": "img/thumbs/1200/japan-hakone-lake-torii.webp",
+        "thumb": "img/thumbs/400/japan-hakone-lake-torii.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: hakone lake torii"
       },
       {
-        "src": "img/japan-houtou-fuji-lantern.jpg",
+        "src": "img/thumbs/1200/japan-houtou-fuji-lantern.webp",
+        "thumb": "img/thumbs/400/japan-houtou-fuji-lantern.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: houtou fuji lantern"
       },
       {
-        "src": "img/japan-museum-painting.jpg",
+        "src": "img/thumbs/1200/japan-museum-painting.webp",
+        "thumb": "img/thumbs/400/japan-museum-painting.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: museum painting"
       },
       {
-        "src": "img/japan-nakameguro-crowd.jpg",
+        "src": "img/thumbs/1200/japan-nakameguro-crowd.webp",
+        "thumb": "img/thumbs/400/japan-nakameguro-crowd.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: nakameguro crowd"
       },
       {
-        "src": "img/japan-nakameguro-street.jpg",
+        "src": "img/thumbs/1200/japan-nakameguro-street.webp",
+        "thumb": "img/thumbs/400/japan-nakameguro-street.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: nakameguro street"
       },
       {
-        "src": "img/japan-nankai-train-interior.jpg",
+        "src": "img/thumbs/1200/japan-nankai-train-interior.webp",
+        "thumb": "img/thumbs/400/japan-nankai-train-interior.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: nankai train interior"
       },
       {
-        "src": "img/japan-narukawa-museum-sign.jpg",
+        "src": "img/thumbs/1200/japan-narukawa-museum-sign.webp",
+        "thumb": "img/thumbs/400/japan-narukawa-museum-sign.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Japan: narukawa museum sign"
       },
       {
-        "src": "img/japan-noa-dance-cityscape.jpg",
+        "src": "img/thumbs/1200/japan-noa-dance-cityscape.webp",
+        "thumb": "img/thumbs/400/japan-noa-dance-cityscape.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: noa dance cityscape"
       },
       {
-        "src": "img/japan-noh-masks-hannya.jpg",
+        "src": "img/thumbs/1200/japan-noh-masks-hannya.webp",
+        "thumb": "img/thumbs/400/japan-noh-masks-hannya.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Japan: noh masks hannya"
       },
       {
-        "src": "img/japan-noh-masks-women.jpg",
+        "src": "img/thumbs/1200/japan-noh-masks-women.webp",
+        "thumb": "img/thumbs/400/japan-noh-masks-women.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Japan: noh masks women"
       },
       {
-        "src": "img/japan-osaka-shinsaibashi-signs.jpg",
+        "src": "img/thumbs/1200/japan-osaka-shinsaibashi-signs.webp",
+        "thumb": "img/thumbs/400/japan-osaka-shinsaibashi-signs.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: osaka shinsaibashi signs"
       },
       {
-        "src": "img/japan-osaka-shinsekai-portrait.jpg",
+        "src": "img/thumbs/1200/japan-osaka-shinsekai-portrait.webp",
+        "thumb": "img/thumbs/400/japan-osaka-shinsekai-portrait.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "Japan: osaka shinsekai portrait"
       },
       {
-        "src": "img/japan-osaka-tsutenkaku-street.jpg",
+        "src": "img/thumbs/1200/japan-osaka-tsutenkaku-street.webp",
+        "thumb": "img/thumbs/400/japan-osaka-tsutenkaku-street.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: osaka tsutenkaku street"
       },
       {
-        "src": "img/japan-osaka-tsutenkaku-tower.jpg",
+        "src": "img/thumbs/1200/japan-osaka-tsutenkaku-tower.webp",
+        "thumb": "img/thumbs/400/japan-osaka-tsutenkaku-tower.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: osaka tsutenkaku tower"
       },
       {
-        "src": "img/japan-owakudani-steam.jpg",
+        "src": "img/thumbs/1200/japan-owakudani-steam.webp",
+        "thumb": "img/thumbs/400/japan-owakudani-steam.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: owakudani steam"
       },
       {
-        "src": "img/japan-ryokan-exterior.jpg",
+        "src": "img/thumbs/1200/japan-ryokan-exterior.webp",
+        "thumb": "img/thumbs/400/japan-ryokan-exterior.webp",
+        "width": 1600,
+        "height": 1065,
         "alt": "Japan: ryokan exterior"
       },
       {
-        "src": "img/japan-ryokan-fuji-window.jpg",
+        "src": "img/thumbs/1200/japan-ryokan-fuji-window.webp",
+        "thumb": "img/thumbs/400/japan-ryokan-fuji-window.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: ryokan fuji window"
       },
       {
-        "src": "img/japan-shibuya-night.jpg",
+        "src": "img/thumbs/1200/japan-shibuya-night.webp",
+        "thumb": "img/thumbs/400/japan-shibuya-night.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: shibuya night"
       },
       {
-        "src": "img/japan-shinjuku-signs.jpg",
+        "src": "img/thumbs/1200/japan-shinjuku-signs.webp",
+        "thumb": "img/thumbs/400/japan-shinjuku-signs.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: shinjuku signs"
       },
       {
-        "src": "img/japan-shrine-torii-ginkgo.jpg",
+        "src": "img/thumbs/1200/japan-shrine-torii-ginkgo.webp",
+        "thumb": "img/thumbs/400/japan-shrine-torii-ginkgo.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: shrine torii ginkgo"
       },
       {
-        "src": "img/japan-street-vendor.jpg",
+        "src": "img/thumbs/1200/japan-street-vendor.webp",
+        "thumb": "img/thumbs/400/japan-street-vendor.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: street vendor"
       },
       {
-        "src": "img/japan-street-worker.jpg",
+        "src": "img/thumbs/1200/japan-street-worker.webp",
+        "thumb": "img/thumbs/400/japan-street-worker.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: street worker"
       },
       {
-        "src": "img/japan-taxi-restaurant.jpg",
+        "src": "img/thumbs/1200/japan-taxi-restaurant.webp",
+        "thumb": "img/thumbs/400/japan-taxi-restaurant.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: taxi restaurant"
       },
       {
-        "src": "img/japan-temple-plaza.jpg",
+        "src": "img/thumbs/1200/japan-temple-plaza.webp",
+        "thumb": "img/thumbs/400/japan-temple-plaza.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: temple plaza"
       },
       {
-        "src": "img/japan-tokyo-tower-close.jpg",
+        "src": "img/thumbs/1200/japan-tokyo-tower-close.webp",
+        "thumb": "img/thumbs/400/japan-tokyo-tower-close.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: tokyo tower close"
       },
       {
-        "src": "img/japan-tokyo-tower-detail.jpg",
+        "src": "img/thumbs/1200/japan-tokyo-tower-detail.webp",
+        "thumb": "img/thumbs/400/japan-tokyo-tower-detail.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: tokyo tower detail"
       },
       {
-        "src": "img/japan-tokyo-tower-skyline.jpg",
+        "src": "img/thumbs/1200/japan-tokyo-tower-skyline.webp",
+        "thumb": "img/thumbs/400/japan-tokyo-tower-skyline.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: tokyo tower skyline"
       },
       {
-        "src": "img/japan-tokyo-tower-wide.jpg",
+        "src": "img/thumbs/1200/japan-tokyo-tower-wide.webp",
+        "thumb": "img/thumbs/400/japan-tokyo-tower-wide.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: tokyo tower wide"
       },
       {
-        "src": "img/japan-tower-reflection-building.jpg",
+        "src": "img/thumbs/1200/japan-tower-reflection-building.webp",
+        "thumb": "img/thumbs/400/japan-tower-reflection-building.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Japan: tower reflection building"
       },
       {
-        "src": "img/japan-village-stream.jpg",
+        "src": "img/thumbs/1200/japan-village-stream.webp",
+        "thumb": "img/thumbs/400/japan-village-stream.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Japan: village stream"
       }
     ]
@@ -789,191 +1350,332 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Spain.",
     "items": [
       {
-        "src": "img/spain-barcelona-palm-blue.jpg",
+        "src": "img/thumbs/1200/spain-barcelona-palm-blue.webp",
+        "thumb": "img/thumbs/400/spain-barcelona-palm-blue.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Spain: barcelona palm blue"
       },
       {
-        "src": "img/spain-barcelona-skyline-sagrada.jpg",
+        "src": "img/thumbs/1200/spain-barcelona-skyline-sagrada.webp",
+        "thumb": "img/thumbs/400/spain-barcelona-skyline-sagrada.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Spain: barcelona skyline sagrada"
       },
       {
-        "src": "img/spain-barceloneta-beach-crowd.jpg",
+        "src": "img/thumbs/1200/spain-barceloneta-beach-crowd.webp",
+        "thumb": "img/thumbs/400/spain-barceloneta-beach-crowd.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Spain: barceloneta beach crowd"
       },
       {
-        "src": "img/spain-batllo-arches.jpg",
+        "src": "img/thumbs/1200/spain-batllo-arches.webp",
+        "thumb": "img/thumbs/400/spain-batllo-arches.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Spain: batllo arches"
       },
       {
-        "src": "img/spain-batllo-kitchen.jpg",
+        "src": "img/thumbs/1200/spain-batllo-kitchen.webp",
+        "thumb": "img/thumbs/400/spain-batllo-kitchen.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Spain: batllo kitchen"
       },
       {
-        "src": "img/spain-batllo-roof-mosaic.jpg",
+        "src": "img/thumbs/1200/spain-batllo-roof-mosaic.webp",
+        "thumb": "img/thumbs/400/spain-batllo-roof-mosaic.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: batllo roof mosaic"
       },
       {
-        "src": "img/spain-batllo-stained-glass.jpg",
+        "src": "img/thumbs/1200/spain-batllo-stained-glass.webp",
+        "thumb": "img/thumbs/400/spain-batllo-stained-glass.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Spain: batllo stained glass"
       },
       {
-        "src": "img/spain-beach-dusk-back.jpg",
+        "src": "img/thumbs/1200/spain-beach-dusk-back.webp",
+        "thumb": "img/thumbs/400/spain-beach-dusk-back.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: beach dusk back"
       },
       {
-        "src": "img/spain-beach-dusk-whotel.jpg",
+        "src": "img/thumbs/1200/spain-beach-dusk-whotel.webp",
+        "thumb": "img/thumbs/400/spain-beach-dusk-whotel.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: beach dusk whotel"
       },
       {
-        "src": "img/spain-beach-night-portrait.jpg",
+        "src": "img/thumbs/1200/spain-beach-night-portrait.webp",
+        "thumb": "img/thumbs/400/spain-beach-night-portrait.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: beach night portrait"
       },
       {
-        "src": "img/spain-beach-volleyball.jpg",
+        "src": "img/thumbs/1200/spain-beach-volleyball.webp",
+        "thumb": "img/thumbs/400/spain-beach-volleyball.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Spain: beach volleyball"
       },
       {
-        "src": "img/spain-canary-coast-palms.jpg",
+        "src": "img/thumbs/1200/spain-canary-coast-palms.webp",
+        "thumb": "img/thumbs/400/spain-canary-coast-palms.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Spain: canary coast palms"
       },
       {
-        "src": "img/spain-canary-ocean-rocks.jpg",
+        "src": "img/thumbs/1200/spain-canary-ocean-rocks.webp",
+        "thumb": "img/thumbs/400/spain-canary-ocean-rocks.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Spain: canary ocean rocks"
       },
       {
-        "src": "img/spain-canary-resort-flowers.jpg",
+        "src": "img/thumbs/1200/spain-canary-resort-flowers.webp",
+        "thumb": "img/thumbs/400/spain-canary-resort-flowers.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "Spain: canary resort flowers"
       },
       {
-        "src": "img/spain-canary-resort-flowers2.jpg",
+        "src": "img/thumbs/1200/spain-canary-resort-flowers2.webp",
+        "thumb": "img/thumbs/400/spain-canary-resort-flowers2.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "Spain: canary resort flowers2"
       },
       {
-        "src": "img/spain-canary-road-signs.jpg",
+        "src": "img/thumbs/1200/spain-canary-road-signs.webp",
+        "thumb": "img/thumbs/400/spain-canary-road-signs.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Spain: canary road signs"
       },
       {
-        "src": "img/spain-canary-sunset-clouds.jpg",
+        "src": "img/thumbs/1200/spain-canary-sunset-clouds.webp",
+        "thumb": "img/thumbs/400/spain-canary-sunset-clouds.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "Spain: canary sunset clouds"
       },
       {
-        "src": "img/spain-canary-sunset-silhouette.jpg",
+        "src": "img/thumbs/1200/spain-canary-sunset-silhouette.webp",
+        "thumb": "img/thumbs/400/spain-canary-sunset-silhouette.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Spain: canary sunset silhouette"
       },
       {
-        "src": "img/spain-gallery-body-screen.jpg",
+        "src": "img/thumbs/1200/spain-gallery-body-screen.webp",
+        "thumb": "img/thumbs/400/spain-gallery-body-screen.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: gallery body screen"
       },
       {
-        "src": "img/spain-gallery-desk-closeup.jpg",
+        "src": "img/thumbs/1200/spain-gallery-desk-closeup.webp",
+        "thumb": "img/thumbs/400/spain-gallery-desk-closeup.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: gallery desk closeup"
       },
       {
-        "src": "img/spain-gallery-installation-cube.jpg",
+        "src": "img/thumbs/1200/spain-gallery-installation-cube.webp",
+        "thumb": "img/thumbs/400/spain-gallery-installation-cube.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Spain: gallery installation cube"
       },
       {
-        "src": "img/spain-gallery-projection.jpg",
+        "src": "img/thumbs/1200/spain-gallery-projection.webp",
+        "thumb": "img/thumbs/400/spain-gallery-projection.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: gallery projection"
       },
       {
-        "src": "img/spain-gallery-puppets.jpg",
+        "src": "img/thumbs/1200/spain-gallery-puppets.webp",
+        "thumb": "img/thumbs/400/spain-gallery-puppets.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Spain: gallery puppets"
       },
       {
-        "src": "img/spain-gallery-tv-bw.jpg",
+        "src": "img/thumbs/1200/spain-gallery-tv-bw.webp",
+        "thumb": "img/thumbs/400/spain-gallery-tv-bw.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: gallery tv BW"
       },
       {
-        "src": "img/spain-gallery-vitrine.jpg",
+        "src": "img/thumbs/1200/spain-gallery-vitrine.webp",
+        "thumb": "img/thumbs/400/spain-gallery-vitrine.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: gallery vitrine"
       },
       {
-        "src": "img/spain-gallery-wood-lamp.jpg",
+        "src": "img/thumbs/1200/spain-gallery-wood-lamp.webp",
+        "thumb": "img/thumbs/400/spain-gallery-wood-lamp.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: gallery wood lamp"
       },
       {
-        "src": "img/spain-hilltop-cityview.jpg",
+        "src": "img/thumbs/1200/spain-hilltop-cityview.webp",
+        "thumb": "img/thumbs/400/spain-hilltop-cityview.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: hilltop cityview"
       },
       {
-        "src": "img/spain-macba-skaters.jpg",
+        "src": "img/thumbs/1200/spain-macba-skaters.webp",
+        "thumb": "img/thumbs/400/spain-macba-skaters.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Spain: macba skaters"
       },
       {
-        "src": "img/spain-orange-wall-cables.jpg",
+        "src": "img/thumbs/1200/spain-orange-wall-cables.webp",
+        "thumb": "img/thumbs/400/spain-orange-wall-cables.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Spain: orange wall cables"
       },
       {
-        "src": "img/spain-pedrera-balcony.jpg",
+        "src": "img/thumbs/1200/spain-pedrera-balcony.webp",
+        "thumb": "img/thumbs/400/spain-pedrera-balcony.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Spain: pedrera balcony"
       },
       {
-        "src": "img/spain-pedrera-chimney-sky.jpg",
+        "src": "img/thumbs/1200/spain-pedrera-chimney-sky.webp",
+        "thumb": "img/thumbs/400/spain-pedrera-chimney-sky.webp",
+        "width": 1188,
+        "height": 661,
         "alt": "Spain: pedrera chimney sky"
       },
       {
-        "src": "img/spain-pedrera-facade-closeup.jpg",
+        "src": "img/thumbs/1200/spain-pedrera-facade-closeup.webp",
+        "thumb": "img/thumbs/400/spain-pedrera-facade-closeup.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Spain: pedrera facade closeup"
       },
       {
-        "src": "img/spain-pedrera-facade-wide.jpg",
+        "src": "img/thumbs/1200/spain-pedrera-facade-wide.webp",
+        "thumb": "img/thumbs/400/spain-pedrera-facade-wide.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: pedrera facade wide"
       },
       {
-        "src": "img/spain-sagrada-blue-vault.jpg",
+        "src": "img/thumbs/1200/spain-sagrada-blue-vault.webp",
+        "thumb": "img/thumbs/400/spain-sagrada-blue-vault.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "Spain: sagrada blue vault"
       },
       {
-        "src": "img/spain-sagrada-golden-light.jpg",
+        "src": "img/thumbs/1200/spain-sagrada-golden-light.webp",
+        "thumb": "img/thumbs/400/spain-sagrada-golden-light.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Spain: sagrada golden light"
       },
       {
-        "src": "img/spain-sagrada-interior-blue.jpg",
+        "src": "img/thumbs/1200/spain-sagrada-interior-blue.webp",
+        "thumb": "img/thumbs/400/spain-sagrada-interior-blue.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Spain: sagrada interior blue"
       },
       {
-        "src": "img/spain-sagrada-stained-glass-warm.jpg",
+        "src": "img/thumbs/1200/spain-sagrada-stained-glass-warm.webp",
+        "thumb": "img/thumbs/400/spain-sagrada-stained-glass-warm.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "Spain: sagrada stained glass warm"
       },
       {
-        "src": "img/spain-seville-alfonso-flowers.jpg",
+        "src": "img/thumbs/1200/spain-seville-alfonso-flowers.webp",
+        "thumb": "img/thumbs/400/spain-seville-alfonso-flowers.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: seville alfonso flowers"
       },
       {
-        "src": "img/spain-seville-alley.jpg",
+        "src": "img/thumbs/1200/spain-seville-alley.webp",
+        "thumb": "img/thumbs/400/spain-seville-alley.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Spain: seville alley"
       },
       {
-        "src": "img/spain-seville-cathedral.jpg",
+        "src": "img/thumbs/1200/spain-seville-cathedral.webp",
+        "thumb": "img/thumbs/400/spain-seville-cathedral.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Spain: seville cathedral"
       },
       {
-        "src": "img/spain-seville-courtyard.jpg",
+        "src": "img/thumbs/1200/spain-seville-courtyard.webp",
+        "thumb": "img/thumbs/400/spain-seville-courtyard.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: seville courtyard"
       },
       {
-        "src": "img/spain-seville-palms-building.jpg",
+        "src": "img/thumbs/1200/spain-seville-palms-building.webp",
+        "thumb": "img/thumbs/400/spain-seville-palms-building.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Spain: seville palms building"
       },
       {
-        "src": "img/spain-seville-parasol.jpg",
+        "src": "img/thumbs/1200/spain-seville-parasol.webp",
+        "thumb": "img/thumbs/400/spain-seville-parasol.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: seville parasol"
       },
       {
-        "src": "img/spain-seville-plaza-arcade.jpg",
+        "src": "img/thumbs/1200/spain-seville-plaza-arcade.webp",
+        "thumb": "img/thumbs/400/spain-seville-plaza-arcade.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: seville plaza arcade"
       },
       {
-        "src": "img/spain-seville-protest.jpg",
+        "src": "img/thumbs/1200/spain-seville-protest.webp",
+        "thumb": "img/thumbs/400/spain-seville-protest.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: seville protest"
       },
       {
-        "src": "img/spain-seville-street-warm.jpg",
+        "src": "img/thumbs/1200/spain-seville-street-warm.webp",
+        "thumb": "img/thumbs/400/spain-seville-street-warm.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Spain: seville street warm"
       },
       {
-        "src": "img/spain-silhouette-green-text.jpg",
+        "src": "img/thumbs/1200/spain-silhouette-green-text.webp",
+        "thumb": "img/thumbs/400/spain-silhouette-green-text.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Spain: silhouette green text"
       }
     ]
@@ -983,191 +1685,332 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Iceland.",
     "items": [
       {
-        "src": "img/iceland-black-beach-walk.jpg",
+        "src": "img/thumbs/1200/iceland-black-beach-walk.webp",
+        "thumb": "img/thumbs/400/iceland-black-beach-walk.webp",
+        "width": 1500,
+        "height": 2000,
         "alt": "Iceland: black beach walk"
       },
       {
-        "src": "img/iceland-black-sand-rocks.jpg",
+        "src": "img/thumbs/1200/iceland-black-sand-rocks.webp",
+        "thumb": "img/thumbs/400/iceland-black-sand-rocks.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: black sand rocks"
       },
       {
-        "src": "img/iceland-blue-water.jpg",
+        "src": "img/thumbs/1200/iceland-blue-water.webp",
+        "thumb": "img/thumbs/400/iceland-blue-water.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: blue water"
       },
       {
-        "src": "img/iceland-blur-portrait.jpg",
+        "src": "img/thumbs/1200/iceland-blur-portrait.webp",
+        "thumb": "img/thumbs/400/iceland-blur-portrait.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: blur portrait"
       },
       {
-        "src": "img/iceland-boat-deck.jpg",
+        "src": "img/thumbs/1200/iceland-boat-deck.webp",
+        "thumb": "img/thumbs/400/iceland-boat-deck.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: boat deck"
       },
       {
-        "src": "img/iceland-boat-window-sea.jpg",
+        "src": "img/thumbs/1200/iceland-boat-window-sea.webp",
+        "thumb": "img/thumbs/400/iceland-boat-window-sea.webp",
+        "width": 1500,
+        "height": 2000,
         "alt": "Iceland: boat window sea"
       },
       {
-        "src": "img/iceland-bus-window.jpg",
+        "src": "img/thumbs/1200/iceland-bus-window.webp",
+        "thumb": "img/thumbs/400/iceland-bus-window.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: bus window"
       },
       {
-        "src": "img/iceland-cliff-arms-ocean.jpg",
+        "src": "img/thumbs/1200/iceland-cliff-arms-ocean.webp",
+        "thumb": "img/thumbs/400/iceland-cliff-arms-ocean.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: cliff arms ocean"
       },
       {
-        "src": "img/iceland-cliff-silhouette.jpg",
+        "src": "img/thumbs/1200/iceland-cliff-silhouette.webp",
+        "thumb": "img/thumbs/400/iceland-cliff-silhouette.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: cliff silhouette"
       },
       {
-        "src": "img/iceland-cliff-sunset.jpg",
+        "src": "img/thumbs/1200/iceland-cliff-sunset.webp",
+        "thumb": "img/thumbs/400/iceland-cliff-sunset.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: cliff sunset"
       },
       {
-        "src": "img/iceland-diamond-beach.jpg",
+        "src": "img/thumbs/1200/iceland-diamond-beach.webp",
+        "thumb": "img/thumbs/400/iceland-diamond-beach.webp",
+        "width": 1578,
+        "height": 1007,
         "alt": "Iceland: diamond beach"
       },
       {
-        "src": "img/iceland-dusk-reach.jpg",
+        "src": "img/thumbs/1200/iceland-dusk-reach.webp",
+        "thumb": "img/thumbs/400/iceland-dusk-reach.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: dusk reach"
       },
       {
-        "src": "img/iceland-ferry-couple.jpg",
+        "src": "img/thumbs/1200/iceland-ferry-couple.webp",
+        "thumb": "img/thumbs/400/iceland-ferry-couple.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: ferry couple"
       },
       {
-        "src": "img/iceland-flag-boat.jpg",
+        "src": "img/thumbs/1200/iceland-flag-boat.webp",
+        "thumb": "img/thumbs/400/iceland-flag-boat.webp",
+        "width": 1333,
+        "height": 2000,
         "alt": "Iceland: flag boat"
       },
       {
-        "src": "img/iceland-glacier-van.jpg",
+        "src": "img/thumbs/1200/iceland-glacier-van.webp",
+        "thumb": "img/thumbs/400/iceland-glacier-van.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: glacier van"
       },
       {
-        "src": "img/iceland-gullfoss-aerial.jpg",
+        "src": "img/thumbs/1200/iceland-gullfoss-aerial.webp",
+        "thumb": "img/thumbs/400/iceland-gullfoss-aerial.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: gullfoss aerial"
       },
       {
-        "src": "img/iceland-gullfoss-overlook.jpg",
+        "src": "img/thumbs/1200/iceland-gullfoss-overlook.webp",
+        "thumb": "img/thumbs/400/iceland-gullfoss-overlook.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: gullfoss overlook"
       },
       {
-        "src": "img/iceland-hand-mountains.jpg",
+        "src": "img/thumbs/1200/iceland-hand-mountains.webp",
+        "thumb": "img/thumbs/400/iceland-hand-mountains.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: hand mountains"
       },
       {
-        "src": "img/iceland-harbor-fjord.jpg",
+        "src": "img/thumbs/1200/iceland-harbor-fjord.webp",
+        "thumb": "img/thumbs/400/iceland-harbor-fjord.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: harbor fjord"
       },
       {
-        "src": "img/iceland-headlamp.jpg",
+        "src": "img/thumbs/1200/iceland-headlamp.webp",
+        "thumb": "img/thumbs/400/iceland-headlamp.webp",
+        "width": 1236,
+        "height": 1855,
         "alt": "Iceland: headlamp"
       },
       {
-        "src": "img/iceland-horse-group.jpg",
+        "src": "img/thumbs/1200/iceland-horse-group.webp",
+        "thumb": "img/thumbs/400/iceland-horse-group.webp",
+        "width": 2000,
+        "height": 1750,
         "alt": "Iceland: horse group"
       },
       {
-        "src": "img/iceland-horse-pet.jpg",
+        "src": "img/thumbs/1200/iceland-horse-pet.webp",
+        "thumb": "img/thumbs/400/iceland-horse-pet.webp",
+        "width": 2000,
+        "height": 1362,
         "alt": "Iceland: horse pet"
       },
       {
-        "src": "img/iceland-ice-cave-camera.jpg",
+        "src": "img/thumbs/1200/iceland-ice-cave-camera.webp",
+        "thumb": "img/thumbs/400/iceland-ice-cave-camera.webp",
+        "width": 1500,
+        "height": 2000,
         "alt": "Iceland: ice cave camera"
       },
       {
-        "src": "img/iceland-ice-cave-silhouette.jpg",
+        "src": "img/thumbs/1200/iceland-ice-cave-silhouette.webp",
+        "thumb": "img/thumbs/400/iceland-ice-cave-silhouette.webp",
+        "width": 1500,
+        "height": 2000,
         "alt": "Iceland: ice cave silhouette"
       },
       {
-        "src": "img/iceland-ice-cave-touch.jpg",
+        "src": "img/thumbs/1200/iceland-ice-cave-touch.webp",
+        "thumb": "img/thumbs/400/iceland-ice-cave-touch.webp",
+        "width": 1500,
+        "height": 2000,
         "alt": "Iceland: ice cave touch"
       },
       {
-        "src": "img/iceland-kirkjufell.jpg",
+        "src": "img/thumbs/1200/iceland-kirkjufell.webp",
+        "thumb": "img/thumbs/400/iceland-kirkjufell.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: kirkjufell"
       },
       {
-        "src": "img/iceland-lava-waves.jpg",
+        "src": "img/thumbs/1200/iceland-lava-waves.webp",
+        "thumb": "img/thumbs/400/iceland-lava-waves.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: lava waves"
       },
       {
-        "src": "img/iceland-lone-house.jpg",
+        "src": "img/thumbs/1200/iceland-lone-house.webp",
+        "thumb": "img/thumbs/400/iceland-lone-house.webp",
+        "width": 1333,
+        "height": 2000,
         "alt": "Iceland: lone house"
       },
       {
-        "src": "img/iceland-modern-building.jpg",
+        "src": "img/thumbs/1200/iceland-modern-building.webp",
+        "thumb": "img/thumbs/400/iceland-modern-building.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: modern building"
       },
       {
-        "src": "img/iceland-mossy-pinnacle.jpg",
+        "src": "img/thumbs/1200/iceland-mossy-pinnacle.webp",
+        "thumb": "img/thumbs/400/iceland-mossy-pinnacle.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: mossy pinnacle"
       },
       {
-        "src": "img/iceland-mountain-gaze.jpg",
+        "src": "img/thumbs/1200/iceland-mountain-gaze.webp",
+        "thumb": "img/thumbs/400/iceland-mountain-gaze.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: mountain gaze"
       },
       {
-        "src": "img/iceland-mountain-walk.jpg",
+        "src": "img/thumbs/1200/iceland-mountain-walk.webp",
+        "thumb": "img/thumbs/400/iceland-mountain-walk.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: mountain walk"
       },
       {
-        "src": "img/iceland-night-duo-dance.jpg",
+        "src": "img/thumbs/1200/iceland-night-duo-dance.webp",
+        "thumb": "img/thumbs/400/iceland-night-duo-dance.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: night duo dance"
       },
       {
-        "src": "img/iceland-night-group.jpg",
+        "src": "img/thumbs/1200/iceland-night-group.webp",
+        "thumb": "img/thumbs/400/iceland-night-group.webp",
+        "width": 1500,
+        "height": 2000,
         "alt": "Iceland: night group"
       },
       {
-        "src": "img/iceland-night-portrait.jpg",
+        "src": "img/thumbs/1200/iceland-night-portrait.webp",
+        "thumb": "img/thumbs/400/iceland-night-portrait.webp",
+        "width": 1333,
+        "height": 2000,
         "alt": "Iceland: night portrait"
       },
       {
-        "src": "img/iceland-red-canyon.jpg",
+        "src": "img/thumbs/1200/iceland-red-canyon.webp",
+        "thumb": "img/thumbs/400/iceland-red-canyon.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: red canyon"
       },
       {
-        "src": "img/iceland-road-arms-up.jpg",
+        "src": "img/thumbs/1200/iceland-road-arms-up.webp",
+        "thumb": "img/thumbs/400/iceland-road-arms-up.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: road arms up"
       },
       {
-        "src": "img/iceland-road-celebrate.jpg",
+        "src": "img/thumbs/1200/iceland-road-celebrate.webp",
+        "thumb": "img/thumbs/400/iceland-road-celebrate.webp",
+        "width": 1333,
+        "height": 2000,
         "alt": "Iceland: road celebrate"
       },
       {
-        "src": "img/iceland-snow-crouch.jpg",
+        "src": "img/thumbs/1200/iceland-snow-crouch.webp",
+        "thumb": "img/thumbs/400/iceland-snow-crouch.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: snow crouch"
       },
       {
-        "src": "img/iceland-snow-dance.jpg",
+        "src": "img/thumbs/1200/iceland-snow-dance.webp",
+        "thumb": "img/thumbs/400/iceland-snow-dance.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: snow dance"
       },
       {
-        "src": "img/iceland-snowfall-arms.jpg",
+        "src": "img/thumbs/1200/iceland-snowfall-arms.webp",
+        "thumb": "img/thumbs/400/iceland-snowfall-arms.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: snowfall arms"
       },
       {
-        "src": "img/iceland-swing-mountains.jpg",
+        "src": "img/thumbs/1200/iceland-swing-mountains.webp",
+        "thumb": "img/thumbs/400/iceland-swing-mountains.webp",
+        "width": 1333,
+        "height": 2000,
         "alt": "Iceland: swing mountains"
       },
       {
-        "src": "img/iceland-troll-van.jpg",
+        "src": "img/thumbs/1200/iceland-troll-van.webp",
+        "thumb": "img/thumbs/400/iceland-troll-van.webp",
+        "width": 2000,
+        "height": 1332,
         "alt": "Iceland: troll van"
       },
       {
-        "src": "img/iceland-walk-pink-sky.jpg",
+        "src": "img/thumbs/1200/iceland-walk-pink-sky.webp",
+        "thumb": "img/thumbs/400/iceland-walk-pink-sky.webp",
+        "width": 1333,
+        "height": 2000,
         "alt": "Iceland: walk pink sky"
       },
       {
-        "src": "img/iceland-waves-crash.jpg",
+        "src": "img/thumbs/1200/iceland-waves-crash.webp",
+        "thumb": "img/thumbs/400/iceland-waves-crash.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: waves crash"
       },
       {
-        "src": "img/iceland-waves-rocks-above.jpg",
+        "src": "img/thumbs/1200/iceland-waves-rocks-above.webp",
+        "thumb": "img/thumbs/400/iceland-waves-rocks-above.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Iceland: waves rocks above"
       },
       {
-        "src": "img/iceland-whale-card.jpg",
+        "src": "img/thumbs/1200/iceland-whale-card.webp",
+        "thumb": "img/thumbs/400/iceland-whale-card.webp",
+        "width": 1333,
+        "height": 2000,
         "alt": "Iceland: whale card"
       }
     ]
@@ -1177,79 +2020,136 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Switzerland.",
     "items": [
       {
-        "src": "img/switzerland-campervans.jpg",
+        "src": "img/thumbs/1200/switzerland-campervans.webp",
+        "thumb": "img/thumbs/400/switzerland-campervans.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Switzerland: campervans"
       },
       {
-        "src": "img/switzerland-cathedral-aisle.jpg",
+        "src": "img/thumbs/1200/switzerland-cathedral-aisle.webp",
+        "thumb": "img/thumbs/400/switzerland-cathedral-aisle.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Switzerland: cathedral aisle"
       },
       {
-        "src": "img/switzerland-cathedral-apse.jpg",
+        "src": "img/thumbs/1200/switzerland-cathedral-apse.webp",
+        "thumb": "img/thumbs/400/switzerland-cathedral-apse.webp",
+        "width": 1067,
+        "height": 2000,
         "alt": "Switzerland: cathedral apse"
       },
       {
-        "src": "img/switzerland-cathedral-entrance.jpg",
+        "src": "img/thumbs/1200/switzerland-cathedral-entrance.webp",
+        "thumb": "img/thumbs/400/switzerland-cathedral-entrance.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Switzerland: cathedral entrance"
       },
       {
-        "src": "img/switzerland-cathedral-statues.jpg",
+        "src": "img/thumbs/1200/switzerland-cathedral-statues.webp",
+        "thumb": "img/thumbs/400/switzerland-cathedral-statues.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Switzerland: cathedral statues"
       },
       {
-        "src": "img/switzerland-chalet-aerial.jpg",
+        "src": "img/thumbs/1200/switzerland-chalet-aerial.webp",
+        "thumb": "img/thumbs/400/switzerland-chalet-aerial.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Switzerland: chalet aerial"
       },
       {
-        "src": "img/switzerland-gondola.jpg",
+        "src": "img/thumbs/1200/switzerland-gondola.webp",
+        "thumb": "img/thumbs/400/switzerland-gondola.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Switzerland: gondola"
       },
       {
-        "src": "img/switzerland-gornergrat-bahn.jpg",
+        "src": "img/thumbs/1200/switzerland-gornergrat-bahn.webp",
+        "thumb": "img/thumbs/400/switzerland-gornergrat-bahn.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Switzerland: gornergrat bahn"
       },
       {
-        "src": "img/switzerland-observatory.jpg",
+        "src": "img/thumbs/1200/switzerland-observatory.webp",
+        "thumb": "img/thumbs/400/switzerland-observatory.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Switzerland: observatory"
       },
       {
-        "src": "img/switzerland-snow-dance.jpg",
+        "src": "img/thumbs/1200/switzerland-snow-dance.webp",
+        "thumb": "img/thumbs/400/switzerland-snow-dance.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Switzerland: snow dance"
       },
       {
-        "src": "img/switzerland-snow-joy.jpg",
+        "src": "img/thumbs/1200/switzerland-snow-joy.webp",
+        "thumb": "img/thumbs/400/switzerland-snow-joy.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Switzerland: snow joy"
       },
       {
-        "src": "img/switzerland-snow-peak.jpg",
+        "src": "img/thumbs/1200/switzerland-snow-peak.webp",
+        "thumb": "img/thumbs/400/switzerland-snow-peak.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Switzerland: snow peak"
       },
       {
-        "src": "img/switzerland-snow-reflection.jpg",
+        "src": "img/thumbs/1200/switzerland-snow-reflection.webp",
+        "thumb": "img/thumbs/400/switzerland-snow-reflection.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Switzerland: snow reflection"
       },
       {
-        "src": "img/switzerland-sticker-pole.jpg",
+        "src": "img/thumbs/1200/switzerland-sticker-pole.webp",
+        "thumb": "img/thumbs/400/switzerland-sticker-pole.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Switzerland: sticker pole"
       },
       {
-        "src": "img/switzerland-swiss-flag.jpg",
+        "src": "img/thumbs/1200/switzerland-swiss-flag.webp",
+        "thumb": "img/thumbs/400/switzerland-swiss-flag.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Switzerland: swiss flag"
       },
       {
-        "src": "img/switzerland-train-window.jpg",
+        "src": "img/thumbs/1200/switzerland-train-window.webp",
+        "thumb": "img/thumbs/400/switzerland-train-window.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Switzerland: train window"
       },
       {
-        "src": "img/switzerland-village-green.jpg",
+        "src": "img/thumbs/1200/switzerland-village-green.webp",
+        "thumb": "img/thumbs/400/switzerland-village-green.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Switzerland: village green"
       },
       {
-        "src": "img/switzerland-zermatt-matterhorn.jpg",
+        "src": "img/thumbs/1200/switzerland-zermatt-matterhorn.webp",
+        "thumb": "img/thumbs/400/switzerland-zermatt-matterhorn.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Switzerland: zermatt matterhorn"
       },
       {
-        "src": "img/switzerland-zermatt-portrait.jpg",
+        "src": "img/thumbs/1200/switzerland-zermatt-portrait.webp",
+        "thumb": "img/thumbs/400/switzerland-zermatt-portrait.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Switzerland: zermatt portrait"
       }
     ]
@@ -1259,83 +2159,143 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from the United States.",
     "items": [
       {
-        "src": "img/us-abstract-art.jpeg",
+        "src": "img/thumbs/1200/us-abstract-art.webp",
+        "thumb": "img/thumbs/400/us-abstract-art.webp",
+        "width": 1600,
+        "height": 900,
         "alt": "United States: abstract art"
       },
       {
-        "src": "img/us-beach-crowd.jpeg",
+        "src": "img/thumbs/1200/us-beach-crowd.webp",
+        "thumb": "img/thumbs/400/us-beach-crowd.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "United States: beach crowd"
       },
       {
-        "src": "img/us-beach-palm.jpeg",
+        "src": "img/thumbs/1200/us-beach-palm.webp",
+        "thumb": "img/thumbs/400/us-beach-palm.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "United States: beach palm"
       },
       {
-        "src": "img/us-beach-portrait.jpeg",
+        "src": "img/thumbs/1200/us-beach-portrait.webp",
+        "thumb": "img/thumbs/400/us-beach-portrait.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "United States: beach portrait"
       },
       {
-        "src": "img/us-beach-walkers.jpeg",
+        "src": "img/thumbs/1200/us-beach-walkers.webp",
+        "thumb": "img/thumbs/400/us-beach-walkers.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "United States: beach walkers"
       },
       {
-        "src": "img/us-bishop-hinge.jpeg",
+        "src": "img/thumbs/1200/us-bishop-hinge.webp",
+        "thumb": "img/thumbs/400/us-bishop-hinge.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "United States: bishop hinge"
       },
       {
-        "src": "img/us-cast-faces.jpeg",
+        "src": "img/thumbs/1200/us-cast-faces.webp",
+        "thumb": "img/thumbs/400/us-cast-faces.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "United States: cast faces"
       },
       {
-        "src": "img/us-cruise-sunset.jpeg",
+        "src": "img/thumbs/1200/us-cruise-sunset.webp",
+        "thumb": "img/thumbs/400/us-cruise-sunset.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "United States: cruise sunset"
       },
       {
-        "src": "img/us-flags.jpeg",
+        "src": "img/thumbs/1200/us-flags.webp",
+        "thumb": "img/thumbs/400/us-flags.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "United States: flags"
       },
       {
-        "src": "img/us-honolulu-skyline.jpeg",
+        "src": "img/thumbs/1200/us-honolulu-skyline.webp",
+        "thumb": "img/thumbs/400/us-honolulu-skyline.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "United States: honolulu skyline"
       },
       {
-        "src": "img/us-lanikai-beach.jpeg",
+        "src": "img/thumbs/1200/us-lanikai-beach.webp",
+        "thumb": "img/thumbs/400/us-lanikai-beach.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "United States: lanikai beach"
       },
       {
-        "src": "img/us-lego-city.jpeg",
+        "src": "img/thumbs/1200/us-lego-city.webp",
+        "thumb": "img/thumbs/400/us-lego-city.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "United States: lego city"
       },
       {
-        "src": "img/us-palms-building.jpeg",
+        "src": "img/thumbs/1200/us-palms-building.webp",
+        "thumb": "img/thumbs/400/us-palms-building.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "United States: palms building"
       },
       {
-        "src": "img/us-palms-convention.jpeg",
+        "src": "img/thumbs/1200/us-palms-convention.webp",
+        "thumb": "img/thumbs/400/us-palms-convention.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "United States: palms convention"
       },
       {
-        "src": "img/us-palms-rainbow.jpeg",
+        "src": "img/thumbs/1200/us-palms-rainbow.webp",
+        "thumb": "img/thumbs/400/us-palms-rainbow.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "United States: palms rainbow"
       },
       {
-        "src": "img/us-palms-sky.jpeg",
+        "src": "img/thumbs/1200/us-palms-sky.webp",
+        "thumb": "img/thumbs/400/us-palms-sky.webp",
+        "width": 902,
+        "height": 1600,
         "alt": "United States: palms sky"
       },
       {
-        "src": "img/us-park-walk.jpeg",
+        "src": "img/thumbs/1200/us-park-walk.webp",
+        "thumb": "img/thumbs/400/us-park-walk.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "United States: park walk"
       },
       {
-        "src": "img/us-petroglyph-display.jpeg",
+        "src": "img/thumbs/1200/us-petroglyph-display.webp",
+        "thumb": "img/thumbs/400/us-petroglyph-display.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "United States: petroglyph display"
       },
       {
-        "src": "img/us-poolside-path.jpeg",
+        "src": "img/thumbs/1200/us-poolside-path.webp",
+        "thumb": "img/thumbs/400/us-poolside-path.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "United States: poolside path"
       },
       {
-        "src": "img/us-vintage-photos.jpeg",
+        "src": "img/thumbs/1200/us-vintage-photos.webp",
+        "thumb": "img/thumbs/400/us-vintage-photos.webp",
+        "width": 1600,
+        "height": 900,
         "alt": "United States: vintage photos"
       }
     ]
@@ -1345,139 +2305,241 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Thailand.",
     "items": [
       {
-        "src": "img/thailand-bangkok-street.jpeg",
+        "src": "img/thumbs/1200/thailand-bangkok-street.webp",
+        "thumb": "img/thumbs/400/thailand-bangkok-street.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: bangkok street"
       },
       {
-        "src": "img/thailand-bangkok-traffic.jpeg",
+        "src": "img/thumbs/1200/thailand-bangkok-traffic.webp",
+        "thumb": "img/thumbs/400/thailand-bangkok-traffic.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Thailand: bangkok traffic"
       },
       {
-        "src": "img/thailand-brahma-head.jpeg",
+        "src": "img/thumbs/1200/thailand-brahma-head.webp",
+        "thumb": "img/thumbs/400/thailand-brahma-head.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: brahma head"
       },
       {
-        "src": "img/thailand-bts-station.jpeg",
+        "src": "img/thumbs/1200/thailand-bts-station.webp",
+        "thumb": "img/thumbs/400/thailand-bts-station.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: bts station"
       },
       {
-        "src": "img/thailand-buddha-back-spire.jpeg",
+        "src": "img/thumbs/1200/thailand-buddha-back-spire.webp",
+        "thumb": "img/thumbs/400/thailand-buddha-back-spire.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: buddha back spire"
       },
       {
-        "src": "img/thailand-buddha-canal.jpeg",
+        "src": "img/thumbs/1200/thailand-buddha-canal.webp",
+        "thumb": "img/thumbs/400/thailand-buddha-canal.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: buddha canal"
       },
       {
-        "src": "img/thailand-buddha-statues.jpeg",
+        "src": "img/thumbs/1200/thailand-buddha-statues.webp",
+        "thumb": "img/thumbs/400/thailand-buddha-statues.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: buddha statues"
       },
       {
-        "src": "img/thailand-cafe-above.jpeg",
+        "src": "img/thumbs/1200/thailand-cafe-above.webp",
+        "thumb": "img/thumbs/400/thailand-cafe-above.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: cafe above"
       },
       {
-        "src": "img/thailand-cafe-drinks.jpeg",
+        "src": "img/thumbs/1200/thailand-cafe-drinks.webp",
+        "thumb": "img/thumbs/400/thailand-cafe-drinks.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: cafe drinks"
       },
       {
-        "src": "img/thailand-cafe-thai-wall.jpeg",
+        "src": "img/thumbs/1200/thailand-cafe-thai-wall.webp",
+        "thumb": "img/thumbs/400/thailand-cafe-thai-wall.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: cafe thai wall"
       },
       {
-        "src": "img/thailand-chiang-mai-temple.jpeg",
+        "src": "img/thumbs/1200/thailand-chiang-mai-temple.webp",
+        "thumb": "img/thumbs/400/thailand-chiang-mai-temple.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: chiang mai temple"
       },
       {
-        "src": "img/thailand-giant-buddha-profile.jpeg",
+        "src": "img/thumbs/1200/thailand-giant-buddha-profile.webp",
+        "thumb": "img/thumbs/400/thailand-giant-buddha-profile.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: giant buddha profile"
       },
       {
-        "src": "img/thailand-gold-artifacts.jpeg",
+        "src": "img/thumbs/1200/thailand-gold-artifacts.webp",
+        "thumb": "img/thumbs/400/thailand-gold-artifacts.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: gold artifacts"
       },
       {
-        "src": "img/thailand-golden-pagoda.jpeg",
+        "src": "img/thumbs/1200/thailand-golden-pagoda.webp",
+        "thumb": "img/thumbs/400/thailand-golden-pagoda.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Thailand: golden pagoda"
       },
       {
-        "src": "img/thailand-grand-palace-roof.jpeg",
+        "src": "img/thumbs/1200/thailand-grand-palace-roof.webp",
+        "thumb": "img/thumbs/400/thailand-grand-palace-roof.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: grand palace roof"
       },
       {
-        "src": "img/thailand-hotel-morning.jpeg",
+        "src": "img/thumbs/1200/thailand-hotel-morning.webp",
+        "thumb": "img/thumbs/400/thailand-hotel-morning.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: hotel morning"
       },
       {
-        "src": "img/thailand-iced-drink.jpeg",
+        "src": "img/thumbs/1200/thailand-iced-drink.webp",
+        "thumb": "img/thumbs/400/thailand-iced-drink.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: iced drink"
       },
       {
-        "src": "img/thailand-ivory-carvings.jpeg",
+        "src": "img/thumbs/1200/thailand-ivory-carvings.webp",
+        "thumb": "img/thumbs/400/thailand-ivory-carvings.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: ivory carvings"
       },
       {
-        "src": "img/thailand-khon-collection.jpeg",
+        "src": "img/thumbs/1200/thailand-khon-collection.webp",
+        "thumb": "img/thumbs/400/thailand-khon-collection.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: khon collection"
       },
       {
-        "src": "img/thailand-khon-masks.jpeg",
+        "src": "img/thumbs/1200/thailand-khon-masks.webp",
+        "thumb": "img/thumbs/400/thailand-khon-masks.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: khon masks"
       },
       {
-        "src": "img/thailand-longtail-dragon.jpeg",
+        "src": "img/thumbs/1200/thailand-longtail-dragon.webp",
+        "thumb": "img/thumbs/400/thailand-longtail-dragon.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: longtail dragon"
       },
       {
-        "src": "img/thailand-motorbikes.jpeg",
+        "src": "img/thumbs/1200/thailand-motorbikes.webp",
+        "thumb": "img/thumbs/400/thailand-motorbikes.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: motorbikes"
       },
       {
-        "src": "img/thailand-national-museum.jpeg",
+        "src": "img/thumbs/1200/thailand-national-museum.webp",
+        "thumb": "img/thumbs/400/thailand-national-museum.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: national museum"
       },
       {
-        "src": "img/thailand-reclining-buddha.jpeg",
+        "src": "img/thumbs/1200/thailand-reclining-buddha.webp",
+        "thumb": "img/thumbs/400/thailand-reclining-buddha.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: reclining buddha"
       },
       {
-        "src": "img/thailand-rice-bowl.jpeg",
+        "src": "img/thumbs/1200/thailand-rice-bowl.webp",
+        "thumb": "img/thumbs/400/thailand-rice-bowl.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: rice bowl"
       },
       {
-        "src": "img/thailand-seated-buddha.jpeg",
+        "src": "img/thumbs/1200/thailand-seated-buddha.webp",
+        "thumb": "img/thumbs/400/thailand-seated-buddha.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: seated buddha"
       },
       {
-        "src": "img/thailand-selfie.jpeg",
+        "src": "img/thumbs/1200/thailand-selfie.webp",
+        "thumb": "img/thumbs/400/thailand-selfie.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "Thailand: selfie"
       },
       {
-        "src": "img/thailand-spires-dusk.jpeg",
+        "src": "img/thumbs/1200/thailand-spires-dusk.webp",
+        "thumb": "img/thumbs/400/thailand-spires-dusk.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Thailand: spires dusk"
       },
       {
-        "src": "img/thailand-stone-relief.jpeg",
+        "src": "img/thumbs/1200/thailand-stone-relief.webp",
+        "thumb": "img/thumbs/400/thailand-stone-relief.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: stone relief"
       },
       {
-        "src": "img/thailand-street-food.jpeg",
+        "src": "img/thumbs/1200/thailand-street-food.webp",
+        "thumb": "img/thumbs/400/thailand-street-food.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: street food"
       },
       {
-        "src": "img/thailand-street-signs.jpeg",
+        "src": "img/thumbs/1200/thailand-street-signs.webp",
+        "thumb": "img/thumbs/400/thailand-street-signs.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: street signs"
       },
       {
-        "src": "img/thailand-temple-cat.jpeg",
+        "src": "img/thumbs/1200/thailand-temple-cat.webp",
+        "thumb": "img/thumbs/400/thailand-temple-cat.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: temple cat"
       },
       {
-        "src": "img/thailand-temple-ceiling.jpeg",
+        "src": "img/thumbs/1200/thailand-temple-ceiling.webp",
+        "thumb": "img/thumbs/400/thailand-temple-ceiling.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "Thailand: temple ceiling"
       },
       {
-        "src": "img/thailand-temple-monk.jpeg",
+        "src": "img/thumbs/1200/thailand-temple-monk.webp",
+        "thumb": "img/thumbs/400/thailand-temple-monk.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Thailand: temple monk"
       }
     ]
@@ -1487,103 +2549,178 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Nepal.",
     "items": [
       {
-        "src": "img/nepal-abc-bridge-crossing-mountains.jpg",
+        "src": "img/thumbs/1200/nepal-abc-bridge-crossing-mountains.webp",
+        "thumb": "img/thumbs/400/nepal-abc-bridge-crossing-mountains.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: ABC bridge crossing mountains"
       },
       {
-        "src": "img/nepal-abc-forest-roots-trek.jpg",
+        "src": "img/thumbs/1200/nepal-abc-forest-roots-trek.webp",
+        "thumb": "img/thumbs/400/nepal-abc-forest-roots-trek.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: ABC forest roots trek"
       },
       {
-        "src": "img/nepal-abc-river-bridge-cliff.jpg",
+        "src": "img/thumbs/1200/nepal-abc-river-bridge-cliff.webp",
+        "thumb": "img/thumbs/400/nepal-abc-river-bridge-cliff.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: ABC river bridge cliff"
       },
       {
-        "src": "img/nepal-abc-silhouette-doorway.jpg",
+        "src": "img/thumbs/1200/nepal-abc-silhouette-doorway.webp",
+        "thumb": "img/thumbs/400/nepal-abc-silhouette-doorway.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: ABC silhouette doorway"
       },
       {
-        "src": "img/nepal-abc-snow-valley-wide.jpg",
+        "src": "img/thumbs/1200/nepal-abc-snow-valley-wide.webp",
+        "thumb": "img/thumbs/400/nepal-abc-snow-valley-wide.webp",
+        "width": 1200,
+        "height": 675,
         "alt": "Nepal: ABC snow valley wide"
       },
       {
-        "src": "img/nepal-breakfast-croissant.jpg",
+        "src": "img/thumbs/1200/nepal-breakfast-croissant.webp",
+        "thumb": "img/thumbs/400/nepal-breakfast-croissant.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: breakfast croissant"
       },
       {
-        "src": "img/nepal-bus-dashboard-interior.jpg",
+        "src": "img/thumbs/1200/nepal-bus-dashboard-interior.webp",
+        "thumb": "img/thumbs/400/nepal-bus-dashboard-interior.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: bus dashboard interior"
       },
       {
-        "src": "img/nepal-cafe-dog-sleeping.jpg",
+        "src": "img/thumbs/1200/nepal-cafe-dog-sleeping.webp",
+        "thumb": "img/thumbs/400/nepal-cafe-dog-sleeping.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: cafe dog sleeping"
       },
       {
-        "src": "img/nepal-cafe-guestbook-notes.jpg",
+        "src": "img/thumbs/1200/nepal-cafe-guestbook-notes.webp",
+        "thumb": "img/thumbs/400/nepal-cafe-guestbook-notes.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: cafe guestbook notes"
       },
       {
-        "src": "img/nepal-dog-balcony-mountains.jpg",
+        "src": "img/thumbs/1200/nepal-dog-balcony-mountains.webp",
+        "thumb": "img/thumbs/400/nepal-dog-balcony-mountains.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: dog balcony mountains"
       },
       {
-        "src": "img/nepal-dog-photo-wall.jpg",
+        "src": "img/thumbs/1200/nepal-dog-photo-wall.webp",
+        "thumb": "img/thumbs/400/nepal-dog-photo-wall.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: dog photo wall"
       },
       {
-        "src": "img/nepal-dog-portrait-balcony.jpg",
+        "src": "img/thumbs/1200/nepal-dog-portrait-balcony.webp",
+        "thumb": "img/thumbs/400/nepal-dog-portrait-balcony.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: dog portrait balcony"
       },
       {
-        "src": "img/nepal-himalaya-guesthouse-sign.jpg",
+        "src": "img/thumbs/1200/nepal-himalaya-guesthouse-sign.webp",
+        "thumb": "img/thumbs/400/nepal-himalaya-guesthouse-sign.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: himalaya guesthouse sign"
       },
       {
-        "src": "img/nepal-jeep-mountain-road.jpg",
+        "src": "img/thumbs/1200/nepal-jeep-mountain-road.webp",
+        "thumb": "img/thumbs/400/nepal-jeep-mountain-road.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: jeep mountain road"
       },
       {
-        "src": "img/nepal-lodge-breakfast-coffee.jpg",
+        "src": "img/thumbs/1200/nepal-lodge-breakfast-coffee.webp",
+        "thumb": "img/thumbs/400/nepal-lodge-breakfast-coffee.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: lodge breakfast coffee"
       },
       {
-        "src": "img/nepal-pashupatinath-overlook-bw.jpg",
+        "src": "img/thumbs/1200/nepal-pashupatinath-overlook-bw.webp",
+        "thumb": "img/thumbs/400/nepal-pashupatinath-overlook-bw.webp",
+        "width": 930,
+        "height": 1200,
         "alt": "Nepal: pashupatinath overlook BW"
       },
       {
-        "src": "img/nepal-pashupatinath-temple-night.jpg",
+        "src": "img/thumbs/1200/nepal-pashupatinath-temple-night.webp",
+        "thumb": "img/thumbs/400/nepal-pashupatinath-temple-night.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: pashupatinath temple night"
       },
       {
-        "src": "img/nepal-pokhara-blue-bus.jpg",
+        "src": "img/thumbs/1200/nepal-pokhara-blue-bus.webp",
+        "thumb": "img/thumbs/400/nepal-pokhara-blue-bus.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: pokhara blue bus"
       },
       {
-        "src": "img/nepal-pokhara-street-smoke.jpg",
+        "src": "img/thumbs/1200/nepal-pokhara-street-smoke.webp",
+        "thumb": "img/thumbs/400/nepal-pokhara-street-smoke.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: pokhara street smoke"
       },
       {
-        "src": "img/nepal-prayer-flags-valley.jpg",
+        "src": "img/thumbs/1200/nepal-prayer-flags-valley.webp",
+        "thumb": "img/thumbs/400/nepal-prayer-flags-valley.webp",
+        "width": 800,
+        "height": 1200,
         "alt": "Nepal: prayer flags valley"
       },
       {
-        "src": "img/nepal-rest-stone-house.jpg",
+        "src": "img/thumbs/1200/nepal-rest-stone-house.webp",
+        "thumb": "img/thumbs/400/nepal-rest-stone-house.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: rest stone house"
       },
       {
-        "src": "img/nepal-trail-mule-caravan.jpg",
+        "src": "img/thumbs/1200/nepal-trail-mule-caravan.webp",
+        "thumb": "img/thumbs/400/nepal-trail-mule-caravan.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: trail mule caravan"
       },
       {
-        "src": "img/nepal-tree-silhouette-blue-mountain.jpg",
+        "src": "img/thumbs/1200/nepal-tree-silhouette-blue-mountain.webp",
+        "thumb": "img/thumbs/400/nepal-tree-silhouette-blue-mountain.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: tree silhouette blue mountain"
       },
       {
-        "src": "img/nepal-trek-dirt-road-sky.jpg",
+        "src": "img/thumbs/1200/nepal-trek-dirt-road-sky.webp",
+        "thumb": "img/thumbs/400/nepal-trek-dirt-road-sky.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: trek dirt road sky"
       },
       {
-        "src": "img/nepal-village-shop-ayurvedic.jpg",
+        "src": "img/thumbs/1200/nepal-village-shop-ayurvedic.webp",
+        "thumb": "img/thumbs/400/nepal-village-shop-ayurvedic.webp",
+        "width": 799,
+        "height": 1200,
         "alt": "Nepal: village shop ayurvedic"
       }
     ]
@@ -1593,103 +2730,178 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Egypt.",
     "items": [
       {
-        "src": "img/egypt-amphitheater-statue.jpg",
+        "src": "img/thumbs/1200/egypt-amphitheater-statue.webp",
+        "thumb": "img/thumbs/400/egypt-amphitheater-statue.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Egypt: amphitheater statue"
       },
       {
-        "src": "img/egypt-amphitheater-steps.jpg",
+        "src": "img/thumbs/1200/egypt-amphitheater-steps.webp",
+        "thumb": "img/thumbs/400/egypt-amphitheater-steps.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Egypt: amphitheater steps"
       },
       {
-        "src": "img/egypt-ancient-painting.jpg",
+        "src": "img/thumbs/1200/egypt-ancient-painting.webp",
+        "thumb": "img/thumbs/400/egypt-ancient-painting.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Egypt: ancient painting"
       },
       {
-        "src": "img/egypt-camel-caravan.jpg",
+        "src": "img/thumbs/1200/egypt-camel-caravan.webp",
+        "thumb": "img/thumbs/400/egypt-camel-caravan.webp",
+        "width": 1333,
+        "height": 2000,
         "alt": "Egypt: camel caravan"
       },
       {
-        "src": "img/egypt-camel-ride-desert.jpg",
+        "src": "img/thumbs/1200/egypt-camel-ride-desert.webp",
+        "thumb": "img/thumbs/400/egypt-camel-ride-desert.webp",
+        "width": 2000,
+        "height": 1333,
         "alt": "Egypt: camel ride desert"
       },
       {
-        "src": "img/egypt-cave-church-arms.jpg",
+        "src": "img/thumbs/1200/egypt-cave-church-arms.webp",
+        "thumb": "img/thumbs/400/egypt-cave-church-arms.webp",
+        "width": 1125,
+        "height": 2000,
         "alt": "Egypt: cave church arms"
       },
       {
-        "src": "img/egypt-cave-church-interior.jpg",
+        "src": "img/thumbs/1200/egypt-cave-church-interior.webp",
+        "thumb": "img/thumbs/400/egypt-cave-church-interior.webp",
+        "width": 1326,
+        "height": 2000,
         "alt": "Egypt: cave church interior"
       },
       {
-        "src": "img/egypt-cave-church-selfie.jpg",
+        "src": "img/thumbs/1200/egypt-cave-church-selfie.webp",
+        "thumb": "img/thumbs/400/egypt-cave-church-selfie.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Egypt: cave church selfie"
       },
       {
-        "src": "img/egypt-cliff-arms-raised.jpg",
+        "src": "img/thumbs/1200/egypt-cliff-arms-raised.webp",
+        "thumb": "img/thumbs/400/egypt-cliff-arms-raised.webp",
+        "width": 2000,
+        "height": 1125,
         "alt": "Egypt: cliff arms raised"
       },
       {
-        "src": "img/egypt-cliff-edge-sit.jpg",
+        "src": "img/thumbs/1200/egypt-cliff-edge-sit.webp",
+        "thumb": "img/thumbs/400/egypt-cliff-edge-sit.webp",
+        "width": 1125,
+        "height": 2000,
         "alt": "Egypt: cliff edge sit"
       },
       {
-        "src": "img/egypt-cliff-ocean-sit.jpg",
+        "src": "img/thumbs/1200/egypt-cliff-ocean-sit.webp",
+        "thumb": "img/thumbs/400/egypt-cliff-ocean-sit.webp",
+        "width": 1125,
+        "height": 2000,
         "alt": "Egypt: cliff ocean sit"
       },
       {
-        "src": "img/egypt-cliff-ocean-wide.jpg",
+        "src": "img/thumbs/1200/egypt-cliff-ocean-wide.webp",
+        "thumb": "img/thumbs/400/egypt-cliff-ocean-wide.webp",
+        "width": 2000,
+        "height": 1125,
         "alt": "Egypt: cliff ocean wide"
       },
       {
-        "src": "img/egypt-cliff-top-perch.jpg",
+        "src": "img/thumbs/1200/egypt-cliff-top-perch.webp",
+        "thumb": "img/thumbs/400/egypt-cliff-top-perch.webp",
+        "width": 1125,
+        "height": 2000,
         "alt": "Egypt: cliff top perch"
       },
       {
-        "src": "img/egypt-mosque-chandeliers.jpg",
+        "src": "img/thumbs/1200/egypt-mosque-chandeliers.webp",
+        "thumb": "img/thumbs/400/egypt-mosque-chandeliers.webp",
+        "width": 1125,
+        "height": 2000,
         "alt": "Egypt: mosque chandeliers"
       },
       {
-        "src": "img/egypt-museum-artifacts.jpg",
+        "src": "img/thumbs/1200/egypt-museum-artifacts.webp",
+        "thumb": "img/thumbs/400/egypt-museum-artifacts.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Egypt: museum artifacts"
       },
       {
-        "src": "img/egypt-museum-busts.jpg",
+        "src": "img/thumbs/1200/egypt-museum-busts.webp",
+        "thumb": "img/thumbs/400/egypt-museum-busts.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Egypt: museum busts"
       },
       {
-        "src": "img/egypt-museum-fresco.jpg",
+        "src": "img/thumbs/1200/egypt-museum-fresco.webp",
+        "thumb": "img/thumbs/400/egypt-museum-fresco.webp",
+        "width": 2000,
+        "height": 1124,
         "alt": "Egypt: museum fresco"
       },
       {
-        "src": "img/egypt-museum-hall.jpg",
+        "src": "img/thumbs/1200/egypt-museum-hall.webp",
+        "thumb": "img/thumbs/400/egypt-museum-hall.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Egypt: museum hall"
       },
       {
-        "src": "img/egypt-museum-sarcophagus.jpg",
+        "src": "img/thumbs/1200/egypt-museum-sarcophagus.webp",
+        "thumb": "img/thumbs/400/egypt-museum-sarcophagus.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Egypt: museum sarcophagus"
       },
       {
-        "src": "img/egypt-pyramid-palms.jpg",
+        "src": "img/thumbs/1200/egypt-pyramid-palms.webp",
+        "thumb": "img/thumbs/400/egypt-pyramid-palms.webp",
+        "width": 1266,
+        "height": 2000,
         "alt": "Egypt: pyramid palms"
       },
       {
-        "src": "img/egypt-pyramids.jpg",
+        "src": "img/thumbs/1200/egypt-pyramids.webp",
+        "thumb": "img/thumbs/400/egypt-pyramids.webp",
+        "width": 1124,
+        "height": 2000,
         "alt": "Egypt: pyramids"
       },
       {
-        "src": "img/egypt-rock-arch.jpg",
+        "src": "img/thumbs/1200/egypt-rock-arch.webp",
+        "thumb": "img/thumbs/400/egypt-rock-arch.webp",
+        "width": 2000,
+        "height": 1125,
         "alt": "Egypt: rock arch"
       },
       {
-        "src": "img/egypt-rocks-ocean-closeup.jpg",
+        "src": "img/thumbs/1200/egypt-rocks-ocean-closeup.webp",
+        "thumb": "img/thumbs/400/egypt-rocks-ocean-closeup.webp",
+        "width": 2000,
+        "height": 1125,
         "alt": "Egypt: rocks ocean closeup"
       },
       {
-        "src": "img/egypt-sand-bay-backpack.jpg",
+        "src": "img/thumbs/1200/egypt-sand-bay-backpack.webp",
+        "thumb": "img/thumbs/400/egypt-sand-bay-backpack.webp",
+        "width": 2000,
+        "height": 1125,
         "alt": "Egypt: sand bay backpack"
       },
       {
-        "src": "img/egypt-sand-beach-gaze.jpg",
+        "src": "img/thumbs/1200/egypt-sand-beach-gaze.webp",
+        "thumb": "img/thumbs/400/egypt-sand-beach-gaze.webp",
+        "width": 2000,
+        "height": 1125,
         "alt": "Egypt: sand beach gaze"
       }
     ]
@@ -1699,115 +2911,199 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Indonesia.",
     "items": [
       {
-        "src": "img/indonesia-bali-jungle-palms.jpg",
+        "src": "img/thumbs/1200/indonesia-bali-jungle-palms.webp",
+        "thumb": "img/thumbs/400/indonesia-bali-jungle-palms.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Indonesia: bali jungle palms"
       },
       {
-        "src": "img/indonesia-bali-palm-sunset.jpg",
+        "src": "img/thumbs/1200/indonesia-bali-palm-sunset.webp",
+        "thumb": "img/thumbs/400/indonesia-bali-palm-sunset.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Indonesia: bali palm sunset"
       },
       {
-        "src": "img/indonesia-bali-temple-ceremony.jpg",
+        "src": "img/thumbs/1200/indonesia-bali-temple-ceremony.webp",
+        "thumb": "img/thumbs/400/indonesia-bali-temple-ceremony.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Indonesia: bali temple ceremony"
       },
       {
-        "src": "img/indonesia-bali-temple-gate-night.jpg",
+        "src": "img/thumbs/1200/indonesia-bali-temple-gate-night.webp",
+        "thumb": "img/thumbs/400/indonesia-bali-temple-gate-night.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Indonesia: bali temple gate night"
       },
       {
-        "src": "img/indonesia-bali-warrior-sculpture.jpg",
+        "src": "img/thumbs/1200/indonesia-bali-warrior-sculpture.webp",
+        "thumb": "img/thumbs/400/indonesia-bali-warrior-sculpture.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Indonesia: bali warrior sculpture"
       },
       {
-        "src": "img/indonesia-beach-gear-sand.jpg",
+        "src": "img/thumbs/1200/indonesia-beach-gear-sand.webp",
+        "thumb": "img/thumbs/400/indonesia-beach-gear-sand.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: beach gear sand"
       },
       {
-        "src": "img/indonesia-bromo-crater-dance.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-crater-dance.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-crater-dance.webp",
+        "width": 902,
+        "height": 1600,
         "alt": "Indonesia: bromo crater dance"
       },
       {
-        "src": "img/indonesia-bromo-crater-interior.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-crater-interior.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-crater-interior.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: bromo crater interior"
       },
       {
-        "src": "img/indonesia-bromo-crater-sign.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-crater-sign.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-crater-sign.webp",
+        "width": 902,
+        "height": 1600,
         "alt": "Indonesia: bromo crater sign"
       },
       {
-        "src": "img/indonesia-bromo-crater-sit.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-crater-sit.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-crater-sit.webp",
+        "width": 901,
+        "height": 1600,
         "alt": "Indonesia: bromo crater sit"
       },
       {
-        "src": "img/indonesia-bromo-crater-smoke.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-crater-smoke.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-crater-smoke.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: bromo crater smoke"
       },
       {
-        "src": "img/indonesia-bromo-dawn-portrait.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-dawn-portrait.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-dawn-portrait.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: bromo dawn portrait"
       },
       {
-        "src": "img/indonesia-bromo-foggy-walk.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-foggy-walk.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-foggy-walk.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Indonesia: bromo foggy walk"
       },
       {
-        "src": "img/indonesia-bromo-silhouette-dawn.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-silhouette-dawn.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-silhouette-dawn.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: bromo silhouette dawn"
       },
       {
-        "src": "img/indonesia-bromo-street-motorcycle.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-street-motorcycle.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-street-motorcycle.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: bromo street motorcycle"
       },
       {
-        "src": "img/indonesia-bromo-tree-frame-clouds.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-tree-frame-clouds.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-tree-frame-clouds.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: bromo tree frame clouds"
       },
       {
-        "src": "img/indonesia-bromo-volcano-wide.jpg",
+        "src": "img/thumbs/1200/indonesia-bromo-volcano-wide.webp",
+        "thumb": "img/thumbs/400/indonesia-bromo-volcano-wide.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Indonesia: bromo volcano wide"
       },
       {
-        "src": "img/indonesia-nusa-penida-aerial-cove.jpg",
+        "src": "img/thumbs/1200/indonesia-nusa-penida-aerial-cove.webp",
+        "thumb": "img/thumbs/400/indonesia-nusa-penida-aerial-cove.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: nusa penida aerial cove"
       },
       {
-        "src": "img/indonesia-nusa-penida-aerial-foliage.jpg",
+        "src": "img/thumbs/1200/indonesia-nusa-penida-aerial-foliage.webp",
+        "thumb": "img/thumbs/400/indonesia-nusa-penida-aerial-foliage.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: nusa penida aerial foliage"
       },
       {
-        "src": "img/indonesia-nusa-penida-aerial-shore.jpg",
+        "src": "img/thumbs/1200/indonesia-nusa-penida-aerial-shore.webp",
+        "thumb": "img/thumbs/400/indonesia-nusa-penida-aerial-shore.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: nusa penida aerial shore"
       },
       {
-        "src": "img/indonesia-nusa-penida-beach-action.jpg",
+        "src": "img/thumbs/1200/indonesia-nusa-penida-beach-action.webp",
+        "thumb": "img/thumbs/400/indonesia-nusa-penida-beach-action.webp",
+        "width": 738,
+        "height": 1600,
         "alt": "Indonesia: nusa penida beach action"
       },
       {
-        "src": "img/indonesia-nusa-penida-beach-dance.jpg",
+        "src": "img/thumbs/1200/indonesia-nusa-penida-beach-dance.webp",
+        "thumb": "img/thumbs/400/indonesia-nusa-penida-beach-dance.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Indonesia: nusa penida beach dance"
       },
       {
-        "src": "img/indonesia-nusa-penida-beach-gaze-ocean.jpg",
+        "src": "img/thumbs/1200/indonesia-nusa-penida-beach-gaze-ocean.webp",
+        "thumb": "img/thumbs/400/indonesia-nusa-penida-beach-gaze-ocean.webp",
+        "width": 1600,
+        "height": 900,
         "alt": "Indonesia: nusa penida beach gaze ocean"
       },
       {
-        "src": "img/indonesia-nusa-penida-beach-wide.jpg",
+        "src": "img/thumbs/1200/indonesia-nusa-penida-beach-wide.webp",
+        "thumb": "img/thumbs/400/indonesia-nusa-penida-beach-wide.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Indonesia: nusa penida beach wide"
       },
       {
-        "src": "img/indonesia-nusa-penida-sea-cliffs.jpg",
+        "src": "img/thumbs/1200/indonesia-nusa-penida-sea-cliffs.webp",
+        "thumb": "img/thumbs/400/indonesia-nusa-penida-sea-cliffs.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: nusa penida sea cliffs"
       },
       {
-        "src": "img/indonesia-nusa-penida-wave-crash.jpg",
+        "src": "img/thumbs/1200/indonesia-nusa-penida-wave-crash.webp",
+        "thumb": "img/thumbs/400/indonesia-nusa-penida-wave-crash.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Indonesia: nusa penida wave crash"
       },
       {
-        "src": "img/indonesia-tumpak-sewu-waterfall-arms.jpg",
+        "src": "img/thumbs/1200/indonesia-tumpak-sewu-waterfall-arms.webp",
+        "thumb": "img/thumbs/400/indonesia-tumpak-sewu-waterfall-arms.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "Indonesia: tumpak sewu waterfall arms"
       },
       {
-        "src": "img/indonesia-tumpak-sewu-waterfall-selfie.jpg",
+        "src": "img/thumbs/1200/indonesia-tumpak-sewu-waterfall-selfie.webp",
+        "thumb": "img/thumbs/400/indonesia-tumpak-sewu-waterfall-selfie.webp",
+        "width": 1600,
+        "height": 900,
         "alt": "Indonesia: tumpak sewu waterfall selfie"
       }
     ]
@@ -1817,31 +3113,52 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Malaysia.",
     "items": [
       {
-        "src": "img/malaysia-batu-caves-stairs.jpg",
+        "src": "img/thumbs/1200/malaysia-batu-caves-stairs.webp",
+        "thumb": "img/thumbs/400/malaysia-batu-caves-stairs.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Malaysia: batu caves stairs"
       },
       {
-        "src": "img/malaysia-batu-caves-temple.jpg",
+        "src": "img/thumbs/1200/malaysia-batu-caves-temple.webp",
+        "thumb": "img/thumbs/400/malaysia-batu-caves-temple.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Malaysia: batu caves temple"
       },
       {
-        "src": "img/malaysia-kl-skyline-night.jpg",
+        "src": "img/thumbs/1200/malaysia-kl-skyline-night.webp",
+        "thumb": "img/thumbs/400/malaysia-kl-skyline-night.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Malaysia: KL skyline night"
       },
       {
-        "src": "img/malaysia-petronas-selfie.jpg",
+        "src": "img/thumbs/1200/malaysia-petronas-selfie.webp",
+        "thumb": "img/thumbs/400/malaysia-petronas-selfie.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Malaysia: petronas selfie"
       },
       {
-        "src": "img/malaysia-petronas-towers-night.jpg",
+        "src": "img/thumbs/1200/malaysia-petronas-towers-night.webp",
+        "thumb": "img/thumbs/400/malaysia-petronas-towers-night.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "Malaysia: petronas towers night"
       },
       {
-        "src": "img/malaysia-petronas-towers-portrait.jpg",
+        "src": "img/thumbs/1200/malaysia-petronas-towers-portrait.webp",
+        "thumb": "img/thumbs/400/malaysia-petronas-towers-portrait.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Malaysia: petronas towers portrait"
       },
       {
-        "src": "img/malaysia-street-food-market.jpg",
+        "src": "img/thumbs/1200/malaysia-street-food-market.webp",
+        "thumb": "img/thumbs/400/malaysia-street-food-market.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "Malaysia: street food market"
       }
     ]
@@ -1851,135 +3168,234 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from China.",
     "items": [
       {
-        "src": "img/china-backpacker-campus.jpg",
+        "src": "img/thumbs/1200/china-backpacker-campus.webp",
+        "thumb": "img/thumbs/400/china-backpacker-campus.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "China: backpacker campus"
       },
       {
-        "src": "img/china-bronze-vessel-rubbing.jpg",
+        "src": "img/thumbs/1200/china-bronze-vessel-rubbing.webp",
+        "thumb": "img/thumbs/400/china-bronze-vessel-rubbing.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "China: bronze vessel rubbing"
       },
       {
-        "src": "img/china-buddha-stone-carving.jpg",
+        "src": "img/thumbs/1200/china-buddha-stone-carving.webp",
+        "thumb": "img/thumbs/400/china-buddha-stone-carving.webp",
+        "width": 1086,
+        "height": 724,
         "alt": "China: buddha stone carving"
       },
       {
-        "src": "img/china-calligraphy-scroll.jpg",
+        "src": "img/thumbs/1200/china-calligraphy-scroll.webp",
+        "thumb": "img/thumbs/400/china-calligraphy-scroll.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "China: calligraphy scroll"
       },
       {
-        "src": "img/china-coffee-roasters.jpg",
+        "src": "img/thumbs/1200/china-coffee-roasters.webp",
+        "thumb": "img/thumbs/400/china-coffee-roasters.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "China: coffee roasters"
       },
       {
-        "src": "img/china-dagu-glacier-signpost.jpg",
+        "src": "img/thumbs/1200/china-dagu-glacier-signpost.webp",
+        "thumb": "img/thumbs/400/china-dagu-glacier-signpost.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "China: dagu glacier signpost"
       },
       {
-        "src": "img/china-glacier-boardwalk-portrait.jpg",
+        "src": "img/thumbs/1200/china-glacier-boardwalk-portrait.webp",
+        "thumb": "img/thumbs/400/china-glacier-boardwalk-portrait.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "China: glacier boardwalk portrait"
       },
       {
-        "src": "img/china-glacier-turquoise-lake.jpg",
+        "src": "img/thumbs/1200/china-glacier-turquoise-lake.webp",
+        "thumb": "img/thumbs/400/china-glacier-turquoise-lake.webp",
+        "width": 1086,
+        "height": 724,
         "alt": "China: glacier turquoise lake"
       },
       {
-        "src": "img/china-metro-red-suitcase.jpg",
+        "src": "img/thumbs/1200/china-metro-red-suitcase.webp",
+        "thumb": "img/thumbs/400/china-metro-red-suitcase.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "China: metro red suitcase"
       },
       {
-        "src": "img/china-mountain-hiking-selfie.jpg",
+        "src": "img/thumbs/1200/china-mountain-hiking-selfie.webp",
+        "thumb": "img/thumbs/400/china-mountain-hiking-selfie.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "China: mountain hiking selfie"
       },
       {
-        "src": "img/china-museum-bodhisattva.jpg",
+        "src": "img/thumbs/1200/china-museum-bodhisattva.webp",
+        "thumb": "img/thumbs/400/china-museum-bodhisattva.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "China: museum bodhisattva"
       },
       {
-        "src": "img/china-museum-ceramic-wall.jpg",
+        "src": "img/thumbs/1200/china-museum-ceramic-wall.webp",
+        "thumb": "img/thumbs/400/china-museum-ceramic-wall.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "China: museum ceramic wall"
       },
       {
-        "src": "img/china-museum-mountain-mural.jpg",
+        "src": "img/thumbs/1200/china-museum-mountain-mural.webp",
+        "thumb": "img/thumbs/400/china-museum-mountain-mural.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "China: museum mountain mural"
       },
       {
-        "src": "img/china-museum-wood-buddha.jpg",
+        "src": "img/thumbs/1200/china-museum-wood-buddha.webp",
+        "thumb": "img/thumbs/400/china-museum-wood-buddha.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "China: museum wood buddha"
       },
       {
-        "src": "img/china-pagoda-golden-spire.jpg",
+        "src": "img/thumbs/1200/china-pagoda-golden-spire.webp",
+        "thumb": "img/thumbs/400/china-pagoda-golden-spire.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "China: pagoda golden spire"
       },
       {
-        "src": "img/china-photo-studio-lights.jpg",
+        "src": "img/thumbs/1200/china-photo-studio-lights.webp",
+        "thumb": "img/thumbs/400/china-photo-studio-lights.webp",
+        "width": 1080,
+        "height": 1440,
         "alt": "China: photo studio lights"
       },
       {
-        "src": "img/china-reed-photographer.jpg",
+        "src": "img/thumbs/1200/china-reed-photographer.webp",
+        "thumb": "img/thumbs/400/china-reed-photographer.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "China: reed photographer"
       },
       {
-        "src": "img/china-river-worker-boat.jpg",
+        "src": "img/thumbs/1200/china-river-worker-boat.webp",
+        "thumb": "img/thumbs/400/china-river-worker-boat.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "China: river worker boat"
       },
       {
-        "src": "img/china-sichuan-lake-portrait.jpg",
+        "src": "img/thumbs/1200/china-sichuan-lake-portrait.webp",
+        "thumb": "img/thumbs/400/china-sichuan-lake-portrait.webp",
+        "width": 900,
+        "height": 1600,
         "alt": "China: sichuan lake portrait"
       },
       {
-        "src": "img/china-snow-mountain-peak.jpg",
+        "src": "img/thumbs/1200/china-snow-mountain-peak.webp",
+        "thumb": "img/thumbs/400/china-snow-mountain-peak.webp",
+        "width": 1024,
+        "height": 768,
         "alt": "China: snow mountain peak"
       },
       {
-        "src": "img/china-snow-portrait-bw.jpg",
+        "src": "img/thumbs/1200/china-snow-portrait-bw.webp",
+        "thumb": "img/thumbs/400/china-snow-portrait-bw.webp",
+        "width": 1179,
+        "height": 1470,
         "alt": "China: snow portrait BW"
       },
       {
-        "src": "img/china-snowboard-gear-bw.jpg",
+        "src": "img/thumbs/1200/china-snowboard-gear-bw.webp",
+        "thumb": "img/thumbs/400/china-snowboard-gear-bw.webp",
+        "width": 1378,
+        "height": 1600,
         "alt": "China: snowboard gear BW"
       },
       {
-        "src": "img/china-tang-figurines.jpg",
+        "src": "img/thumbs/1200/china-tang-figurines.webp",
+        "thumb": "img/thumbs/400/china-tang-figurines.webp",
+        "width": 1200,
+        "height": 1600,
         "alt": "China: tang figurines"
       },
       {
-        "src": "img/china-tea-village-cablecar.jpg",
+        "src": "img/thumbs/1200/china-tea-village-cablecar.webp",
+        "thumb": "img/thumbs/400/china-tea-village-cablecar.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "China: tea village cablecar"
       },
       {
-        "src": "img/china-temple-yellow-wall.jpg",
+        "src": "img/thumbs/1200/china-temple-yellow-wall.webp",
+        "thumb": "img/thumbs/400/china-temple-yellow-wall.webp",
+        "width": 1600,
+        "height": 1066,
         "alt": "China: temple yellow wall"
       },
       {
-        "src": "img/china-tibet-ancient-stupas-valley.jpg",
+        "src": "img/thumbs/1200/china-tibet-ancient-stupas-valley.webp",
+        "thumb": "img/thumbs/400/china-tibet-ancient-stupas-valley.webp",
+        "width": 1086,
+        "height": 724,
         "alt": "China: tibet ancient stupas valley"
       },
       {
-        "src": "img/china-tibet-highland-road.jpg",
+        "src": "img/thumbs/1200/china-tibet-highland-road.webp",
+        "thumb": "img/thumbs/400/china-tibet-highland-road.webp",
+        "width": 1086,
+        "height": 724,
         "alt": "China: tibet highland road"
       },
       {
-        "src": "img/china-tibet-plateau-portrait.jpg",
+        "src": "img/thumbs/1200/china-tibet-plateau-portrait.webp",
+        "thumb": "img/thumbs/400/china-tibet-plateau-portrait.webp",
+        "width": 1086,
+        "height": 724,
         "alt": "China: tibet plateau portrait"
       },
       {
-        "src": "img/china-tibet-prayer-flags-mountains.jpg",
+        "src": "img/thumbs/1200/china-tibet-prayer-flags-mountains.webp",
+        "thumb": "img/thumbs/400/china-tibet-prayer-flags-mountains.webp",
+        "width": 724,
+        "height": 1086,
         "alt": "China: tibet prayer flags mountains"
       },
       {
-        "src": "img/china-tibet-prayer-flags-peak.jpg",
+        "src": "img/thumbs/1200/china-tibet-prayer-flags-peak.webp",
+        "thumb": "img/thumbs/400/china-tibet-prayer-flags-peak.webp",
+        "width": 1024,
+        "height": 768,
         "alt": "China: tibet prayer flags peak"
       },
       {
-        "src": "img/china-tibet-red-jacket-mountain.jpg",
+        "src": "img/thumbs/1200/china-tibet-red-jacket-mountain.webp",
+        "thumb": "img/thumbs/400/china-tibet-red-jacket-mountain.webp",
+        "width": 1086,
+        "height": 724,
         "alt": "China: tibet red jacket mountain"
       },
       {
-        "src": "img/china-traditional-barbershop.jpg",
+        "src": "img/thumbs/1200/china-traditional-barbershop.webp",
+        "thumb": "img/thumbs/400/china-traditional-barbershop.webp",
+        "width": 1066,
+        "height": 1600,
         "alt": "China: traditional barbershop"
       },
       {
-        "src": "img/china-tsingtao-vintage-poster.jpg",
+        "src": "img/thumbs/1200/china-tsingtao-vintage-poster.webp",
+        "thumb": "img/thumbs/400/china-tsingtao-vintage-poster.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "China: tsingtao vintage poster"
       }
     ]
@@ -1989,67 +3405,115 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Vietnam.",
     "items": [
       {
-        "src": "img/vietnam-beach-dusk.jpeg",
+        "src": "img/thumbs/1200/vietnam-beach-dusk.webp",
+        "thumb": "img/thumbs/400/vietnam-beach-dusk.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Vietnam: beach dusk"
       },
       {
-        "src": "img/vietnam-bronze-tara.jpeg",
+        "src": "img/thumbs/1200/vietnam-bronze-tara.webp",
+        "thumb": "img/thumbs/400/vietnam-bronze-tara.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: bronze tara"
       },
       {
-        "src": "img/vietnam-cham-statue-2.jpeg",
+        "src": "img/thumbs/1200/vietnam-cham-statue-2.webp",
+        "thumb": "img/thumbs/400/vietnam-cham-statue-2.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: cham statue 2"
       },
       {
-        "src": "img/vietnam-cham-statue.jpeg",
+        "src": "img/thumbs/1200/vietnam-cham-statue.webp",
+        "thumb": "img/thumbs/400/vietnam-cham-statue.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: cham statue"
       },
       {
-        "src": "img/vietnam-corridor.jpeg",
+        "src": "img/thumbs/1200/vietnam-corridor.webp",
+        "thumb": "img/thumbs/400/vietnam-corridor.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: corridor"
       },
       {
-        "src": "img/vietnam-hoian-pond-gate.jpeg",
+        "src": "img/thumbs/1200/vietnam-hoian-pond-gate.webp",
+        "thumb": "img/thumbs/400/vietnam-hoian-pond-gate.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: hoian pond gate"
       },
       {
-        "src": "img/vietnam-hue-gate-detail.jpeg",
+        "src": "img/thumbs/1200/vietnam-hue-gate-detail.webp",
+        "thumb": "img/thumbs/400/vietnam-hue-gate-detail.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: hue gate detail"
       },
       {
-        "src": "img/vietnam-hue-imperial-city.jpeg",
+        "src": "img/thumbs/1200/vietnam-hue-imperial-city.webp",
+        "thumb": "img/thumbs/400/vietnam-hue-imperial-city.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: hue imperial city"
       },
       {
-        "src": "img/vietnam-hue-newspaper.jpeg",
+        "src": "img/thumbs/1200/vietnam-hue-newspaper.webp",
+        "thumb": "img/thumbs/400/vietnam-hue-newspaper.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: hue newspaper"
       },
       {
-        "src": "img/vietnam-hue-ngo-mon.jpeg",
+        "src": "img/thumbs/1200/vietnam-hue-ngo-mon.webp",
+        "thumb": "img/thumbs/400/vietnam-hue-ngo-mon.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Vietnam: hue NGO MON"
       },
       {
-        "src": "img/vietnam-interior.jpeg",
+        "src": "img/thumbs/1200/vietnam-interior.webp",
+        "thumb": "img/thumbs/400/vietnam-interior.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: interior"
       },
       {
-        "src": "img/vietnam-marble-mountains.jpeg",
+        "src": "img/thumbs/1200/vietnam-marble-mountains.webp",
+        "thumb": "img/thumbs/400/vietnam-marble-mountains.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Vietnam: marble mountains"
       },
       {
-        "src": "img/vietnam-pavilion-archway.jpeg",
+        "src": "img/thumbs/1200/vietnam-pavilion-archway.webp",
+        "thumb": "img/thumbs/400/vietnam-pavilion-archway.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: pavilion archway"
       },
       {
-        "src": "img/vietnam-poolside.jpeg",
+        "src": "img/thumbs/1200/vietnam-poolside.webp",
+        "thumb": "img/thumbs/400/vietnam-poolside.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: poolside"
       },
       {
-        "src": "img/vietnam-restaurant.jpeg",
+        "src": "img/thumbs/1200/vietnam-restaurant.webp",
+        "thumb": "img/thumbs/400/vietnam-restaurant.webp",
+        "width": 899,
+        "height": 1600,
         "alt": "Vietnam: restaurant"
       },
       {
-        "src": "img/vietnam-train.jpeg",
+        "src": "img/thumbs/1200/vietnam-train.webp",
+        "thumb": "img/thumbs/400/vietnam-train.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Vietnam: train"
       }
     ]
@@ -2059,35 +3523,59 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from South Korea.",
     "items": [
       {
-        "src": "img/korea-bronze-vessel.jpeg",
+        "src": "img/thumbs/1200/korea-bronze-vessel.webp",
+        "thumb": "img/thumbs/400/korea-bronze-vessel.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "South Korea: bronze vessel"
       },
       {
-        "src": "img/korea-dark-gallery-books.jpeg",
+        "src": "img/thumbs/1200/korea-dark-gallery-books.webp",
+        "thumb": "img/thumbs/400/korea-dark-gallery-books.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "South Korea: dark gallery books"
       },
       {
-        "src": "img/korea-gold-crown.jpeg",
+        "src": "img/thumbs/1200/korea-gold-crown.webp",
+        "thumb": "img/thumbs/400/korea-gold-crown.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "South Korea: gold crown"
       },
       {
-        "src": "img/korea-hanbok-performance.jpeg",
+        "src": "img/thumbs/1200/korea-hanbok-performance.webp",
+        "thumb": "img/thumbs/400/korea-hanbok-performance.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "South Korea: hanbok performance"
       },
       {
-        "src": "img/korea-human-skulls.jpeg",
+        "src": "img/thumbs/1200/korea-human-skulls.webp",
+        "thumb": "img/thumbs/400/korea-human-skulls.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "South Korea: human skulls"
       },
       {
-        "src": "img/korea-portrait-scroll.jpeg",
+        "src": "img/thumbs/1200/korea-portrait-scroll.webp",
+        "thumb": "img/thumbs/400/korea-portrait-scroll.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "South Korea: portrait scroll"
       },
       {
-        "src": "img/korea-seated-buddha.jpeg",
+        "src": "img/thumbs/1200/korea-seated-buddha.webp",
+        "thumb": "img/thumbs/400/korea-seated-buddha.webp",
+        "width": 664,
+        "height": 1182,
         "alt": "South Korea: seated buddha"
       },
       {
-        "src": "img/korea-theatre-control-booth.jpeg",
+        "src": "img/thumbs/1200/korea-theatre-control-booth.webp",
+        "thumb": "img/thumbs/400/korea-theatre-control-booth.webp",
+        "width": 1182,
+        "height": 664,
         "alt": "South Korea: theatre control booth"
       }
     ]
@@ -2097,111 +3585,192 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Doha and Lusail, Qatar.",
     "items": [
       {
-        "src": "img/qatar-national-museum-passage.jpg",
+        "src": "img/thumbs/1200/qatar-national-museum-passage.webp",
+        "thumb": "img/thumbs/400/qatar-national-museum-passage.webp",
+        "width": 2200,
+        "height": 3911,
         "alt": "Passage through the desert-rose forms of the National Museum of Qatar."
       },
       {
-        "src": "img/qatar-katara-shade-sails.jpg",
+        "src": "img/thumbs/1200/qatar-katara-shade-sails.webp",
+        "thumb": "img/thumbs/400/qatar-katara-shade-sails.webp",
+        "width": 1600,
+        "height": 2846,
         "alt": "Shade sails above a passage in Katara Cultural Village."
       },
       {
-        "src": "img/qatar-museum-of-islamic-art.jpg",
+        "src": "img/thumbs/1200/qatar-museum-of-islamic-art.webp",
+        "thumb": "img/thumbs/400/qatar-museum-of-islamic-art.webp",
+        "width": 2200,
+        "height": 1238,
         "alt": "Museum of Islamic Art on the Doha waterfront."
       },
       {
-        "src": "img/qatar-national-museum-curves.jpg",
+        "src": "img/thumbs/1200/qatar-national-museum-curves.webp",
+        "thumb": "img/thumbs/400/qatar-national-museum-curves.webp",
+        "width": 1600,
+        "height": 2844,
         "alt": "Overlapping architectural curves at the National Museum of Qatar."
       },
       {
-        "src": "img/qatar-place-vendome-hands.jpg",
+        "src": "img/thumbs/1200/qatar-place-vendome-hands.webp",
+        "thumb": "img/thumbs/400/qatar-place-vendome-hands.webp",
+        "width": 2200,
+        "height": 1237,
         "alt": "Hands sculpture at Place Vendome in Lusail."
       },
       {
-        "src": "img/qatar-pastel-street-stop.jpg",
+        "src": "img/thumbs/1200/qatar-pastel-street-stop.webp",
+        "thumb": "img/thumbs/400/qatar-pastel-street-stop.webp",
+        "width": 1600,
+        "height": 2846,
         "alt": "Pastel buildings and a stop sign in Qatar."
       },
       {
-        "src": "img/qatar-national-museum-facade-wide.jpg",
+        "src": "img/thumbs/1200/qatar-national-museum-facade-wide.webp",
+        "thumb": "img/thumbs/400/qatar-national-museum-facade-wide.webp",
+        "width": 2200,
+        "height": 1237,
         "alt": "Wide view of the National Museum of Qatar facade."
       },
       {
-        "src": "img/qatar-katara-door-06.jpg",
+        "src": "img/thumbs/1200/qatar-katara-door-06.webp",
+        "thumb": "img/thumbs/400/qatar-katara-door-06.webp",
+        "width": 1600,
+        "height": 2843,
         "alt": "Numbered wooden door in Katara Cultural Village."
       },
       {
-        "src": "img/qatar-geometric-skylight.jpg",
+        "src": "img/thumbs/1200/qatar-geometric-skylight.webp",
+        "thumb": "img/thumbs/400/qatar-geometric-skylight.webp",
+        "width": 1600,
+        "height": 2843,
         "alt": "Geometric skylight casting patterned light."
       },
       {
-        "src": "img/qatar-palms-through-museum.jpg",
+        "src": "img/thumbs/1200/qatar-palms-through-museum.webp",
+        "thumb": "img/thumbs/400/qatar-palms-through-museum.webp",
+        "width": 1600,
+        "height": 2844,
         "alt": "Palm trees framed by the National Museum of Qatar."
       },
       {
-        "src": "img/qatar-katara-sails-lane.jpg",
+        "src": "img/thumbs/1200/qatar-katara-sails-lane.webp",
+        "thumb": "img/thumbs/400/qatar-katara-sails-lane.webp",
+        "width": 1600,
+        "height": 2843,
         "alt": "Sail-covered lane in Katara Cultural Village."
       },
       {
-        "src": "img/qatar-national-museum-sculpture.jpg",
+        "src": "img/thumbs/1200/qatar-national-museum-sculpture.webp",
+        "thumb": "img/thumbs/400/qatar-national-museum-sculpture.webp",
+        "width": 1600,
+        "height": 2844,
         "alt": "Outdoor sculpture at the National Museum of Qatar."
       },
       {
-        "src": "img/qatar-pink-buildings-wide.jpg",
+        "src": "img/thumbs/1200/qatar-pink-buildings-wide.webp",
+        "thumb": "img/thumbs/400/qatar-pink-buildings-wide.webp",
+        "width": 2200,
+        "height": 1238,
         "alt": "Wide view of pink buildings in Qatar."
       },
       {
-        "src": "img/qatar-pink-courtyard-plants.jpg",
+        "src": "img/thumbs/1200/qatar-pink-courtyard-plants.webp",
+        "thumb": "img/thumbs/400/qatar-pink-courtyard-plants.webp",
+        "width": 1600,
+        "height": 2400,
         "alt": "Hanging plants in a pink courtyard."
       },
       {
-        "src": "img/qatar-national-museum-city-frame.jpg",
+        "src": "img/thumbs/1200/qatar-national-museum-city-frame.webp",
+        "thumb": "img/thumbs/400/qatar-national-museum-city-frame.webp",
+        "width": 1600,
+        "height": 2844,
         "alt": "Doha buildings framed by the National Museum of Qatar."
       },
       {
-        "src": "img/qatar-blue-pots-calligraphy.jpg",
+        "src": "img/thumbs/1200/qatar-blue-pots-calligraphy.webp",
+        "thumb": "img/thumbs/400/qatar-blue-pots-calligraphy.webp",
+        "width": 1600,
+        "height": 2400,
         "alt": "Blue pots beside an Arabic calligraphy wall."
       },
       {
-        "src": "img/qatar-pink-door.jpg",
+        "src": "img/thumbs/1200/qatar-pink-door.webp",
+        "thumb": "img/thumbs/400/qatar-pink-door.webp",
+        "width": 1600,
+        "height": 2400,
         "alt": "Wooden door set in a pink wall."
       },
       {
-        "src": "img/qatar-stained-glass-hall.jpg",
+        "src": "img/thumbs/1200/qatar-stained-glass-hall.webp",
+        "thumb": "img/thumbs/400/qatar-stained-glass-hall.webp",
+        "width": 1600,
+        "height": 2843,
         "alt": "Colourful stained-glass hall in Qatar."
       },
       {
-        "src": "img/qatar-courtyard-arches.jpg",
+        "src": "img/thumbs/1200/qatar-courtyard-arches.webp",
+        "thumb": "img/thumbs/400/qatar-courtyard-arches.webp",
+        "width": 1600,
+        "height": 2843,
         "alt": "Repeated arches around a quiet courtyard."
       },
       {
-        "src": "img/qatar-katara-lantern-wall.jpg",
+        "src": "img/thumbs/1200/qatar-katara-lantern-wall.webp",
+        "thumb": "img/thumbs/400/qatar-katara-lantern-wall.webp",
+        "width": 1600,
+        "height": 2843,
         "alt": "Lanterns mounted on a wall in Katara Cultural Village."
       },
       {
-        "src": "img/qatar-black-door-13.jpg",
+        "src": "img/thumbs/1200/qatar-black-door-13.webp",
+        "thumb": "img/thumbs/400/qatar-black-door-13.webp",
+        "width": 1600,
+        "height": 2843,
         "alt": "Black numbered door in Qatar."
       },
       {
-        "src": "img/qatar-palm-walls.jpg",
+        "src": "img/thumbs/1200/qatar-palm-walls.webp",
+        "thumb": "img/thumbs/400/qatar-palm-walls.webp",
+        "width": 1600,
+        "height": 2843,
         "alt": "Palm tree between pale architectural walls."
       },
       {
-        "src": "img/qatar-katara-horse-mural.jpg",
+        "src": "img/thumbs/1200/qatar-katara-horse-mural.webp",
+        "thumb": "img/thumbs/400/qatar-katara-horse-mural.webp",
+        "width": 1600,
+        "height": 2844,
         "alt": "Horse mural in Katara Cultural Village."
       },
       {
-        "src": "img/qatar-bougainvillea-window.jpg",
+        "src": "img/thumbs/1200/qatar-bougainvillea-window.webp",
+        "thumb": "img/thumbs/400/qatar-bougainvillea-window.webp",
+        "width": 1600,
+        "height": 2844,
         "alt": "Bougainvillea beside a shaded window."
       },
       {
-        "src": "img/qatar-evening-building-frame.jpg",
+        "src": "img/thumbs/1200/qatar-evening-building-frame.webp",
+        "thumb": "img/thumbs/400/qatar-evening-building-frame.webp",
+        "width": 1600,
+        "height": 899,
         "alt": "Evening building framed by shade cloth."
       },
       {
-        "src": "img/qatar-red-bougainvillea-arch.jpg",
+        "src": "img/thumbs/1200/qatar-red-bougainvillea-arch.webp",
+        "thumb": "img/thumbs/400/qatar-red-bougainvillea-arch.webp",
+        "width": 1600,
+        "height": 2844,
         "alt": "Red bougainvillea beside an archway."
       },
       {
-        "src": "img/qatar-national-museum-wide.jpg",
+        "src": "img/thumbs/1200/qatar-national-museum-wide.webp",
+        "thumb": "img/thumbs/400/qatar-national-museum-wide.webp",
+        "width": 2200,
+        "height": 1237,
         "alt": "Desert-rose architecture of the National Museum of Qatar."
       }
     ]
@@ -2211,131 +3780,227 @@ window.PORTFOLIO_GALLERIES = {
     "description": "Travel photographs from Prague, Czech Republic.",
     "items": [
       {
-        "src": "img/czech-08-red-walled-passage.jpg",
+        "src": "img/thumbs/1200/czech-08-red-walled-passage.webp",
+        "thumb": "img/thumbs/400/czech-08-red-walled-passage.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "A silhouetted person crossing a red-walled passage."
       },
       {
-        "src": "img/czech-04-dark-restaurant-window.jpg",
+        "src": "img/thumbs/1200/czech-04-dark-restaurant-window.webp",
+        "thumb": "img/thumbs/400/czech-04-dark-restaurant-window.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Empty restaurant tables beside a bright window in a dark interior."
       },
       {
-        "src": "img/czech-05-red-white-tram.jpg",
+        "src": "img/thumbs/1200/czech-05-red-white-tram.webp",
+        "thumb": "img/thumbs/400/czech-05-red-white-tram.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Red-and-white city tram beneath a blue, cloud-filled sky."
       },
       {
-        "src": "img/czech-07-passengers-through-tram-window.jpg",
+        "src": "img/thumbs/1200/czech-07-passengers-through-tram-window.webp",
+        "thumb": "img/thumbs/400/czech-07-passengers-through-tram-window.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Passengers seen through the window of a red-and-white tram."
       },
       {
-        "src": "img/czech-03-cobbled-street-cafe.jpg",
+        "src": "img/thumbs/1200/czech-03-cobbled-street-cafe.webp",
+        "thumb": "img/thumbs/400/czech-03-cobbled-street-cafe.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "People seated at outdoor cafe tables on a cobbled street."
       },
       {
-        "src": "img/czech-24-window-framed-architecture.jpg",
+        "src": "img/thumbs/1200/czech-24-window-framed-architecture.webp",
+        "thumb": "img/thumbs/400/czech-24-window-framed-architecture.webp",
+        "width": 1349,
+        "height": 2400,
         "alt": "Sunlit stone architecture framed by dark window mullions."
       },
       {
-        "src": "img/czech-11-sculpture-stained-glass.jpg",
+        "src": "img/thumbs/1200/czech-11-sculpture-stained-glass.webp",
+        "thumb": "img/thumbs/400/czech-11-sculpture-stained-glass.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Stone sculpture beside a stained-glass window inside a cathedral."
       },
       {
-        "src": "img/czech-14-statue-stained-glass.jpg",
+        "src": "img/thumbs/1200/czech-14-statue-stained-glass.webp",
+        "thumb": "img/thumbs/400/czech-14-statue-stained-glass.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "A dark religious statue silhouetted against stained glass."
       },
       {
-        "src": "img/czech-16-statue-gilded-screen.jpg",
+        "src": "img/thumbs/1200/czech-16-statue-gilded-screen.webp",
+        "thumb": "img/thumbs/400/czech-16-statue-gilded-screen.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Stone statue and gilded screen lit by sunlight inside a cathedral."
       },
       {
-        "src": "img/czech-17-bronze-figure-stained-glass.jpg",
+        "src": "img/thumbs/1200/czech-17-bronze-figure-stained-glass.webp",
+        "thumb": "img/thumbs/400/czech-17-bronze-figure-stained-glass.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Bronze praying figure beside tall stained-glass windows."
       },
       {
-        "src": "img/czech-18-stained-glass-from-below.jpg",
+        "src": "img/thumbs/1200/czech-18-stained-glass-from-below.webp",
+        "thumb": "img/thumbs/400/czech-18-stained-glass-from-below.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Stained-glass windows and Gothic stonework seen from below."
       },
       {
-        "src": "img/czech-10-visitors-cathedral-nave.jpg",
+        "src": "img/thumbs/1200/czech-10-visitors-cathedral-nave.webp",
+        "thumb": "img/thumbs/400/czech-10-visitors-cathedral-nave.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Visitors standing in a dim cathedral nave beside tall windows."
       },
       {
-        "src": "img/czech-21-organ-pipes-circular-window.jpg",
+        "src": "img/thumbs/1200/czech-21-organ-pipes-circular-window.webp",
+        "thumb": "img/thumbs/400/czech-21-organ-pipes-circular-window.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Silver organ pipes framed by a circular stained-glass window."
       },
       {
-        "src": "img/czech-15-blue-gold-religious-mural.jpg",
+        "src": "img/thumbs/1200/czech-15-blue-gold-religious-mural.webp",
+        "thumb": "img/thumbs/400/czech-15-blue-gold-religious-mural.webp",
+        "width": 1122,
+        "height": 1402,
         "alt": "Blue-and-gold religious mural depicting a crowned figure."
       },
       {
-        "src": "img/czech-09-gothic-cathedral-exterior.jpg",
+        "src": "img/thumbs/1200/czech-09-gothic-cathedral-exterior.webp",
+        "thumb": "img/thumbs/400/czech-09-gothic-cathedral-exterior.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Gothic cathedral exterior under a deep blue sky."
       },
       {
-        "src": "img/czech-25-church-courtyard.jpg",
+        "src": "img/thumbs/1200/czech-25-church-courtyard.webp",
+        "thumb": "img/thumbs/400/czech-25-church-courtyard.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Historic church buildings around a crowded sunlit courtyard."
       },
       {
-        "src": "img/czech-28-crowded-pastel-street.jpg",
+        "src": "img/thumbs/1200/czech-28-crowded-pastel-street.webp",
+        "thumb": "img/thumbs/400/czech-28-crowded-pastel-street.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Crowds walking along a narrow street between pastel buildings."
       },
       {
-        "src": "img/czech-30-red-tiled-rooftops.jpg",
+        "src": "img/thumbs/1200/czech-30-red-tiled-rooftops.webp",
+        "thumb": "img/thumbs/400/czech-30-red-tiled-rooftops.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Red tiled rooftops across the historic city center."
       },
       {
-        "src": "img/czech-32-prague-skyline-bridge.jpg",
+        "src": "img/thumbs/1200/czech-32-prague-skyline-bridge.webp",
+        "thumb": "img/thumbs/400/czech-32-prague-skyline-bridge.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Prague skyline and bridge seen across red rooftops and trees."
       },
       {
-        "src": "img/czech-01-prague-castle-riverside.jpg",
+        "src": "img/thumbs/1200/czech-01-prague-castle-riverside.webp",
+        "thumb": "img/thumbs/400/czech-01-prague-castle-riverside.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Prague Castle and riverside buildings under a cloudy sky."
       },
       {
-        "src": "img/czech-02-historic-street-tram-wires.jpg",
+        "src": "img/thumbs/1200/czech-02-historic-street-tram-wires.webp",
+        "thumb": "img/thumbs/400/czech-02-historic-street-tram-wires.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Sunlit street lined with historic buildings and tram wires."
       },
       {
-        "src": "img/czech-29-quiet-cobbled-courtyard.jpg",
+        "src": "img/thumbs/1200/czech-29-quiet-cobbled-courtyard.webp",
+        "thumb": "img/thumbs/400/czech-29-quiet-cobbled-courtyard.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Parked cars in a quiet cobbled courtyard between pale buildings."
       },
       {
-        "src": "img/czech-06-passengers-inside-tram.jpg",
+        "src": "img/thumbs/1200/czech-06-passengers-inside-tram.webp",
+        "thumb": "img/thumbs/400/czech-06-passengers-inside-tram.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Passengers seated inside a city tram beside sunlit doors."
       },
       {
-        "src": "img/czech-12-gothic-windows-interior.jpg",
+        "src": "img/thumbs/1200/czech-12-gothic-windows-interior.webp",
+        "thumb": "img/thumbs/400/czech-12-gothic-windows-interior.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Gothic windows and carved details in a dim cathedral interior."
       },
       {
-        "src": "img/czech-13-angels-gilded-crest.jpg",
+        "src": "img/thumbs/1200/czech-13-angels-gilded-crest.webp",
+        "thumb": "img/thumbs/400/czech-13-angels-gilded-crest.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Sculpted angels gathered around a gilded crest inside a cathedral."
       },
       {
-        "src": "img/czech-19-large-stained-glass-window.jpg",
+        "src": "img/thumbs/1200/czech-19-large-stained-glass-window.webp",
+        "thumb": "img/thumbs/400/czech-19-large-stained-glass-window.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Large stained-glass window framed by Gothic stone arches."
       },
       {
-        "src": "img/czech-20-organ-circular-window.jpg",
+        "src": "img/thumbs/1200/czech-20-organ-circular-window.webp",
+        "thumb": "img/thumbs/400/czech-20-organ-circular-window.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Cathedral organ beneath a circular stained-glass window."
       },
       {
-        "src": "img/czech-22-windows-scaffolding.jpg",
+        "src": "img/thumbs/1200/czech-22-windows-scaffolding.webp",
+        "thumb": "img/thumbs/400/czech-22-windows-scaffolding.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Tall stained-glass windows and scaffolding inside a cathedral."
       },
       {
-        "src": "img/czech-23-shadowed-gothic-arches.jpg",
+        "src": "img/thumbs/1200/czech-23-shadowed-gothic-arches.webp",
+        "thumb": "img/thumbs/400/czech-23-shadowed-gothic-arches.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Shadowed Gothic arches and windows inside a cathedral."
       },
       {
-        "src": "img/czech-26-diners-sunlit-courtyard.jpg",
+        "src": "img/thumbs/1200/czech-26-diners-sunlit-courtyard.webp",
+        "thumb": "img/thumbs/400/czech-26-diners-sunlit-courtyard.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Diners in a sunlit courtyard outside a restaurant."
       },
       {
-        "src": "img/czech-27-cafe-fountain.jpg",
+        "src": "img/thumbs/1200/czech-27-cafe-fountain.webp",
+        "thumb": "img/thumbs/400/czech-27-cafe-fountain.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Outdoor cafe tables around a small circular fountain."
       },
       {
-        "src": "img/czech-31-rooftops-church-towers.jpg",
+        "src": "img/thumbs/1200/czech-31-rooftops-church-towers.webp",
+        "thumb": "img/thumbs/400/czech-31-rooftops-church-towers.webp",
+        "width": 2400,
+        "height": 1350,
         "alt": "Historic rooftops and church towers beside a green hillside."
       }
     ]
