@@ -361,6 +361,23 @@ test('all twenty travel galleries are present and total 553 photographs', async 
   await expect(page.locator('#gallery-grid .gallery-thumb')).toHaveCount(10);
 });
 
+test('travel country covers keep a consistent landscape ratio', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/index.html#travel');
+
+  const covers = page.locator('.travel-card img');
+  await expect(covers).toHaveCount(20);
+  const ratios = await covers.evaluateAll((images) => images.map((image) => {
+    const bounds = image.getBoundingClientRect();
+    return bounds.width / bounds.height;
+  }));
+  expect(ratios.every((ratio) => Math.abs(ratio - (4 / 3)) < 0.01)).toBe(true);
+
+  const firstRowTop = await page.locator('.travel-card').first().evaluate((card) => card.getBoundingClientRect().top);
+  const secondRowTop = await page.locator('.travel-card').nth(4).evaluate((card) => card.getBoundingClientRect().top);
+  expect(secondRowTop - firstRowTop).toBeLessThan(400);
+});
+
 test('homepage images reserve their layout space and galleries use optimized derivatives', async ({ page }) => {
   await page.goto('/index.html#top');
 
