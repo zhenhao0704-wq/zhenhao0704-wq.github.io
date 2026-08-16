@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "check:ids": "node scripts/check-id-references.mjs",
-    "check:html": "html-validate index.html cv.html bodies-left-out.html returned-on-loan.html",
+    "check:html": "html-validate index.html cv.html bodies-left-out.html returned-on-loan.html elegies.html",
     "images:generate": "node scripts/generate-image-derivatives.mjs && node scripts/generate-gallery-data.mjs",
     "test:e2e": "playwright test",
     "test": "npm run check:ids && npm run check:html && npm run test:e2e"
