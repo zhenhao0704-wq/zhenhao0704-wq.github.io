@@ -90,8 +90,12 @@
 .elegies-photo a { display: block; color: inherit; }
 .elegies-photo img { display: block; width: 100%; height: auto; }
 .elegies-photo figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
-.festival-tour-gallery { margin-bottom: 2.25rem; }
-.festival-tour-gallery, .festival-tour-gallery figure, .festival-tour-gallery a, .festival-tour-gallery img { border: 0; outline: 0; box-shadow: none; background: transparent; }
+.festival-editorial-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.6rem); margin: 2rem 0 2.25rem; }
+.festival-editorial-gallery figure { min-width: 0; margin: 0; }
+.festival-editorial-gallery a { display: block; color: inherit; border: 0; outline: 0; box-shadow: none; background: transparent; }
+.festival-editorial-gallery img { display: block; width: 100%; height: auto; border: 0; outline: 0; box-shadow: none; }
+.festival-editorial-gallery figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
+.festival-editorial-gallery__tshirt { grid-column: 1 / -1; width: min(100%, 35rem); justify-self: center; margin-top: .6rem !important; }
 
 
 .elegies-poster-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.8rem, 1.8vw, 1.4rem); max-width: 52rem; margin-top: 2rem; }
@@ -105,4 +109,35 @@
   .elegies-photo-grid { grid-template-columns: 1fr; }
   .elegies-photo--wide { grid-column: auto; }
   .elegies-poster-grid { grid-template-columns: 1fr; max-width: 26rem; }
+  .festival-editorial-gallery { grid-template-columns: 1fr; }
+  .festival-editorial-gallery__tshirt { grid-column: auto; width: auto; }
 }
+
+
+/* ---------- Festival a Corps: cover, tour lead, coverage ---------- */
+
+.project-cover { width: min(calc(100% - (2 * var(--pad))), 1040px); margin: 0 auto clamp(3.5rem, 7vw, 6rem); }
+.project-cover a { display: block; }
+.project-cover img { display: block; width: 100%; height: auto; border: 0; }
+.project-cover figcaption { margin-top: .7rem; color: var(--text-faint); font-size: .82rem; line-height: 1.5; }
+
+.tour-lead { width: 100%; margin: 2rem 0 0; }
+.tour-lead a { display: block; }
+.tour-lead img { display: block; width: 100%; height: auto; border: 0; }
+.tour-lead figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
+
+.coverage-lead { width: 100%; margin: 2.25rem 0 0; }
+.coverage-lead a { display: block; }
+.coverage-lead img { display: block; width: 100%; height: auto; border: 0; }
+.coverage-lead figcaption { margin-top: .6rem; color: var(--text-body); font-size: .9rem; line-height: 1.55; }
+
+.coverage-second { width: min(100%, 34rem); margin: 1.6rem 0 0; }
+.coverage-second a { display: block; }
+.coverage-second img { display: block; width: 100%; height: auto; border: 0; }
+.coverage-second figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
+
+.coverage-credit { max-width: 62ch; margin: 1.5rem 0 0; color: var(--text-faint); font-size: .8rem; line-height: 1.6; }
+
+.figure-source { color: var(--text-faint); }
+.figure-source a { border-bottom: 1px solid var(--line); }
+.figure-source a:hover { border-color: var(--line-strong); }
