@@ -377,3 +377,4 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding: 1.4r
 .performance-press-quote { margin: 1.35rem 0; padding: 1rem 1.1rem; border-left: 2px solid var(--paper); color: var(--text-primary); font-size: 1.05rem; line-height: 1.45; }
 .performance-press-quote cite { display: block; margin-top: .55rem; color: var(--text-meta); font-size: .78rem; font-style: normal; letter-spacing: .02em; }
 .performance-press-quote cite span { color: var(--paper); letter-spacing: .1em; margin-right: .4rem; }
+.lead-film .wall-label .action-link { justify-self: start; }
