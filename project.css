@@ -80,7 +80,8 @@
 }
 
 .rehearsal-figure { width: min(100%, 760px); margin: 1.25rem 0 2.25rem; }
-.rehearsal-figure img { width: 100%; height: auto; }
+.rehearsal-figure a { display: block; border: 0; }
+.rehearsal-figure img { display: block; width: 100%; height: auto; border: 0; }
 .rehearsal-figure figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
 
 .elegies-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.8rem, 1.8vw, 1.4rem); margin-top: 2rem; }
@@ -89,6 +90,8 @@
 .elegies-photo a { display: block; color: inherit; }
 .elegies-photo img { display: block; width: 100%; height: auto; }
 .elegies-photo figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
+.festival-tour-gallery { margin-bottom: 2.25rem; }
+.festival-tour-gallery, .festival-tour-gallery figure, .festival-tour-gallery a, .festival-tour-gallery img { border: 0; outline: 0; box-shadow: none; background: transparent; }
 
 
 .elegies-poster-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.8rem, 1.8vw, 1.4rem); max-width: 52rem; margin-top: 2rem; }
