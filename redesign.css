@@ -158,6 +158,9 @@ h3 + .item-meta { margin-top: .52rem; }
 .wall-label h3, .research-card h3, .upcoming-list h3, .teaching-copy h3 { margin: 0; font-size: var(--fs-item); font-weight: 500; line-height: 1.2; letter-spacing: -.018em; }
 .wall-label > p { max-width: 31rem; margin: .05rem 0 0; color: var(--text-body); }
 .wall-label .action-link { justify-self: end; }
+.wall-label:has(.performance-press-quote) { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, 1fr); }
+.wall-label .performance-press-quote { margin: 0; min-width: 0; }
+.wall-label:has(.performance-press-quote) .action-link { grid-column: 1 / -1; justify-self: start; }
 
 .film-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: clamp(3rem, 5vw, 4.5rem) clamp(1.25rem, 2.2vw, 1.75rem); max-width: 1180px; margin-top: clamp(5rem, 9vw, 8rem); padding-top: clamp(2rem, 4vw, 3.5rem); border-top: 1px solid var(--line); }
 .film-card { min-width: 0; width: 100%; max-width: 640px; }
@@ -304,6 +307,8 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding: 1.4r
   .section-head { grid-template-columns: 1fr; gap: 1.1rem; }
   .wall-label { grid-template-columns: 1fr; gap: .8rem; }
   .wall-label .action-link { justify-self: start; }
+  .wall-label:has(.performance-press-quote) { grid-template-columns: 1fr; }
+  .wall-label:has(.performance-press-quote) .performance-press-quote { margin-top: .35rem; }
   .film-grid, .research-grid, .photo-project-grid { grid-template-columns: 1fr; }
   .film-card { margin-inline: auto; }
   .upcoming-list article { grid-template-columns: 1fr; gap: .4rem; }
