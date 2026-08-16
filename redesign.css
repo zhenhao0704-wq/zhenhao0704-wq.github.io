@@ -147,8 +147,13 @@ h3 + .item-meta { margin-top: .52rem; }
 .about-copy .statement-note { margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
 
 .lead-film { max-width: 800px; }
+.lead-film + .lead-film { margin-top: clamp(4rem, 8vw, 7rem); }
 .lead-film-image { margin: 0; border: 1px solid var(--line); background: #000; }
 .lead-film-image img { width: 100%; height: auto; }
+.tour-place-card { display: grid; min-height: clamp(16rem, 38vw, 25rem); padding: clamp(1.5rem, 4vw, 3rem); border: 1px solid var(--line); background: linear-gradient(135deg, #182249 0%, #4d5f97 52%, #b9c7e0 100%); color: #f8f6f1; text-align: left; align-content: end; gap: .45rem; }
+.tour-place-card span { color: rgba(248,246,241,.76); font-size: var(--fs-meta); font-weight: 600; letter-spacing: .11em; text-transform: uppercase; }
+.tour-place-card strong { max-width: 9ch; font-size: clamp(2.4rem, 6vw, 5.25rem); font-weight: 500; line-height: .93; letter-spacing: -.05em; }
+.tour-place-card small { margin-top: .7rem; font-size: var(--fs-meta); letter-spacing: .12em; text-transform: uppercase; }
 .wall-label { display: grid; grid-template-columns: minmax(0, .9fr) minmax(15rem, .7fr) auto; gap: 1.5rem 2rem; align-items: start; padding: 1.35rem 0 2.25rem; border-bottom: 1px solid var(--line); }
 .wall-label h3, .research-card h3, .upcoming-list h3, .teaching-copy h3 { margin: 0; font-size: var(--fs-item); font-weight: 500; line-height: 1.2; letter-spacing: -.018em; }
 .wall-label > p { max-width: 31rem; margin: .05rem 0 0; color: var(--text-body); }
