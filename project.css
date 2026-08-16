@@ -10,6 +10,7 @@
 .par-status { margin-left: .7rem; }
 .par-method { display: block; margin-top: .55rem; }
 .project-title { max-width: 19ch; margin: 0 0 1.25rem; font-size: var(--fs-section); font-weight: 500; font-stretch: 92%; line-height: 1.05; letter-spacing: -.03em; }
+.tour-kicker { margin: 0 0 1.1rem; color: var(--text-meta); font-size: var(--fs-meta); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
 .par-method + .project-desc { margin-top: 2rem; }
 .project-desc { max-width: 72ch; margin: 0; color: var(--text-body); }
 .project-desc a { border-bottom: 1px solid var(--line-strong); }
