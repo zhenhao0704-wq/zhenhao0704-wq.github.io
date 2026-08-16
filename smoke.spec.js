@@ -16,10 +16,11 @@ test('home page loads without errors and exposes the complete navigation', async
   await page.goto('/index.html#about');
   await expect(page).toHaveTitle(/Zhenhao Wen/i);
   await expect(page.locator('#main')).not.toHaveAttribute('inert', '');
-  await expect(page.locator('#site-nav a')).toHaveCount(8);
+  await expect(page.locator('#site-nav a')).toHaveCount(9);
   expect(await page.locator('#site-nav a').allTextContents()).toEqual([
     'About',
     'Dance Films',
+    'Performance',
     'Research',
     'Photography',
     'CV',
@@ -427,6 +428,7 @@ test('research journals share the new system and keep their content structure', 
   expect(await page.locator('.project-nav .nav-links a').allTextContents()).toEqual([
     'About',
     'Dance Films',
+    'Performance',
     'Research',
     'Photography',
     'CV',
@@ -473,11 +475,102 @@ test('desktop and mobile pages do not overflow', async ({ page }) => {
     { width: 390, height: 844 },
   ]) {
     await page.setViewportSize(viewport);
-    for (const url of ['/index.html#top', '/cv.html', '/bodies-left-out.html']) {
+    for (const url of ['/index.html#top', '/cv.html', '/bodies-left-out.html', '/festival-a-corps.html']) {
       await page.goto(url);
       const width = await page.evaluate(() => document.documentElement.scrollWidth);
       expect(width, `${url} overflows at ${viewport.width}px`).toBeLessThanOrEqual(viewport.width);
     }
+  }
+});
+
+test('Festival a Corps uses only the selected performance material without cropping or duplicate group photographs', async ({ page }) => {
+  await page.goto('/festival-a-corps.html');
+
+  const selectedImages = page.locator('img[src^="festival-a-corps-"]');
+  await expect(selectedImages).toHaveCount(2);
+  await expect(page.locator('img[src="festival-a-corps-doorway.jpg"]')).toHaveCount(1);
+  await expect(page.locator('img[src="festival-a-corps-tshirt.jpg"]')).toHaveCount(1);
+  await expect(page.locator('img[src*="festival-a-corps-company"], img[src*="festival-a-corps-rehearsal"]')).toHaveCount(0);
+
+  for (let index = 0; index < await selectedImages.count(); index += 1) {
+    const image = selectedImages.nth(index);
+    await expect(image.locator('xpath=..')).toHaveAttribute('target', '_blank');
+    expect(await image.evaluate((element) => {
+      const style = getComputedStyle(element);
+      return style.objectFit === 'fill' && style.borderWidth === '0px';
+    })).toBe(true);
+  }
+});
+
+test('performance labels keep text in separate, non-overlapping regions on desktop and mobile', async ({ page }) => {
+  for (const viewport of [
+    { width: 1440, height: 900 },
+    { width: 390, height: 844 },
+  ]) {
+    await page.setViewportSize(viewport);
+    await page.goto('/index.html#performance');
+    await page.locator('#intro-skip').click();
+
+    expect(await page.locator('.lead-film .wall-label').evaluateAll((labels) => labels.every((label) => {
+      const children = [...label.children].map((child) => child.getBoundingClientRect());
+      return children.every((rect, index) => children.slice(index + 1).every((other) =>
+        rect.bottom <= other.top || other.bottom <= rect.top || rect.right <= other.left || other.right <= rect.left,
+      ));
+    }))).toBe(true);
+  }
+});
+
+test('Festival a Corps follows the same project-page system as Elegies at every supported width', async ({ page }) => {
+  const selectors = [
+    '.project-hero',
+    '.project-journal',
+    '.par-week',
+    '.par-week-header',
+    '.par-week-date',
+    '.rehearsal-figure',
+    '.press-lead',
+  ];
+
+  for (const viewport of [
+    { width: 1440, height: 900 },
+    { width: 768, height: 900 },
+    { width: 390, height: 844 },
+  ]) {
+    await page.setViewportSize(viewport);
+    await page.goto('/elegies.html');
+    const elegiesStyles = await page.evaluate((items) => Object.fromEntries(items.map((selector) => {
+      const element = document.querySelector(selector);
+      const style = getComputedStyle(element);
+      return [selector, {
+        fontFamily: style.fontFamily,
+        fontSize: style.fontSize,
+        lineHeight: style.lineHeight,
+        marginTop: style.marginTop,
+        paddingTop: style.paddingTop,
+        width: style.width,
+      }];
+    })), selectors);
+
+    await page.goto('/festival-a-corps.html');
+    const festivalStyles = await page.evaluate((items) => Object.fromEntries(items.map((selector) => {
+      const element = document.querySelector(selector);
+      const style = getComputedStyle(element);
+      return [selector, {
+        fontFamily: style.fontFamily,
+        fontSize: style.fontSize,
+        lineHeight: style.lineHeight,
+        marginTop: style.marginTop,
+        paddingTop: style.paddingTop,
+        width: style.width,
+      }];
+    })), selectors);
+    expect(festivalStyles, `Festival à Corps differs from Elegies at ${viewport.width}px`).toEqual(elegiesStyles);
+
+    expect(await page.locator('.rehearsal-figure').evaluateAll((figures) => figures.every((figure) => {
+      const image = figure.querySelector('img')?.getBoundingClientRect();
+      const caption = figure.querySelector('figcaption')?.getBoundingClientRect();
+      return image && caption && caption.top >= image.bottom;
+    }))).toBe(true);
   }
 });
 
