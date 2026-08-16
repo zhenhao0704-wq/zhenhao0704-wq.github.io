@@ -89,7 +89,15 @@
 .elegies-photo--wide img { aspect-ratio: 16 / 9; }
 .elegies-photo figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
 
+.elegies-poster-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.8rem, 1.8vw, 1.4rem); max-width: 52rem; margin-top: 2rem; }
+.elegies-poster { min-width: 0; margin: 0; }
+.elegies-poster a { display: block; }
+.elegies-poster img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.poster-link { margin: 1.15rem 0 0; }
+.poster-link a { border-bottom: 1px solid var(--line-strong); }
+
 @media (max-width: 620px) {
   .elegies-photo-grid { grid-template-columns: 1fr; }
   .elegies-photo--wide { grid-column: auto; }
+  .elegies-poster-grid { grid-template-columns: 1fr; max-width: 26rem; }
 }
