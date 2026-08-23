@@ -54,6 +54,8 @@
 .credits-list dd { margin: 0; color: var(--text-body); }
 .credits-me { color: var(--text-primary); border-bottom: 1px solid var(--line-strong); }
 
+.performance-lead { max-width: 62ch; margin: 0 0 1.5rem; color: var(--text-body); font-size: clamp(1rem, 1.35vw, 1.15rem); line-height: 1.6; }
+
 .press-lead { max-width: 34ch; margin: 0 0 clamp(3rem, 6vw, 4.5rem); }
 .press-lead blockquote { margin: 0; font-size: var(--fs-item); font-weight: 500; font-stretch: 92%; line-height: 1.25; letter-spacing: -.025em; text-indent: -.4em; }
 .university-coverage .press-lead blockquote { text-indent: 0; }
@@ -71,6 +73,15 @@
 .press-headline a:hover { border-color: var(--line-strong); }
 .press-list time { color: var(--text-meta); font-size: .82rem; white-space: nowrap; }
 .press-note { max-width: 62ch; margin-top: 1.5rem; color: var(--text-faint); font-size: .82rem; line-height: 1.6; }
+
+.coverage-records { max-width: 72ch; margin: 0 0 clamp(3rem, 6vw, 4.5rem); padding-bottom: clamp(2rem, 4vw, 3rem); border-bottom: 1px solid var(--line); }
+.coverage-records p { margin: 0; line-height: 1.65; }
+.coverage-records p + p { margin-top: 1.4rem; }
+.coverage-record { color: var(--text-body); font-size: .95rem; }
+.coverage-press { color: var(--text-meta); font-size: .88rem; }
+.coverage-archive { color: var(--text-faint); font-size: .8rem; }
+.coverage-records a { color: inherit; border-bottom: 1px solid var(--line); }
+.coverage-records a:hover { color: var(--text-primary); border-color: var(--line-strong); }
 
 @media (max-width: 620px) {
   .credits-list { grid-template-columns: 1fr; gap: .2rem; }
@@ -128,7 +139,7 @@
 .tour-lead figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
 
 .coverage-lead { width: 100%; margin: 2.25rem 0 0; }
-.coverage-lead a { display: block; }
+.coverage-lead > a { display: block; }
 .coverage-lead img { display: block; width: 100%; height: auto; border: 0; }
 .coverage-lead figcaption { margin-top: .6rem; color: var(--text-body); font-size: .9rem; line-height: 1.55; }
 
