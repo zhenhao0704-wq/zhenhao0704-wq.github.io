@@ -93,6 +93,7 @@
 .festival-editorial-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.6rem); margin: 2rem 0 2.25rem; }
 .festival-editorial-gallery figure { min-width: 0; margin: 0; }
 .festival-editorial-gallery a { display: block; color: inherit; border: 0; outline: 0; box-shadow: none; background: transparent; }
+.festival-editorial-gallery a:focus-visible { outline: 2px solid var(--paper); outline-offset: 4px; }
 .festival-editorial-gallery img { display: block; width: 100%; height: auto; border: 0; outline: 0; box-shadow: none; }
 .festival-editorial-gallery figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
 .festival-editorial-gallery__tshirt { grid-column: 1 / -1; width: min(100%, 35rem); justify-self: center; margin-top: .6rem !important; }
@@ -142,7 +143,7 @@
 .figure-source a { border-bottom: 1px solid var(--line); }
 .figure-source a:hover { border-color: var(--line-strong); }
 
-.tour-video { width: 100%; margin: 2rem 0 0; }
+.tour-video { width: 100%; margin: 2rem 0 2.5rem; }
 .tour-video__frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
 .tour-video__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .tour-video figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
