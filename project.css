@@ -141,3 +141,8 @@
 .figure-source { color: var(--text-faint); }
 .figure-source a { border-bottom: 1px solid var(--line); }
 .figure-source a:hover { border-color: var(--line-strong); }
+
+.tour-video { width: 100%; margin: 2rem 0 0; }
+.tour-video__frame { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.tour-video__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.tour-video figcaption { margin-top: .6rem; color: var(--text-faint); font-size: .8rem; line-height: 1.5; }
