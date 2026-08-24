@@ -156,6 +156,8 @@ h3 + .item-meta { margin-top: .52rem; }
 .wall-label { display: grid; grid-template-columns: minmax(0, .9fr) minmax(15rem, .7fr) auto; gap: 1.5rem 2rem; align-items: start; padding: 1.35rem 0 2.25rem; border-bottom: 1px solid var(--line); }
 .wall-label h3, .research-card h3, .upcoming-list h3, .teaching-copy h3 { margin: 0; font-size: var(--fs-item); font-weight: 500; line-height: 1.2; letter-spacing: -.018em; }
 .wall-label > p { max-width: 31rem; margin: .05rem 0 0; color: var(--text-body); }
+.film-screening-link { display: block; width: fit-content; margin-top: .8rem; color: var(--text-meta); font-size: .88rem; line-height: 1.5; border-bottom: 1px solid var(--line); }
+.film-screening-link:hover { color: var(--text-primary); border-color: var(--line-strong); }
 .wall-label .action-link { justify-self: end; }
 .wall-label:has(.performance-press-quote) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, .9fr); }
 .wall-label .performance-press-quote { margin: 0; min-width: 0; }

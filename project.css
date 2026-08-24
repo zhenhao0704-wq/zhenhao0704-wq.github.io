@@ -32,6 +32,14 @@
 .par-week-refs p { margin: 0 0 .75rem; }
 .project-back { display: flex; width: min(calc(100% - (2 * var(--pad))), 920px); min-height: 44px; align-items: center; margin: 0 auto clamp(4rem, 8vw, 7rem); padding-top: 1.25rem; border-top: 1px solid var(--line); font-size: .9rem; text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: .25em; }
 
+.screening-record { scroll-margin-top: 5rem; }
+.screening-record-figure { width: min(100%, 56.25rem); margin: 2rem 0 0; }
+.screening-record-figure > a, .screening-record-figure picture { display: block; }
+.screening-record-figure img { display: block; width: 100%; height: auto; border: 1px solid rgba(255,255,255,.14); }
+.screening-record-figure figcaption { margin-top: .7rem; color: var(--text-faint); font-size: .8rem; line-height: 1.6; }
+.screening-record-figure figcaption a { display: inline-block; margin-top: .25rem; color: var(--text-meta); border-bottom: 1px solid var(--line); }
+.screening-record-figure figcaption a:hover { color: var(--text-primary); border-color: var(--line-strong); }
+
 @media (max-width: 1080px) {
   .nav-toggle { display: block; }
   .nav-links { position: absolute; top: 3.75rem; right: var(--pad); display: none; flex-direction: column; align-items: flex-end; padding: .65rem .9rem; border: 1px solid var(--line); background: var(--black); }
