@@ -29,3 +29,17 @@ document.querySelectorAll(".par-week-video iframe").forEach((frame, index) => {
   if (!frame.title) frame.title = `Project video ${index + 1}`;
   frame.loading = "lazy";
 });
+
+document.querySelectorAll("[data-video-facade]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const frame = document.createElement("iframe");
+    frame.src = `https://www.youtube-nocookie.com/embed/${button.dataset.videoId}?rel=0`;
+    frame.title = button.dataset.videoTitle || "Project video";
+    frame.loading = "lazy";
+    frame.allowFullscreen = true;
+    frame.allow = "accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share";
+    frame.referrerPolicy = "strict-origin-when-cross-origin";
+    button.replaceWith(frame);
+    frame.focus();
+  });
+});
