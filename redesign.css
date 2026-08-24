@@ -150,12 +150,14 @@ h3 + .item-meta { margin-top: .52rem; }
 .lead-film + .lead-film { margin-top: clamp(4rem, 8vw, 7rem); }
 .lead-film-image { display: block; margin: 0; background: #000; }
 .lead-film-image img { display: block; width: 100%; height: auto; }
+.lead-film-image--poster { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 9; box-sizing: border-box; padding: 1rem; overflow: hidden; background: #0d0d0d; }
+.lead-film-image--poster img { width: auto; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; border: 1px solid rgba(255,255,255,.14); }
 .festival-cover-link { color: inherit; }
 .wall-label { display: grid; grid-template-columns: minmax(0, .9fr) minmax(15rem, .7fr) auto; gap: 1.5rem 2rem; align-items: start; padding: 1.35rem 0 2.25rem; border-bottom: 1px solid var(--line); }
 .wall-label h3, .research-card h3, .upcoming-list h3, .teaching-copy h3 { margin: 0; font-size: var(--fs-item); font-weight: 500; line-height: 1.2; letter-spacing: -.018em; }
 .wall-label > p { max-width: 31rem; margin: .05rem 0 0; color: var(--text-body); }
 .wall-label .action-link { justify-self: end; }
-.wall-label:has(.performance-press-quote) { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr) minmax(0, 1fr); }
+.wall-label:has(.performance-press-quote) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, .9fr); }
 .wall-label .performance-press-quote { margin: 0; min-width: 0; }
 .wall-label:has(.performance-press-quote) .action-link { grid-column: 1 / -1; justify-self: start; }
 
@@ -322,6 +324,7 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding: 1.4r
 }
 
 @media (max-width: 560px) {
+  .lead-film-image--poster { aspect-ratio: 1 / 1; }
   .landing { padding-bottom: 5.25rem; }
   .landing-media { background-position: 65% center; }
   .landing-motion-toggle { bottom: .75rem; }
