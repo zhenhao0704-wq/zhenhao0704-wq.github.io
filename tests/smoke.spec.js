@@ -16,10 +16,11 @@ test('home page loads without errors and exposes the complete navigation', async
   await page.goto('/index.html#about');
   await expect(page).toHaveTitle(/Zhenhao Wen/i);
   await expect(page.locator('#main')).not.toHaveAttribute('inert', '');
-  await expect(page.locator('#site-nav a')).toHaveCount(8);
+  await expect(page.locator('#site-nav a')).toHaveCount(9);
   expect(await page.locator('#site-nav a').allTextContents()).toEqual([
     'About',
     'Dance Films',
+    'Performance',
     'Research',
     'Photography',
     'CV',
@@ -29,7 +30,7 @@ test('home page loads without errors and exposes the complete navigation', async
   ]);
   expect(await page.locator('#main > section.content-section').evaluateAll((sections) =>
     sections.map((section) => section.id),
-  )).toEqual(['about', 'works', 'research', 'photography', 'cv', 'teaching', 'travel', 'contact']);
+  )).toEqual(['about', 'works', 'performance', 'research', 'photography', 'cv', 'teaching', 'travel', 'contact']);
   await expect(page.getByRole('heading', { name: 'About', exact: true })).toBeVisible();
   expect(ownCodeErrors(errors), ownCodeErrors(errors).join('\n')).toEqual([]);
 });
@@ -43,10 +44,11 @@ test('the typography separates module labels from content titles', async ({ page
     '.home-page #about .about-copy > h2',
     '.home-page #contact > h2',
   ].join(', '));
-  await expect(moduleTitles).toHaveCount(8);
+  await expect(moduleTitles).toHaveCount(9);
   expect(await moduleTitles.allTextContents()).toEqual([
     'About',
     'Dance Films',
+    'Performance',
     'Research',
     'Photography',
     'CV',
@@ -60,8 +62,8 @@ test('the typography separates module labels from content titles', async ({ page
   }))).toBe(true);
 
   const sizes = await moduleTitles.evaluateAll((titles) => titles.map((title) => Number.parseFloat(getComputedStyle(title).fontSize)));
-  expect(Math.max(...sizes.slice(0, 7))).toBeLessThanOrEqual(56);
-  expect(Math.max(...sizes.slice(7))).toBeLessThan(Math.max(...sizes.slice(0, 7)));
+  expect(Math.max(...sizes.slice(0, 8))).toBeLessThanOrEqual(56);
+  expect(Math.max(...sizes.slice(8))).toBeLessThan(Math.max(...sizes.slice(0, 8)));
 
   expect(await page.locator('.landing h1').evaluate((title) => getComputedStyle(title).textTransform)).toBe('none');
   expect(await page.locator('.film-card-copy h3').first().evaluate((title) => getComputedStyle(title).textTransform)).toBe('none');
@@ -426,6 +428,7 @@ test('research journals share the new system and keep their content structure', 
   expect(await page.locator('.project-nav .nav-links a').allTextContents()).toEqual([
     'About',
     'Dance Films',
+    'Performance',
     'Research',
     'Photography',
     'CV',
