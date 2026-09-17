@@ -154,6 +154,26 @@ test('the site remains usable if the enhancement script fails', async ({ page })
   await expect(page.getByRole('heading', { name: 'Zhenhao Wen', exact: true })).toBeVisible();
 });
 
+test('portrait opening film keeps its full frame and rotation restores the wide layout', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  await expect(page.locator('body')).toHaveClass(/intro-active/);
+  await expect(page.locator('#intro-video')).toHaveCSS('object-fit', 'contain');
+  await expect(page.locator('#site-intro')).toHaveCSS('background-size', 'contain');
+  await expect(page.locator('#intro-skip')).toBeInViewport();
+  for (const viewport of [{ width: 320, height: 568 }, { width: 430, height: 932 }, { width: 768, height: 1024 }]) {
+    await page.setViewportSize(viewport);
+    await expect(page.locator('#intro-video')).toHaveCSS('object-fit', 'contain');
+  }
+  await page.setViewportSize({ width: 844, height: 390 });
+  await expect(page.locator('#intro-video')).toHaveCSS('object-fit', 'cover');
+  await expect(page.locator('#site-intro')).toHaveCSS('background-size', 'cover');
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.locator('#intro-skip').click();
+  await expect(page.locator('body')).not.toHaveClass(/intro-active/);
+  await expect(page.locator('.landing-video').first()).toHaveCSS('object-fit', 'cover');
+});
+
 test('deep links and reduced motion bypass the intro', async ({ page }) => {
   await page.goto('/index.html#research');
   await expect(page.locator('body')).not.toHaveClass(/intro-active/);
