@@ -9,6 +9,12 @@
 <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="redesign.css?v=20260823-2">
 <link rel="stylesheet" href="project.css?v=20260823-4">
+<style>
+.epic-gallery { display: grid; gap: 2.5rem; margin: 2rem 0 4rem; }
+.epic-gallery .tour-lead { margin: 0; }
+.epic-gallery .epic-portrait { width: min(100%, 540px); margin-inline: auto; }
+@media (max-width: 600px) { .epic-gallery { gap: 1.5rem; margin-bottom: 2.5rem; } }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -40,12 +46,28 @@
   </div>
 
   <div class="project-journal">
-    <figure class="tour-lead">
-      <a href="media/performance/epic-season-image.webp" target="_blank" rel="noopener" aria-label="Open the full EPIC promotional artwork">
-        <img src="media/performance/epic-season-image.webp" alt="Official EPIC promotional artwork combining dancers in colorful costumes against a dark stage" width="2511" height="3080">
-      </a>
-      <figcaption>Official promotional artwork. <a href="https://manoa.hawaii.edu/liveonstage/kennedy-theatre/20262027season/epic.php" target="_blank" rel="noopener">UH Mānoa Department of Theatre and Dance / Kennedy Theatre</a>, 2026.</figcaption>
-    </figure>
+    <section class="epic-gallery" aria-label="EPIC photo gallery">
+      <figure class="tour-lead">
+        <a href="media/performance/epic-stage-ensemble.jpg" target="_blank" rel="noopener" aria-label="Open photograph: The EPIC ensemble moving across the stage under bright overhead lights, photographed in black and white">
+          <img src="media/performance/epic-stage-ensemble.jpg" alt="The EPIC ensemble moving across the stage under bright overhead lights, photographed in black and white" width="2200" height="1650" fetchpriority="high">
+        </a>
+      </figure>
+      <figure class="tour-lead epic-portrait">
+        <a href="media/performance/epic-ensemble-portrait.jpg" target="_blank" rel="noopener" aria-label="Open photograph: Dancers gathered in an ensemble formation during EPIC">
+          <img src="media/performance/epic-ensemble-portrait.jpg" alt="Dancers gathered in an ensemble formation during EPIC" width="1079" height="1731" loading="lazy">
+        </a>
+      </figure>
+      <figure class="tour-lead">
+        <a href="media/performance/epic-partner-lift.jpg" target="_blank" rel="noopener" aria-label="Open photograph: Two EPIC dancers performing a partner lift">
+          <img src="media/performance/epic-partner-lift.jpg" alt="Two EPIC dancers performing a partner lift" width="1920" height="1080" loading="lazy">
+        </a>
+      </figure>
+      <figure class="tour-lead">
+        <a href="media/performance/epic-backstage.jpg" target="_blank" rel="noopener" aria-label="Open photograph: An EPIC ensemble scene with a performer seen from behind in the foreground">
+          <img src="media/performance/epic-backstage.jpg" alt="An EPIC ensemble scene with a performer seen from behind in the foreground" width="1600" height="900" loading="lazy">
+        </a>
+      </figure>
+    </section>
 
     <section class="par-week">
       <h2 class="par-week-header">Production</h2>
@@ -59,6 +81,14 @@
       </dl>
       <p class="par-week-refs"><a href="https://manoa.hawaii.edu/liveonstage/kennedy-theatre/20262027season/epic.php" target="_blank" rel="noopener">Official production announcement</a></p>
     </section>
+
+    <figure class="tour-lead">
+      <a href="media/performance/epic-season-image.webp" target="_blank" rel="noopener" aria-label="Open the full EPIC promotional artwork">
+        <img src="media/performance/epic-season-image.webp" alt="Official EPIC promotional artwork combining dancers in colorful costumes against a dark stage" width="2511" height="3080">
+      </a>
+      <figcaption>Official promotional artwork. <a href="https://manoa.hawaii.edu/liveonstage/kennedy-theatre/20262027season/epic.php" target="_blank" rel="noopener">UH Mānoa Department of Theatre and Dance / Kennedy Theatre</a>, 2026.</figcaption>
+    </figure>
+
 
     <section class="par-week university-coverage">
       <h2 class="par-week-header">University coverage</h2>
