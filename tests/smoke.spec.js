@@ -469,10 +469,10 @@ test('research journals share the new system and keep their content structure', 
   await expect(page.locator('.project-back')).toHaveAttribute('href', 'index.html#research');
 });
 
-test('the full CV includes all twenty-three substantive entries', async ({ page }) => {
+test('the full CV includes all twenty-four substantive entries', async ({ page }) => {
   await page.goto('/cv.html');
   await expect(page.getByRole('heading', { level: 1, name: 'Zhenhao Wen' })).toBeVisible();
-  await expect(page.locator('.cv-rows article')).toHaveCount(23);
+  await expect(page.locator('.cv-rows article')).toHaveCount(24);
   await expect(page.getByText('Publications and presentations', { exact: true })).toBeVisible();
   await expect(page.getByText('Performances and production', { exact: true })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Print / save PDF' })).toBeVisible();
@@ -495,7 +495,7 @@ test('desktop and mobile pages do not overflow', async ({ page }) => {
     { width: 390, height: 844 },
   ]) {
     await page.setViewportSize(viewport);
-    for (const url of ['/index.html#top', '/cv.html', '/bodies-left-out.html']) {
+    for (const url of ['/index.html#top', '/cv.html', '/bodies-left-out.html', '/epic.html']) {
       await page.goto(url);
       const width = await page.evaluate(() => document.documentElement.scrollWidth);
       expect(width, `${url} overflows at ${viewport.width}px`).toBeLessThanOrEqual(viewport.width);
