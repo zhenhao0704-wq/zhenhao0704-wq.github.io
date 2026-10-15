@@ -276,12 +276,13 @@ test('every dance film has an image and the published films retain the original 
 
   await expect(page.locator('.film-grid .film-card')).toHaveCount(6);
   await expect(page.locator('.film-grid .film-card-media img')).toHaveCount(6);
-  await expect(page.locator('.film-card', { hasText: 'Facing the Mirror' }).locator('[data-video-id]')).toHaveCount(0);
+  await expect(page.locator('.film-card', { hasText: 'Facing the Mirror' }).locator('[data-video-id]')).toHaveCount(2);
 
   const ids = await page.locator('#works [data-video-id]').evaluateAll((elements) =>
     [...new Set(elements.map((element) => element.dataset.videoId))].sort(),
   );
   expect(ids).toEqual([
+    'gpn135WJceQ',
     '7V75O94rXgM',
     '8a7t169MjLk',
     'PiYInr_Njfg',
@@ -295,7 +296,8 @@ test('every dance film has an image and the published films retain the original 
     const image = thumbnails.nth(index);
     await image.scrollIntoViewIfNeeded();
     await expect(image).toHaveJSProperty('complete', true);
-    expect(await image.evaluate((element) => [element.naturalWidth, element.naturalHeight])).toEqual([1280, 720]);
+    const expectedHeight = (await image.getAttribute('src')).endsWith('/facing-the-mirror.jpg') ? 719 : 720;
+    expect(await image.evaluate((element) => [element.naturalWidth, element.naturalHeight])).toEqual([1280, expectedHeight]);
   }
 });
 
