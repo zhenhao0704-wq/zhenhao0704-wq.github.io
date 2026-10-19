@@ -530,3 +530,20 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") renderViewer(activeImageIndex - 1);
   if (event.key === "ArrowRight") renderViewer(activeImageIndex + 1);
 });
+
+// Posters change only when a visitor presses a navigation button.
+document.querySelectorAll(".poster-carousel").forEach((carousel) => {
+  const posters = [...carousel.querySelectorAll("img")];
+  const controls = carousel.querySelector(".poster-controls");
+  const count = carousel.querySelector(".poster-count");
+  let current = 0;
+  function changePoster(step) {
+    posters[current].hidden = true;
+    current = (current + step + posters.length) % posters.length;
+    posters[current].hidden = false;
+    count.textContent = `${current + 1} / ${posters.length}`;
+  }
+  carousel.querySelector(".poster-arrow--prev").addEventListener("click", () => changePoster(-1));
+  carousel.querySelector(".poster-arrow--next").addEventListener("click", () => changePoster(1));
+  controls.hidden = false;
+});

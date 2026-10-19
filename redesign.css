@@ -396,3 +396,14 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding: 1.4r
 .performance-press-quote cite { display: block; margin-top: .55rem; color: var(--text-meta); font-size: .78rem; font-style: normal; letter-spacing: .02em; }
 .performance-press-quote cite span { color: var(--paper); letter-spacing: .1em; margin-right: .4rem; }
 .lead-film .wall-label .action-link { justify-self: start; }
+
+/* Manual poster browsing for the featured film. */
+.poster-carousel { position: relative; aspect-ratio: 16 / 9; }
+.poster-carousel img { width: 100%; height: 100%; object-fit: contain; }
+.poster-carousel img[hidden], .poster-controls[hidden] { display: none; }
+.poster-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: rgba(0,0,0,.25); color: rgba(255,255,255,.75); font: 300 30px/1 Georgia, serif; cursor: pointer; }
+.poster-arrow--prev { left: 8px; }
+.poster-arrow--next { right: 8px; }
+.poster-arrow:hover, .poster-arrow:focus-visible { color: #fff; background: rgba(0,0,0,.6); }
+.poster-arrow:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.poster-count { position: absolute; right: 16px; bottom: 8px; padding: 2px 6px; border-radius: 3px; background: rgba(0,0,0,.45); color: rgba(255,255,255,.8); font-size: 11px; letter-spacing: .08em; pointer-events: none; }

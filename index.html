@@ -7,9 +7,9 @@
   <title>Zhenhao Wen</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="redesign.css?v=20260916-intro">
+<link rel="stylesheet" href="redesign.css?v=20261019-posters">
   <script src="gallery-data.js?v=20260812-3" defer></script>
-  <script src="redesign.js?v=20260812-1" defer></script>
+  <script src="redesign.js?v=20261019-posters" defer></script>
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -83,8 +83,16 @@
       </header>
 
       <article class="lead-film" data-reveal>
-        <figure class="lead-film-image">
+        <figure class="lead-film-image poster-carousel" aria-label="Facing the Mirror posters">
           <img src="media/films/facing-the-mirror.jpg" alt="Facing the Mirror poster for a dance film on Chinese Jingju" loading="lazy" width="1280" height="719">
+          <img src="media/films/facing-the-mirror-front.jpg" alt="Facing the Mirror poster with a Jingju performer facing forward" loading="lazy" width="1920" height="1080" hidden>
+          <img src="media/films/facing-the-mirror-gesture.jpg" alt="Facing the Mirror poster with a Jingju performer raising one arm" loading="lazy" width="1920" height="1080" hidden>
+          <img src="media/films/facing-the-mirror-corridor.jpg" alt="Facing the Mirror poster showing a performer walking down a corridor" loading="lazy" width="1718" height="966" hidden>
+          <div class="poster-controls" hidden>
+            <button class="poster-arrow poster-arrow--prev" type="button" aria-label="Previous poster">‹</button>
+            <button class="poster-arrow poster-arrow--next" type="button" aria-label="Next poster">›</button>
+            <span class="poster-count" aria-live="polite" aria-atomic="true">1 / 4</span>
+          </div>
         </figure>
         <div class="wall-label film-label">
           <div class="title-block">
