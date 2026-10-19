@@ -276,7 +276,7 @@ test('every dance film has an image and the published films retain the original 
 
   await expect(page.locator('.film-grid .film-card')).toHaveCount(6);
   await expect(page.locator('.film-grid .film-card-media img')).toHaveCount(6);
-  await expect(page.locator('.film-card', { hasText: 'Facing the Mirror' }).locator('[data-video-id]')).toHaveCount(2);
+  await expect(page.locator('.lead-film', { hasText: 'Facing the Mirror' }).locator('[data-video-id]')).toHaveCount(1);
 
   const ids = await page.locator('#works [data-video-id]').evaluateAll((elements) =>
     [...new Set(elements.map((element) => element.dataset.videoId))].sort(),
@@ -296,8 +296,9 @@ test('every dance film has an image and the published films retain the original 
     const image = thumbnails.nth(index);
     await image.scrollIntoViewIfNeeded();
     await expect(image).toHaveJSProperty('complete', true);
-    const expectedHeight = (await image.getAttribute('src')).endsWith('/facing-the-mirror.jpg') ? 719 : 720;
-    expect(await image.evaluate((element) => [element.naturalWidth, element.naturalHeight])).toEqual([1280, expectedHeight]);
+    const isTrace = (await image.getAttribute('src')).endsWith('/to-leave-a-trace-still.jpg');
+    const expectedHeight = isTrace ? 642 : 720;
+    expect(await image.evaluate((element) => [element.naturalWidth, element.naturalHeight])).toEqual([isTrace ? 1600 : 1280, expectedHeight]);
   }
 });
 
