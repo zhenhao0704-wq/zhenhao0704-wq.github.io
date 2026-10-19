@@ -538,3 +538,23 @@ test('featured photography and gallery viewer load bounded optimized sources', a
   expect(await page.locator('#viewer-image').evaluate((element) => element.naturalWidth)).toBeLessThanOrEqual(1200);
   await context.close();
 });
+
+test('featured posters switch manually without opening the film', async ({ page }) => {
+  await page.goto('/index.html#works');
+  const gallery = page.locator('.poster-carousel');
+  const visible = gallery.locator('img:visible');
+  await expect(visible).toHaveAttribute('src', 'media/films/facing-the-mirror.jpg');
+  await gallery.getByRole('button', { name: 'Next poster' }).click();
+  await expect(visible).toHaveAttribute('src', 'media/films/facing-the-mirror-front.jpg');
+  await gallery.getByRole('button', { name: 'Previous poster' }).click();
+  await gallery.getByRole('button', { name: 'Previous poster' }).click();
+  await expect(visible).toHaveAttribute('src', 'media/films/facing-the-mirror-corridor.jpg');
+  await expect(gallery.locator('.poster-count')).toHaveText('4 / 4');
+  await gallery.getByRole('button', { name: 'Next poster' }).press('Enter');
+  await expect(visible).toHaveAttribute('src', 'media/films/facing-the-mirror.jpg');
+  await expect(page.locator('dialog[open]')).toHaveCount(0);
+  for (const width of [1280, 390]) {
+    await page.setViewportSize({ width, height: 900 });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  }
+});
