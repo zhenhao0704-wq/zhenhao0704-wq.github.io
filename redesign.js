@@ -367,6 +367,7 @@ window.addEventListener("resize", () => {
 
 const videoDialog = document.getElementById("video-dialog");
 const videoFrame = document.getElementById("video-frame");
+const teaserPlayer = document.getElementById("teaser-player");
 const videoTitle = document.getElementById("video-dialog-title");
 const videoExternal = document.getElementById("video-external");
 const dialogClose = document.getElementById("dialog-close");
@@ -377,6 +378,9 @@ document.querySelectorAll("[data-video-id]").forEach((button) => {
     const title = button.dataset.videoTitle || "Film";
     activeVideoTrigger = button;
     videoTitle.textContent = title;
+    videoFrame.hidden = false;
+    teaserPlayer.hidden = true;
+    videoExternal.hidden = false;
     videoFrame.title = title;
     videoFrame.src = `https://www.youtube.com/embed/${button.dataset.videoId}?autoplay=1&rel=0`;
     videoExternal.href = `https://www.youtube.com/watch?v=${button.dataset.videoId}`;
@@ -384,7 +388,23 @@ document.querySelectorAll("[data-video-id]").forEach((button) => {
   });
 });
 
+document.querySelectorAll("[data-video-src]").forEach((button) => {
+  button.addEventListener("click", () => {
+    activeVideoTrigger = button;
+    videoTitle.textContent = button.dataset.videoTitle;
+    videoFrame.hidden = true;
+    videoExternal.hidden = true;
+    teaserPlayer.hidden = false;
+    teaserPlayer.src = button.dataset.videoSrc;
+    videoDialog.showModal();
+    teaserPlayer.play().catch(() => { /* Native controls remain available. */ });
+  });
+});
+
 function closeVideo() {
+  teaserPlayer.pause();
+  teaserPlayer.removeAttribute("src");
+  teaserPlayer.load();
   videoFrame.src = "";
   videoExternal.href = "https://www.youtube.com/";
   if (videoDialog.open) videoDialog.close();
