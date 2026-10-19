@@ -274,8 +274,8 @@ test('the site presents original image colour without a shared CSS filter', asyn
 test('every dance film has an image and the published films retain the original links', async ({ page }) => {
   await page.goto('/index.html#works');
 
-  await expect(page.locator('.film-grid .film-card')).toHaveCount(6);
-  await expect(page.locator('.film-grid .film-card-media img')).toHaveCount(6);
+  await expect(page.locator('.film-grid .film-card')).toHaveCount(7);
+  await expect(page.locator('.film-grid .film-card-media img')).toHaveCount(10);
   await expect(page.locator('.lead-film', { hasText: 'Facing the Mirror' }).locator('[data-video-id]')).toHaveCount(1);
 
   const ids = await page.locator('#works [data-video-id]').evaluateAll((elements) =>
@@ -541,7 +541,7 @@ test('featured photography and gallery viewer load bounded optimized sources', a
 
 test('featured posters switch manually without opening the film', async ({ page }) => {
   await page.goto('/index.html#works');
-  const gallery = page.locator('.poster-carousel');
+  const gallery = page.locator('#works > .lead-film .poster-carousel');
   const visible = gallery.locator('img:visible');
   await expect(visible).toHaveAttribute('src', 'media/films/facing-the-mirror.jpg');
   await gallery.getByRole('button', { name: 'Next poster' }).click();
@@ -578,4 +578,45 @@ test('teaser loads on demand, plays locally, and stops when closed', async ({ pa
   await expect(page.locator('#video-frame')).toBeVisible();
   await expect(player).toBeHidden();
   await expect(page.locator('#video-external')).toBeVisible();
+});
+
+test('new film sits left of Trace and has independent posters and trailer', async ({ page }) => {
+  await page.goto('/index.html#works');
+  const cards = page.locator('.film-grid .film-card');
+  await expect(cards.nth(0).getByRole('heading')).toHaveText('Until I Say Stop');
+  await expect(cards.nth(1).getByRole('heading')).toHaveText('To Leave a Trace');
+  const card = cards.nth(0);
+  const posters = card.locator('.poster-carousel');
+  for (const name of ['duet', 'cast', 'emily', 'yellow']) {
+    await expect(posters.locator('img:visible')).toHaveAttribute('src', `media/films/until-i-say-stop-${name}.jpg`);
+    await posters.getByRole('button', { name: 'Next poster' }).click();
+  }
+  await expect(page.locator('#works > .lead-film .poster-count')).toHaveText('1 / 4');
+  await expect(card.locator('.film-credits')).toContainText('Eleanor Liʻulā Svaton');
+  await card.getByRole('button', { name: /Watch trailer/ }).click();
+  await expect(page.locator('#video-dialog-title')).toHaveText('Until I Say Stop — Trailer');
+  const player = page.locator('#teaser-player');
+  await expect(player).toHaveAttribute('poster', 'media/films/until-i-say-stop-duet.jpg');
+  await expect.poll(() => player.evaluate(v => v.videoWidth)).toBe(1920);
+  await expect.poll(() => player.evaluate(v => v.currentTime)).toBeGreaterThan(0);
+  await page.keyboard.press('Escape');
+  await expect(player).toHaveJSProperty('paused', true);
+  await expect(player).not.toHaveAttribute('src');
+});
+
+test('new film posters can be swiped on a phone', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 900 }, hasTouch: true, reducedMotion: 'reduce' });
+  const page = await context.newPage();
+  await page.goto('/index.html#until-i-say-stop');
+  const posters = page.locator('#until-i-say-stop .poster-carousel');
+  await posters.scrollIntoViewIfNeeded();
+  const box = await posters.boundingBox();
+  const client = await context.newCDPSession(page);
+  const y = box.y + box.height / 2;
+  await client.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: box.x + box.width * .75, y }] });
+  await client.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: box.x + box.width * .25, y }] });
+  await client.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await expect(posters.locator('.poster-count')).toHaveText('2 / 4');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await context.close();
 });
