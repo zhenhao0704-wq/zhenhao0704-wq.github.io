@@ -558,3 +558,24 @@ test('featured posters switch manually without opening the film', async ({ page 
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   }
 });
+
+test('teaser loads on demand, plays locally, and stops when closed', async ({ page }) => {
+  await page.goto('/index.html#works');
+  const player = page.locator('#teaser-player');
+  await expect(player).not.toHaveAttribute('src');
+  const trigger = page.getByRole('button', { name: /Watch teaser/ });
+  await trigger.click();
+  await expect(player).toBeVisible();
+  await expect.poll(() => player.evaluate(v => v.videoWidth)).toBe(1920);
+  await expect.poll(() => player.evaluate(v => v.currentTime)).toBeGreaterThan(0);
+  await expect(player).toHaveJSProperty('muted', false);
+  await expect(page.locator('#video-external')).toBeHidden();
+  await page.keyboard.press('Escape');
+  await expect(player).toHaveJSProperty('paused', true);
+  await expect(player).not.toHaveAttribute('src');
+  await expect(trigger).toBeFocused();
+  await page.getByRole('button', { name: 'Watch Facing the Mirror', exact: true }).click();
+  await expect(page.locator('#video-frame')).toBeVisible();
+  await expect(player).toBeHidden();
+  await expect(page.locator('#video-external')).toBeVisible();
+});
