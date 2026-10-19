@@ -395,6 +395,7 @@ document.querySelectorAll("[data-video-src]").forEach((button) => {
     videoFrame.hidden = true;
     videoExternal.hidden = true;
     teaserPlayer.hidden = false;
+    teaserPlayer.poster = button.dataset.videoPoster || "";
     teaserPlayer.src = button.dataset.videoSrc;
     videoDialog.showModal();
     teaserPlayer.play().catch(() => { /* Native controls remain available. */ });
@@ -551,7 +552,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") renderViewer(activeImageIndex + 1);
 });
 
-// Posters change only when a visitor presses a navigation button.
+// Posters change only through manual navigation or a horizontal touch swipe.
 document.querySelectorAll(".poster-carousel").forEach((carousel) => {
   const posters = [...carousel.querySelectorAll("img")];
   const controls = carousel.querySelector(".poster-controls");
@@ -565,5 +566,19 @@ document.querySelectorAll(".poster-carousel").forEach((carousel) => {
   }
   carousel.querySelector(".poster-arrow--prev").addEventListener("click", () => changePoster(-1));
   carousel.querySelector(".poster-arrow--next").addEventListener("click", () => changePoster(1));
+  let touchStart = null;
+  carousel.addEventListener("pointerdown", (event) => {
+    if (event.pointerType !== "touch" || event.target.closest("button")) return;
+    touchStart = { x: event.clientX, y: event.clientY };
+    carousel.setPointerCapture(event.pointerId);
+  });
+  carousel.addEventListener("pointerup", (event) => {
+    if (!touchStart) return;
+    const dx = event.clientX - touchStart.x;
+    const dy = event.clientY - touchStart.y;
+    touchStart = null;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) changePoster(dx < 0 ? 1 : -1);
+  });
+  carousel.addEventListener("pointercancel", () => { touchStart = null; });
   controls.hidden = false;
 });

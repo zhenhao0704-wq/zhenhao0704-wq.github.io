@@ -7,9 +7,9 @@
   <title>Zhenhao Wen</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="redesign.css?v=20261019-credits">
+<link rel="stylesheet" href="redesign.css?v=20261019-until-stop">
   <script src="gallery-data.js?v=20260812-3" defer></script>
-  <script src="redesign.js?v=20261019-teaser" defer></script>
+  <script src="redesign.js?v=20261019-until-stop" defer></script>
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -79,7 +79,7 @@
     <section class="content-section" id="works">
       <header class="section-head" data-reveal>
         <h2>Dance Films</h2>
-        <p>Seven dance films made between 2022 and the present. Completed films can be watched here.</p>
+        <p>Dance films, 2022–present. Watch completed films and previews of new work.</p>
       </header>
 
       <article class="lead-film" data-reveal>
@@ -108,13 +108,36 @@
             <p style="margin: 0; color: var(--text-meta); font-size: .88rem; line-height: 1.5;">Selected — MORPHÉ Film Festival 2027, Ukraine · Experimental/New Media</p>
           </div>
           <div class="film-actions">
-            <button class="action-link teaser-link" type="button" data-video-src="media/films/facing-the-mirror-teaser-1080p.mp4" data-video-title="Facing the Mirror — Teaser">▷ Watch teaser · 0:22</button>
+            <button class="action-link teaser-link" type="button" data-video-src="media/films/facing-the-mirror-teaser-1080p.mp4" data-video-poster="media/films/facing-the-mirror-gesture.jpg" data-video-title="Facing the Mirror — Teaser">▷ Watch teaser · 0:22</button>
             <button class="action-link" type="button" data-video-id="gpn135WJceQ" data-video-title="Facing the Mirror" aria-label="Watch Facing the Mirror">Watch full film · 9:30</button>
           </div>
         </div>
       </article>
 
       <div class="film-grid" role="list" aria-label="More dance films">
+        <article class="film-card" id="until-i-say-stop" role="listitem" data-reveal>
+          <figure class="film-card-media poster-carousel" aria-label="Until I Say Stop posters">
+            <img src="media/films/until-i-say-stop-duet.jpg" alt="Until I Say Stop poster showing two performers facing each other" loading="lazy" width="1920" height="1080">
+            <img src="media/films/until-i-say-stop-cast.jpg" alt="Until I Say Stop poster with portraits of the three cast members" loading="lazy" width="1920" height="1080" hidden>
+            <img src="media/films/until-i-say-stop-emily.jpg" alt="Until I Say Stop poster showing Emily Johnston beside a mirror" loading="lazy" width="1280" height="720" hidden>
+            <img src="media/films/until-i-say-stop-yellow.jpg" alt="Yellow Until I Say Stop poster showing a dancer extending one leg upward" loading="lazy" width="1280" height="720" hidden>
+            <div class="poster-controls" hidden>
+              <button class="poster-arrow poster-arrow--prev" type="button" aria-label="Previous poster">‹</button>
+              <button class="poster-arrow poster-arrow--next" type="button" aria-label="Next poster">›</button>
+              <span class="poster-count" aria-live="polite" aria-atomic="true">1 / 4</span>
+            </div>
+          </figure>
+          <div class="film-card-copy">
+            <div class="title-block"><h3>Until I Say Stop</h3><p class="item-meta">Dance film · In progress</p></div>
+            <p class="film-credits">Director, Editor &amp; Producer: Zhenhao Wen<br>
+              Composer: Yunxin An<br>
+              Starring: Maelynn Ferrell, Eleanor Liʻulā Svaton, Emily Johnston</p>
+            <div class="film-actions">
+              <button class="action-link teaser-link" type="button" data-video-src="media/films/until-i-say-stop-trailer-1080p.mp4" data-video-poster="media/films/until-i-say-stop-duet.jpg" data-video-title="Until I Say Stop — Trailer">▷ Watch trailer · 0:36</button>
+            </div>
+          </div>
+        </article>
+
         <article class="film-card" role="listitem" data-reveal>
           <button class="film-card-media" type="button" data-video-id="7V75O94rXgM" data-video-title="To Leave a Trace" aria-label="Play To Leave a Trace">
             <img src="media/films/to-leave-a-trace-still.jpg" alt="Film still from To Leave a Trace" loading="lazy" width="1600" height="642" style="object-fit: contain;">
