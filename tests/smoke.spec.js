@@ -16,12 +16,13 @@ test('home page loads without errors and exposes the complete navigation', async
   await page.goto('/index.html#about');
   await expect(page).toHaveTitle(/Zhenhao Wen/i);
   await expect(page.locator('#main')).not.toHaveAttribute('inert', '');
-  await expect(page.locator('#site-nav a')).toHaveCount(9);
+  await expect(page.locator('#site-nav a')).toHaveCount(10);
   expect(await page.locator('#site-nav a').allTextContents()).toEqual([
     'About',
     'Dance Films',
     'Performance',
     'Research',
+    'Conferences',
     'Photography',
     'CV',
     'Teaching',
@@ -30,7 +31,7 @@ test('home page loads without errors and exposes the complete navigation', async
   ]);
   expect(await page.locator('#main > section.content-section').evaluateAll((sections) =>
     sections.map((section) => section.id),
-  )).toEqual(['about', 'works', 'performance', 'research', 'photography', 'cv', 'teaching', 'travel', 'contact']);
+  )).toEqual(['about', 'works', 'performance', 'research', 'conferences', 'photography', 'cv', 'teaching', 'travel', 'contact']);
   await expect(page.getByRole('heading', { name: 'About', exact: true })).toBeVisible();
   expect(ownCodeErrors(errors), ownCodeErrors(errors).join('\n')).toEqual([]);
 });
@@ -44,12 +45,13 @@ test('the typography separates module labels from content titles', async ({ page
     '.home-page #about .about-copy > h2',
     '.home-page #contact > h2',
   ].join(', '));
-  await expect(moduleTitles).toHaveCount(9);
+  await expect(moduleTitles).toHaveCount(10);
   expect(await moduleTitles.allTextContents()).toEqual([
     'About',
     'Dance Films',
     'Performance',
     'Research',
+    'Conferences',
     'Photography',
     'CV',
     'Teaching',
@@ -62,8 +64,8 @@ test('the typography separates module labels from content titles', async ({ page
   }))).toBe(true);
 
   const sizes = await moduleTitles.evaluateAll((titles) => titles.map((title) => Number.parseFloat(getComputedStyle(title).fontSize)));
-  expect(Math.max(...sizes.slice(0, 8))).toBeLessThanOrEqual(56);
-  expect(Math.max(...sizes.slice(8))).toBeLessThan(Math.max(...sizes.slice(0, 8)));
+  expect(Math.max(...sizes.slice(0, -1))).toBeLessThanOrEqual(56);
+  expect(sizes.at(-1)).toBeLessThan(Math.max(...sizes.slice(0, -1)));
 
   expect(await page.locator('.landing h1').evaluate((title) => getComputedStyle(title).textTransform)).toBe('none');
   expect(await page.locator('.film-card-copy h3').first().evaluate((title) => getComputedStyle(title).textTransform)).toBe('none');
@@ -475,13 +477,32 @@ test('research journals share the new system and keep their content structure', 
 test('the full CV includes all substantive entries', async ({ page }) => {
   await page.goto('/cv.html');
   await expect(page.getByRole('heading', { level: 1, name: 'Zhenhao Wen' })).toBeVisible();
-  await expect(page.locator('.cv-rows article')).toHaveCount(27);
-  await expect(page.getByText('Publications and presentations', { exact: true })).toBeVisible();
+  await expect(page.locator('.cv-rows article')).toHaveCount(30);
+  await expect(page.getByText('Publications and manuscripts', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Conference presentations', exact: true })).toBeVisible();
   await expect(page.getByText('Performances and production', { exact: true })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Print / save PDF' })).toBeVisible();
   await page.emulateMedia({ media: 'print' });
   await expect(page.getByRole('button', { name: 'Print / save PDF' })).toBeHidden();
   expect(await page.locator('body').evaluate((body) => getComputedStyle(body).backgroundColor)).toBe('rgb(255, 255, 255)');
+});
+
+test('conference records have a dedicated section and preserve presentation status', async ({ page }) => {
+  await page.goto('/index.html#conferences');
+  await expect(page.locator('#conferences .conference-entry')).toHaveCount(3);
+  await expect(page.locator('#cv')).not.toContainText('Dance Studies Association');
+  await page.getByRole('link', { name: 'Open conference record', exact: true }).click();
+  await expect(page).toHaveURL(/conferences\.html$/);
+  await expect(page.locator('#presented').locator('..').locator('article')).toHaveCount(4);
+  await expect(page.locator('#upcoming').locator('..').locator('article')).toHaveCount(1);
+  await expect(page.locator('#not-presented').locator('..').locator('article')).toHaveCount(2);
+  await expect(page.locator('#dsa-2026')).toContainText('Paper presented');
+  await expect(page.locator('#pca-2027')).toContainText('Accepted for presentation');
+  await expect(page.locator('#pacrim-2026')).toContainText('not presented');
+  await page.getByRole('link', { name: 'Full CV', exact: true }).click();
+  await expect(page).toHaveURL(/cv\.html#cv-conferences$/);
+  await expect(page.locator('#cv-conferences').locator('..').locator('article')).toHaveCount(7);
+  await expect(page.locator('#cv-publications').locator('..')).not.toContainText('What If the Archive Already Failed?');
 });
 
 test('teaching archive images remain secondary to the teaching information', async ({ page }) => {
@@ -494,11 +515,12 @@ test('teaching archive images remain secondary to the teaching information', asy
 test('desktop and mobile pages do not overflow', async ({ page }) => {
   for (const viewport of [
     { width: 1440, height: 900 },
+    { width: 1100, height: 900 },
     { width: 768, height: 900 },
     { width: 390, height: 844 },
   ]) {
     await page.setViewportSize(viewport);
-    for (const url of ['/index.html#top', '/cv.html', '/bodies-left-out.html', '/epic.html']) {
+    for (const url of ['/index.html#top', '/cv.html', '/conferences.html', '/bodies-left-out.html', '/epic.html']) {
       await page.goto(url);
       const width = await page.evaluate(() => document.documentElement.scrollWidth);
       expect(width, `${url} overflows at ${viewport.width}px`).toBeLessThanOrEqual(viewport.width);
