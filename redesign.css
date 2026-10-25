@@ -187,6 +187,12 @@ button.film-card-media:hover { border-color: var(--line-strong); }
 .upcoming-list p:not(.item-meta) { color: var(--text-body); }
 .upcoming-list .item-meta { color: var(--text-meta); }
 
+.conference-list { border-top: 1px solid var(--line); }
+.conference-entry { display: grid; grid-template-columns: minmax(0,1fr) minmax(10rem,.25fr); gap: 2rem; align-items: start; padding: 1.65rem 0; border-bottom: 1px solid var(--line); }
+.conference-entry h3 { max-width: 48rem; margin: 0; font-size: var(--fs-item); font-weight: 500; line-height: 1.3; letter-spacing: -.018em; }
+.conference-entry .item-meta { margin: .7rem 0 0; line-height: 1.6; }
+.conference-entry time { color: var(--text-meta); font-size: var(--fs-meta); text-align: right; }
+
 .photo-project-grid { max-width: 1180px; }
 .photo-project .wall-label { grid-template-columns: minmax(0,.9fr) minmax(14rem,.7fr); }
 .photo-project .wall-label .action-link { grid-column: 1 / -1; justify-self: start; }
@@ -319,6 +325,8 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding: 1.4r
   .film-grid, .research-grid, .photo-project-grid { grid-template-columns: 1fr; }
   .film-card { margin-inline: auto; }
   .upcoming-list article { grid-template-columns: 1fr; gap: .4rem; }
+  .conference-entry { grid-template-columns: 1fr; gap: .75rem; }
+  .conference-entry time { text-align: left; }
   .travel-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .future-travel { grid-template-columns: 1fr; }
   .future-travel ul { grid-template-columns: repeat(2,1fr); }
