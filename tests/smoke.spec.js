@@ -475,7 +475,7 @@ test('research journals share the new system and keep their content structure', 
 test('the full CV includes all substantive entries', async ({ page }) => {
   await page.goto('/cv.html');
   await expect(page.getByRole('heading', { level: 1, name: 'Zhenhao Wen' })).toBeVisible();
-  await expect(page.locator('.cv-rows article')).toHaveCount(26);
+  await expect(page.locator('.cv-rows article')).toHaveCount(27);
   await expect(page.getByText('Publications and presentations', { exact: true })).toBeVisible();
   await expect(page.getByText('Performances and production', { exact: true })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Print / save PDF' })).toBeVisible();
