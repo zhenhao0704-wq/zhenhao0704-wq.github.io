@@ -252,6 +252,7 @@ footer { display: flex; justify-content: space-between; gap: 2rem; padding: 1.4r
 .cv-hero > p:last-child { margin: 0; color: var(--text-body); }
 .cv-group { display: grid; grid-template-columns: minmax(13rem,.38fr) minmax(0,1fr); gap: clamp(2rem, 5vw, 5rem); padding: clamp(3rem, 6vw, 5rem) 0; border-top: 1px solid var(--line); }
 .cv-group > h2 { margin: 0; font-size: clamp(1.1rem, calc(1rem + .55vw), 1.35rem); font-weight: 600; font-stretch: 88%; line-height: 1.18; letter-spacing: .06em; text-transform: uppercase; }
+.cv-group > h2[id] { scroll-margin-top: 5rem; }
 .cv-rows { border-top: 1px solid var(--line); }
 .cv-rows article { display: grid; grid-template-columns: minmax(0,1fr) minmax(8rem,.25fr); gap: 2rem; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
 .cv-rows h3 { margin: 0; font-size: 1.05rem; font-weight: 500; line-height: 1.35; }
