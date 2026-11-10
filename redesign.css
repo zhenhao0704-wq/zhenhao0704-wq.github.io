@@ -150,6 +150,18 @@ h3 + .item-meta { margin-top: .52rem; }
 .lead-film + .lead-film { margin-top: clamp(4rem, 8vw, 7rem); }
 .lead-film-image { display: block; margin: 0; background: #000; }
 .lead-film-image img { display: block; width: 100%; height: auto; }
+.yellow-river-history { max-width: 800px; margin-top: 1.5rem; }
+.yellow-river-recording { scroll-margin-top: 6rem; }
+.yellow-river-recording video { display: block; width: 100%; height: auto; margin-top: 1.25rem; background: #000; }
+.yellow-river-history, #performance-history { scroll-margin-top: 6rem; }
+.yellow-river-history h4 { margin: 0; color: var(--text-meta); font-size: .82rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+.performance-history { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: .75rem 1.5rem; margin: 1.25rem 0 0; padding: 0; }
+.performance-history dt { color: var(--text-meta); font-size: .82rem; line-height: 1.6; }
+.performance-history dd { margin: 0; color: var(--text-body); font-size: .95rem; line-height: 1.6; }
+@media (max-width: 620px) {
+  .performance-history { grid-template-columns: minmax(0, 1fr); gap: .25rem; }
+  .performance-history dd { margin-bottom: 1rem; }
+}
 .lead-film-image--poster { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 9; box-sizing: border-box; padding: 1rem; overflow: hidden; background: #0d0d0d; }
 .lead-film-image--poster img { width: auto; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; border: 1px solid rgba(255,255,255,.14); }
 .festival-cover-link { color: inherit; }
