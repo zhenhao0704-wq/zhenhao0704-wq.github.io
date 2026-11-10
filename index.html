@@ -7,9 +7,9 @@
   <title>Zhenhao Wen</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="redesign.css?v=20261110-teaching-align">
+  <link rel="stylesheet" href="redesign.css?v=20261110-contact">
   <script src="gallery-data.js?v=20260812-3" defer></script>
-  <script src="redesign.js?v=20261019-until-stop" defer></script>
+  <script src="redesign.js?v=20261110-contact" defer></script>
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -497,7 +497,7 @@
       <h2>Contact</h2>
       <p>For collaborations, research, teaching, and photography enquiries.</p>
       <div class="contact-links">
-        <a href="mailto:zhenhao0704@gmail.com">Email Zhenhao</a>
+        <a href="mailto:zhenhao0704@gmail.com" id="email-contact" aria-haspopup="dialog" aria-controls="email-contact-dialog">Email Zhenhao</a>
         <a href="https://www.instagram.com/zhenhaow74/" target="_blank" rel="noreferrer">Instagram @zhenhaow74</a>
       </div>
     </section>
@@ -508,6 +508,20 @@
     <span>© 2026 Zhenhao Wen</span>
     <span>Photographs by the artist unless credited</span>
   </footer>
+
+  <dialog class="email-dialog" id="email-contact-dialog" aria-labelledby="email-contact-title">
+    <div class="email-dialog-header">
+      <h2 id="email-contact-title">Email Zhenhao</h2>
+      <form method="dialog"><button class="dialog-close" type="submit">Close</button></form>
+    </div>
+    <p class="email-address" id="contact-email-address">zhenhao0704@gmail.com</p>
+    <div class="email-options">
+      <a class="action-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=zhenhao0704%40gmail.com" target="_blank" rel="noopener">Open Gmail</a>
+      <a class="action-link" href="mailto:zhenhao0704@gmail.com">Open email app</a>
+      <button class="action-link" id="copy-contact-email" type="button">Copy email address</button>
+    </div>
+    <p class="email-copy-status" id="email-copy-status" role="status"></p>
+  </dialog>
 
   <dialog class="video-dialog" id="video-dialog" aria-labelledby="video-dialog-title">
     <div class="dialog-bar">

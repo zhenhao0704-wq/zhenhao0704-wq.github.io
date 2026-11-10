@@ -268,6 +268,15 @@ button.film-card-media:hover { border-color: var(--line-strong); }
 .contact-links { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2.25rem; }
 .contact-links a { min-height: 44px; padding: .55rem 0; border-bottom: 1px solid var(--line-strong); }
 
+.email-dialog { width: min(92vw, 36rem); padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--line-strong); background: var(--black); color: var(--text-primary); }
+.email-dialog::backdrop { background: rgba(0,0,0,.85); backdrop-filter: blur(10px); }
+.email-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.email-dialog-header h2 { margin: 0; font-size: 1.35rem; font-weight: 500; }
+.email-dialog-header form { margin: 0; }
+.email-address { margin: 2rem 0 1.25rem; color: var(--text-body); font-size: clamp(1.1rem, 4vw, 1.55rem); overflow-wrap: anywhere; user-select: all; }
+.email-options { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; }
+.email-copy-status { min-height: 1.5em; margin: 1rem 0 0; color: var(--text-meta); font-size: .9rem; }
+
 footer { display: flex; justify-content: space-between; gap: 2rem; padding: 1.4rem var(--pad); color: var(--text-faint); border-top: 1px solid var(--line); font-size: var(--fs-meta); }
 
 .subpage { padding-top: 3.75rem; }

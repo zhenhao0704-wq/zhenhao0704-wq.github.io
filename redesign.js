@@ -365,6 +365,32 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 1080) closeMenu();
 });
 
+const emailContact = document.getElementById("email-contact");
+const emailContactDialog = document.getElementById("email-contact-dialog");
+const emailCopyStatus = document.getElementById("email-copy-status");
+if (emailContact && emailContactDialog) {
+  emailContact.addEventListener("click", (event) => {
+    if (typeof emailContactDialog.showModal !== "function") return;
+    event.preventDefault();
+    emailCopyStatus.textContent = "";
+    emailContactDialog.showModal();
+  });
+  emailContactDialog.addEventListener("close", () => emailContact.focus());
+  emailContactDialog.addEventListener("click", (event) => {
+    if (event.target !== emailContactDialog) return;
+    const bounds = emailContactDialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) emailContactDialog.close();
+  });
+  document.getElementById("copy-contact-email").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText("zhenhao0704@gmail.com");
+      emailCopyStatus.textContent = "Email address copied.";
+    } catch {
+      emailCopyStatus.textContent = "Select the email address above to copy it.";
+    }
+  });
+}
+
 const videoDialog = document.getElementById("video-dialog");
 const videoFrame = document.getElementById("video-frame");
 const teaserPlayer = document.getElementById("teaser-player");
