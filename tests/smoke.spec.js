@@ -477,13 +477,20 @@ test('research journals share the new system and keep their content structure', 
 test('the full CV includes all substantive entries', async ({ page }) => {
   await page.goto('/cv.html');
   await expect(page.getByRole('heading', { level: 1, name: 'Zhenhao Wen' })).toBeVisible();
-  await expect(page.locator('.cv-rows article')).toHaveCount(35);
+  await expect(page.locator('.cv-rows article')).toHaveCount(92);
   await expect(page.getByText('Publications and manuscripts', { exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Conference presentations', exact: true })).toBeVisible();
   await expect(page.getByText('Performances and production', { exact: true })).toBeVisible();
-  await expect(page.getByRole('button', { name: 'Print / save PDF' })).toBeVisible();
+  const download = page.getByRole('link', { name: 'Download complete CV (PDF)', exact: true });
+  await expect(download).toHaveAttribute('href', 'documents/Zhenhao_Wen_CV.pdf?v=20261109-v12');
+  await expect(download).toHaveAttribute('download', 'Zhenhao_Wen_CV_2026-11-09.pdf');
+  await expect(page.locator('.cv-version')).toContainText('9 November 2026');
+  await expect(page.getByRole('button', { name: 'Print this page' })).toBeVisible();
+  await expect(page.locator('#cv-publications').locator('..')).toContainText('awaiting proofs');
+  await expect(page.locator('#cv-teaching').locator('..')).toContainText('Archives and Digital Preservation');
+  await expect(page.locator('#cv-performance').locator('..')).toContainText(/one of three rotating principal performers/i);
   await page.emulateMedia({ media: 'print' });
-  await expect(page.getByRole('button', { name: 'Print / save PDF' })).toBeHidden();
+  await expect(page.getByRole('button', { name: 'Print this page' })).toBeHidden();
   expect(await page.locator('body').evaluate((body) => getComputedStyle(body).backgroundColor)).toBe('rgb(255, 255, 255)');
 });
 
