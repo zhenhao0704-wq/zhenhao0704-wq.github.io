@@ -365,6 +365,15 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 1080) closeMenu();
 });
 
+const guestbookFrame = document.getElementById("guestbook-frame");
+if (guestbookFrame) {
+  window.addEventListener("message", (event) => {
+    if (event.origin !== "https://zhenhao-guestbook.coral-isle-0139.chatgpt.site" || event.source !== guestbookFrame.contentWindow) return;
+    if (event.data?.type !== "zhenhao-guestbook:resize" || !Number.isFinite(event.data.height)) return;
+    guestbookFrame.style.height = `${Math.max(420, Math.min(6000, event.data.height))}px`;
+  });
+}
+
 const emailContact = document.getElementById("email-contact");
 const emailContactDialog = document.getElementById("email-contact-dialog");
 const emailCopyStatus = document.getElementById("email-copy-status");
