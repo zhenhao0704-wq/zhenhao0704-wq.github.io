@@ -170,6 +170,18 @@ h3 + .item-meta { margin-top: .52rem; }
 .wall-label > p { max-width: 31rem; margin: .05rem 0 0; color: var(--text-body); }
 .film-screening-link { display: block; width: fit-content; margin-top: .8rem; color: var(--text-meta); font-size: .88rem; line-height: 1.5; border-bottom: 1px solid var(--line); }
 .film-screening-link:hover { color: var(--text-primary); border-color: var(--line-strong); }
+.film-awards { margin-top: 1.5rem; }
+.film-awards h4 { margin: 0 0 1rem; scroll-margin-top: 6rem; color: var(--text-meta); font-size: .82rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+.film-awards-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.film-awards-grid figure { min-width: 0; margin: 0; }
+.film-awards-grid a { display: block; border: 1px solid var(--line); transition: border-color .2s ease; }
+.film-awards-grid a:hover, .film-awards-grid a:focus-visible { border-color: var(--line-strong); }
+.film-awards-grid a:focus-visible { outline: 2px solid var(--text-primary); outline-offset: 4px; }
+.film-awards-grid img { display: block; width: 100%; height: auto; }
+.film-awards-grid figcaption { margin-top: .65rem; color: var(--text-meta); font-size: .82rem; line-height: 1.5; }
+@media (max-width: 620px) {
+  .film-awards-grid { grid-template-columns: minmax(0, 1fr); }
+}
 .wall-label .action-link { justify-self: end; }
 .wall-label:has(.performance-press-quote) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, .9fr); }
 .wall-label .performance-press-quote { margin: 0; min-width: 0; }
