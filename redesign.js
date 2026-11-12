@@ -70,6 +70,14 @@ function revealIntroName() {
   introNameTimeout = window.setTimeout(finishIntro, 3200);
 }
 
+function scheduleIntroFallback() {
+  window.clearTimeout(introFallbackTimeout);
+  const remaining = Number.isFinite(introVideo.duration)
+    ? Math.max(0, introVideo.duration - introVideo.currentTime) * 1000
+    : 14000;
+  introFallbackTimeout = window.setTimeout(revealIntroName, Math.max(16000, remaining + 2000));
+}
+
 function startIntro() {
   const source = introVideo?.querySelector("source[data-src]");
   if (!intro || !introVideo || !introName || !source) return;
@@ -85,7 +93,7 @@ function startIntro() {
   source.src = source.dataset.src;
   introVideo.load();
   introStartupTimeout = window.setTimeout(revealIntroName, 4500);
-  introFallbackTimeout = window.setTimeout(revealIntroName, 16000);
+  scheduleIntroFallback();
 
   const playAttempt = introVideo.play();
   if (playAttempt) playAttempt.catch(revealIntroName);
@@ -94,6 +102,9 @@ function startIntro() {
 skipLink.addEventListener("click", () => finishIntro({ moveFocus: true }));
 introSkip.addEventListener("click", () => finishIntro({ moveFocus: true }));
 introVideo.addEventListener("ended", revealIntroName);
+introVideo.addEventListener("loadedmetadata", () => {
+  if (introPhase === "video") scheduleIntroFallback();
+});
 introVideo.addEventListener("playing", () => window.clearTimeout(introStartupTimeout));
 ["error", "abort"].forEach((eventName) => introVideo.addEventListener(eventName, revealIntroName));
 introVideo.addEventListener("timeupdate", () => {
