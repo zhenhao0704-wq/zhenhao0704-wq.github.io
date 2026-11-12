@@ -119,7 +119,7 @@ test('the intro plays once, remains skippable, and return visits go straight to 
 
   await expect(page.locator('body')).toHaveClass(/intro-active/);
   await expect(page.locator('#main')).toHaveAttribute('inert', '');
-  await expect(page.locator('#intro-video')).toHaveAttribute('poster', 'media/intro-poster.jpg');
+  await expect(page.locator('#intro-video')).toHaveAttribute('poster', 'media/intro-poster.jpg?v=20261111-intro-r2');
   await page.locator('#intro-skip').click();
 
   await expect(page.locator('body')).not.toHaveClass(/intro-active/);
@@ -193,7 +193,7 @@ test('the landing page loops the visual opening and keeps a static motion fallba
 
   await expect(page.locator('.landing-video')).toHaveCount(2);
   await expect(page.locator('.landing-video').first()).toHaveAttribute('poster', 'media/landing-poster.jpg');
-  await expect(page.locator('#intro-video source[data-src="media/intro.mp4?v=20261111-yellow-river"]')).toHaveCount(1);
+  await expect(page.locator('#intro-video source[data-src="media/intro.mp4?v=20261111-intro-r2"]')).toHaveCount(1);
   await expect(page.locator('.landing-video source[data-src="media/landing-loop.mp4"]')).toHaveCount(2);
   await expect(page.locator('.landing-video').first()).toHaveJSProperty('playbackRate', 1);
   const duration = await page.locator('.landing-video').first().evaluate((video) => video.duration);
