@@ -7,9 +7,9 @@
   <title>Zhenhao Wen</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="redesign.css?v=20261114-background-r6">
+  <link rel="stylesheet" href="redesign.css?v=20261114-guestbook-ready">
   <script src="gallery-data.js?v=20260812-3" defer></script>
-  <script src="redesign.js?v=20261114-background-r6" defer></script>
+  <script src="redesign.js?v=20261114-guestbook-ready" defer></script>
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -535,8 +535,11 @@
       <section class="guestbook-block" id="guestbook" aria-labelledby="guestbook-title">
         <h3 id="guestbook-title">Leave a note</h3>
         <p>No account needed. Messages appear after review.</p>
-        <iframe id="guestbook-frame" src="https://zhenhao-guestbook.coral-isle-0139.chatgpt.site/embed?v=20261112-dark" title="Zhenhao Wen guestbook" loading="lazy" style="background: #0a0a09; color-scheme: dark;" height="620" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        <p class="guestbook-fallback"><a href="https://zhenhao-guestbook.coral-isle-0139.chatgpt.site/?v=20261112-dark" target="_blank" rel="noopener">Open guestbook in a new tab</a></p>
+        <div class="guestbook-embed" id="guestbook-embed" aria-busy="true">
+          <p class="guestbook-loading" id="guestbook-loading" role="status">Loading guestbook…</p>
+          <iframe id="guestbook-frame" src="https://zhenhao-guestbook.coral-isle-0139.chatgpt.site/embed?v=20261114-ready" title="Zhenhao Wen guestbook" loading="lazy" style="background: #0a0a09; color-scheme: dark; opacity: 0;" height="620" tabindex="-1" inert referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="guestbook-fallback"><a href="https://zhenhao-guestbook.coral-isle-0139.chatgpt.site/?v=20261114-ready" target="_blank" rel="noopener">Open guestbook in a new tab</a></p>
       </section>
     </section>
 

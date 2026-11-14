@@ -285,7 +285,12 @@ button.film-card-media:hover { border-color: var(--line-strong); }
 .guestbook-block { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--line); }
 .guestbook-block h3 { margin: 0 0 .6rem; font-size: 1.6rem; font-weight: 500; }
 .guestbook-block > p { color: var(--text-body); margin: 0 0 2rem; }
-.guestbook-block iframe { display: block; width: 100%; border: 0; background: var(--black); color-scheme: dark; }
+.guestbook-embed { position: relative; min-height: 420px; background: #0a0a09; color-scheme: dark; }
+.guestbook-loading { position: absolute; z-index: 1; inset: 0; display: grid; place-content: center; margin: 0; padding: 2rem; border: 1px solid var(--line); background: #0a0a09; color: var(--text-meta); text-align: center; }
+.guestbook-loading[hidden] { display: none; }
+.guestbook-block iframe { display: block; width: 100%; border: 0; background: #0a0a09; color-scheme: dark; }
+.guestbook-embed:not(.is-ready) iframe { pointer-events: none; }
+.guestbook-embed.is-ready { min-height: 0; }
 .guestbook-block .guestbook-fallback { margin: 1rem 0 0; font-size: var(--fs-meta); color: var(--text-meta); }
 
 .email-dialog { width: min(92vw, 36rem); padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--line-strong); background: var(--black); color: var(--text-primary); }

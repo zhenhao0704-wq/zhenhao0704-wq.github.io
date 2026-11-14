@@ -384,12 +384,50 @@ window.addEventListener("resize", () => {
 });
 
 const guestbookFrame = document.getElementById("guestbook-frame");
+const guestbookEmbed = document.getElementById("guestbook-embed");
+const guestbookLoading = document.getElementById("guestbook-loading");
 if (guestbookFrame) {
+  const guestbookOrigin = "https://zhenhao-guestbook.coral-isle-0139.chatgpt.site";
+  let guestbookReady = false;
+  let guestbookTimeout;
+  const requestGuestbookSize = () => {
+    guestbookFrame.contentWindow?.postMessage({ type: "zhenhao-guestbook:request-size" }, "*");
+  };
+  const revealGuestbook = () => {
+    if (guestbookReady) return;
+    guestbookReady = true;
+    window.clearTimeout(guestbookTimeout);
+    guestbookFrame.style.opacity = "1";
+    guestbookFrame.removeAttribute("inert");
+    guestbookFrame.removeAttribute("tabindex");
+    guestbookEmbed?.classList.add("is-ready");
+    guestbookEmbed?.setAttribute("aria-busy", "false");
+    if (guestbookLoading) guestbookLoading.hidden = true;
+  };
   window.addEventListener("message", (event) => {
-    if (event.origin !== "https://zhenhao-guestbook.coral-isle-0139.chatgpt.site" || event.source !== guestbookFrame.contentWindow) return;
+    if (event.origin !== guestbookOrigin || event.source !== guestbookFrame.contentWindow) return;
     if (event.data?.type !== "zhenhao-guestbook:resize" || !Number.isFinite(event.data.height)) return;
     guestbookFrame.style.height = `${Math.max(420, Math.min(6000, event.data.height))}px`;
+    if (event.data.ready === true) revealGuestbook();
   });
+  guestbookFrame.addEventListener("load", requestGuestbookSize);
+  requestGuestbookSize();
+  if ("IntersectionObserver" in window) {
+    const guestbookObserver = new IntersectionObserver(([entry]) => {
+      if (!entry?.isIntersecting) return;
+      if (!guestbookReady) {
+        requestGuestbookSize();
+        guestbookTimeout = window.setTimeout(() => {
+          if (!guestbookReady && guestbookLoading) {
+            guestbookLoading.textContent = "The guestbook is taking longer to load. Please use the link below to leave a note.";
+            guestbookEmbed?.setAttribute("aria-busy", "false");
+          }
+        }, 12000);
+      }
+      guestbookObserver.disconnect();
+    }, { rootMargin: "200px" });
+    guestbookObserver.observe(guestbookFrame);
+  }
 }
 
 const emailContact = document.getElementById("email-contact");
