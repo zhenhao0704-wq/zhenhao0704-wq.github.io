@@ -115,21 +115,17 @@ introVideo.addEventListener("timeupdate", () => {
 if (!reducedMotion && !saveData && !isDeepLink && !hasSeenIntro()) startIntro();
 
 const LANDING_LOOP_START = 0;
-const LANDING_LOOP_END = 21.9;
 const LANDING_PLAYBACK_RATE = 1;
 const LANDING_CROSSFADE = 0.55;
-const LANDING_CROSSFADE_POINT = LANDING_LOOP_END - LANDING_CROSSFADE * LANDING_PLAYBACK_RATE;
 const landingPortraitMedia = window.matchMedia?.("(orientation: portrait) and (max-width: 900px)");
 const LANDING_PORTRAIT_FOCUS = [
-  [0, 2.4, 58],
-  [2.4, 4.8, 42],
-  [4.8, 7.2, 50],
-  [7.2, 9.6, 35],
-  [9.6, 12.1, 72],
-  [12.1, 14.4, 50],
-  [14.4, 16.7, 50],
-  [16.7, 19.3, 72],
-  [19.3, 21.9, 45],
+  [0, 1.5, 50],
+  [1.5, 2.966667, 50],
+  [2.966667, 3.6, 70],
+  [3.6, 7.566667, 50],
+  [7.566667, 8.133333, 55],
+  [8.133333, 8.566667, 72],
+  [8.566667, Infinity, 50],
 ];
 let landingActiveVideo = landingVideos[0] || null;
 let landingStandbyVideo = landingVideos[1] || null;
@@ -153,10 +149,13 @@ function shouldPlayLanding() {
 
 function injectLandingSources() {
   if (landingInitialized) return;
+  const introSource = introVideo?.querySelector("source[data-src]")?.dataset.src;
   landingVideos.forEach((video) => {
     const source = video.querySelector("source[data-src]");
     if (!source) return;
+    source.dataset.src = introSource || source.dataset.src;
     source.src = source.dataset.src;
+    video.poster = introVideo?.getAttribute("poster") || video.poster;
     video.preload = "auto";
     video.defaultPlaybackRate = LANDING_PLAYBACK_RATE;
     video.playbackRate = LANDING_PLAYBACK_RATE;
@@ -250,15 +249,23 @@ function beginLandingCrossfade() {
   });
 }
 
+function landingLoopEnd(video) {
+  return Number.isFinite(video?.duration) && video.duration > 0 ? video.duration : 0;
+}
+
+function landingCrossfadePoint(video) {
+  return Math.max(LANDING_LOOP_START, landingLoopEnd(video) - LANDING_CROSSFADE * LANDING_PLAYBACK_RATE);
+}
+
 function monitorLandingLoop() {
   window.cancelAnimationFrame(landingAnimationFrame);
   const monitor = () => {
     if (!shouldPlayLanding() || !landingActiveVideo) return;
     landingVideos.forEach(updateLandingVideoFocus);
-    if (!landingCrossfading && landingActiveVideo.currentTime >= LANDING_CROSSFADE_POINT) {
+    if (!landingCrossfading && landingLoopEnd(landingActiveVideo) > 0 && landingActiveVideo.currentTime >= landingCrossfadePoint(landingActiveVideo)) {
       beginLandingCrossfade();
     }
-    if (!landingCrossfading && landingActiveVideo.currentTime >= LANDING_LOOP_END) {
+    if (!landingCrossfading && landingLoopEnd(landingActiveVideo) > 0 && landingActiveVideo.currentTime >= landingLoopEnd(landingActiveVideo)) {
       landingActiveVideo.currentTime = LANDING_LOOP_START;
     }
     landingAnimationFrame = window.requestAnimationFrame(monitor);
@@ -271,7 +278,7 @@ function startLandingPlayback() {
   injectLandingSources();
   landing.classList.remove("is-static");
   const currentTime = landingActiveVideo.currentTime;
-  const needsReset = !Number.isFinite(currentTime) || currentTime < LANDING_LOOP_START || currentTime >= LANDING_CROSSFADE_POINT;
+  const needsReset = !Number.isFinite(currentTime) || currentTime < LANDING_LOOP_START || currentTime >= landingCrossfadePoint(landingActiveVideo);
   const playAttempt = needsReset
     ? seekAndPlayLandingVideo(landingActiveVideo, LANDING_LOOP_START)
     : landingActiveVideo.play();
