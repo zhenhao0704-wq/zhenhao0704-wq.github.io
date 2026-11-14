@@ -658,3 +658,31 @@ test('new film posters can be swiped on a phone', async ({ browser }) => {
   await context.close();
 });
 
+
+test('the guestbook stays dark until its embedded page is ready without a click', async ({ page }) => {
+  await page.route('https://zhenhao-guestbook.coral-isle-0139.chatgpt.site/embed*', (route) => route.fulfill({
+    contentType: 'text/html',
+    body: `<html style="background:white"><body>Loading embedded page<script>
+      setTimeout(() => {
+        document.documentElement.style.background = '#0a0a09';
+        document.body.style.color = '#eeeae0';
+        document.body.textContent = 'Guestbook ready';
+        parent.postMessage({type:'zhenhao-guestbook:resize',height:440,ready:true}, '*');
+      }, 1800);
+    </script></body></html>`,
+  }));
+  await page.goto('/index.html#guestbook');
+  const frame = page.locator('#guestbook-frame');
+  const shell = page.locator('#guestbook-embed');
+  await expect(shell).toHaveCSS('background-color', 'rgb(10, 10, 9)');
+  await expect(frame).toHaveCSS('opacity', '0');
+  await expect(page.locator('#guestbook-loading')).toBeVisible();
+  await page.evaluate(() => window.postMessage({type:'zhenhao-guestbook:resize',height:440,ready:true}, '*'));
+  await expect(frame).toHaveCSS('opacity', '0');
+  await expect(shell).toHaveAttribute('aria-busy', 'false', { timeout: 7000 });
+  await expect(frame).toHaveCSS('opacity', '1');
+  await expect(frame).not.toHaveAttribute('inert');
+  await expect(frame).toHaveCSS('height', '440px');
+  await expect(page.locator('#guestbook-loading')).toBeHidden();
+  await expect(page.frameLocator('#guestbook-frame').getByText('Guestbook ready', {exact:true})).toBeVisible();
+});
