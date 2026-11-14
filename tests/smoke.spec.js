@@ -192,13 +192,21 @@ test('the landing page loops the visual opening and keeps a static motion fallba
   await page.locator('#intro-skip').click();
 
   await expect(page.locator('.landing-video')).toHaveCount(2);
-  await expect(page.locator('.landing-video').first()).toHaveAttribute('poster', 'media/landing-poster.jpg');
+  await expect(page.locator('.landing-video').first()).toHaveAttribute('poster', 'media/intro-poster.jpg?v=20261111-intro-r5');
   await expect(page.locator('#intro-video source[data-src="media/intro.mp4?v=20261111-intro-r6"]')).toHaveCount(1);
-  await expect(page.locator('.landing-video source[data-src="media/landing-loop.mp4"]')).toHaveCount(2);
+  const introSource = await page.locator('#intro-video source').getAttribute('data-src');
+  const landingSources = await page.locator('.landing-video source').evaluateAll((sources) => sources.map((source) => source.getAttribute('src')));
+  expect(landingSources).toEqual([introSource, introSource]);
   await expect(page.locator('.landing-video').first()).toHaveJSProperty('playbackRate', 1);
   const duration = await page.locator('.landing-video').first().evaluate((video) => video.duration);
-  expect(duration).toBeGreaterThan(21);
-  expect(duration).toBeLessThan(22.2);
+  expect(duration).toBeGreaterThan(14);
+  expect(duration).toBeLessThan(14.3);
+
+  const outgoing = page.locator('.landing-video.is-visible');
+  const outgoingId = await outgoing.getAttribute('id');
+  await outgoing.evaluate((video) => { video.currentTime = video.duration - 0.2; });
+  await expect.poll(() => page.locator('.landing-video.is-visible').getAttribute('id')).not.toBe(outgoingId);
+  await expect.poll(() => page.locator('.landing-video.is-visible').evaluate((video) => !video.paused)).toBe(true);
 
   const motionToggle = page.locator('#landing-motion-toggle');
   await expect(motionToggle).toBeVisible();
@@ -223,17 +231,17 @@ test('the portrait landing crop follows people across the longer native-speed ed
   expect(await page.evaluate(() => window.matchMedia('(orientation: portrait) and (max-width: 900px)').matches)).toBe(true);
 
   await activeVideo.evaluate((video) => {
-    Object.defineProperty(video, 'currentTime', { configurable: true, writable: true, value: 10.2 });
+    Object.defineProperty(video, 'currentTime', { configurable: true, writable: true, value: 8.2 });
     video.dispatchEvent(new Event('timeupdate'));
   });
   expect(await activeVideo.evaluate((video) => video.style.getPropertyValue('--landing-focus-x'))).toBe('72%');
   await expect.poll(() => activeVideo.evaluate((video) => getComputedStyle(video).objectPosition)).toBe('72% 50%');
 
   await activeVideo.evaluate((video) => {
-    video.currentTime = 20.5;
+    video.currentTime = 12.5;
     video.dispatchEvent(new Event('timeupdate'));
   });
-  await expect.poll(() => activeVideo.evaluate((video) => getComputedStyle(video).objectPosition)).toBe('45% 50%');
+  await expect.poll(() => activeVideo.evaluate((video) => getComputedStyle(video).objectPosition)).toBe('50% 50%');
 });
 
 test('titles consistently precede metadata and published films show verified durations', async ({ page }) => {
