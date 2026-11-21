@@ -193,10 +193,11 @@ test('the landing page loops the visual opening and keeps a static motion fallba
 
   await expect(page.locator('.landing-video')).toHaveCount(2);
   await expect(page.locator('.landing-video').first()).toHaveAttribute('poster', 'media/intro-poster.jpg?v=20261111-intro-r5');
-  await expect(page.locator('#intro-video source[data-src="media/intro.mp4?v=20261111-intro-r6"]')).toHaveCount(1);
+  await expect(page.locator('#intro-video source[data-src="media/intro-muted-bow.mp4?v=20261120-muted-bow"]')).toHaveCount(1);
   const introSource = await page.locator('#intro-video source').getAttribute('data-src');
   const landingSources = await page.locator('.landing-video source').evaluateAll((sources) => sources.map((source) => source.getAttribute('src')));
-  expect(landingSources).toEqual([introSource, introSource]);
+  expect(landingSources).toEqual(['media/intro.mp4?v=20261111-intro-r6', 'media/intro.mp4?v=20261111-intro-r6']);
+  expect(landingSources).not.toContain(introSource);
   await expect(page.locator('.landing-video').first()).toHaveJSProperty('playbackRate', 1);
   const duration = await page.locator('.landing-video').first().evaluate((video) => video.duration);
   expect(duration).toBeGreaterThan(14);
