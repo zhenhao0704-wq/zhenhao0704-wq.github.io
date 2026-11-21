@@ -204,6 +204,7 @@ test('the landing page loops the visual opening and keeps a static motion fallba
   expect(duration).toBeLessThan(14.3);
 
   const outgoing = page.locator('.landing-video.is-visible');
+  await expect.poll(() => outgoing.evaluate((video) => !video.paused && video.readyState >= 3 && video.currentTime > 0)).toBe(true);
   const outgoingId = await outgoing.getAttribute('id');
   await outgoing.evaluate((video) => { video.currentTime = video.duration - 0.2; });
   await expect.poll(() => page.locator('.landing-video.is-visible').getAttribute('id')).not.toBe(outgoingId);
