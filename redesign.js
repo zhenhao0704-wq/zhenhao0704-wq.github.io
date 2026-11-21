@@ -153,7 +153,7 @@ function injectLandingSources() {
   landingVideos.forEach((video) => {
     const source = video.querySelector("source[data-src]");
     if (!source) return;
-    source.dataset.src = introSource || source.dataset.src;
+    source.dataset.src = source.dataset.src || introSource;
     source.src = source.dataset.src;
     video.poster = introVideo?.getAttribute("poster") || video.poster;
     video.preload = "auto";
