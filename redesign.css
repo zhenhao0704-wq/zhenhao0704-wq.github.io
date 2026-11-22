@@ -174,7 +174,7 @@ h3 + .item-meta { margin-top: .52rem; }
 .film-screening-link:hover { color: var(--text-primary); border-color: var(--line-strong); }
 .film-awards { margin-top: 1.5rem; }
 .film-awards h4 { margin: 0 0 1rem; scroll-margin-top: 6rem; color: var(--text-meta); font-size: .82rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
-.film-awards-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.film-awards-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
 .film-awards-grid figure { min-width: 0; margin: 0; }
 .film-awards-grid a { display: block; border: 1px solid var(--line); transition: border-color .2s ease; }
 .film-awards-grid a:hover, .film-awards-grid a:focus-visible { border-color: var(--line-strong); }
