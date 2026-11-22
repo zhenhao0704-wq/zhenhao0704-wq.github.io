@@ -644,6 +644,102 @@ document.addEventListener("keydown", (event) => {
 });
 
 // Posters change only through manual navigation or a horizontal touch swipe.
+document.querySelectorAll(".film-awards").forEach((section) => {
+  const track = section.querySelector(".film-awards-grid");
+  const controls = section.querySelector(".film-awards-controls");
+  if (!track || !controls || track.children.length < 2) return;
+
+  const cards = Array.from(track.children);
+  const [previous, next] = controls.querySelectorAll("button");
+  const mobile = window.matchMedia("(max-width: 620px)");
+  let leading;
+  let trailing;
+  let settleTimer;
+  let touching = false;
+
+  function copyCard(card) {
+    const copy = card.cloneNode(true);
+    copy.inert = true;
+    copy.setAttribute("aria-hidden", "true");
+    return copy;
+  }
+
+  function snapPosition(card) {
+    const center = card.getBoundingClientRect().left + card.offsetWidth / 2;
+    const trackCenter = track.getBoundingClientRect().left + track.clientWidth / 2;
+    const position = track.scrollLeft + center - trackCenter;
+    return Math.max(0, Math.min(position, track.scrollWidth - track.clientWidth));
+  }
+
+  function scrollToCard(card, behavior = "instant") {
+    track.scrollTo({ left: snapPosition(card), behavior });
+  }
+
+  function closestCard() {
+    return Array.from(track.children).reduce((closest, card) =>
+      Math.abs(snapPosition(card) - track.scrollLeft) < Math.abs(snapPosition(closest) - track.scrollLeft)
+        ? card : closest
+    );
+  }
+
+  function wrapAtEdge() {
+    if (!leading || touching) return;
+    const current = closestCard();
+    // The duplicate and the original show the same card at the same alignment.
+    if (current === leading) scrollToCard(cards.at(-1));
+    if (current === trailing) scrollToCard(cards[0]);
+  }
+
+  function move(direction) {
+    const current = closestCard();
+    const index = current === leading ? cards.length - 1 : current === trailing ? 0 : cards.indexOf(current);
+    const target = index + direction;
+    const card = target < 0 ? leading : target >= cards.length ? trailing : cards[target];
+    scrollToCard(card, reducedMotion ? "instant" : "smooth");
+  }
+
+  function syncLayout() {
+    if (mobile.matches) {
+      leading = copyCard(cards.at(-1));
+      trailing = copyCard(cards[0]);
+      track.prepend(leading);
+      track.append(trailing);
+      controls.hidden = false;
+      scrollToCard(cards[0]);
+    } else if (leading) {
+      clearTimeout(settleTimer);
+      leading.remove();
+      trailing.remove();
+      leading = trailing = undefined;
+      touching = false;
+      controls.hidden = true;
+      track.scrollLeft = 0;
+    }
+  }
+
+  previous.addEventListener("click", () => move(-1));
+  next.addEventListener("click", () => move(1));
+  if ("onscrollend" in track) {
+    track.addEventListener("scrollend", wrapAtEdge);
+  } else {
+    function settleAfterScroll() {
+      clearTimeout(settleTimer);
+      settleTimer = setTimeout(wrapAtEdge, 150);
+    }
+    track.addEventListener("scroll", settleAfterScroll, { passive: true });
+    track.addEventListener("touchstart", () => { touching = true; }, { passive: true });
+    ["touchend", "touchcancel"].forEach((event) => {
+      track.addEventListener(event, () => {
+        touching = false;
+        settleAfterScroll();
+      }, { passive: true });
+    });
+  }
+
+  mobile.addEventListener("change", syncLayout);
+  syncLayout();
+});
+
 document.querySelectorAll(".poster-carousel").forEach((carousel) => {
   const posters = [...carousel.querySelectorAll("img")];
   const controls = carousel.querySelector(".poster-controls");
