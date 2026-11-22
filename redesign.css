@@ -182,7 +182,39 @@ h3 + .item-meta { margin-top: .52rem; }
 .film-awards-grid img { display: block; width: 100%; height: auto; }
 .film-awards-grid figcaption { margin-top: .65rem; color: var(--text-meta); font-size: .82rem; line-height: 1.5; }
 @media (max-width: 620px) {
-  .film-awards-grid { grid-template-columns: minmax(0, 1fr); }
+  .film-awards-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: .75rem;
+    padding-block: .25rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+  }
+  .film-awards-grid figure {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+  .film-awards-grid a:focus-visible { outline-offset: -4px; }
+  .film-awards-header { display: flex; justify-content: space-between; align-items: center; gap: .75rem; margin-bottom: .65rem; }
+  .film-awards-header h4 { margin: 0; }
+  .film-awards-controls:not([hidden]) { display: flex; gap: .25rem; }
+  .film-awards-controls button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    color: var(--text-meta);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    font: inherit;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  .film-awards-controls button:hover,
+  .film-awards-controls button:focus-visible { color: var(--text-primary); border-color: var(--line-strong); }
 }
 .wall-label .action-link { justify-self: end; }
 .wall-label:has(.performance-press-quote) { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, .9fr); }
