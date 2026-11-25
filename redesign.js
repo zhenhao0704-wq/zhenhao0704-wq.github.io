@@ -651,64 +651,83 @@ document.querySelectorAll(".film-awards").forEach((section) => {
 
   const cards = Array.from(track.children);
   const [previous, next] = controls.querySelectorAll("button");
+  const mobile = window.matchMedia("(max-width: 620px)");
+  const copyCard = (card) => card.cloneNode(true);
+  // Keep enough copies on both sides for a full desktop row across either seam.
+  const leading = cards.slice(-3).map(copyCard);
+  const trailing = cards.slice(0, 3).map(copyCard);
+  track.prepend(...leading);
+  track.append(...trailing);
+  const slides = [...leading, ...cards, ...trailing];
+  const first = leading.length;
+  const last = first + cards.length - 1;
   let settleTimer;
   let touching = false;
+  let pending;
+  let current = first;
 
-  function copyCard(card) {
-    const copy = card.cloneNode(true);
-    copy.inert = true;
-    copy.setAttribute("aria-hidden", "true");
-    return copy;
+  function position(index) {
+    return track.scrollLeft + slides[index].getBoundingClientRect().left - track.getBoundingClientRect().left;
   }
 
-  const leading = copyCard(cards.at(-1));
-  const trailing = copyCard(cards[0]);
-  track.prepend(leading);
-  track.append(trailing);
-  controls.hidden = false;
-
-  function snapPosition(card) {
-    const center = card.getBoundingClientRect().left + card.offsetWidth / 2;
-    const trackCenter = track.getBoundingClientRect().left + track.clientWidth / 2;
-    const position = track.scrollLeft + center - trackCenter;
-    return Math.max(0, Math.min(position, track.scrollWidth - track.clientWidth));
+  function scrollToSlide(index, behavior = "instant") {
+    track.scrollTo({ left: position(index), behavior });
   }
 
-  function scrollToCard(card, behavior = "instant") {
-    track.scrollTo({ left: snapPosition(card), behavior });
+  function visibleCount() {
+    return mobile.matches ? 1 : 3;
   }
 
-  function closestCard() {
-    return Array.from(track.children).reduce((closest, card) =>
-      Math.abs(snapPosition(card) - track.scrollLeft) < Math.abs(snapPosition(closest) - track.scrollLeft)
-        ? card : closest
-    );
+  function closestSlide() {
+    let closest = 0;
+    for (let index = 1; index <= slides.length - visibleCount(); index++) {
+      if (Math.abs(position(index) - track.scrollLeft) < Math.abs(position(closest) - track.scrollLeft)) {
+        closest = index;
+      }
+    }
+    return closest;
   }
 
-  function wrapAtEdge() {
+  function normalize(index) {
+    if (index < first) return index + cards.length;
+    if (index > last) return index - cards.length;
+    return index;
+  }
+
+  function updateVisible(index) {
+    const count = visibleCount();
+    // A certificate shown across the seam remains a usable link even when it is a copy.
+    slides.forEach((slide, i) => {
+      slide.inert = i < index || i >= index + count;
+    });
+  }
+
+  function settle() {
     if (touching) return;
-    const current = closestCard();
-    // The duplicate and the original show the same card at the same alignment.
-    if (current === leading) scrollToCard(cards.at(-1));
-    if (current === trailing) scrollToCard(cards[0]);
+    const closest = closestSlide();
+    current = normalize(closest);
+    pending = undefined;
+    if (current !== closest) scrollToSlide(current);
+    updateVisible(current);
   }
 
   function move(direction) {
-    const current = closestCard();
-    const index = current === leading ? cards.length - 1 : current === trailing ? 0 : cards.indexOf(current);
-    const target = index + direction;
-    const card = target < 0 ? leading : target >= cards.length ? trailing : cards[target];
-    scrollToCard(card, reducedMotion ? "instant" : "smooth");
+    const displayed = pending ?? closestSlide();
+    const start = normalize(displayed);
+    if (pending !== undefined || start !== displayed) scrollToSlide(start);
+    pending = start + direction;
+    scrollToSlide(pending, reducedMotion ? "instant" : "smooth");
+    if (reducedMotion) settle();
   }
 
   previous.addEventListener("click", () => move(-1));
   next.addEventListener("click", () => move(1));
   if ("onscrollend" in track) {
-    track.addEventListener("scrollend", wrapAtEdge);
+    track.addEventListener("scrollend", settle);
   } else {
     function settleAfterScroll() {
       clearTimeout(settleTimer);
-      settleTimer = setTimeout(wrapAtEdge, 150);
+      settleTimer = setTimeout(settle, 150);
     }
     track.addEventListener("scroll", settleAfterScroll, { passive: true });
     track.addEventListener("touchstart", () => { touching = true; }, { passive: true });
@@ -720,7 +739,14 @@ document.querySelectorAll(".film-awards").forEach((section) => {
     });
   }
 
-  scrollToCard(cards[0]);
+  mobile.addEventListener("change", () => {
+    pending = undefined;
+    scrollToSlide(current);
+    updateVisible(current);
+  });
+  scrollToSlide(current);
+  updateVisible(current);
+  controls.hidden = false;
 });
 
 document.querySelectorAll(".poster-carousel").forEach((carousel) => {
