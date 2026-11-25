@@ -487,18 +487,20 @@ test('research journals share the new system and keep their content structure', 
 test('the full CV includes all substantive entries', async ({ page }) => {
   await page.goto('/cv.html');
   await expect(page.getByRole('heading', { level: 1, name: 'Zhenhao Wen' })).toBeVisible();
-  await expect(page.locator('.cv-rows article')).toHaveCount(98);
+  await expect(page.locator('.cv-rows article')).toHaveCount(90);
   await expect(page.getByText('Publications and manuscripts', { exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Conference presentations', exact: true })).toBeVisible();
   await expect(page.getByText('Performances and production', { exact: true })).toBeVisible();
   const download = page.getByRole('link', { name: 'Download complete CV (PDF)', exact: true });
-  await expect(download).toHaveAttribute('href', 'documents/Zhenhao_Wen_CV.pdf?v=20261113-v18');
-  await expect(download).toHaveAttribute('download', 'Zhenhao_Wen_CV_2026-11-13.pdf');
-  await expect(page.locator('.cv-version')).toContainText('13 November 2026');
+  await expect(download).toHaveAttribute('href', 'documents/Zhenhao_Wen_CV.pdf?v=20261124-v23');
+  await expect(download).toHaveAttribute('download', 'Zhenhao_Wen_CV_2026-11-24.pdf');
+  await expect(page.locator('.cv-version')).toContainText('24 November 2026');
   await expect(page.getByRole('button', { name: 'Print this page' })).toBeVisible();
   await expect(page.locator('#cv-publications').locator('..')).toContainText('awaiting proofs');
   await expect(page.locator('#cv-teaching').locator('..')).toContainText('Archives and Digital Preservation');
   await expect(page.locator('#cv-performance').locator('..')).toContainText(/one of three rotating principal performers/i);
+  await expect(page.locator('#cv-funding').locator('..')).toContainText('Best Experimental Film');
+  await expect(page.locator('#cv-conferences').locator('..')).toContainText('26th International Graduate Student Conference');
   await page.emulateMedia({ media: 'print' });
   await expect(page.getByRole('button', { name: 'Print this page' })).toBeHidden();
   expect(await page.locator('body').evaluate((body) => getComputedStyle(body).backgroundColor)).toBe('rgb(255, 255, 255)');
