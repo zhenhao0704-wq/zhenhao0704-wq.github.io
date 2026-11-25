@@ -651,9 +651,6 @@ document.querySelectorAll(".film-awards").forEach((section) => {
 
   const cards = Array.from(track.children);
   const [previous, next] = controls.querySelectorAll("button");
-  const mobile = window.matchMedia("(max-width: 620px)");
-  let leading;
-  let trailing;
   let settleTimer;
   let touching = false;
 
@@ -663,6 +660,12 @@ document.querySelectorAll(".film-awards").forEach((section) => {
     copy.setAttribute("aria-hidden", "true");
     return copy;
   }
+
+  const leading = copyCard(cards.at(-1));
+  const trailing = copyCard(cards[0]);
+  track.prepend(leading);
+  track.append(trailing);
+  controls.hidden = false;
 
   function snapPosition(card) {
     const center = card.getBoundingClientRect().left + card.offsetWidth / 2;
@@ -683,7 +686,7 @@ document.querySelectorAll(".film-awards").forEach((section) => {
   }
 
   function wrapAtEdge() {
-    if (!leading || touching) return;
+    if (touching) return;
     const current = closestCard();
     // The duplicate and the original show the same card at the same alignment.
     if (current === leading) scrollToCard(cards.at(-1));
@@ -696,25 +699,6 @@ document.querySelectorAll(".film-awards").forEach((section) => {
     const target = index + direction;
     const card = target < 0 ? leading : target >= cards.length ? trailing : cards[target];
     scrollToCard(card, reducedMotion ? "instant" : "smooth");
-  }
-
-  function syncLayout() {
-    if (mobile.matches) {
-      leading = copyCard(cards.at(-1));
-      trailing = copyCard(cards[0]);
-      track.prepend(leading);
-      track.append(trailing);
-      controls.hidden = false;
-      scrollToCard(cards[0]);
-    } else if (leading) {
-      clearTimeout(settleTimer);
-      leading.remove();
-      trailing.remove();
-      leading = trailing = undefined;
-      touching = false;
-      controls.hidden = true;
-      track.scrollLeft = 0;
-    }
   }
 
   previous.addEventListener("click", () => move(-1));
@@ -736,8 +720,7 @@ document.querySelectorAll(".film-awards").forEach((section) => {
     });
   }
 
-  mobile.addEventListener("change", syncLayout);
-  syncLayout();
+  scrollToCard(cards[0]);
 });
 
 document.querySelectorAll(".poster-carousel").forEach((carousel) => {
